@@ -1,0 +1,36 @@
+/* Tables customization */
+
+table form {
+    margin: 0;
+}
+
+tr.datatable-row {
+    border-bottom: 1px solid #EBEDF3;
+}
+
+.table-bordered {
+    text-align: center;
+}
+
+.table-bordered th, .table-bordered td {
+    vertical-align: middle;
+}
+
+.table th, .table td{
+    padding: 0.5rem;
+}
+
+.checkbox > span {
+    margin: auto;
+}
+
+/* End Tables customization */
+
+/* Permissions checkboxes */
+.checkbox.checkbox-outline.checkbox-primary > span{
+    margin: 0;
+}
+
+/* End Permissions checkboxes */
+
+

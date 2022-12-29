@@ -1,0 +1,22 @@
+.navbar {
+    gap: 14px;
+}
+
+.nav-link {
+    font-weight: 600 !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .show>.nav-link {
+    color: #11B0F9 !important;
+}
+.text-primary {
+    color: #11B0F9 !important;
+}
+.offcanvas-body {
+    flex-direction: row-reverse;
+}
+
+@media screen {
+
+}
