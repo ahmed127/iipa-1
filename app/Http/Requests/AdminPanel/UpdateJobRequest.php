@@ -24,8 +24,8 @@ class UpdateJobRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = Job::$rules;
-        
+        $rules = Job::rules();
+
         return $rules;
     }
 }

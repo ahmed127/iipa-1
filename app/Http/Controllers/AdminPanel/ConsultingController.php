@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers\AdminPanel;
 
-use App\Http\Requests\AdminPanel\CreateConsultingRequest;
-use App\Http\Requests\AdminPanel\UpdateConsultingRequest;
-use App\Repositories\AdminPanel\ConsultingRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
 use Response;
+use App\Models\Job;
+use App\Models\Country;
+use App\Models\Consulting;
+use Illuminate\Http\Request;
+use App\Models\ConsultantType;
+use App\Http\Controllers\AppBaseController;
+use App\Repositories\AdminPanel\ConsultingRepository;
+use App\Http\Requests\AdminPanel\CreateConsultingRequest;
+use App\Http\Requests\AdminPanel\UpdateConsultingRequest;
 
 class ConsultingController extends AppBaseController
 {
@@ -42,7 +46,15 @@ class ConsultingController extends AppBaseController
      */
     public function create()
     {
-        return view('adminPanel.consultings.create');
+        $data['countryCodes'] = Country::get()->pluck('code', 'code');
+        $data['countries'] = Country::get()->pluck('name', 'id');
+        $data['jobs'] = Job::get()->pluck('name', 'id');
+        $data['consultantTypes'] = ConsultantType::get()->pluck('name', 'id');
+        $data['types'] = Consulting::types();
+        $data['favLangs'] = Consulting::favLangs();
+        $data['genders'] = Consulting::genders();
+
+        return view('adminPanel.consultings.create', $data);
     }
 
     /**
@@ -92,15 +104,22 @@ class ConsultingController extends AppBaseController
      */
     public function edit($id)
     {
-        $consulting = $this->consultingRepository->find($id);
+        $data['consulting'] = $this->consultingRepository->find($id);
+        $data['countryCodes'] = Country::get()->pluck('code', 'code');
+        $data['countries'] = Country::get()->pluck('name', 'id');
+        $data['jobs'] = Job::get()->pluck('name', 'id');
+        $data['consultantTypes'] = ConsultantType::get()->pluck('name', 'id');
+        $data['types'] = Consulting::types();
+        $data['favLangs'] = Consulting::favLangs();
+        $data['genders'] = Consulting::genders();
 
-        if (empty($consulting)) {
+        if (empty($data['consulting'])) {
             Flash::error(__('messages.not_found', ['model' => __('models/consultings.singular')]));
 
             return redirect(route('adminPanel.consultings.index'));
         }
 
-        return view('adminPanel.consultings.edit')->with('consulting', $consulting);
+        return view('adminPanel.consultings.edit', $data);
     }
 
     /**

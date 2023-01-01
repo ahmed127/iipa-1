@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class RegionTranslation extends Model
+class JobTranslation extends Model
 {
 
 
-    protected $table = 'region_translations';
+    protected $table = 'job_translations';
 
     protected $fillable = ['name'];
 

@@ -45,11 +45,7 @@ class Region extends Model
 
     public $translatedAttributes = ['name'];
 
-    /**
-     * Rules validation
-     *
-     * @return array vaildations rules
-     */
+    
     public static function rules()
     {
         $languages = array_keys(config('langs'));

@@ -67,11 +67,11 @@
             <td>
                 {{-- {!! Form::open(['route' => ['adminPanel.volunteerTypes.destroy', $volunteerType->id], 'method' => 'delete']) !!} --}}
                 <div class='btn btn-sm-group'>
-                    @can('volunteerTypes view')
+                    {{-- @can('volunteerTypes view')
                     <a href="{{ route('adminPanel.volunteerTypes.show', [$volunteerType->id]) }}" class='btn btn-sm btn-shadow mx-1 btn-transparent-success'>
                         <i class="fa fa-eye"></i>
                     </a>
-                    @endcan
+                    @endcan --}}
                     @can('volunteerTypes edit')
                     <a href="{{ route('adminPanel.volunteerTypes.edit', [$volunteerType->id]) . "?languages=en" }}" class='btn btn-sm btn-shadow mx-1 btn-transparent-primary'>
                         <i class="fa fa-edit"></i>

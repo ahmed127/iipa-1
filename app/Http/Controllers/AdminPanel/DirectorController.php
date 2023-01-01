@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\AdminPanel;
 
-use App\Http\Requests\AdminPanel\CreateDirectorRequest;
-use App\Http\Requests\AdminPanel\UpdateDirectorRequest;
-use App\Repositories\AdminPanel\DirectorRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
 use Response;
+use App\Models\Country;
+use Illuminate\Http\Request;
+use App\Http\Controllers\AppBaseController;
+use App\Repositories\AdminPanel\DirectorRepository;
+use App\Http\Requests\AdminPanel\CreateDirectorRequest;
+use App\Http\Requests\AdminPanel\UpdateDirectorRequest;
 
 class DirectorController extends AppBaseController
 {
@@ -42,7 +43,8 @@ class DirectorController extends AppBaseController
      */
     public function create()
     {
-        return view('adminPanel.directors.create');
+        $countryCodes = Country::get()->pluck('code', 'code');
+        return view('adminPanel.directors.create', compact('countryCodes'));
     }
 
     /**
@@ -93,6 +95,7 @@ class DirectorController extends AppBaseController
     public function edit($id)
     {
         $director = $this->directorRepository->find($id);
+        $countryCodes = Country::get()->pluck('code', 'code');
 
         if (empty($director)) {
             Flash::error(__('messages.not_found', ['model' => __('models/directors.singular')]));
@@ -100,7 +103,7 @@ class DirectorController extends AppBaseController
             return redirect(route('adminPanel.directors.index'));
         }
 
-        return view('adminPanel.directors.edit')->with('director', $director);
+        return view('adminPanel.directors.edit', compact('countryCodes', 'director'));
     }
 
     /**

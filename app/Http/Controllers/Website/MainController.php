@@ -7,7 +7,19 @@ use App\Models\Country;
 use Laracasts\Flash\Flash;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AdminPanel\CreateConsultingRequest;
 use App\Http\Requests\AdminPanel\CreateContactRequest;
+use App\Http\Requests\AdminPanel\CreateCooperativeTrainingRequest;
+use App\Http\Requests\AdminPanel\CreateIndividualTrainingRequest;
+use App\Http\Requests\AdminPanel\CreateVolunteerRequest;
+use App\Models\ConsultantType;
+use App\Models\Consulting;
+use App\Models\CooperativeTraining;
+use App\Models\Director;
+use App\Models\IndividualTraining;
+use App\Models\Job;
+use App\Models\Volunteer;
+use App\Models\VolunteerType;
 
 class MainController extends Controller
 {
@@ -23,7 +35,7 @@ class MainController extends Controller
 
     public function contact_us()
     {
-        $countryCodes = Country::get()->pluck('code', 'id');
+        $countryCodes = Country::get()->pluck('code', 'code');
         return view('website.pages.contact_us', compact('countryCodes'));
     }
 
@@ -31,7 +43,7 @@ class MainController extends Controller
     {
         $input = $request->all();
 
-        $contact = Contact::create($input);
+        Contact::create($input);
 
         Flash::success(__('lang.message_sent'));
 
@@ -56,7 +68,8 @@ class MainController extends Controller
 
     public function board_of_directors()
     {
-        return view('website.pages.who_we_are.board_of_directors');
+        $directors = Director::all();
+        return view('website.pages.who_we_are.board_of_directors', compact('directors'));
     }
 
     public function organizational_structure()
@@ -88,11 +101,26 @@ class MainController extends Controller
     // Advisors
     public function advisors()
     {
-        return view('website.pages.advisors');
+        $data['countryCodes'] = Country::get()->pluck('code', 'code');
+        $data['countries'] = Country::get()->pluck('name', 'id');
+        $data['jobs'] = Job::get()->pluck('name', 'id');
+        $data['consultantTypes'] = ConsultantType::get()->pluck('name', 'id');
+        $data['types'] = Consulting::types();
+        $data['favLangs'] = Consulting::favLangs();
+        $data['genders'] = Consulting::genders();
+
+
+        return view('website.pages.advisors', $data);
     }
 
-    public function advisors_store()
+    public function advisors_store(CreateConsultingRequest $request)
     {
+        $input = $request->all();
+
+        Consulting::create($input);
+
+        Flash::success(__('lang.message_sent'));
+
         return back();
     }
     // Advisors
@@ -117,17 +145,49 @@ class MainController extends Controller
     // Volunteer and Training
     public function volunteer_request()
     {
-        return view('website.pages.volunteer_request');
+        $volunteerTypes = VolunteerType::get()->pluck('name', 'id');
+        $countryCodes = Country::get()->pluck('code', 'code');
+        return view('website.pages.volunteer_request', compact('volunteerTypes', 'countryCodes'));
+    }
+
+    public function volunteer_request_store(CreateVolunteerRequest $request)
+    {
+        $input = $request->all();
+        $volunteer = Volunteer::create($input);
+        Flash::success(__('lang.message_sent'));
+
+        return back();
     }
 
     public function training_entities()
     {
-        return view('website.pages.training_entities');
+        $countryCodes = Country::get()->pluck('code', 'code');
+        return view('website.pages.training_entities', compact('countryCodes'));
+    }
+
+    public function training_entities_store(CreateCooperativeTrainingRequest $request)
+    {
+        $input = $request->all();
+        $training = CooperativeTraining::create($input);
+        Flash::success(__('lang.message_sent'));
+
+        return back();
     }
 
     public function training_individuals()
     {
-        return view('website.pages.training_individuals');
+        $countryCodes = Country::get()->pluck('code', 'code');
+        return view('website.pages.training_individuals', compact('countryCodes'));
+    }
+
+
+    public function training_individuals_store(CreateIndividualTrainingRequest $request)
+    {
+        $input = $request->all();
+        $training = IndividualTraining::create($input);
+        Flash::success(__('lang.message_sent'));
+
+        return back();
     }
     // Volunteer and Training
 

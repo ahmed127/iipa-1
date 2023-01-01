@@ -36,7 +36,8 @@
 <!-- Attachment Letter Field -->
 <div class="form-group">
     {!! Form::label('attachment_letter', __('models/cooperativeTrainings.fields.attachment_letter').':') !!}
-    <b>{{ $cooperativeTraining->attachment_letter }}</b>
+    <b><a href="{{ $cooperativeTraining->attachment_letter }}" target="_blank"
+        class="btn btn-sm btn-primary">@lang('lang.open_file')</a></b>
 </div>
 
 

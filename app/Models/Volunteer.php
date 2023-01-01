@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Helpers\ImageUploaderTrait;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -21,11 +22,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class Volunteer extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, ImageUploaderTrait;
 
 
     public $table = 'volunteers';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -64,7 +65,7 @@ class Volunteer extends Model
      */
     public static $rules = [
         'volunteer_type_id' => 'required|exists:volunteer_types,id',
-        'full_name' => 'required|srting|min:3|max:191',
+        'full_name' => 'required|string|min:3|max:191',
         'id_no' => 'required',
         'email' => 'required|email',
         'country_code' => 'required',
@@ -72,5 +73,33 @@ class Volunteer extends Model
         'attachment_cv' => 'required'
     ];
 
-    
+
+
+    public function setAttachmentCvAttribute($file)
+    {
+        if ($file) {
+            try {
+                $fileName = $this->createFileName($file);
+
+                $this->saveFile($file, $fileName);
+
+                $this->attributes['attachment_cv'] = $fileName;
+            } catch (\Throwable $th) {
+                $this->attributes['attachment_cv'] = $file;
+            }
+        }
+    }
+
+
+    public function getAttachmentCvAttribute($val)
+    {
+        return $val ? asset('uploads/files') . '/' . $val : null;
+    }
+
+
+
+    public function volunteer_type()
+    {
+        return $this->belongsTo(VolunteerType::class);
+    }
 }

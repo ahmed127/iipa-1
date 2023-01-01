@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Astrotomic\Translatable\Translatable;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -15,11 +16,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class VolunteerType extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, Translatable;
 
 
     public $table = 'volunteer_types';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -39,14 +40,18 @@ class VolunteerType extends Model
         'name' => 'string'
     ];
 
-    /**
-     * Validation rules
-     *
-     * @var array
-     */
-    public static $rules = [
-        
-    ];
+    public $translatedAttributes = ['name'];
 
-    
+
+    public static function rules()
+    {
+        $languages = array_keys(config('langs'));
+        foreach ($languages as $language) {
+            $rules[$language . '.name'] = 'required|string|min:3|max:191';
+        }
+
+        return $rules;
+    }
+
+
 }

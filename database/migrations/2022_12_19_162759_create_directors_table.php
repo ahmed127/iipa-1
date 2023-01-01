@@ -18,7 +18,7 @@ class CreateDirectorsTable extends Migration
             $table->id();
             $table->string('photo');
             $table->string('name');
-            $table->string('country_code');
+            $table->string('nickname');
             $table->string('job_title');
             $table->timestamps();
             $table->softDeletes();

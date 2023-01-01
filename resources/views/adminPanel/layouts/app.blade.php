@@ -104,6 +104,12 @@ License: You must have a valid license purchased only from themeforest(the above
     {{-- ckeditor --}}
     <script src="https://cdn.ckeditor.com/4.12.1/full/ckeditor.js"></script>
 
+    <style>
+        .card.card-custom {
+            overflow-x: scroll;
+        }
+    </style>
+
 </head>
 <!--end::Head-->
 

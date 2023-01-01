@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Helpers\ImageUploaderTrait;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -19,11 +20,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class CooperativeTraining extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, ImageUploaderTrait;
 
 
     public $table = 'cooperative_trainings';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -64,5 +65,27 @@ class CooperativeTraining extends Model
         'attachment_letter' => 'required'
     ];
 
-    
+
+    public function setAttachmentLetterAttribute($file)
+    {
+        if ($file) {
+            try {
+                $fileName = $this->createFileName($file);
+
+                $this->saveFile($file, $fileName);
+
+                $this->attributes['attachment_letter'] = $fileName;
+            } catch (\Throwable $th) {
+                $this->attributes['attachment_letter'] = $file;
+            }
+        }
+    }
+
+
+    public function getAttachmentLetterAttribute($val)
+    {
+        return $val ? asset('uploads/files') . '/' . $val : null;
+    }
+
+
 }

@@ -24,8 +24,8 @@ class UpdateVolunteerTypeRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = VolunteerType::$rules;
-        
+        $rules = VolunteerType::rules();
+
         return $rules;
     }
 }

@@ -24,6 +24,6 @@ class CreateConsultantTypeRequest extends FormRequest
      */
     public function rules()
     {
-        return ConsultantType::$rules;
+        return ConsultantType::rules();
     }
 }

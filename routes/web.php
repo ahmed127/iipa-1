@@ -189,8 +189,11 @@ Route::group([
 
     // volunteer-training
     Route::get('volunteer-request',  $class_name . 'volunteer_request')->name('volunteer_request');
+    Route::post('volunteer-request',  $class_name . 'volunteer_request_store')->name('volunteer_request_store');
     Route::get('training-entities',  $class_name . 'training_entities')->name('training_entities');
+    Route::post('training-entities',  $class_name . 'training_entities_store')->name('training_entities_store');
     Route::get('training-individuals',  $class_name . 'training_individuals')->name('training_individuals');
+    Route::post('training-individuals',  $class_name . 'training_individuals_store')->name('training_individuals_store');
     // volunteer-training
 
     // media-center
