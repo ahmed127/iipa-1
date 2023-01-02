@@ -24,8 +24,9 @@ class UpdateInitiativeRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = Initiative::$rules;
-        
+        $rules = Initiative::rules();
+        $rules['photo'] = 'nullable';
+
         return $rules;
     }
 }

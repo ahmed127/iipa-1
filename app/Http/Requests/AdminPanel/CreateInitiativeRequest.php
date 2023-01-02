@@ -24,6 +24,6 @@ class CreateInitiativeRequest extends FormRequest
      */
     public function rules()
     {
-        return Initiative::$rules;
+        return Initiative::rules();
     }
 }

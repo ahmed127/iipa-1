@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 @php $lang_page = request()->segment(1); @endphp
 @if ($lang_page == 'en')
-<html lang="en" dir="ltr">
+    <html lang="en" dir="ltr">
 @else
-<html lang="ar" dir="rtl">
+    <html lang="ar" dir="rtl">
 @endif
 
 <head>
@@ -27,15 +27,20 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     @if ($lang_page == 'ar')
-    <!-- Bootstrap CSS RTL -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css"
-        integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('website') }}/css/style.rtl.css" />
+        <!-- Bootstrap CSS RTL -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css"
+            integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('website') }}/css/style.rtl.css" />
     @endif
 
     <link rel="stylesheet" href="{{ asset('website') }}/css/navbar.css" />
     <link rel="stylesheet" href="{{ asset('website') }}/css/color.css" />
     <link rel="shortcut icon" href="{{ $information_app->fav_icon_original_path }}" />
+    <style>
+        .pagination-container nav {
+            margin: auto
+        }
+    </style>
     @yield('css')
     @stack('css_stack')
 </head>
