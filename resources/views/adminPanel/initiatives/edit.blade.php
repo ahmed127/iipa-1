@@ -21,7 +21,7 @@
                             <h3 class="card-title">Edit @lang('models/initiatives.singular')</h3>
                         </div>
                         <div class="card-body">
-                            {!! Form::model($initiative, ['route' => ['adminPanel.initiatives.update', $initiative->id], 'method' => 'patch']) !!}
+                            {!! Form::model($initiative, ['route' => ['adminPanel.initiatives.update', $initiative->id], 'method' => 'patch', 'files' => true]) !!}
                               @include('adminPanel.initiatives.fields')
                             {!! Form::close() !!}
                         </div>

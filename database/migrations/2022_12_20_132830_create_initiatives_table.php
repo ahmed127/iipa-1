@@ -17,6 +17,7 @@ class CreateInitiativesTable extends Migration
         Schema::create('initiatives', function (Blueprint $table) {
             $table->id();
 
+            $table->string('photo');
             $table->timestamps();
             $table->softDeletes();
         });

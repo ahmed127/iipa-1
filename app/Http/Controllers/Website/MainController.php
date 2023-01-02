@@ -17,6 +17,7 @@ use App\Models\Consulting;
 use App\Models\CooperativeTraining;
 use App\Models\Director;
 use App\Models\IndividualTraining;
+use App\Models\Initiative;
 use App\Models\Job;
 use App\Models\Volunteer;
 use App\Models\VolunteerType;
@@ -95,7 +96,13 @@ class MainController extends Controller
 
     public function initiatives()
     {
-        return view('website.pages.initiatives');
+        $initiatives = Initiative::paginate(9);
+        return view('website.pages.initiatives', compact('initiatives'));
+    }
+
+    public function initiative(Initiative $initiative)
+    {
+        return view('website.pages.initiative', compact('initiative'));
     }
 
     // Advisors

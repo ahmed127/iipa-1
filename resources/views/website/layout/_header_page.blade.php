@@ -1,6 +1,7 @@
 <div>
     <div class="container-fluid p-0">
-        <div class="header-page row gx-0 align-items-center">
+        <div class="header-page row gx-0 align-items-center"
+            @isset($heroImage) style="background:url('{{ $heroImage }}')" @endisset>
             <div class="col-12 text-white p-5 mt-5">
                 <h1 class="py-2 firstWordInfo">{{ $title }}</h1>
                 <nav aria-label="breadcrumb">

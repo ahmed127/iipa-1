@@ -186,16 +186,18 @@ Route::group([
         Route::post('contact-us', $class_name_main . 'contact_us_store')->name('contact_us_store');
         Route::get('help', $class_name_main . 'help')->name('help');
 
-        // who-we-are
-        Route::get('who-we-are/incorporation', $class_name_main . 'incorporation')->name('incorporation');
-        Route::get('who-we-are/our-goals', $class_name_main . 'our_goals')->name('our_goals');
-        Route::get('who-we-are/board-of-directors', $class_name_main . 'board_of_directors')->name('board_of_directors');
-        Route::get('who-we-are/organizational-structure', $class_name_main . 'organizational_structure')->name('organizational_structure');
-        Route::get('who-we-are/our-partners', $class_name_main . 'our_partners')->name('our_partners');
-        // who-we-are
+        // about_us
+        Route::get('about_us/incorporation', $class_name_main . 'incorporation')->name('incorporation');
+        Route::get('about_us/our-goals', $class_name_main . 'our_goals')->name('our_goals');
+        Route::get('about_us/board-of-directors', $class_name_main . 'board_of_directors')->name('board_of_directors');
+        Route::get('about_us/organizational-structure', $class_name_main . 'organizational_structure')->name('organizational_structure');
+        Route::get('about_us/our-partners', $class_name_main . 'our_partners')->name('our_partners');
+        // about_us
+
         Route::get('the-outreach', $class_name_main . 'outreach')->name('outreach');
         Route::get('the-laws', $class_name_main . 'laws')->name('laws');
         Route::get('the-initiatives', $class_name_main . 'initiatives')->name('initiatives');
+        Route::get('the-initiative/{initiative}', $class_name_main . 'initiative')->name('initiative');
 
         // volunteer-training
         Route::get('volunteer-request',  $class_name_main . 'volunteer_request')->name('volunteer_request');
