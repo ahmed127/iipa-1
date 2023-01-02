@@ -12,11 +12,17 @@ class ProfileController extends Controller
     public function profile()
     {
         $data['user'] = auth()->user();
+        return view('website.pages.profile.main', $data);
+    }
+
+    public function update_information(Request $request)
+    {
+        $data['user'] = auth()->user();
         $data['countryCodes'] = Country::get()->pluck('code', 'id');
         return view('website.pages.profile.information', $data);
     }
 
-    public function update_information(Request $request)
+    public function update_information_post(Request $request)
     {
         $user = auth()->user();
 

@@ -55,4 +55,14 @@ class User extends Authenticatable
     {
         if ($value) $this->attributes['password'] = bcrypt($value);
     }
+
+    /**
+     * Get the country that owns the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function country()
+    {
+        return $this->belongsTo(Country::class, 'country_code', 'id');
+    }
 }
