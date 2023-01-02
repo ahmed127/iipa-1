@@ -2,29 +2,17 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Model;
 use Astrotomic\Translatable\Translatable;
-use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-
-/**
- * Class Country
- * @package App\Models
- * @version May 25, 2022, 1:14 pm UTC
- *
- * @property string $name
- */
 class Country extends Model
 {
     use SoftDeletes, Translatable;
 
-
     public $table = 'countries';
 
-
     protected $dates = ['deleted_at'];
-
-
 
     public $fillable = [
         'code'
@@ -43,7 +31,7 @@ class Country extends Model
     // translated attributes
     public $translatedAttributes =  ['name'];
 
-       /**
+    /**
      * Rules validation
      *
      * @return array vaildations rules
@@ -65,6 +53,4 @@ class Country extends Model
     {
         return $this->hasMany(City::class);
     }
-
-
 }

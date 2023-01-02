@@ -151,55 +151,74 @@ Route::group([
     'namespace' => 'App\Http\Controllers\Website',
     'as' => 'website.'
 ], function () {
+    Route::group(['middleware' => ['guest']], function () {
 
-    $class_name = 'AuthController@';
-    Route::get('login',  $class_name . 'login')->name('login');
-    Route::get('register',  $class_name . 'register')->name('register');
-    Route::get('forget_password',  $class_name . 'forget_password')->name('forget_password');
+        $class_name_auth = 'AuthController@';
+        Route::get('login',  $class_name_auth . 'login')->name('login');
+        Route::post('login-post',  $class_name_auth . 'login_post')->name('login_post');
+        Route::get('register',  $class_name_auth . 'register')->name('register');
+        Route::post('register-post',  $class_name_auth . 'register_post')->name('register_post');
+        Route::get('forget_password',  $class_name_auth . 'forget_password')->name('forget_password');
+        Route::post('forget_password_post',  $class_name_auth . 'forget_password_post')->name('forget_password_post');
+        Route::get('reset_password/{email}',  $class_name_auth . 'reset_password')->name('reset_password');
+        Route::post('reset_password_post',  $class_name_auth . 'reset_password_post')->name('reset_password_post');
+    });
 
-    $class_name = 'MainController@';
-    Route::get('home',  $class_name . 'home')->name('home');
-    Route::get('events',  $class_name . 'events')->name('events');
-    Route::get('contact-us',  $class_name . 'contact_us')->name('contact_us');
-    Route::post('contact-us',  $class_name . 'contact_us_store')->name('contact_us_store');
-    Route::get('help',  $class_name . 'help')->name('help');
+    Route::group(['middleware' => ['auth:web']], function () {
 
-    // who-we-are
-    Route::get('who-we-are/incorporation',  $class_name . 'incorporation')->name('incorporation');
-    Route::get('who-we-are/our-goals',  $class_name . 'our_goals')->name('our_goals');
-    Route::get('who-we-are/board-of-directors',  $class_name . 'board_of_directors')->name('board_of_directors');
-    Route::get('who-we-are/organizational-structure',  $class_name . 'organizational_structure')->name('organizational_structure');
-    Route::get('who-we-are/our-partners',  $class_name . 'our_partners')->name('our_partners');
-    // who-we-are
+        Route::get('logout',  'AuthController@logout')->name('logout');
 
-    Route::get('the-outreach',  $class_name . 'outreach')->name('outreach');
-    Route::get('the-laws',  $class_name . 'laws')->name('laws');
-    Route::get('the-initiatives',  $class_name . 'initiatives')->name('initiatives');
+        //Profile
+        Route::get('profile', 'ProfileController@profile')->name('profile');
+        Route::post('update-information', 'ProfileController@update_information')->name('update_information');
+        Route::get('update-password', 'ProfileController@update_password')->name('update_password');
+        Route::post('update-password-post', 'ProfileController@update_password_post')->name('update_password_post');
+        Route::get('my_request',  'ProfileController@my_request')->name('my_request');
 
-    // your-advisors
-    Route::get('your-advisors',  $class_name . 'advisors')->name('advisors');
-    Route::post('your-advisors-store',  $class_name . 'advisors_store')->name('advisors_store');
-    // your-advisors
+        // Pages
+        Route::get('home', 'MainController@home')->name('home');
+        Route::get('events', 'MainController@events')->name('events');
+        Route::get('contact-us', 'MainController@contact_us')->name('contact_us');
+        Route::post('contact-us', 'MainController@contact_us_store')->name('contact_us_store');
+        Route::get('help', 'MainController@help')->name('help');
 
-    // class-actions
-    Route::get('class-actions-request',  $class_name . 'class_actions_request')->name('class_actions_request');
-    Route::post('class-actions-request-store',  $class_name . 'class_actions_request_store')->name('class_actions_request_store');
-    Route::get('class-actions-tutorial',  $class_name . 'class_actions_tutorial')->name('class_actions_tutorial');
-    // class-actions
+        // who-we-are
+        Route::get('who-we-are/incorporation', 'MainController@incorporation')->name('incorporation');
+        Route::get('who-we-are/our-goals', 'MainController@our_goals')->name('our_goals');
+        Route::get('who-we-are/board-of-directors', 'MainController@board_of_directors')->name('board_of_directors');
+        Route::get('who-we-are/organizational-structure', 'MainController@organizational_structure')->name('organizational_structure');
+        Route::get('who-we-are/our-partners', 'MainController@our_partners')->name('our_partners');
+        // who-we-are
 
-    // volunteer-training
-    Route::get('volunteer-request',  $class_name . 'volunteer_request')->name('volunteer_request');
-    Route::get('training-entities',  $class_name . 'training_entities')->name('training_entities');
-    Route::get('training-individuals',  $class_name . 'training_individuals')->name('training_individuals');
-    // volunteer-training
+        Route::get('the-outreach', 'MainController@outreach')->name('outreach');
+        Route::get('the-laws', 'MainController@laws')->name('laws');
+        Route::get('the-initiatives', 'MainController@initiatives')->name('initiatives');
 
-    // media-center
-    Route::get('media-center',  $class_name . 'media_center_all')->name('media_center_all');
-    Route::get('media-center/{id}',  $class_name . 'media_center_single')->name('media_center_single');
-    // media-center
+        // your-advisors
+        Route::get('your-advisors', 'MainController@advisors')->name('advisors');
+        Route::post('your-advisors-store', 'MainController@advisors_store')->name('advisors_store');
+        // your-advisors
 
-    // recruitment
-    Route::get('recruitment',  $class_name . 'recruitment')->name('recruitment');
-    Route::post('recruitment-store',  $class_name . 'recruitment_store')->name('recruitment_store');
-    // recruitment
+        // class-actions
+        Route::get('class-actions-request', 'MainController@class_actions_request')->name('class_actions_request');
+        Route::post('class-actions-request-store', 'MainController@class_actions_request_store')->name('class_actions_request_store');
+        Route::get('class-actions-tutorial', 'MainController@class_actions_tutorial')->name('class_actions_tutorial');
+        // class-actions
+
+        // volunteer-training
+        Route::get('volunteer-request', 'MainController@volunteer_request')->name('volunteer_request');
+        Route::get('training-entities', 'MainController@training_entities')->name('training_entities');
+        Route::get('training-individuals', 'MainController@training_individuals')->name('training_individuals');
+        // volunteer-training
+
+        // media-center
+        Route::get('media-center', 'MainController@media_center_all')->name('media_center_all');
+        Route::get('media-center/{id}', 'MainController@media_center_single')->name('media_center_single');
+        // media-center
+
+        // recruitment
+        Route::get('recruitment', 'MainController@recruitment')->name('recruitment');
+        Route::post('recruitment-store', 'MainController@recruitment_store')->name('recruitment_store');
+        // recruitment
+    });
 });

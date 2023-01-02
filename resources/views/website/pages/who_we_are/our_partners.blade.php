@@ -8,7 +8,7 @@
 'pageName' => 'Our Partners',
 ])
 
-<section class="bg-content-custom">
+<section class="bg-content-custom p-custom">
     <div class="container-fluid p-0">
 
     </div>

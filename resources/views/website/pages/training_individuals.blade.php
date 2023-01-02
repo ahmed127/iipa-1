@@ -8,7 +8,7 @@
 'pageName' => 'Training Individual',
 ])
 
-<section class="bg-content-custom">
+<section class="bg-content-custom p-custom">
     <div class="container-fluid p-0">
         <div class="shadow-custom rounded-4 bg-white col-xl-10 col-lg-12 col-sm-12 mx-xl-auto mx-sm-0">
             <div class="row gx-0 p-3">
@@ -27,8 +27,9 @@
                         <span class="text-danger">*</span>
                     </label>
                     <div class="input-group flex-row-reverse">
-                        <input type="full_name" class="form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr" id="full_name"
-                            placeholder="name@example.com">
+                        <input type="full_name"
+                            class="form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr"
+                            id="full_name" placeholder="name@example.com">
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-12 p-1">
@@ -37,8 +38,9 @@
                         <span class="text-danger">*</span>
                     </label>
                     <div class="input-group flex-row-reverse">
-                        <input type="email" class="form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr" id="email"
-                            placeholder="name@example.com">
+                        <input type="email"
+                            class="form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr"
+                            id="email" placeholder="name@example.com">
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-12 p-1">
@@ -47,8 +49,9 @@
                         <span class="text-danger">*</span>
                     </label>
                     <div class="input-group flex-row-reverse">
-                        <input type="phone" class="form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr" id="phone"
-                            placeholder="name@example.com">
+                        <input type="phone"
+                            class="form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr"
+                            id="phone" placeholder="name@example.com">
                     </div>
                 </div>
 

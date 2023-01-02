@@ -144,15 +144,15 @@
 
 <div class="section-market sticky-bottom">
     <div class="container-fluid text-white p-0">
-        <p class="fw-bold">
+        <p class="fw-bold py-0 mb-0">
             <span class="">
-            <i class="fa-solid fa-dollar-sign"></i>
+                <i class="fa-solid fa-dollar-sign"></i>
             </span>
             <span class="px-2">
                 اسعار الاسهم الأن :
             </span>
         </p>
-        <div class="fw-lighter m-0 overflow-x-hidden" style="font-size: small;" >
+        <div class="fw-lighter m-0 overflow-x-hidden py-2" style="font-size: small;">
             الحفر العربية
             <span class="text-warning">29.00 0.00 (0.00%)</span> |
             البحري

@@ -15,7 +15,7 @@
 'title' => 'Our Events',
 'pageName' => 'events',
 ])
-<section class="bg-content-custom">
+<section class="bg-content-custom p-custom">
     <div class="container-fluid p-0">
         <!--begin::Card-->
         <div class="card card-custom">

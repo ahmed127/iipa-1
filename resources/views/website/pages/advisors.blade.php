@@ -7,7 +7,7 @@
 'title' => 'Your legal advisor',
 'pageName' => 'Your Adviors',
 ])
-<section class="bg-content-custom">
+<section class="bg-content-custom p-custom">
     <div class="container-fluid p-0">
         <div class="shadow-custom rounded-4 bg-white col-xl-10 col-lg-12 col-sm-12 mx-xl-auto mx-sm-0">
             <div class="row gx-0 p-3">
@@ -40,8 +40,8 @@
                         <span class="text-danger">*</span>
                     </label>
                     <div class="input-group">
-                        <input type="text" class="form-control border text-start py-3 shadow-sm rounded-4"
-                            id="fullName" placeholder="@lang('lang.full_name')">
+                        <input type="text" class="form-control border text-start py-3 shadow-sm rounded-4" id="fullName"
+                            placeholder="@lang('lang.full_name')">
                     </div>
                 </div>
                 <div class="col-lg-5 col-sm-12 p-1">
@@ -52,9 +52,9 @@
                     </label>
                     <div class="input-group">
                         {!! Form::text('email', null, [
-                            'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
-                            'id' => 'email',
-                            'placeholder' => 'name@example.com',
+                        'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
+                        'id' => 'email',
+                        'placeholder' => 'name@example.com',
                         ]) !!}
                     </div>
                 </div>
@@ -65,7 +65,9 @@
                         <span class="text-danger">*</span>
                     </label>
                     <div class="input-group rounded-4 shadow-sm">
-                        <input type="text" name="phone" class="form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr" id="phone">
+                        <input type="text" name="phone"
+                            class="form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr"
+                            id="phone">
                         <label for="country_code">
 
                         </label>

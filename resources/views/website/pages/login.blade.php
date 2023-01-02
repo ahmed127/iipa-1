@@ -8,7 +8,7 @@
 'title' => 'Login Now',
 'pageName' => 'Login',
 ])
-<section class="bg-content-custom">
+<section class="bg-content-custom p-custom">
     <div class="container-fluid p-0">
         <div class="shadow-custom rounded-4 bg-white col-xl-10 col-lg-12 col-sm-12 mx-xl-auto mx-sm-0">
             <div class="row gx-0 p-3">
@@ -35,9 +35,12 @@
                         <span class="text-danger">*</span>
                     </label>
                     <div class="input-group shadow-sm rounded-4">
-                        <input type="password" name="password" class="form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr"
+                        <input type="password" name="password"
+                            class="form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr"
                             id="password" placeholder="كلمة المرور">
-                        <span class="input-group-text bg-white border border-start-0 direction-span-rtl direction-span-ltr" id="basic-addon1">
+                        <span
+                            class="input-group-text bg-white border border-start-0 direction-span-rtl direction-span-ltr"
+                            id="basic-addon1">
                             <i class="fa-solid fa-eye text-secondary opacity-50 fa-sm"></i>
                         </span>
                     </div>

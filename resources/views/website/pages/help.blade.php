@@ -7,7 +7,7 @@
 'title' => 'Help',
 'pageName' => 'Help',
 ])
-<section class="bg-content-custom">
+<section class="bg-content-custom p-custom">
     <div class="container-fluid p-0">
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">

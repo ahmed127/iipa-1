@@ -94,12 +94,16 @@ return [
     'Settings' => 'Settings',
     'send' => 'Send',
     'our_office' => 'Our Office',
+    'otp_msg' => 'OTP :otp',
+    'otp' => 'OTP',
     '' => '',
 
     // P p
 
     'phone' => 'Phone',
     'pending' => 'Pending',
+    'password' => 'Password',
+    'password_confirmation' => 'Password Confirmation',
     '' => '',
 
     // Q q

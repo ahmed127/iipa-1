@@ -26,7 +26,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $data['information_app'] = Information::first();
-        View::share($data);
+        try {
+            $data['information_app'] = Information::first();
+            View::share($data);
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 }

@@ -9,9 +9,9 @@
 'pageName' => 'Board Of Directors',
 ])
 
-<section class="bg-content-custom">
+<section class="bg-content-custom p-custom">
     <div class="container-fluid p-0">
-        <div class="bg-content-custom p-0">
+        <div class="bg-content-custom p-custom p-0">
             <div class="row gx-0 p-5">
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card m-3 rounded-4 shadow-custom p-0">
