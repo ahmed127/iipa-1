@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Helpers\ImageUploaderTrait;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -13,16 +14,16 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *
  * @property string $photo
  * @property string $name
- * @property string $country_code
+ * @property string $nickname
  * @property string $job_title
  */
 class Director extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, ImageUploaderTrait;
 
 
     public $table = 'directors';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -31,7 +32,7 @@ class Director extends Model
     public $fillable = [
         'photo',
         'name',
-        'country_code',
+        'nickname',
         'job_title'
     ];
 
@@ -44,7 +45,7 @@ class Director extends Model
         'id' => 'integer',
         'photo' => 'string',
         'name' => 'string',
-        'country_code' => 'string',
+        'nickname' => 'string',
         'job_title' => 'string'
     ];
 
@@ -56,9 +57,31 @@ class Director extends Model
     public static $rules = [
         'photo' => 'required|mimes:jpeg,jpg,png|max:10000',
         'name' => 'required|string|min:3|max:191',
-        'country_code' => 'required|string|min:3|max:191',
+        'nickname' => 'required',
         'job_title' => 'required|string|min:3|max:191'
     ];
 
-    
+
+    public function setPhotoAttribute($file)
+    {
+        if ($file) {
+            try {
+                $fileName = $this->createFileName($file);
+
+                $this->originalImage($file, $fileName);
+
+                $this->thumbImage($file, $fileName, 300, 300);
+
+                $this->attributes['photo'] = $fileName;
+            } catch (\Throwable $th) {
+                $this->attributes['photo'] = $file;
+            }
+        }
+    }
+
+
+    public function getPhotoAttribute($val)
+    {
+        return $val ? asset('uploads/images/original') . '/' . $val : null;
+    }
 }

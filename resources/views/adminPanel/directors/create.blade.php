@@ -21,7 +21,7 @@
                             <h3 class="card-title">Create @lang('models/directors.singular')</h3>
                         </div>
                         <div class="card-body">
-                            {!! Form::open(['route' => 'adminPanel.directors.store']) !!}
+                            {!! Form::open(['route' => 'adminPanel.directors.store', 'files' => true]) !!}
                                 @include('adminPanel.directors.fields')
                             {!! Form::close() !!}
                         </div>

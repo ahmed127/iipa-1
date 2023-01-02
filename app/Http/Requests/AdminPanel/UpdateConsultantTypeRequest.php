@@ -24,8 +24,8 @@ class UpdateConsultantTypeRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = ConsultantType::$rules;
-        
+        $rules = ConsultantType::rules()    ;
+
         return $rules;
     }
 }

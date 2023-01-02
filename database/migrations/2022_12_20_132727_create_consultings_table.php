@@ -22,7 +22,6 @@ class CreateConsultingsTable extends Migration
 
             $table->string('name');
             $table->string('email');
-            $table->string('email_confirmation');
             $table->string('country_code');
             $table->string('phone');
             $table->date('date_of_birth');

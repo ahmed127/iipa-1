@@ -90,6 +90,8 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
             @php
             $source =
+            'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.6695398994475!2d46.66376298490263!3d24.703884157598882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f1de8adbf2e39%3A0x1942f1da23f026d6!2z2KzZhdi52YrYqSDYrdmF2KfZitipINin2YTZhdiz2KrYq9mF2LHZitmGINin2YTYo9mB2LHYp9iv!5e0!3m2!1sar!2seg!4v1671367662111!5m2!1sar!2seg';
+            // $source =
             "https://www.google.com/maps/embed?pb=$information_app->location_lat,$information_app->location_long&z=zoom&output=embed";
             @endphp
             {{-- {{ dd($source) }} --}}
@@ -99,14 +101,8 @@
                 <div class="shadow-custom rounded-4 bg-white">
                     <div class="row gx-0 p-3">
                         <div class="col-12 text-center py-2">
-                            <h3 class="h4">
-                                <i class="fa-solid fa-phone text-info"></i>
-                                @lang('lang.communication_with_the_association')
-                                <span class="text-info">
-                                    @lang('lang.model')
-                                </span>
-                            </h3>
-                            <p>@lang('lang.so_that_you_can_submit_your_requests_inquiries_and_follow_up_later')</p>
+                            <h3 class="firstWordInfo d-inline">@lang('lang.contact_us_intro_heading')</h3>
+                            <p>@lang('lang.contact_us_intro_text')</p>
                         </div>
                         {!! Form::open(['route' => 'website.contact_us_store', 'class' => 'd-flex row']) !!}
                         <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
@@ -118,7 +114,7 @@
                             <div class="input-group">
                                 {!! Form::text('name', null, [
                                 'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
-                                'id' => 'fullName'
+                                'id' => 'fullName',
                                 ]) !!}
                             </div>
                         </div>
@@ -143,9 +139,11 @@
                                 <span class="text-danger">*</span>
                             </label>
                             <div class="input-group rounded-4 shadow-sm">
-                                <input type="text" name="phone"
-                                    class="form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr"
-                                    id="phone">
+                                {!! Form::text('phone', null, [
+                                'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl
+                                direction-input-ltr',
+                                'id' => 'phone',
+                                ]) !!}
                                 <label for="country_code">
                                     {!! Form::select('country_code', $countryCodes, null, [
                                     'class' => 'border border-end-0 py-3 form-select bg-primary text-white
@@ -161,20 +159,17 @@
                                 <span class="text-danger">*</span>
                             </label>
                             <div class="input-group">
-                                <textarea name="message" class="form-control border py-3 rounded-4 shadow-sm"
-                                    id="message"></textarea>
+                                {!! Form::textarea('message', null, [
+                                'class' => 'form-control border py-3 rounded-4 shadow-sm',
+                                'id' => 'message',
+                                ]) !!}
                             </div>
                         </div>
                         <div class="row justify-content-center gx-0 pb-3">
-                            <button class="btn btn-primary rounded-4 px-lg-5 py-3 col-lg-4 shadow-custom m-2">
-                                <i class="fa-solid fa-circle-check"></i>
-                                @lang('lang.send')
-                            </button>
-                            {{-- <button type="button"
-                                class="btn btn-light rounded-4 px-lg-4 py-3 col-lg-4 shadow-custom m-2">
-                                <i class="fa-solid fa-circle-xmark"></i>
-                                الغاء الأن
-                            </button> --}}
+                            {!! Form::button('<i class="fa-solid fa-circle-check"></i>' . ' ' . __('lang.send'), [
+                            'type' => 'submit',
+                            'class' => 'btn btn-primary rounded-4 px-lg-5 py-3 col-lg-4 shadow-custom m-2',
+                            ]) !!}
                         </div>
                         {!! Form::close() !!}
                     </div>

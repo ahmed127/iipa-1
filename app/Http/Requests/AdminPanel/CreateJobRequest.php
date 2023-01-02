@@ -24,6 +24,6 @@ class CreateJobRequest extends FormRequest
      */
     public function rules()
     {
-        return Job::$rules;
+        return Job::rules();
     }
 }

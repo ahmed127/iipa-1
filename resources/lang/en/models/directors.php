@@ -8,7 +8,7 @@ return array(
         'id' => 'ID',
         'photo' => 'Photo',
         'name' => 'Name',
-        'country_code' => 'Country Code',
+        'nickname' => 'Nickname',
         'photo' => 'Photo',
         'job_title' => 'Job title',
 

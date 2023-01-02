@@ -75,44 +75,66 @@
                 <hr class="dropdown-divider">
             </span>
             <div class="col-lg-3 col-sm-12">
-                <ul class="text-lg-start text-center px-0 ms-lg-5 me-0 mx-sm-0 my-0">
-                    <p class="fw-bold pb-2"> تواصل معنا :</p>
-                    <li class="py-1">
-                        <span class="m-0 fw-bold">
-                            <i class="fa-solid fa-envelope-open fa-2xl text-primary"></i>
-                            <span class="fw-lighter ps-2 pe-0">
-                                البريد الإلكتروني:
+                <div class="text-lg-start text-center px-0 ms-lg-5 me-0 mx-sm-0 my-0">
+                    <p class="fw-bold ">
+                        @lang('lang.contact_us') :
+                    </p>
+                    <p class="fw-bold h6 d-flex">
+                        <i class="fa-solid fa-location-dot text-primary fa-2xl pt-3"></i>
+                        <span class="px-2 w-75">
+                            <span class="fw-normal">
+                                @lang('lang.our_office'):
                             </span>
-                            info@iipa.org.sa
+                            {{ $information_app->address ?? '' }}
                         </span>
-                    </li>
-                    <li class="py-4">
-                        <span class="m-0 fw-bold">
-                            <i class="fa-solid fa-phone fa-2xl text-primary"></i>
-                            <span class="fw-lighter ps-2 pe-0">
-                                رقم الهاتف :
-                            </span>
-                            920016543 966+
+                    </p>
+                    <p class="fw-bold">
+                        <i class="fa-solid fa-envelope-open text-primary fa-xl"></i>
+                        <span class="fw-lighter px-1">
+                            @lang('lang.email'):
                         </span>
-                    </li>
-                    <li class="w-100 d-block d-lg-flex">
-                        <a class="m-2" href="#">
-                            <i class="fa-brands fa-linkedin-in fa-2xl text-black-50"></i>
-                        </a>
-                        <a class="m-2" href="#">
-                            <i class="fa-brands fa-youtube fa-2xl text-black-50"></i>
-                        </a>
-                        <a class="m-2" href="#">
-                            <i class="fa-brands fa-instagram fa-2xl text-black-50"></i>
-                        </a>
-                        <a class="m-2" href="#">
-                            <i class="fa-brands fa-facebook-f fa-2xl text-black-50"></i>
-                        </a>
-                        <a class="m-2" href="#">
-                            <i class="fa-brands fa-twitter fa-2xl text-black-50"></i>
-                        </a>
-                    </li>
-                </ul>
+                        {{ $information_app->email ?? '' }}
+                    </p>
+                    <p class="fw-bold">
+                        <i class="fa-solid fa-phone text-primary fa-xl"></i>
+                        <span class="fw-lighter px-1">
+                            @lang('lang.phone') :
+                        </span>
+                        {{ $information_app->phone ?? '' }}
+                    </p>
+                    <p class="d-flex justify-content-between pt-2">
+
+                        @if ($information_app->linkedin_visible)
+                            <a href="{{ $information_app->linkedin_link }}">
+                                <i class="fa-brands fa-linkedin-in fa-2xl text-black-50"></i>
+                            </a>
+                        @endif
+
+                        @if ($information_app->youtube_visible)
+                            <a href="{{ $information_app->youtube_link }}">
+                                <i class="fa-brands fa-youtube fa-2xl text-black-50"></i>
+                            </a>
+                        @endif
+
+                        @if ($information_app->instagram_visible)
+                            <a href="{{ $information_app->instagram_link }}">
+                                <i class="fa-brands fa-instagram fa-2xl text-black-50"></i>
+                            </a>
+                        @endif
+
+                        @if ($information_app->facebook_visible)
+                            <a href="{{ $information_app->facebook_link }}">
+                                <i class="fa-brands fa-facebook-f fa-2xl text-black-50"></i>
+                            </a>
+                        @endif
+
+                        @if ($information_app->twitter_visible)
+                            <a href="{{ $information_app->twitter_link }}">
+                                <i class="fa-brands fa-twitter fa-2xl text-black-50"></i>
+                            </a>
+                        @endif
+                    </p>
+                </div>
             </div>
         </div>
     </div>

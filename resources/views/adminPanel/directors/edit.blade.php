@@ -21,7 +21,7 @@
                             <h3 class="card-title">Edit @lang('models/directors.singular')</h3>
                         </div>
                         <div class="card-body">
-                            {!! Form::model($director, ['route' => ['adminPanel.directors.update', $director->id], 'method' => 'patch']) !!}
+                            {!! Form::model($director, ['route' => ['adminPanel.directors.update', $director->id], 'method' => 'patch', 'files' => true]) !!}
                               @include('adminPanel.directors.fields')
                             {!! Form::close() !!}
                         </div>

@@ -4,32 +4,36 @@
         <div class="col-lg-12 col-xl-12">
             <div class="row align-items-center">
                 <div class="col-md-12 my-md-0">
-                    {!! Form::open(['route' => 'adminPanel.consultings.index', 'method'=>'GET']) !!}
-                        <div class="row">
+                    {!! Form::open(['route' => 'adminPanel.consultings.index', 'method' => 'GET']) !!}
+                    <div class="row">
 
-                            <!-- pagination Field -->
-                            <div class="form-group col-sm-4">
-                                {!! Form::label('pagination', __('crud.pagination').':') !!}
-                                {!! Form::select('pagination', config('statusSystem.pagination'), request('pagination')??null, ['class' => 'form-control']) !!}
-                            </div>
-
-
-                            <!-- Submit Field -->
-                            <div class="form-group col-sm-4">
-                                {!! Form::label('user_id', __('crud.action').':') !!} <br>
-                                {!! Form::submit(__('crud.search'), ['class' => 'btn btn-light-success']) !!}
-                                <a href="{{ route('adminPanel.consultings.index') }}" class="btn btn-light-danger font-weight-bold">@lang('crud.reset')</a>
-                                <button type="button" class="btn btn-light-primary font-weight-bold"  id="exportButton">@lang('crud.export')</button>
-                            </div>
-
-                            <div class="form-group col-sm-12">
-                                @error('export_rows')
-                                    <h1 class="text-danger">
-                                        @lang('lang.select_to_export', ['model' => __('models/consultings.plural')])
-                                    </h1>
-                                @enderror
-                            </div>
+                        <!-- pagination Field -->
+                        <div class="form-group col-sm-4">
+                            {!! Form::label('pagination', __('crud.pagination') . ':') !!}
+                            {!! Form::select('pagination', config('statusSystem.pagination'), request('pagination') ?? null, [
+                                'class' => 'form-control',
+                            ]) !!}
                         </div>
+
+
+                        <!-- Submit Field -->
+                        <div class="form-group col-sm-4">
+                            {!! Form::label('user_id', __('crud.action') . ':') !!} <br>
+                            {!! Form::submit(__('crud.search'), ['class' => 'btn btn-light-success']) !!}
+                            <a href="{{ route('adminPanel.consultings.index') }}"
+                                class="btn btn-light-danger font-weight-bold">@lang('crud.reset')</a>
+                            <button type="button" class="btn btn-light-primary font-weight-bold"
+                                id="exportButton">@lang('crud.export')</button>
+                        </div>
+
+                        <div class="form-group col-sm-12">
+                            @error('export_rows')
+                                <h1 class="text-danger">
+                                    @lang('lang.select_to_export', ['model' => __('models/consultings.plural')])
+                                </h1>
+                            @enderror
+                        </div>
+                    </div>
                     {!! Form::close() !!}
                 </div>
 
@@ -50,71 +54,67 @@
                 </label>
             </th>
             <th>@lang('models/consultings.fields.name')</th>
-        <th>@lang('models/consultings.fields.email')</th>
-        <th>@lang('models/consultings.fields.email_confirmation')</th>
-        <th>@lang('models/consultings.fields.country_code')</th>
-        <th>@lang('models/consultings.fields.phone')</th>
-        <th>@lang('models/consultings.fields.country_id')</th>
-        <th>@lang('models/consultings.fields.job_id')</th>
-        <th>@lang('models/consultings.fields.consultant_type_id')</th>
-        <th>@lang('models/consultings.fields.type')</th>
-        <th>@lang('models/consultings.fields.date_of_birth')</th>
-        <th>@lang('models/consultings.fields.fav_lang')</th>
-        <th>@lang('models/consultings.fields.description')</th>
-        <th>@lang('models/consultings.fields.attachment_letter')</th>
-        <th>@lang('models/consultings.fields.gender')</th>
-        <th>@lang('models/consultings.fields.nationality')</th>
+            <th>@lang('models/consultings.fields.email')</th>
+            <th>@lang('models/consultings.fields.country_code')</th>
+            <th>@lang('models/consultings.fields.phone')</th>
+            <th>@lang('models/consultings.fields.country_id')</th>
+            <th>@lang('models/consultings.fields.job_id')</th>
+            <th>@lang('models/consultings.fields.consultant_type_id')</th>
+            <th>@lang('models/consultings.fields.type')</th>
+            <th>@lang('models/consultings.fields.fav_lang')</th>
+            <th>@lang('models/consultings.fields.gender')</th>
+            <th>@lang('models/consultings.fields.nationality')</th>
             <th>@lang('crud.action')</th>
         </tr>
     </thead>
     <tbody>
         {!! Form::open(['route' => ['adminPanel.data.export', 'consultings'], 'id' => 'export-data']) !!}
-        @foreach($consultings as $consulting)
-        <tr>
-            <td>
-                <label class="checkbox">
-                    <input type="checkbox" class="check_inputs inputs-permmission control-input" value="{{ $consulting->id }}" name="export_rows[]">
-                    <span></span>
-                </label>
-            </td>
-            <td>{{ $consulting->name }}</td>
-            <td>{{ $consulting->email }}</td>
-            <td>{{ $consulting->email_confirmation }}</td>
-            <td>{{ $consulting->country_code }}</td>
-            <td>{{ $consulting->phone }}</td>
-            <td>{{ $consulting->country_id }}</td>
-            <td>{{ $consulting->job_id }}</td>
-            <td>{{ $consulting->consultant_type_id }}</td>
-            <td>{{ $consulting->type }}</td>
-            <td>{{ $consulting->date_of_birth }}</td>
-            <td>{{ $consulting->fav_lang }}</td>
-            <td>{{ $consulting->description }}</td>
-            <td>{{ $consulting->attachment_letter }}</td>
-            <td>{{ $consulting->gender }}</td>
-            <td>{{ $consulting->nationality }}</td>
-            <td>
-                {{-- {!! Form::open(['route' => ['adminPanel.consultings.destroy', $consulting->id], 'method' => 'delete']) !!} --}}
-                <div class='btn btn-sm-group'>
-                    @can('consultings view')
-                    <a href="{{ route('adminPanel.consultings.show', [$consulting->id]) }}" class='btn btn-sm btn-shadow mx-1 btn-transparent-success'>
-                        <i class="fa fa-eye"></i>
-                    </a>
-                    @endcan
-                    @can('consultings edit')
-                    <a href="{{ route('adminPanel.consultings.edit', [$consulting->id]) . "?languages=en" }}" class='btn btn-sm btn-shadow mx-1 btn-transparent-primary'>
-                        <i class="fa fa-edit"></i>
-                    </a>
-                    @endcan
-                    @can('consultings destroy')
-                    {{-- {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-sm btn-shadow mx-1 btn-transparent-danger', 'onclick' => 'return confirm("'.__('crud.are_you_sure').'")']) !!} --}}
-                    <button type="button" class="btn btn-sm btn-shadow mx-1 btn-transparent-danger" data-toggle="modal" data-target="#country-{{$consulting->id}}-modal">
-                        <i class="fa fa-trash"></i>
-                    </button>
-                    @endcan
-                </div>
-                {{-- {!! Form::close() !!} --}}
-            </td>
-        </tr>
+        @foreach ($consultings as $consulting)
+            <tr>
+                <td>
+                    <label class="checkbox">
+                        <input type="checkbox" class="check_inputs inputs-permmission control-input"
+                            value="{{ $consulting->id }}" name="export_rows[]">
+                        <span></span>
+                    </label>
+                </td>
+                <td>{{ $consulting->name }}</td>
+                <td>{{ $consulting->email }}</td>
+                <td>{{ $consulting->country_code }}</td>
+                <td>{{ $consulting->phone }}</td>
+                <td>{{ $consulting->country->name ?? '' }}</td>
+                <td>{{ $consulting->job->name ?? '' }}</td>
+                <td>{{ $consulting->consultant_type->name ?? '' }}</td>
+                <td>{{ $consulting->type }}</td>
+                <td>{{ $consulting->fav_lang }}</td>
+                <td>{{ $consulting->gender }}</td>
+                <td>{{ $consulting->nationality }}</td>
+                <td>
+                    {{-- {!! Form::open(['route' => ['adminPanel.consultings.destroy', $consulting->id], 'method' => 'delete']) !!} --}}
+                    <div class='btn btn-sm-group'>
+                        @can('consultings view')
+                            <a href="{{ route('adminPanel.consultings.show', [$consulting->id]) }}"
+                                class='btn btn-sm btn-shadow mx-1 btn-transparent-success'>
+                                <i class="fa fa-eye"></i>
+                            </a>
+                        @endcan
+                        @can('consultings edit')
+                            <a href="{{ route('adminPanel.consultings.edit', [$consulting->id]) . '?languages=en' }}"
+                                class='btn btn-sm btn-shadow mx-1 btn-transparent-primary'>
+                                <i class="fa fa-edit"></i>
+                            </a>
+                        @endcan
+                        @can('consultings destroy')
+                            {{-- {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-sm btn-shadow mx-1 btn-transparent-danger', 'onclick' => 'return confirm("'.__('crud.are_you_sure').'")']) !!} --}}
+                            <button type="button" class="btn btn-sm btn-shadow mx-1 btn-transparent-danger"
+                                data-toggle="modal" data-target="#country-{{ $consulting->id }}-modal">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        @endcan
+                    </div>
+                    {{-- {!! Form::close() !!} --}}
+                </td>
+            </tr>
         @endforeach
         {!! Form::close() !!}
     </tbody>
@@ -122,27 +122,25 @@
 <!--end: Datatable-->
 
 @can('consultings destroy')
-@foreach($consultings as $consulting)
-
-<!-- Modal -->
-<div class="modal fade" id="country-{{$consulting->id}}-modal" tabindex="-1" role="dialog" aria-labelledby="country-{{$consulting->id}}"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <h2 class="text-danger">
-                    @lang('crud.are_you_sure')
-                </h2>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">@lang('crud.close')</button>
-                {!! Form::open(['route' => ['adminPanel.consultings.destroy', $consulting->id], 'method' => 'delete']) !!}
-                {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-transparent-danger']) !!}
-                {!! Form::close() !!}
+    @foreach ($consultings as $consulting)
+        <!-- Modal -->
+        <div class="modal fade" id="country-{{ $consulting->id }}-modal" tabindex="-1" role="dialog"
+            aria-labelledby="country-{{ $consulting->id }}" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h2 class="text-danger">
+                            @lang('crud.are_you_sure')
+                        </h2>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">@lang('crud.close')</button>
+                        {!! Form::open(['route' => ['adminPanel.consultings.destroy', $consulting->id], 'method' => 'delete']) !!}
+                        {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-transparent-danger']) !!}
+                        {!! Form::close() !!}
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-@endforeach
+    @endforeach
 @endcan
-

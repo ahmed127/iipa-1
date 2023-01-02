@@ -24,6 +24,6 @@ class CreateVolunteerTypeRequest extends FormRequest
      */
     public function rules()
     {
-        return VolunteerType::$rules;
+        return VolunteerType::rules();
     }
 }
