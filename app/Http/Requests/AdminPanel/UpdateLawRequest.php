@@ -24,8 +24,8 @@ class UpdateLawRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = Law::$rules;
-        
+        $rules = Law::rules();
+
         return $rules;
     }
 }

@@ -24,6 +24,6 @@ class CreateLawRequest extends FormRequest
      */
     public function rules()
     {
-        return Law::$rules;
+        return Law::rules();
     }
 }

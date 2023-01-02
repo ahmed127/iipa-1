@@ -1,12 +1,12 @@
 @extends('adminPanel.layouts.app')
 
 @section('breadcrumb')
-<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
-    <li class="breadcrumb-item">
-        <a href="{!! route('adminPanel.laws.index') !!}">@lang('models/laws.singular')</a>
-    </li>
-    <li class="breadcrumb-item active">@lang('crud.edit')</li>
-</ul>
+    <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
+        <li class="breadcrumb-item">
+            <a href="{!! route('adminPanel.laws.index') !!}">@lang('models/laws.singular')</a>
+        </li>
+        <li class="breadcrumb-item active">@lang('crud.edit')</li>
+    </ul>
 @endsection
 @section('content')
     <div class="d-flex flex-column-fluid">
@@ -21,8 +21,8 @@
                             <h3 class="card-title">Edit @lang('models/laws.singular')</h3>
                         </div>
                         <div class="card-body">
-                            {!! Form::model($law, ['route' => ['adminPanel.laws.update', $law->id], 'method' => 'patch']) !!}
-                              @include('adminPanel.laws.fields')
+                            {!! Form::model($law, ['route' => ['adminPanel.laws.update', $law->id], 'method' => 'patch', 'files' => true]) !!}
+                            @include('adminPanel.laws.fields')
                             {!! Form::close() !!}
                         </div>
                     </div>

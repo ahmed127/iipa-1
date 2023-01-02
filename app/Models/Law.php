@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Helpers\ImageUploaderTrait;
+use Astrotomic\Translatable\Translatable;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -17,19 +19,17 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class Law extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, Translatable, ImageUploaderTrait;
 
 
     public $table = 'laws';
-    
+
 
     protected $dates = ['deleted_at'];
 
 
 
     public $fillable = [
-        'title',
-        'description',
         'attachment_pdf'
     ];
 
@@ -45,14 +45,44 @@ class Law extends Model
         'attachment_pdf' => 'string'
     ];
 
-    /**
-     * Validation rules
-     *
-     * @var array
-     */
-    public static $rules = [
-        
-    ];
+    public $translatedAttributes = ['title', 'description'];
 
-    
+
+    public static function rules()
+    {
+        $languages = array_keys(config('langs'));
+        foreach ($languages as $language) {
+            $rules[$language . '.title'] = 'required|string|min:3|max:191';
+            $rules[$language . '.description'] = 'required|string';
+        }
+        $rules['attachment_pdf'] = 'required';
+
+        return $rules;
+    }
+
+
+    // attachment_pdf Handling
+    public function setAttachmentPdfAttribute($file)
+    {
+        if ($file) {
+            try {
+                $fileName = $this->createFileName($file);
+
+                $this->saveFile($file, $fileName);
+
+                $this->attributes['attachment_pdf'] = $fileName;
+            } catch (\Throwable $th) {
+                $this->attributes['attachment_pdf'] = $file;
+            }
+        }
+    }
+
+
+    public function getAttachmentPdfAttribute($val)
+    {
+        return $val ? asset('uploads/files') . '/' . $val : null;
+    }
+    // End attachment_pdf Handling
+
+
 }

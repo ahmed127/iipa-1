@@ -19,6 +19,7 @@ use App\Models\Director;
 use App\Models\IndividualTraining;
 use App\Models\Initiative;
 use App\Models\Job;
+use App\Models\Law;
 use App\Models\Volunteer;
 use App\Models\VolunteerType;
 
@@ -91,7 +92,8 @@ class MainController extends Controller
 
     public function laws()
     {
-        return view('website.pages.laws');
+        $laws = Law::paginate(9);
+        return view('website.pages.laws', compact('laws'));
     }
 
     public function initiatives()

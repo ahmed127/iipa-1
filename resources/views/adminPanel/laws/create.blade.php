@@ -21,7 +21,7 @@
                             <h3 class="card-title">Create @lang('models/laws.singular')</h3>
                         </div>
                         <div class="card-body">
-                            {!! Form::open(['route' => 'adminPanel.laws.store']) !!}
+                            {!! Form::open(['route' => 'adminPanel.laws.store', 'files' => true]) !!}
                                 @include('adminPanel.laws.fields')
                             {!! Form::close() !!}
                         </div>
