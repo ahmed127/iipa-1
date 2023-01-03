@@ -103,22 +103,15 @@
                                 <ul class="dropdown-menu">
 
                                     @if ($lang_page == 'ar')
-                                        <<<<<<< HEAD <li><a class="dropdown-item"
+                                        <li><a class="dropdown-item"
                                                 href="{{ str_replace('ar', 'en', url()->current()) }}">En</a>
+                                        </li>
+                                    @else
+                                        <li><a class="dropdown-item"
+                                                href="{{ str_replace('/en', '/ar', url()->current()) }}">Ar</a></li>
+                                    @endif
+                                </ul>
                             </li>
-                        @else
-                            <li><a class="dropdown-item" href="{{ str_replace('en', 'ar', url()->current()) }}">Ar</a>
-                            </li>
-                            =======
-                            <li><a class="dropdown-item"
-                                    href="{{ str_replace('/ar', '/en', url()->current()) }}">En</a></li>
-                        @else
-                            <li><a class="dropdown-item"
-                                    href="{{ str_replace('/en', '/ar', url()->current()) }}">Ar</a></li>
-                            >>>>>>> refs/remotes/origin/master
-                            @endif
-                        </ul>
-                        </li>
                         </ul>
                     </div>
                     <span class="hr-navbar d-xl-none w-100 my-3">
