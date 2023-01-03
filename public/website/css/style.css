@@ -474,7 +474,9 @@ i {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
-.fa-circle-check, .fa-dollar-sign {
+.fa-circle-check,
+.fa-dollar-sign,
+.fa-arrow-right-to-bracket {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }

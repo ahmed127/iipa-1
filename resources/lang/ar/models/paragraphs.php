@@ -3,11 +3,11 @@
 return array (
   'singular' => 'Paragraph',
   'plural' => 'Paragraphs',
-  'fields' =>
+  'fields' => 
   array (
-    'id' => '#',
-    'page_id' => 'الصفحة',
-    'text' => 'النص',
-    'Select الصفحة' => 'Select الصفحة',
+    'id' => 'Id',
+    'page_id' => 'Page',
+    'text' => 'Text',
+    'Select Page' => 'Select Page',
   ),
 );

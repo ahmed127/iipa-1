@@ -2,26 +2,27 @@
 
 namespace App\Http\Controllers\Website;
 
-use App\Models\Contact;
-use App\Models\Country;
-use Laracasts\Flash\Flash;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\AdminPanel\CreateConsultingRequest;
-use App\Http\Requests\AdminPanel\CreateContactRequest;
-use App\Http\Requests\AdminPanel\CreateCooperativeTrainingRequest;
-use App\Http\Requests\AdminPanel\CreateIndividualTrainingRequest;
-use App\Http\Requests\AdminPanel\CreateVolunteerRequest;
-use App\Models\ConsultantType;
-use App\Models\Consulting;
-use App\Models\CooperativeTraining;
-use App\Models\Director;
-use App\Models\IndividualTraining;
-use App\Models\Initiative;
 use App\Models\Job;
 use App\Models\Law;
+use App\Models\Contact;
+use App\Models\Country;
+use App\Models\Director;
+use App\Models\Outreach;
 use App\Models\Volunteer;
+use App\Models\Consulting;
+use App\Models\Initiative;
+use Laracasts\Flash\Flash;
+use Illuminate\Http\Request;
 use App\Models\VolunteerType;
+use App\Models\ConsultantType;
+use App\Models\IndividualTraining;
+use App\Models\CooperativeTraining;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\AdminPanel\CreateContactRequest;
+use App\Http\Requests\AdminPanel\CreateVolunteerRequest;
+use App\Http\Requests\AdminPanel\CreateConsultingRequest;
+use App\Http\Requests\AdminPanel\CreateIndividualTrainingRequest;
+use App\Http\Requests\AdminPanel\CreateCooperativeTrainingRequest;
 
 class MainController extends Controller
 {
@@ -85,10 +86,11 @@ class MainController extends Controller
     }
     // Who We Are
 
-    public function outreach()
+    public function outreaches(Outreach $outreach)
     {
-        return view('website.pages.outreach');
+        return view('website.pages.outreach', compact('outreach'));
     }
+
 
     public function laws()
     {

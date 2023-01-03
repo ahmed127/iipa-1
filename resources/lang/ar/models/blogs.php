@@ -1,16 +1,18 @@
 <?php
 
 return array(
-    'singular' => 'خبر',
-    'plural' => 'اخبار',
+    'singular' => 'Blog',
+    'plural' => 'Blogs',
     'fields' =>
     array(
-        'id' => '#',
-        'photo' => 'الصورة',
-        'title' => 'الاسم',
-        'brief' => 'نبذة',
-        'description' => 'الوصف',
-        'created_at' => 'تاريخ الانشاء',
-        'updated_at' => 'تاريخ التعديل',
+        'id' => 'ID',
+        'blog_category_id' => 'Category',
+        'photo_sm' => 'Small Photo',
+        'photo_cover' => 'Cover Photo',
+        'title' => 'Title',
+        'brief' => 'Brief',
+        'description' => 'Description',
+        'created_at' => 'Created At',
+        'updated_at' => 'Updated At',
     ),
 );

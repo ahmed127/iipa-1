@@ -24,6 +24,6 @@ class CreateOutreachRequest extends FormRequest
      */
     public function rules()
     {
-        return Outreach::$rules;
+        return Outreach::rules();
     }
 }

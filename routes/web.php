@@ -194,7 +194,8 @@ Route::group([
         Route::get('about_us/our-partners', $class_name_main . 'our_partners')->name('our_partners');
         // about_us
 
-        Route::get('the-outreach', $class_name_main . 'outreach')->name('outreach');
+        Route::get('awareness', $class_name_main . 'outreaches')->name('outreaches');
+        Route::get('awareness/{outreach}', $class_name_main . 'outreaches')->name('outreaches');
         Route::get('the-laws', $class_name_main . 'laws')->name('laws');
         Route::get('the-initiatives', $class_name_main . 'initiatives')->name('initiatives');
         Route::get('the-initiative/{initiative}', $class_name_main . 'initiative')->name('initiative');

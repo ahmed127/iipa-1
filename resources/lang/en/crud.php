@@ -44,4 +44,6 @@ return [
     'export_error' => 'An error occurred, reports cannot be extracted now',
     'export_rows' => 'rows',
     'names' => 'names',
+    'English' => 'English',
+    'Arabic' => 'Arabic',
 ];

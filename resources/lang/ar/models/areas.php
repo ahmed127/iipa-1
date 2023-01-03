@@ -1,12 +1,12 @@
 <?php
 
 return array (
-  'singular' => 'منطقة',
-  'plural' => 'مناطق',
+  'singular' => 'Area',
+  'plural' => 'Areas',
   'fields' =>
   array (
-    'id' => '#',
-    'text' => 'الاسم',
-    'status' => 'الحالة',
+    'id' => 'ID',
+    'text' => 'Text',
+    'status' => 'Status',
   ),
 );

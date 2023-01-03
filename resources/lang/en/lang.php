@@ -19,6 +19,7 @@ return [
     'attachment_cv' => 'Attachment CV',
     'advisors_intro_heading' => 'Please complete the registration details below',
     'advisors_intro_text' => 'This service aims to provide advice and legal assistance to members and individual investors with regard to filing complaints, filing class action lawsuits, and hiring lawyers.',
+    'attachment_pdf' => 'Attachment PDF',
 
     // B b
 
@@ -39,6 +40,7 @@ return [
     'deactivate' => 'Deactivate',
     'date_of_birth' => 'Date Of Birth',
     'description' => 'Description',
+    'description_initiative' => 'Description Initiative',
 
     // E e
 
@@ -118,6 +120,7 @@ return [
     'pending' => 'Pending',
     'password' => 'Password',
     'password_confirmation' => 'Password Confirmation',
+    'page' => 'Page',
     '' => '',
 
     // Q q
@@ -134,6 +137,8 @@ return [
 
     'select' => 'Select',
     'status' => 'Status',
+    'strategic_goal' => 'Strategic Goal',
+    'status' => 'Status',
 
 
     // T t
@@ -143,6 +148,8 @@ return [
     'training_individuals_intro_heading' => 'Please complete the registration details below',
     'training_individuals_intro_text' => 'This service aims to provide advice and legal assistance to members and individual investors with regard to filing complaints, filing class action lawsuits, and hiring lawyers.',
     'type' => 'Type',
+    'target_group' => 'Target Group',
+    'more' => 'More',
 
     // U u
 

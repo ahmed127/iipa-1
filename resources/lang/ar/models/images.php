@@ -3,10 +3,10 @@
 return array (
   'singular' => 'images',
   'plural' => 'images',
-  'fields' =>
+  'fields' => 
   array (
-    'id' => '#',
-    'page_id' => 'الصفحة',
-    'photo' => 'الصورة',
+    'id' => 'Id',
+    'page_id' => 'Page',
+    'photo' => 'Photo',
   ),
 );

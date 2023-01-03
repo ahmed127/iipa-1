@@ -29,7 +29,7 @@ class OutreachController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $outreaches = $this->outreachRepository->paginate(10);
+        $outreaches = $this->outreachRepository->allQuery($request->all())->paginate($request->pagination ?? 5);
 
         return view('adminPanel.outreaches.index')
             ->with('outreaches', $outreaches);
@@ -55,6 +55,8 @@ class OutreachController extends AppBaseController
     public function store(CreateOutreachRequest $request)
     {
         $input = $request->all();
+        $input['en']['slug'] = str_replace(' ', '-', $request->en['title']);
+        $input['ar']['slug'] = str_replace(' ', '-', $request->ar['title']);
 
         $outreach = $this->outreachRepository->create($input);
 

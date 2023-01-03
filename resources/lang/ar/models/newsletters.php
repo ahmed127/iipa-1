@@ -1,13 +1,13 @@
 <?php
 
 return array (
-  'singular' => 'النشرة الإخبارية',
-  'plural' => 'النشرات الإخبارية',
+  'singular' => 'Newsletter',
+  'plural' => 'Newsletters',
   'fields' =>
   array (
-    'id' => '#',
-    'email' => 'البريد الاكتروني',
-    'created_at' => 'تاريخ الانشاء',
-    'updated_at' => 'تاريخ التعديل',
+    'id' => 'ID',
+    'email' => 'Email',
+    'created_at' => 'Created At',
+    'updated_at' => 'Updated At',
   ),
 );

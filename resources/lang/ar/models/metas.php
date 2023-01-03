@@ -1,18 +1,18 @@
 <?php
 
 return array (
-  'singular' => 'محركات البحث',
-  'plural' => 'محركات البحث',
+  'singular' => 'SEO',
+  'plural' => 'SEOs',
   'fields' =>
   array (
-    'id' => '#',
-    'language' => 'الغة',
-    'title' => 'العنوان',
-    'description' => 'الوصف',
-    'keywords' => 'الكلمات الدالة',
-    'page' => 'الصفحة',
-    'status' => 'الحالة',
-    'created_at' => 'تاريخ الانشاء',
-    'updated_at' => 'تاريخ التعديل',
+    'id' => 'ID',
+    'language' => 'Language',
+    'title' => 'Title',
+    'description' => 'Description',
+    'keywords' => 'Keywords',
+    'page' => 'Page',
+    'status' => 'Status',
+    'created_at' => 'Created At',
+    'updated_at' => 'Updated At',
   ),
 );

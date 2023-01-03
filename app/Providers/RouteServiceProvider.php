@@ -19,6 +19,7 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/home';
+    public const ADMIN = 'adminPanel/login';
 
     /**
      * The controller namespace for the application.
@@ -39,14 +40,14 @@ class RouteServiceProvider extends ServiceProvider
         $this->configureRateLimiting();
 
         $this->routes(function () {
-            $langs=array_keys(config('langs'));
+            $langs = array_keys(config('langs'));
             $locale = request()->segment(1);
-            App::setLocale(in_array($locale, $langs)?$locale:'en');
+            App::setLocale(in_array($locale, $langs) ? $locale : 'en');
 
-            Route::prefix(app()->getLocale().'/api')
+            Route::prefix(app()->getLocale() . '/api')
                 ->middleware('api')
                 ->as('api.')
-                ->namespace($this->app->getNamespace().'Http\Controllers\API')
+                ->namespace($this->app->getNamespace() . 'Http\Controllers\API')
                 ->group(base_path('routes/api.php'));
 
             Route::prefix(app()->getLocale())

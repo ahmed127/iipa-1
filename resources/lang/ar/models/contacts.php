@@ -1,17 +1,18 @@
 <?php
 
 return array(
-  'singular' => 'الرسالة',
-  'plural' => 'الرسائل',
-  'fields' =>
-  array(
-    'id' => '#',
-    'name' => 'الاسم',
-    'type' => 'النوع',
-    'email' => 'البريد الاكتروني',
-    'subject' => 'الموضوع',
-    'message' => 'الرسالة',
-    'created_at' => 'تاريخ الانشاء',
-    'updated_at' => 'تاريخ التعديل',
-  ),
+    'singular' => 'Message',
+    'plural' => 'Messages',
+    'fields' =>
+    array(
+        'id' => 'ID',
+        'name' => 'Name',
+        'type' => 'Type',
+        'phone' => 'Phone',
+        'email' => 'Email',
+        'country_code' => 'Country Code',
+        'message' => 'Message',
+        'created_at' => 'Created At',
+        'updated_at' => 'Updated At',
+    ),
 );

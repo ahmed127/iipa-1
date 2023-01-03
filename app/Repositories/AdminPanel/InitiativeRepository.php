@@ -9,7 +9,7 @@ use App\Repositories\BaseRepository;
  * Class InitiativeRepository
  * @package App\Repositories\AdminPanel
  * @version December 20, 2022, 1:28 pm UTC
-*/
+ */
 
 class InitiativeRepository extends BaseRepository
 {
@@ -17,8 +17,9 @@ class InitiativeRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'name',
-        'description'
+        'title',
+        'brief',
+        'type',
     ];
 
     /**
