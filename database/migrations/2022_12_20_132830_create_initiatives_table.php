@@ -16,8 +16,9 @@ class CreateInitiativesTable extends Migration
     {
         Schema::create('initiatives', function (Blueprint $table) {
             $table->id();
-
-            $table->string('photo');
+            $table->string('photo')->nullable();
+            $table->string('attachment_pdf')->nullable();
+            $table->unsignedTinyInteger('type')->comment('1=> page - 2 => pdf');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -26,9 +27,16 @@ class CreateInitiativesTable extends Migration
             $table->id();
             $table->foreignId('initiative_id')->constrained();
             $table->string('locale', 2)->index();
-
-            $table->string('name');
-            $table->text('description');
+            $table->string('slug')->nullable();
+            $table->string('name')->nullable();
+            $table->text('meta_title')->nullable();
+            $table->text('meta_description')->nullable();
+            $table->text('meta_keywords')->nullable();
+            $table->text('title')->nullable();
+            $table->text('brief')->nullable();
+            $table->text('description')->nullable();
+            $table->text('strategic_goal')->nullable();
+            $table->text('target_group')->nullable();
 
             $table->unique(['initiative_id', 'locale']);
         });

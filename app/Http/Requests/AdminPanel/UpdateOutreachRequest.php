@@ -24,8 +24,10 @@ class UpdateOutreachRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = Outreach::$rules;
-        
+        $rules = Outreach::rules();
+        $rules['photo'] = 'image|mimes:jpeg,jpg,png';
+        $rules['attachment_pdf'] = 'file|mimes:pdf';
+
         return $rules;
     }
 }

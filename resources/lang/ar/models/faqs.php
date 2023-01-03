@@ -1,16 +1,16 @@
 <?php
 
 return array(
-    'singular' => 'السوأل',
-    'plural' => 'الاسئلة',
+    'singular' => 'Faq',
+    'plural' => 'Faqs',
     'fields' =>
     array(
-        'id' => '#',
-        'action' => 'التحكم',
-        'name' => 'الاسم',
-        'question' => 'السوال',
-        'answer' => 'الاجابة',
-        'category' => 'الفئة',
-        'faq_category_id' => 'فئة السوال',
+        'id' => 'ID',
+        'action' => 'Action',
+        'name' => 'Name',
+        'question' => 'Question',
+        'answer' => 'Answer',
+        'category' => 'Category',
+        'faq_category_id' => 'Faq Category',
     ),
 );

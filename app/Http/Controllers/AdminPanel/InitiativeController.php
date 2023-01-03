@@ -29,7 +29,7 @@ class InitiativeController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $initiatives = $this->initiativeRepository->paginate(10);
+        $initiatives = $this->initiativeRepository->allQuery($request->all())->paginate($request->pagination ?? 5);
 
         return view('adminPanel.initiatives.index')
             ->with('initiatives', $initiatives);
@@ -55,6 +55,8 @@ class InitiativeController extends AppBaseController
     public function store(CreateInitiativeRequest $request)
     {
         $input = $request->all();
+        $input['en']['slug'] = str_replace(' ', '-', $request->en['title']);
+        $input['ar']['slug'] = str_replace(' ', '-', $request->ar['title']);
 
         $initiative = $this->initiativeRepository->create($input);
 
@@ -121,7 +123,11 @@ class InitiativeController extends AppBaseController
             return redirect(route('adminPanel.initiatives.index'));
         }
 
-        $initiative = $this->initiativeRepository->update($request->all(), $id);
+        $input = $request->all();
+        $input['en']['slug'] = str_replace(' ', '-', $request->en['title']);
+        $input['ar']['slug'] = str_replace(' ', '-', $request->ar['title']);
+
+        $initiative = $this->initiativeRepository->update($input, $id);
 
         Flash::success(__('messages.updated', ['model' => __('models/initiatives.singular')]));
 

@@ -3,19 +3,10 @@
 namespace App\Models;
 
 use App\Helpers\ImageUploaderTrait;
-use Eloquent as Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Model;
 use Astrotomic\Translatable\Translatable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * Class Information
- * @package App\Models
- * @version June 4, 2020, 11:51 am UTC
- *
- * @property string $name
- * @property string $value
- * @property integer $status
- */
 class Information extends Model
 {
     use SoftDeletes, Translatable, ImageUploaderTrait;

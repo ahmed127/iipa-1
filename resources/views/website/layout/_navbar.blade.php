@@ -103,14 +103,22 @@
                                 <ul class="dropdown-menu">
 
                                     @if ($lang_page == 'ar')
-                                        <li><a class="dropdown-item"
-                                                href="{{ str_replace('ar', 'en', url()->current()) }}">En</a></li>
-                                    @else
-                                        <li><a class="dropdown-item"
-                                                href="{{ str_replace('en', 'ar', url()->current()) }}">Ar</a></li>
-                                    @endif
-                                </ul>
+                                        <<<<<<< HEAD <li><a class="dropdown-item"
+                                                href="{{ str_replace('ar', 'en', url()->current()) }}">En</a>
                             </li>
+                        @else
+                            <li><a class="dropdown-item" href="{{ str_replace('en', 'ar', url()->current()) }}">Ar</a>
+                            </li>
+                            =======
+                            <li><a class="dropdown-item"
+                                    href="{{ str_replace('/ar', '/en', url()->current()) }}">En</a></li>
+                        @else
+                            <li><a class="dropdown-item"
+                                    href="{{ str_replace('/en', '/ar', url()->current()) }}">Ar</a></li>
+                            >>>>>>> refs/remotes/origin/master
+                            @endif
+                        </ul>
+                        </li>
                         </ul>
                     </div>
                     <span class="hr-navbar d-xl-none w-100 my-3">
@@ -172,25 +180,27 @@
 
                             {{-- Start: The Outreach --}}
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle {{ Request::is('*outreach*') ? 'active' : '' }}"
+                                <a class="nav-link dropdown-toggle {{ Request::is('*awareness*') ? 'active' : '' }}"
                                     href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                                    The Outreach
+                                    @lang('models/outreaches.plural')
 
                                 </a>
                                 <ul class="dropdown-menu" style="width: 210px;">
-                                    @php $outreachs = \App\Models\Outreach::get(); @endphp
-                                    @forelse ($outreachs as $outreach)
+                                    @forelse ($outreaches_app as $outreach)
                                         <li>
-                                            <a class="dropdown-item" href="{{ route('website.outreach') }}">
-                                                How to file a complaint
-                                            </a>
+                                            @if ($outreach->type == 1)
+                                                <a class="dropdown-item"
+                                                    href="{{ route('website.outreaches', $outreach->id) }}">
+                                                    {{ $outreach->title ?? '' }}
+                                                </a>
+                                            @else
+                                                <a class="dropdown-item" target="_blank"
+                                                    href="{{ $outreach->attachment_pdf ?? '' }}">
+                                                    {{ $outreach->title ?? '' }}
+                                                </a>
+                                            @endif
                                         </li>
                                     @empty
-                                        <li>
-                                            <a class="dropdown-item" href="{{ route('website.outreach') }}">
-                                                How to file a complaint
-                                            </a>
-                                        </li>
                                     @endforelse
                                     <li class="bg-success">
                                         <a class="dropdown-item text-light"
@@ -218,7 +228,7 @@
                             {{-- Start: The Initiatives --}}
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('*initiatives*') ? 'active' : '' }}"
-                                    href="{{ route('website.initiatives') }}">The Initiatives</a>
+                                    href="{{ route('website.initiatives') }}">@lang('models/initiatives.plural')</a>
                             </li>
                             {{-- End: The Initiatives --}}
 

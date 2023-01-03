@@ -1,22 +1,22 @@
 <?php
 
 return array (
-  'singular' => 'صفحة',
-  'plural' => 'الصفحات',
+  'singular' => 'Page',
+  'plural' => 'Pages',
   'fields' =>
   array (
-    'id'                => '#',
-    'language'          => 'الغة',
-    'active'            => 'نشط',
+    'id'                => 'ID',
+    'language'          => 'Language',
+    'active'            => 'Active',
     'in_navbar'         => 'In Navbar',
     'in_footer'         => 'In Footer',
+    'name'              => 'Name',
+    'content'           => 'Content',
+    'slug'              => 'URL',
     'meta_title'        => 'Meta Title',
     'meta_description'  => 'Meta Description',
     'meta_keywords'     => 'Meta Keywords',
-    'name'              => 'الاسم',
-    'content'           => 'المحتوي',
-    'slug'              => 'الرابط',
-    'created_at'        => 'تاريخ الانشاء',
-    'updated_at'        => 'تاريخ التعديل',
+    'created_at'        => 'Created At',
+    'updated_at'        => 'Updated At',
   ),
 );

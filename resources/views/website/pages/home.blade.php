@@ -120,179 +120,179 @@
         <div class="swiper-wrapper col-3 h-50 pb-5">
             <div class="swiper-slide shadow-custom rounded-4" style="background-image: linear-gradient(105.09deg, rgba(0, 17, 61, 0) 0%, #00113D 78.13%),
                     url({{ asset('website') }}/images/bg-card.png); height: 24vh!important; background-size: cover;">
-                    <div class="d-flex flex-column justify-content-between h-100">
-                        <span>
-                            <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                <div class="d-flex flex-column justify-content-between h-100">
+                    <span>
+                        <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    </span>
+                    <span class="text-white p-3 pb-0 d-flex justify-content-between ">
+                        <span class="py-3">
+                            نظام السوق المالي
                         </span>
-                        <span class="text-white p-3 pb-0 d-flex justify-content-between ">
-                            <span class="py-3">
-                                نظام السوق المالي
-                            </span>
-                            <span class="py-3">
-                                <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
-                            </span>
+                        <span class="py-3">
+                            <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
                         </span>
-                    </div>
+                    </span>
+                </div>
             </div>
             <div class="swiper-slide shadow-custom rounded-4" style="background-image: linear-gradient(105.09deg, rgba(0, 17, 61, 0) 0%, #00113D 78.13%),
                     url({{ asset('website') }}/images/bg-card.png); height: 24vh!important; background-size: cover;">
                 <div class="d-flex flex-column justify-content-between h-100">
-                        <span>
-                            <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    <span>
+                        <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    </span>
+                    <span class="text-white p-3 pb-0 d-flex justify-content-between ">
+                        <span class="py-3">
+                            نظام السوق المالي
                         </span>
-                        <span class="text-white p-3 pb-0 d-flex justify-content-between ">
-                            <span class="py-3">
-                                نظام السوق المالي
-                            </span>
-                            <span class="py-3">
-                                <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
-                            </span>
+                        <span class="py-3">
+                            <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
                         </span>
-                    </div>
+                    </span>
+                </div>
             </div>
             <div class="swiper-slide shadow-custom rounded-4" style="background-image: linear-gradient(105.09deg, rgba(0, 17, 61, 0) 0%, #00113D 78.13%),
                     url({{ asset('website') }}/images/bg-card.png); height: 24vh!important; background-size: cover;">
                 <div class="d-flex flex-column justify-content-between h-100">
-                        <span>
-                            <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    <span>
+                        <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    </span>
+                    <span class="text-white p-3 pb-0 d-flex justify-content-between ">
+                        <span class="py-3">
+                            نظام السوق المالي
                         </span>
-                        <span class="text-white p-3 pb-0 d-flex justify-content-between ">
-                            <span class="py-3">
-                                نظام السوق المالي
-                            </span>
-                            <span class="py-3">
-                                <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
-                            </span>
+                        <span class="py-3">
+                            <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
                         </span>
-                    </div>
+                    </span>
+                </div>
             </div>
             <div class="swiper-slide shadow-custom rounded-4" style="background-image: linear-gradient(105.09deg, rgba(0, 17, 61, 0) 0%, #00113D 78.13%),
                     url({{ asset('website') }}/images/bg-card.png); height: 24vh!important; background-size: cover;">
                 <div class="d-flex flex-column justify-content-between h-100">
-                        <span>
-                            <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    <span>
+                        <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    </span>
+                    <span class="text-white p-3 pb-0 d-flex justify-content-between ">
+                        <span class="py-3">
+                            نظام السوق المالي
                         </span>
-                        <span class="text-white p-3 pb-0 d-flex justify-content-between ">
-                            <span class="py-3">
-                                نظام السوق المالي
-                            </span>
-                            <span class="py-3">
-                                <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
-                            </span>
+                        <span class="py-3">
+                            <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
                         </span>
-                    </div>
+                    </span>
+                </div>
             </div>
             <div class="swiper-slide shadow-custom rounded-4" style="background-image: linear-gradient(105.09deg, rgba(0, 17, 61, 0) 0%, #00113D 78.13%),
                     url({{ asset('website') }}/images/bg-card.png); height: 24vh!important; background-size: cover;">
                 <div class="d-flex flex-column justify-content-between h-100">
-                        <span>
-                            <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    <span>
+                        <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    </span>
+                    <span class="text-white p-3 pb-0 d-flex justify-content-between ">
+                        <span class="py-3">
+                            نظام السوق المالي
                         </span>
-                        <span class="text-white p-3 pb-0 d-flex justify-content-between ">
-                            <span class="py-3">
-                                نظام السوق المالي
-                            </span>
-                            <span class="py-3">
-                                <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
-                            </span>
+                        <span class="py-3">
+                            <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
                         </span>
-                    </div>
+                    </span>
+                </div>
             </div>
             <div class="swiper-slide shadow-custom rounded-4" style="background-image: linear-gradient(105.09deg, rgba(0, 17, 61, 0) 0%, #00113D 78.13%),
                     url({{ asset('website') }}/images/bg-card.png); height: 24vh!important; background-size: cover;">
                 <div class="d-flex flex-column justify-content-between h-100">
-                        <span>
-                            <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    <span>
+                        <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    </span>
+                    <span class="text-white p-3 pb-0 d-flex justify-content-between ">
+                        <span class="py-3">
+                            نظام السوق المالي
                         </span>
-                        <span class="text-white p-3 pb-0 d-flex justify-content-between ">
-                            <span class="py-3">
-                                نظام السوق المالي
-                            </span>
-                            <span class="py-3">
-                                <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
-                            </span>
+                        <span class="py-3">
+                            <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
                         </span>
-                    </div>
+                    </span>
+                </div>
             </div>
             <div class="swiper-slide shadow-custom rounded-4" style="background-image: linear-gradient(105.09deg, rgba(0, 17, 61, 0) 0%, #00113D 78.13%),
                     url({{ asset('website') }}/images/bg-card.png); height: 24vh!important; background-size: cover;">
                 <div class="d-flex flex-column justify-content-between h-100">
-                        <span>
-                            <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    <span>
+                        <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    </span>
+                    <span class="text-white p-3 pb-0 d-flex justify-content-between ">
+                        <span class="py-3">
+                            نظام السوق المالي
                         </span>
-                        <span class="text-white p-3 pb-0 d-flex justify-content-between ">
-                            <span class="py-3">
-                                نظام السوق المالي
-                            </span>
-                            <span class="py-3">
-                                <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
-                            </span>
+                        <span class="py-3">
+                            <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
                         </span>
-                    </div>
+                    </span>
+                </div>
             </div>
             <div class="swiper-slide shadow-custom rounded-4" style="background-image: linear-gradient(105.09deg, rgba(0, 17, 61, 0) 0%, #00113D 78.13%),
                     url({{ asset('website') }}/images/bg-card.png); height: 24vh!important; background-size: cover;">
                 <div class="d-flex flex-column justify-content-between h-100">
-                        <span>
-                            <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    <span>
+                        <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    </span>
+                    <span class="text-white p-3 pb-0 d-flex justify-content-between ">
+                        <span class="py-3">
+                            نظام السوق المالي
                         </span>
-                        <span class="text-white p-3 pb-0 d-flex justify-content-between ">
-                            <span class="py-3">
-                                نظام السوق المالي
-                            </span>
-                            <span class="py-3">
-                                <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
-                            </span>
+                        <span class="py-3">
+                            <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
                         </span>
-                    </div>
+                    </span>
+                </div>
             </div>
             <div class="swiper-slide shadow-custom rounded-4" style="background-image: linear-gradient(105.09deg, rgba(0, 17, 61, 0) 0%, #00113D 78.13%),
                     url({{ asset('website') }}/images/bg-card.png); height: 24vh!important; background-size: cover;">
                 <div class="d-flex flex-column justify-content-between h-100">
-                        <span>
-                            <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    <span>
+                        <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    </span>
+                    <span class="text-white p-3 pb-0 d-flex justify-content-between ">
+                        <span class="py-3">
+                            نظام السوق المالي
                         </span>
-                        <span class="text-white p-3 pb-0 d-flex justify-content-between ">
-                            <span class="py-3">
-                                نظام السوق المالي
-                            </span>
-                            <span class="py-3">
-                                <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
-                            </span>
+                        <span class="py-3">
+                            <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
                         </span>
-                    </div>
+                    </span>
+                </div>
             </div>
             <div class="swiper-slide shadow-custom rounded-4" style="background-image: linear-gradient(105.09deg, rgba(0, 17, 61, 0) 0%, #00113D 78.13%),
                     url({{ asset('website') }}/images/bg-card.png); height: 24vh!important; background-size: cover;">
                 <div class="d-flex flex-column justify-content-between h-100">
-                        <span>
-                            <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    <span>
+                        <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    </span>
+                    <span class="text-white p-3 pb-0 d-flex justify-content-between ">
+                        <span class="py-3">
+                            نظام السوق المالي
                         </span>
-                        <span class="text-white p-3 pb-0 d-flex justify-content-between ">
-                            <span class="py-3">
-                                نظام السوق المالي
-                            </span>
-                            <span class="py-3">
-                                <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
-                            </span>
+                        <span class="py-3">
+                            <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
                         </span>
-                    </div>
+                    </span>
+                </div>
             </div>
             <div class="swiper-slide shadow-custom rounded-4" style="background-image: linear-gradient(105.09deg, rgba(0, 17, 61, 0) 0%, #00113D 78.13%),
                     url({{ asset('website') }}/images/bg-card.png); height: 24vh!important; background-size: cover;">
                 <div class="d-flex flex-column justify-content-between h-100">
-                        <span>
-                            <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    <span>
+                        <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png" alt="">
+                    </span>
+                    <span class="text-white p-3 pb-0 d-flex justify-content-between ">
+                        <span class="py-3">
+                            نظام السوق المالي
                         </span>
-                        <span class="text-white p-3 pb-0 d-flex justify-content-between ">
-                            <span class="py-3">
-                                نظام السوق المالي
-                            </span>
-                            <span class="py-3">
-                                <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
-                            </span>
+                        <span class="py-3">
+                            <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
                         </span>
-                    </div>
+                    </span>
+                </div>
             </div>
             <div class="swiper-slide shadow-custom rounded-4" style="background-image: linear-gradient(105.09deg, rgba(0, 17, 61, 0) 0%, #00113D 78.13%),
                     url({{ asset('website') }}/images/bg-card.png); height: 24vh!important; background-size: cover;">
@@ -359,258 +359,69 @@
         <h2>
             <!-- <img class="" src="images/privacy_tip.svg" alt=""> -->
             <i class="fa-solid fa-shield fa-lg text-info"></i>
-            التوعية
+            @lang('models/outreaches.plural')
         </h2>
-        <span class="px-2">
+        {{-- <span class="px-2">
             <a class="fw-light fs-6 text-secondary" href="#">
                 <!-- <img class="" src="images/window.svg" alt=""> -->
                 <i class="fa-solid fa-window-restore fa-lg"></i>
                 عرض الكل
             </a>
-        </span>
+        </span> --}}
     </div>
     <div class="swiper mySwiperslide slide-swiper">
         <div class="swiper-wrapper pb-5">
-            <div class="swiper-slide">
-                <div class="card-slider mx-2">
-                    <div class="card-body d-flex align-items-center">
-                        <span class="mx-3">
-                            <i class="fa-solid fa-circle-info text-dark"></i>
-                        </span>
-                        <span class="">
-                            <p class="fw-bold fs-6 m-1">
-                                كيف تقدم بلاغ عن مخالفه
-                            </p>
-                            <p class="fs-6 fw-lighter m-1">
-                                كيفية تقديم بلاغ عن مخالفة لدى هيئة السوق المالية...
-                            </p>
-                            <span class="text-info fw-bold fs-6">
-                                المزيد
+            @forelse ($outreaches_app as $outreach)
+            <li>
+                @if ($outreach->type == 1)
+
+                <div class="swiper-slide">
+                    <div class="card-slider mx-2">
+                        <div class="card-body d-flex align-items-center">
+                            <span class="mx-3">
+                                <i class="fa-solid fa-circle-info text-dark"></i>
                             </span>
-                        </span>
+                            <span class="">
+                                <p class="fw-bold fs-6 m-1">
+                                    {{ $outreach->title??'' }}
+                                </p>
+                                <p class="fs-6 fw-lighter m-1">
+                                    {{ $outreach->brief??'' }}
+                                </p>
+                                <a class="text-info fw-bold fs-6"
+                                    href="{{ route('website.outreaches', $outreach->id) }}">
+                                    @lang('lang.more')
+                                </a>
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card-slider mx-2">
-                    <div class="card-body d-flex align-items-center">
-                        <span class="mx-3">
-                            <i class="fa-solid fa-circle-info text-dark"></i>
-                        </span>
-                        <span class="">
-                            <p class="fw-bold fs-6 m-1">
-                                كيف تقدم بلاغ عن مخالفه
-                            </p>
-                            <p class="fs-6 fw-lighter m-1">
-                                كيفية تقديم بلاغ عن مخالفة لدى هيئة السوق المالية...
-                            </p>
-                            <span class="text-info fw-bold fs-6">
-                                المزيد
+                @else
+                <div class="swiper-slide">
+                    <div class="card-slider mx-2">
+                        <div class="card-body d-flex align-items-center">
+                            <span class="mx-3">
+                                <i class="fa-solid fa-circle-info text-dark"></i>
                             </span>
-                        </span>
+                            <span class="">
+                                <p class="fw-bold fs-6 m-1">
+                                    {{ $outreach->title??'' }}
+                                </p>
+                                <p class="fs-6 fw-lighter m-1">
+                                    {{ $outreach->brief??'' }}
+                                </p>
+                                <a class="text-info fw-bold fs-6" target="_blank"
+                                    href="{{ $outreach->attachment_pdf??'' }}">
+                                    @lang('lang.more')
+                                </a>
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card-slider mx-2">
-                    <div class="card-body d-flex align-items-center">
-                        <span class="mx-3">
-                            <i class="fa-solid fa-circle-info text-dark"></i>
-                        </span>
-                        <span class="">
-                            <p class="fw-bold fs-6 m-1">
-                                كيف تقدم بلاغ عن مخالفه
-                            </p>
-                            <p class="fs-6 fw-lighter m-1">
-                                كيفية تقديم بلاغ عن مخالفة لدى هيئة السوق المالية...
-                            </p>
-                            <span class="text-info fw-bold fs-6">
-                                المزيد
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card-slider mx-2">
-                    <div class="card-body d-flex align-items-center">
-                        <span class="mx-3">
-                            <i class="fa-solid fa-circle-info text-dark"></i>
-                        </span>
-                        <span class="">
-                            <p class="fw-bold fs-6 m-1">
-                                كيف تقدم بلاغ عن مخالفه
-                            </p>
-                            <p class="fs-6 fw-lighter m-1">
-                                كيفية تقديم بلاغ عن مخالفة لدى هيئة السوق المالية...
-                            </p>
-                            <span class="text-info fw-bold fs-6">
-                                المزيد
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card-slider mx-2">
-                    <div class="card-body d-flex align-items-center">
-                        <span class="mx-3">
-                            <i class="fa-solid fa-circle-info text-dark"></i>
-                        </span>
-                        <span class="">
-                            <p class="fw-bold fs-6 m-1">
-                                كيف تقدم بلاغ عن مخالفه
-                            </p>
-                            <p class="fs-6 fw-lighter m-1">
-                                كيفية تقديم بلاغ عن مخالفة لدى هيئة السوق المالية...
-                            </p>
-                            <span class="text-info fw-bold fs-6">
-                                المزيد
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card-slider mx-2">
-                    <div class="card-body d-flex align-items-center">
-                        <span class="mx-3">
-                            <i class="fa-solid fa-circle-info text-dark"></i>
-                        </span>
-                        <span class="">
-                            <p class="fw-bold fs-6 m-1">
-                                كيف تقدم بلاغ عن مخالفه
-                            </p>
-                            <p class="fs-6 fw-lighter m-1">
-                                كيفية تقديم بلاغ عن مخالفة لدى هيئة السوق المالية...
-                            </p>
-                            <span class="text-info fw-bold fs-6">
-                                المزيد
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card-slider mx-2">
-                    <div class="card-body d-flex align-items-center">
-                        <span class="mx-3">
-                            <i class="fa-solid fa-circle-info text-dark"></i>
-                        </span>
-                        <span class="">
-                            <p class="fw-bold fs-6 m-1">
-                                كيف تقدم بلاغ عن مخالفه
-                            </p>
-                            <p class="fs-6 fw-lighter m-1">
-                                كيفية تقديم بلاغ عن مخالفة لدى هيئة السوق المالية...
-                            </p>
-                            <span class="text-info fw-bold fs-6">
-                                المزيد
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card-slider mx-2">
-                    <div class="card-body d-flex align-items-center">
-                        <span class="mx-3">
-                            <i class="fa-solid fa-circle-info text-dark"></i>
-                        </span>
-                        <span class="">
-                            <p class="fw-bold fs-6 m-1">
-                                كيف تقدم بلاغ عن مخالفه
-                            </p>
-                            <p class="fs-6 fw-lighter m-1">
-                                كيفية تقديم بلاغ عن مخالفة لدى هيئة السوق المالية...
-                            </p>
-                            <span class="text-info fw-bold fs-6">
-                                المزيد
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card-slider mx-2">
-                    <div class="card-body d-flex align-items-center">
-                        <span class="mx-3">
-                            <i class="fa-solid fa-circle-info text-dark"></i>
-                        </span>
-                        <span class="">
-                            <p class="fw-bold fs-6 m-1">
-                                كيف تقدم بلاغ عن مخالفه
-                            </p>
-                            <p class="fs-6 fw-lighter m-1">
-                                كيفية تقديم بلاغ عن مخالفة لدى هيئة السوق المالية...
-                            </p>
-                            <span class="text-info fw-bold fs-6">
-                                المزيد
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card-slider mx-2">
-                    <div class="card-body d-flex align-items-center">
-                        <span class="mx-3">
-                            <i class="fa-solid fa-circle-info text-dark"></i>
-                        </span>
-                        <span class="">
-                            <p class="fw-bold fs-6 m-1">
-                                كيف تقدم بلاغ عن مخالفه
-                            </p>
-                            <p class="fs-6 fw-lighter m-1">
-                                كيفية تقديم بلاغ عن مخالفة لدى هيئة السوق المالية...
-                            </p>
-                            <span class="text-info fw-bold fs-6">
-                                المزيد
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card-slider mx-2">
-                    <div class="card-body d-flex align-items-center">
-                        <span class="mx-3">
-                            <i class="fa-solid fa-circle-info text-dark"></i>
-                        </span>
-                        <span class="">
-                            <p class="fw-bold fs-6 m-1">
-                                كيف تقدم بلاغ عن مخالفه
-                            </p>
-                            <p class="fs-6 fw-lighter m-1">
-                                كيفية تقديم بلاغ عن مخالفة لدى هيئة السوق المالية...
-                            </p>
-                            <span class="text-info fw-bold fs-6">
-                                المزيد
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card-slider mx-2">
-                    <div class="card-body d-flex align-items-center">
-                        <span class="mx-3">
-                            <i class="fa-solid fa-circle-info text-dark"></i>
-                        </span>
-                        <span class="">
-                            <p class="fw-bold fs-6 m-1">
-                                كيف تقدم بلاغ عن مخالفه
-                            </p>
-                            <p class="fs-6 fw-lighter m-1">
-                                كيفية تقديم بلاغ عن مخالفة لدى هيئة السوق المالية...
-                            </p>
-                            <span class="text-info fw-bold fs-6">
-                                المزيد
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
+                @endif
+            </li>
+            @empty
+            @endforelse
         </div>
         <span class="d-flex align-items-center gap-4 justify-content-center p-3 swiper-btn">
             <div class="swiper-button-prev text-white"><i class="fa-sharp fa-solid fa-arrow-right"></i></div>

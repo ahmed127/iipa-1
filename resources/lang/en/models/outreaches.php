@@ -1,18 +1,27 @@
 <?php
 
-return array (
-  'singular' => 'Outreach',
-  'plural' => 'Outreaches',
-  'fields' => 
-  array (
-    'id' => 'Id',
-    'title' => 'Title',
-    'brief' => 'Brief',
-    'description' => 'Description',
-    'photo' => 'Photo',
-    'attachment_pdf' => 'Attachment Pdf',
-    'type' => 'Type',
-    'created_at' => 'Created At',
-    'updated_at' => 'Updated At',
-  ),
+return array(
+    'singular'              => 'Awareness Raising',
+    'plural'                => 'Awareness Raising',
+    'fields'                => array(
+        'id'                => 'Id',
+        'title'             => 'Title',
+        'name'              => 'Name',
+        'slug'              => 'Slug',
+        'meta_title'        => 'Meta Title',
+        'meta_description'  => 'Meta Description',
+        'meta_keywords'     => 'Meta Keywords',
+        'brief'             => 'Brief',
+        'description'       => 'Description',
+        'strategic_goal'    => 'Strategic Goal',
+        'target_group'      => 'Target Group',
+        'photo'             => 'Photo',
+        'attachment_pdf'    => 'Attachment Pdf',
+        'type'              => 'Type',
+        'page'              => 'Page',
+        'btn_name'          => 'Button Name',
+        'btn_link'          => 'Button Link',
+        'created_at'        => 'Created At',
+        'updated_at'        => 'Updated At',
+    ),
 );

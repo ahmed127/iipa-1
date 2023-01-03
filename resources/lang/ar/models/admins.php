@@ -1,19 +1,19 @@
 <?php
 
 return array (
-  'singular' => 'المشرف',
-  'plural' => 'المشرفين',
+  'singular' => 'Admin',
+  'plural' => 'Admins',
   'fields' =>
   array (
-    'id' => '#',
-    'name' => 'الاسم',
-    'email' => 'البريد الاكتروني',
-    'password' => 'كلمة السر',
-    'password_confirmation' => 'تاكيد كلمة السر',
-    'roles' => 'الادوار',
-    'status' => 'الحالة',
-    'remember_token' => 'تذكر الرمز',
-    'created_at' => 'تاريخ الانشاء',
-    'updated_at' => 'تاريخ التعديل',
+    'id' => 'ID',
+    'name' => 'Name',
+    'email' => 'Email',
+    'password' => 'Password',
+    'password_confirmation' => 'Password Confirmation',
+    'roles' => 'Roles',
+    'status' => 'Status',
+    'remember_token' => 'Remember Token',
+    'created_at' => 'Created At',
+    'updated_at' => 'Updated At',
   ),
 );

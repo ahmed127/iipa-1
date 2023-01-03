@@ -1,16 +1,16 @@
 <?php
 
 return array(
-    'singular' => 'لوحة التحكم',
-    'plural' => 'لوحة التحكم',
+    'singular' => 'Dashboard',
+    'plural' => 'Dashboard',
     'fields' =>
     array(
-        'hi' => 'مرحبا',
-        'arabic' => 'العربية',
-        'english' => 'الانجليزية',
-        'Settings' => 'الخيارات',
-        'administration' => 'الادارة',
-        'site_contents' => 'محتويات الموقع',
-        'appearance' => 'المظهر الخارجي',
+        'hi' => 'Hi',
+        'arabic' => 'Arabic',
+        'english' => 'English',
+        'settings' => 'Settings',
+        'administration' => 'Administration',
+        'site_contents' => 'Site Contents',
+        'appearance' => 'Appearance',
     ),
 );

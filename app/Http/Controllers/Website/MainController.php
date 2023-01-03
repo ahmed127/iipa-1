@@ -24,6 +24,7 @@ use App\Models\Law;
 use App\Models\Package;
 use App\Models\Volunteer;
 use App\Models\VolunteerType;
+use App\Models\Outreach;
 
 class MainController extends Controller
 {
@@ -87,10 +88,11 @@ class MainController extends Controller
     }
     // Who We Are
 
-    public function outreach()
+    public function outreaches(Outreach $outreach)
     {
-        return view('website.pages.outreach');
+        return view('website.pages.outreach', compact('outreach'));
     }
+
 
     public function laws()
     {

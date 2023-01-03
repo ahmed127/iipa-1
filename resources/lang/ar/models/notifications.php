@@ -1,16 +1,19 @@
 <?php
 
 return array (
-  'singular' => 'اشعار',
-  'plural' => 'الاشعارات',
+  'singular' => 'Notification',
+  'plural' => 'Notifications',
   'fields' =>
   array (
-    'id' => '#',
-    'title' => 'العنوان',
-    'body' => 'المحتوي',
-    'send_to' => 'ارسال الي',
-    'created_by' => 'انشاء بواسطة',
-    'created_at' => 'تاريخ الانشاء',
-    'updated_at' => 'تاريخ التعديل',
+    'id' => 'ID',
+    'title' => 'Title',
+    'brief' => 'Brief',
+    'description' => 'Description',
+    'photo' => 'Photo',
+    'type' => 'Type',
+    'btn_to' => 'button To',
+    'created_by' => 'Created By',
+    'created_at' => 'Created At',
+    'updated_at' => 'Updated At',
   ),
 );

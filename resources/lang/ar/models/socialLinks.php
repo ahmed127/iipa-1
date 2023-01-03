@@ -1,13 +1,13 @@
 <?php
 
 return array(
-    'singular' => 'التواصل الاجتماعي',
-    'plural' => 'التواصل الاجتماعي',
+    'singular' => 'Social Link',
+    'plural' => 'Social Links',
     'fields' =>
     array(
-        'id' => '#',
-        'name' => 'الاسم',
-        'link' => 'الرابط',
-        'status' => 'الحالة',
+        'id' => 'Id',
+        'name' => 'Name',
+        'link' => 'Link',
+        'status' => 'Status',
     ),
 );
