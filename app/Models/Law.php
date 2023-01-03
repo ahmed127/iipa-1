@@ -47,7 +47,6 @@ class Law extends Model
 
     public $translatedAttributes = ['title', 'description'];
 
-
     public static function rules()
     {
         $languages = array_keys(config('langs'));

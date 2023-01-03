@@ -98,6 +98,9 @@ abstract class BaseRepository
                             case 'name':
                                 $query->where($key,'LIKE', $value.'%');
                                 break;
+                            case 'type':
+                                $query->where($key,'LIKE', $value.'%');
+                                break;
                             case 'created_at':
                                 $query->where($key,'LIKE', $value.'%');
                                 break;

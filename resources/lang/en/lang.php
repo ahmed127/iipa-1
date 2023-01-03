@@ -13,6 +13,8 @@ return [
     'active' => 'Active',
     'arabic' => 'Arabic',
     'all' => 'All',
+    'authorized' => 'Authorized',
+    'authorized_companies' => 'Authorized Companies',
     'accountNotActive' => 'account not active',
     'approved' => 'Approved',
     'attachment_letter' => 'Attachment Letter',
@@ -33,7 +35,8 @@ return [
     'consultant_type' => 'Consultant Type',
     'contact_us_intro_heading' => 'Communication with the association model',
     'contact_us_intro_text' => 'So that you can submit your requests, inquiries and follow-up later',
-
+    'currency' => 'SR',
+    '' => '',
     // D d
 
     'deactivate' => 'Deactivate',
@@ -71,7 +74,8 @@ return [
     'in_progress' => 'In progress',
     'id_no' => 'ID Number',
     'iipa' => 'Individual Investors Protection Association',
-
+    'ithmaar_company' => 'Saudi Ithmaar Financial Consulting Company',
+    'individual_fees' => 'Individual Fees',
     '' => '',
 
     // J j
@@ -87,6 +91,8 @@ return [
     // L l
     'logoutMsg' => 'Successfully logged out',
     'legal_advisor' => 'Legal Advisor',
+    'list_updated_weekly' => 'The list is updated weekly based on the Capital Market Authority website',
+    'office_fees' => 'Office Fees',
     '' => '',
 
     // M m
@@ -101,6 +107,8 @@ return [
     'name' => 'Name',
     'nationality' => 'Nationality',
     'nick_name' => 'Nick Name',
+    'not_authorized' => 'Not Authorized',
+    'not_authorized_companies' => 'Not Authorized Companies',
 
     // O o
 
@@ -118,6 +126,7 @@ return [
     'pending' => 'Pending',
     'password' => 'Password',
     'password_confirmation' => 'Password Confirmation',
+    'packages' => 'Packages',
     '' => '',
 
     // Q q
@@ -133,6 +142,7 @@ return [
     // S s
 
     'select' => 'Select',
+    'search' => 'Search',
     'status' => 'Status',
 
 

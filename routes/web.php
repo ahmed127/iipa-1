@@ -134,6 +134,8 @@ Route::group(
             Route::resource('partners', PartnerController::class);
             Route::resource('events', EventController::class);
             Route::resource('eventAttendees', EventAttendeeController::class);
+            Route::resource('companies', CompanyController::class);
+            Route::resource('packages', PackageController::class);
         });
     }
 );
@@ -234,5 +236,16 @@ Route::group([
         Route::get('recruitment', $class_name_main . 'recruitment')->name('recruitment');
         Route::post('recruitment-store', $class_name_main . 'recruitment_store')->name('recruitment_store');
         // recruitment
+
+        // Companies
+        Route::get('authorized-companies', $class_name_main . 'authorized_companies')->name('authorized_companies');
+        Route::post('authorized-companies', $class_name_main . 'authorized_companies_search')->name('authorized_companies_search');
+        Route::get('not-authorized-companies', $class_name_main . 'not_authorized_companies')->name('not_authorized_companies');
+        Route::post('not-authorized-companies', $class_name_main . 'not_authorized_companies_search')->name('not_authorized_companies_search');
+        // End Companies
+
+        // Packages
+        Route::get('packages', $class_name_main . 'packages')->name('packages');
+        // End Packages
     });
 });
