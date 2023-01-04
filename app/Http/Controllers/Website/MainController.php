@@ -4,13 +4,14 @@ namespace App\Http\Controllers\Website;
 
 use App\Models\Job;
 use App\Models\Law;
+use App\Models\Blog;
 use App\Models\Company;
 use App\Models\Contact;
 use App\Models\Country;
 use App\Models\Package;
+use App\Models\Partner;
 use App\Models\Director;
 use App\Models\Outreach;
-use App\Models\Partner;
 use App\Models\Volunteer;
 use App\Models\Consulting;
 use App\Models\Initiative;
@@ -238,12 +239,14 @@ class MainController extends Controller
     // Media Center
     public function media_center_all()
     {
-        return view('website.pages.media_center.all');
+        $blogs = Blog::latest()->paginate(9);
+        return view('website.pages.media_center.all', compact('blogs'));
     }
 
     public function media_center_single($id)
     {
-        return view('website.pages.media_center.single');
+        $blog = Blog::findOrFail($id);
+        return view('website.pages.media_center.single', compact('blog'));
     }
     // Media Center
 

@@ -76,7 +76,7 @@ return [
     // H h
 
     'hidden' => 'Hidden',
-    '' => '',
+    'home' => 'Home',
     '' => '',
 
     // I i
@@ -110,6 +110,8 @@ return [
     'message' => 'Message',
     'message_sent' => 'Message sent successfully!',
     'male' => 'Male',
+    'media_center' => 'Media Center',
+    '' => '',
 
     // N n
 
