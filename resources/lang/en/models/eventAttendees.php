@@ -1,13 +1,13 @@
 <?php
 
-return array (
+return array(
   'singular' => 'EventAttendee',
   'plural' => 'EventAttendees',
-  'fields' => 
-  array (
-    'id' => 'Id',
-    'event_id' => 'Event Id',
-    'user_id' => 'User Id',
+  'fields' =>
+  array(
+    'id' => '#',
+    'event_id' => 'Event #',
+    'user_id' => 'User #',
     'created_at' => 'Created At',
     'updated_at' => 'Updated At',
   ),

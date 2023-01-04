@@ -1,11 +1,11 @@
 <?php
 
-return array (
+return array(
   'singular' => 'Partner',
   'plural' => 'Partners',
-  'fields' => 
-  array (
-    'id' => 'Id',
+  'fields' =>
+  array(
+    'id' => '#',
     'logo' => 'Logo',
     'link' => 'Link',
     'created_at' => 'Created At',

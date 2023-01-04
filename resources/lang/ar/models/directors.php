@@ -1,18 +1,17 @@
 <?php
 
 return array(
-    'singular' => 'Director',
-    'plural' => 'Directors',
+    'singular' => 'المؤسس',
+    'plural' => 'المؤسسين',
     'fields' =>
     array(
-        'id' => 'ID',
-        'photo' => 'Photo',
-        'name' => 'Name',
-        'nickname' => 'Nickname',
-        'photo' => 'Photo',
-        'job_title' => 'Job title',
-
-        'created_at' => 'Created At',
-        'updated_at' => 'Updated At',
+        'id' => '#',
+        'photo' => 'صورة الخلفية',
+        'name' => 'الاسم',
+        'nickname' => 'اسم الشهرة',
+        'photo' => 'صورة الخلفية',
+        'job_title' => 'اسم الوظيفة',
+        'created_at' => 'تم الانشاء في',
+        'updated_at' => 'تم التعديل في',
     ),
 );

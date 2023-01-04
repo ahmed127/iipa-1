@@ -26,8 +26,10 @@ class PageTranslation extends Model
         'meta_description',
         'meta_keywords',
         'name',
-        'content',
-        'slug'
+        'slug',
+        'title',
+        'brief',
+        'description',
     ];
 
     /**

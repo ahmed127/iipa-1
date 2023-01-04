@@ -1,11 +1,11 @@
 <?php
 
-return array (
+return array(
   'singular' => 'Admin',
   'plural' => 'Admins',
   'fields' =>
-  array (
-    'id' => 'ID',
+  array(
+    'id' => '#',
     'name' => 'Name',
     'email' => 'Email',
     'password' => 'Password',

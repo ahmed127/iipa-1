@@ -1,14 +1,14 @@
 <?php
 
-return array (
-  'singular' => 'Country',
-  'plural' => 'Countries',
-  'fields' =>
-  array (
-    'id' => 'Id',
-    'name' => 'Name',
-    'code' => 'Code',
-    'created_at' => 'Created At',
-    'updated_at' => 'Updated At',
-  ),
+return array(
+    'singular' => 'دولة',
+    'plural' => 'الدول',
+    'fields' =>
+    array(
+        'id' => '#',
+        'name' => 'الاسم',
+        'code' => 'رمز',
+        'created_at' => 'تم الانشاء في',
+        'updated_at' => 'تم التعديل في',
+    ),
 );

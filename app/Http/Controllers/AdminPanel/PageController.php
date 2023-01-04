@@ -30,7 +30,7 @@ class PageController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $pages = Page::withCount('paragraph', 'image')->get();
+        $pages = $this->pageRepository->allQuery($request->all())->paginate(request('pagination') ?? 10);
 
         return view('adminPanel.pages.index')
             ->with('pages', $pages);
@@ -56,7 +56,8 @@ class PageController extends AppBaseController
     public function store(CreatePageRequest $request)
     {
         $input = $request->all();
-
+        $input['en']['slug'] = str_replace(' ', '-', $request->en['title']);
+        $input['ar']['slug'] = str_replace(' ', '-', $request->ar['title']);
         $page = $this->pageRepository->create($input);
 
         Flash::success(__('messages.saved', ['model' => __('models/pages.singular')]));
@@ -121,8 +122,11 @@ class PageController extends AppBaseController
 
             return redirect(route('adminPanel.pages.index'));
         }
+        $input = $request->all();
+        $input['en']['slug'] = str_replace(' ', '-', $request->en['title']);
+        $input['ar']['slug'] = str_replace(' ', '-', $request->ar['title']);
 
-        $page = $this->pageRepository->update($request->all(), $id);
+        $page = $this->pageRepository->update($input, $id);
 
         Flash::success(__('messages.updated', ['model' => __('models/pages.singular')]));
 

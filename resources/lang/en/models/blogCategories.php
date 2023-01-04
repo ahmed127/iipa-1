@@ -1,11 +1,11 @@
 <?php
 
-return array (
+return array(
   'singular' => 'BlogCategory',
   'plural' => 'BlogCategories',
-  'fields' => 
-  array (
-    'id' => 'Id',
+  'fields' =>
+  array(
+    'id' => '#',
     'title' => 'Title',
     'photo' => 'Photo',
     'created_at' => 'Created At',

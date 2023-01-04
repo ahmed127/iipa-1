@@ -1,11 +1,11 @@
 <?php
 
-return array (
+return array(
   'singular' => 'Company',
   'plural' => 'Companies',
-  'fields' => 
-  array (
-    'id' => 'Id',
+  'fields' =>
+  array(
+    'id' => '#',
     'name' => 'Name',
     'website' => 'Website',
     'location' => 'Location',

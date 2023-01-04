@@ -9,7 +9,7 @@ use App\Repositories\BaseRepository;
  * Class PageRepository
  * @package App\Repositories\AdminPanel
  * @version January 11, 2020, 1:53 pm UTC
-*/
+ */
 
 class PageRepository extends BaseRepository
 {
@@ -17,10 +17,9 @@ class PageRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'id',
-        'active',
-        'in_navbar',
-        'in_footer'
+        'title',
+        'brief',
+        'type'
     ];
 
     /**

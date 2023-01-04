@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Website;
 
 use App\Models\Job;
 use App\Models\Law;
+use App\Models\Page;
 use App\Models\Company;
 use App\Models\Contact;
 use App\Models\Country;
@@ -69,12 +70,14 @@ class MainController extends Controller
     // Who We Are
     public function incorporation()
     {
-        return view('website.pages.who_we_are.incorporation');
+        $page = Page::find(1);
+        return view('website.pages.page', compact('page'));
     }
 
     public function our_goals()
     {
-        return view('website.pages.who_we_are.our_goals');
+        $page = Page::find(2);
+        return view('website.pages.page', compact('page'));
     }
 
     public function board_of_directors()
@@ -85,7 +88,8 @@ class MainController extends Controller
 
     public function organizational_structure()
     {
-        return view('website.pages.who_we_are.organizational_structure');
+        $page = Page::find(3);
+        return view('website.pages.page', compact('page'));
     }
 
     public function our_partners()
@@ -158,7 +162,8 @@ class MainController extends Controller
 
     public function class_actions_tutorial()
     {
-        return view('website.pages.class_actions.tutorial');
+        $page = Page::find(4);
+        return view('website.pages.page', compact('page'));
     }
     // Class Actions
 

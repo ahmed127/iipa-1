@@ -590,11 +590,19 @@ License: You must have a valid license purchased only from themeforest(the above
         var radio_switch = $('.radio_switch').attr('type-active');
         if(radio_switch == 'page'){
             $('.type_pdf').addClass('d-none');
+            $('.type_image').addClass('d-none');
             $('.type_page').removeClass('d-none');
         }
         if(radio_switch == 'pdf'){
             $('.type_page').addClass('d-none');
+            $('.type_image').addClass('d-none');
             $('.type_pdf').removeClass('d-none');
+        }
+        if(type_switch == 'image'){
+            $('.type_pdf').addClass('d-none');
+            $('.type_page').removeClass('d-none');
+            $('.type_image').removeClass('d-none');
+            $('.type_page_description').addClass('d-none');
         }
 
     });
@@ -604,12 +612,19 @@ License: You must have a valid license purchased only from themeforest(the above
             $('.radio_switch').attr('type-active', type_switch);
             if(type_switch == 'page'){
                 $('.type_pdf').addClass('d-none');
-                $('.type_pdf').addClass('d-none');
+                $('.type_image').addClass('d-none');
                 $('.type_page').removeClass('d-none');
             }
             if(type_switch == 'pdf'){
                 $('.type_page').addClass('d-none');
+                $('.type_image').addClass('d-none');
                 $('.type_pdf').removeClass('d-none');
+            }
+            if(type_switch == 'image'){
+                $('.type_pdf').addClass('d-none');
+                $('.type_page').removeClass('d-none');
+                $('.type_image').removeClass('d-none');
+                $('.type_page_description').addClass('d-none');
             }
         });
     });

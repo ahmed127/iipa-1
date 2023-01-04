@@ -4,7 +4,7 @@ return array(
     'singular'              => 'The Initiative',
     'plural'                => 'The Initiatives',
     'fields'                => array(
-        'id'                => 'Id',
+        'id'                => '#',
         'title'             => 'Title',
         'name'              => 'Name',
         'slug'              => 'Slug',

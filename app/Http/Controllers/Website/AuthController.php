@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Website;
 
 use Carbon\Carbon;
 use App\Models\User;
+use App\Models\Country;
 use App\Helpers\MailTrait;
 use Laracasts\Flash\Flash;
 use Illuminate\Http\Request;
@@ -36,19 +37,22 @@ class AuthController extends Controller
 
     public function register()
     {
-        return view('website.auth.register');
+        $countryCodes = Country::get()->pluck('code', 'id');
+        return view('website.auth.register', compact('countryCodes'));
     }
 
     public function register_post(Request $request)
     {
 
-        $request->validate([
-            'full_name' => 'required',
-            'email'     => 'required|unique:users,email',
-            'password'  => 'required|confirmed',
+        $inputs = $request->validate([
+            'full_name'     => 'required',
+            'email'         => 'required|unique:users,email',
+            'password'      => 'required|confirmed',
+            'country_code'  => 'required',
+            'phone'         => 'required',
         ]);
 
-        $user = User::create($request->only('full_name', 'email', 'password'));
+        $user = User::create($inputs);
 
         if (Auth::guard('web')->attempt($request->only('email', 'password'))) {
             return redirect(route('website.home'));

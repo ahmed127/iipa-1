@@ -5,7 +5,7 @@ return array(
     'plural' => 'Directors',
     'fields' =>
     array(
-        'id' => 'ID',
+        'id' => '#',
         'photo' => 'Photo',
         'name' => 'Name',
         'nickname' => 'Nickname',

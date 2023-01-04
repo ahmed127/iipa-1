@@ -1,17 +1,17 @@
 <?php
 
-return array (
-  'singular' => 'CooperativeTraining',
-  'plural' => 'CooperativeTrainings',
-  'fields' => 
-  array (
-    'id' => 'Id',
-    'entity_name' => 'Entity Name',
-    'country_code' => 'Country Code',
-    'phone' => 'Phone',
-    'email' => 'Email',
-    'attachment_letter' => 'Attachment Letter',
-    'created_at' => 'Created At',
-    'updated_at' => 'Updated At',
-  ),
+return array(
+    'singular' => 'طلب تدريب شركة',
+    'plural' => 'طلبات تدريب الشركات',
+    'fields' =>
+    array(
+        'id' => '#',
+        'entity_name' => 'اسم الشركة',
+        'country_code' => 'رمز الدولة',
+        'phone' => 'الهاتف',
+        'email' => 'البريد الالكتروني',
+        'attachment_letter' => 'Attachment Letter',
+        'created_at' => 'تم الانشاء في',
+        'updated_at' => 'تم التعديل في',
+    ),
 );

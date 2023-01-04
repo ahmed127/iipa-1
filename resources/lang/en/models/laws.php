@@ -1,11 +1,11 @@
 <?php
 
-return array (
+return array(
   'singular' => 'Law',
   'plural' => 'Laws',
-  'fields' => 
-  array (
-    'id' => 'Id',
+  'fields' =>
+  array(
+    'id' => '#',
     'title' => 'Title',
     'description' => 'Description',
     'attachment_pdf' => 'Attachment Pdf',

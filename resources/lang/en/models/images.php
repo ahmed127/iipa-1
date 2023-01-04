@@ -1,11 +1,11 @@
 <?php
 
-return array (
+return array(
   'singular' => 'images',
   'plural' => 'images',
-  'fields' => 
-  array (
-    'id' => 'Id',
+  'fields' =>
+  array(
+    'id' => '#',
     'page_id' => 'Page',
     'photo' => 'Photo',
   ),

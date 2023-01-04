@@ -15,7 +15,7 @@ return [
     'detail'       => 'Details',
     'back'         => 'Back',
     'action'       => 'Action',
-    'id'           => 'Id',
+    'id'           => '#',
     'export'       => 'Export',
     'import'       => 'Import',
     'sort'         => 'Sort',

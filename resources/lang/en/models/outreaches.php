@@ -4,7 +4,7 @@ return array(
     'singular'              => 'Awareness Raising',
     'plural'                => 'Awareness Raising',
     'fields'                => array(
-        'id'                => 'Id',
+        'id'                => '#',
         'title'             => 'Title',
         'name'              => 'Name',
         'slug'              => 'Slug',

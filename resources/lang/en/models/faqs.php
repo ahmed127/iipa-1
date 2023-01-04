@@ -5,7 +5,7 @@ return array(
     'plural' => 'Faqs',
     'fields' =>
     array(
-        'id' => 'ID',
+        'id' => '#',
         'action' => 'Action',
         'name' => 'Name',
         'question' => 'Question',

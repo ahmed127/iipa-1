@@ -1,11 +1,11 @@
 <?php
 
-return array (
+return array(
   'singular' => 'SEO',
   'plural' => 'SEOs',
   'fields' =>
-  array (
-    'id' => 'ID',
+  array(
+    'id' => '#',
     'language' => 'Language',
     'title' => 'Title',
     'description' => 'Description',

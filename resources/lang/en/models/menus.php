@@ -1,15 +1,15 @@
 <?php
 
-return array (
+return array(
   'menu_singular'   => 'Menu',
   'menu_plural'     => 'Menus',
   'item_singular'   => 'Item',
   'item_plural'     => 'Items',
   'route_singular'  => 'Route',
   'route_plural'    => 'Routes',
-  'fields'          => array (
+  'fields'          => array(
 
-    'id'            => 'Id',
+    'id'            => '#',
     'name'          => 'Name',
     'parent_id'     => 'Category',
     'items_count'   => 'Items Count',

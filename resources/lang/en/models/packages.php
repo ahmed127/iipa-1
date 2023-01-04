@@ -5,7 +5,7 @@ return array(
     'plural' => 'Packages',
     'fields' =>
     array(
-        'id' => 'Id',
+        'id' => '#',
         'name' => 'Name',
         'note' => 'Note',
         'description' => 'Description',

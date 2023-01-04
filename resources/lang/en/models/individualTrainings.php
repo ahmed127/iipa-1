@@ -1,11 +1,11 @@
 <?php
 
-return array (
+return array(
   'singular' => 'IndividualTraining',
   'plural' => 'IndividualTrainings',
-  'fields' => 
-  array (
-    'id' => 'Id',
+  'fields' =>
+  array(
+    'id' => '#',
     'full_name' => 'Full Name',
     'country_code' => 'Country Code',
     'phone' => 'Phone',

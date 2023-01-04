@@ -1,11 +1,11 @@
 <?php
 
-return array (
+return array(
   'singular' => 'Role',
   'plural' => 'Roles',
   'fields' =>
-  array (
-    'id' => 'ID',
+  array(
+    'id' => '#',
     'name' => 'Name',
     'bulck_select' => 'Bulck Select',
   ),

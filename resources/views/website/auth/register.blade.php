@@ -27,9 +27,9 @@
                         </span>
                         تسجيل الدخول او تسجيل حساب جديد
                     </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, earum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, earum.4/p>
                 </div>
-                <div class="col-lg-6 col-sm-12 px-3 mb-3 fs-6">
+                <div class="col-lg-4 col-sm-12 px-3 mb-3 fs-6">
                     <label for="fullName" class="form-label px-1">
                         <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
                         @lang('lang.full_name') :
@@ -44,7 +44,27 @@
                     <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
-                <div class="col-lg-6 col-sm-12 px-3 mb-3 fs-6">
+                <div class="col-lg-4 col-sm-12 px-3 mb-3 fs-6">
+                    <label for="phone" class="form-label px-1">
+                        <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
+                        @lang('lang.phone') :
+                        <span class="text-danger">*</span>
+                    </label>
+                    <div class="input-group rounded-4 shadow-sm">
+                        {!! Form::text('phone', null, [
+                        'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl
+                        direction-input-ltr',
+                        'id' => 'phone',
+                        ]) !!}
+                        <label for="country_code">
+                            {!! Form::select('country_code', $countryCodes, null, [
+                            'class' => 'border border-end-0 py-3 form-select bg-primary text-white
+                            direction-span-rtl direction-span-ltr',
+                            ]) !!}
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 px-3 mb-3 fs-6">
                     <label for="email" class="form-label px-1">
                         <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
                         @lang('lang.email') :

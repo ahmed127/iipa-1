@@ -1,12 +1,12 @@
 <?php
 
 return array(
-    'singular' => 'Faq Category',
-    'plural' => 'Faq Categories',
+    'singular' => 'فئة المساعدة',
+    'plural' => 'فئات المساعدة',
     'fields' =>
     array(
-        'id' => 'ID',
-        'name' => 'Name',
-        'action' => 'Action',
+        'id' => '#',
+        'name' => 'الاسم',
+        'action' => 'التحكم',
     ),
 );

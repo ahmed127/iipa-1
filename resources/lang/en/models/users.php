@@ -5,7 +5,7 @@ return array(
   'plural' => 'Users',
   'fields' =>
   array(
-    'id' => 'ID',
+    'id' => '#',
     'email' => 'Email',
     'full_name' => 'Full Name',
     'name' => 'Name',

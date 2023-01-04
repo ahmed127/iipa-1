@@ -27,9 +27,17 @@
                     {{$page->title??''}}
                 </h2>
 
+                @if ($page->description)
                 <div class="col-12 text-lg-start text-center my-3">
                     {!! $page->description??'' !!}
                 </div>
+                @endif
+
+                @if ($page->image)
+                <div class="col-12   my-3">
+                    <img src="{{ $page->image??'' }}" alt="{{ $page->name }}" width="100%">
+                </div>
+                @endif
             </div>
         </div>
     </div>

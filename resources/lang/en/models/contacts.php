@@ -5,7 +5,7 @@ return array(
     'plural' => 'Messages',
     'fields' =>
     array(
-        'id' => 'ID',
+        'id' => '#',
         'name' => 'Name',
         'type' => 'Type',
         'phone' => 'Phone',

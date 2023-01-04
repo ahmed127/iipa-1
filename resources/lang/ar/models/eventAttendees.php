@@ -1,14 +1,14 @@
 <?php
 
-return array (
-  'singular' => 'EventAttendee',
-  'plural' => 'EventAttendees',
-  'fields' => 
-  array (
-    'id' => 'Id',
-    'event_id' => 'Event Id',
-    'user_id' => 'User Id',
-    'created_at' => 'Created At',
-    'updated_at' => 'Updated At',
-  ),
+return array(
+    'singular' => 'حضور الفاعلية',
+    'plural' => 'حضور الفاعليات',
+    'fields' =>
+    array(
+        'id' => '#',
+        'event_id' => 'الفاعلية',
+        'user_id' => 'المستخدم',
+        'created_at' => 'تم الانشاء في',
+        'updated_at' => 'تم التعديل في',
+    ),
 );

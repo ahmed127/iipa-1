@@ -1,12 +1,12 @@
 <?php
 
-return array (
+return array(
   'singular' => 'Role',
-  'plural' => 'Roles',
+  'plural' => 'الصلحيات',
   'fields' =>
-  array (
-    'id' => 'ID',
-    'name' => 'Name',
+  array(
+    'id' => '#',
+    'name' => 'الاسم',
     'bulck_select' => 'Bulck Select',
   ),
 );

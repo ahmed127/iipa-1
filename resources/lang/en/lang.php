@@ -80,7 +80,7 @@ return [
     // I i
     'inactive' => 'Inactive',
     'in_progress' => 'In progress',
-    'id_no' => 'ID Number',
+    'id_no' => '# ',
     'iipa' => 'Individual Investors Protection Association',
     'ithmaar_company' => 'Saudi Ithmaar Financial Consulting Company',
     'individual_fees' => 'Individual Fees',

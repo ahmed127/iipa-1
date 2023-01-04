@@ -26,7 +26,8 @@ class UpdatePageRequest extends FormRequest
     public function rules()
     {
         $rules = Page::rules();
-
+        $rules['photo'] = 'image|mimes:jpeg,jpg,png';
+        $rules['image'] = 'image|mimes:jpeg,jpg,png';
         return $rules;
     }
 }

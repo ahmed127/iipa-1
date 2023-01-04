@@ -1,14 +1,14 @@
 <?php
 
 return array(
-    'singular'  => 'Setting',
-    'plural'    => 'Settings',
+    'singular'  => 'الاعداد',
+    'plural'    => 'الاعدادات',
     'fields'    =>
     array(
         'id' => '#',
-        'created_at' => 'Created At',
-        'updated_at'  => 'Updated At',
-        'logo' => 'Logo',
-        'fav_icon' => 'Fav Icon',
+        'created_at' => 'تم الانشاء في',
+        'updated_at'  => 'تم التعديل في',
+        'logo' => 'الشعار',
+        'fav_icon' => 'الشعار مصغر',
     ),
 );

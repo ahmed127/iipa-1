@@ -5,7 +5,7 @@ return array(
     'plural' => 'Sliders',
     'fields' =>
     array(
-        'id' => 'ID',
+        'id' => '#',
         'photo' => 'Photo',
         'title' => 'Title',
         'subtitle' => 'Subtitle',

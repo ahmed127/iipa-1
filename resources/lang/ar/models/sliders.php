@@ -1,21 +1,21 @@
 <?php
 
 return array(
-    'singular' => 'Slider',
-    'plural' => 'Sliders',
+    'singular' => 'عرض ترويجي',
+    'plural' => 'العروض التروجية',
     'fields' =>
     array(
-        'id' => 'ID',
-        'photo' => 'Photo',
-        'title' => 'Title',
-        'subtitle' => 'Subtitle',
-        'content' => 'Content',
-        'description' => 'Description',
-        'button_text' => 'Button Text',
-        'link' => 'Link',
-        'status' => 'Status',
-        'sort' => 'Sort',
-        'created_at' => 'Created At',
-        'updated_at' => 'Updated At',
+        'id' => '#',
+        'photo' => 'صورة الخلفية',
+        'title' => 'العنوان',
+        'subtitle' => 'العنوان الفرعي',
+        'content' => 'المحتوي',
+        'description' => 'الوصف',
+        'button_text' => 'اسم الزرار',
+        'link' => 'رابط الزرار',
+        'status' => 'الحالة',
+        'sort' => 'الترتيب',
+        'created_at' => 'تم الانشاء في',
+        'updated_at' => 'تم التعديل في',
     ),
 );

@@ -1,11 +1,11 @@
 <?php
 
-return array (
+return array(
   'singular' => 'Area',
   'plural' => 'Areas',
   'fields' =>
-  array (
-    'id' => 'ID',
+  array(
+    'id' => '#',
     'text' => 'Text',
     'status' => 'Status',
   ),

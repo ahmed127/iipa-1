@@ -1,14 +1,14 @@
 <?php
 
-return array (
-  'singular' => 'City',
-  'plural' => 'Cities',
-  'fields' =>
-  array (
-    'id' => 'Id',
-    'name' => 'Name',
-    'country_id' => 'Country',
-    'created_at' => 'Created At',
-    'updated_at' => 'Updated At',
-  ),
+return array(
+    'singular' => 'المدينة',
+    'plural' => 'المدن',
+    'fields' =>
+    array(
+        'id' => '#',
+        'name' => 'الاسم',
+        'country_id' => 'الدولة',
+        'created_at' => 'تم الانشاء في',
+        'updated_at' => 'تم التعديل في',
+    ),
 );

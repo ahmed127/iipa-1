@@ -1,14 +1,14 @@
 <?php
 
-return array (
-  'singular' => 'Partner',
-  'plural' => 'Partners',
-  'fields' => 
-  array (
-    'id' => 'Id',
-    'logo' => 'Logo',
-    'link' => 'Link',
-    'created_at' => 'Created At',
-    'updated_at' => 'Updated At',
-  ),
+return array(
+    'singular' => 'الشريك',
+    'plural' => 'الشركاء',
+    'fields' =>
+    array(
+        'id' => '#',
+        'logo' => 'الشعار',
+        'link' => 'الرابط',
+        'created_at' => 'تم الانشاء في',
+        'updated_at' => 'تم التعديل في',
+    ),
 );

@@ -2,16 +2,15 @@
 
 namespace App\Models;
 
-use Eloquent as Model;
+use App\Helpers\ImageUploaderTrait;
+use Illuminate\Database\Eloquent\Model;
+use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
-use Astrotomic\Translatable\Translatable;
 
 class Page extends Model
 {
-    use SoftDeletes;
-
-    use Translatable;
+    use SoftDeletes, Translatable, ImageUploaderTrait;
 
     public $table = 'pages';
 
@@ -19,13 +18,11 @@ class Page extends Model
     protected $dates = ['deleted_at'];
 
     public $fillable = [
-        'title',
-        'description',
-        'keywords',
+        'photo',
+        'image',
+        'attachment_pdf',
+        'type', // 1 => page - 2 => pdf, 3 => image
         'active',
-        'in_navbar',
-        'slug',
-        'in_footer'
     ];
 
     /**
@@ -50,8 +47,10 @@ class Page extends Model
         'meta_description',
         'meta_keywords',
         'name',
-        'content',
-        'slug'
+        'slug',
+        'title',
+        'brief',
+        'description',
     ];
 
     /**
@@ -62,38 +61,105 @@ class Page extends Model
     public static function rules()
     {
         $languages = array_keys(config('langs'));
+
         foreach ($languages as $language) {
-            $rules[$language . '.name'] = 'required|string|min:3|max:191';
-            $rules[$language . '.content'] = 'required|min:3';
-            $rules[$language . '.meta_title'] = 'required|min:3';
-            $rules[$language . '.meta_description'] = 'required|min:3';
-            $rules[$language . '.meta_keywords'] = 'required|min:3';
+            $rules[$language . '.name'] = 'nullable|required_if:type,1';
+            $rules[$language . '.btn_name'] = 'nullable|required_if:type,1';
+            $rules[$language . '.meta_title'] = 'nullable|required_if:type,1';
+            $rules[$language . '.meta_description'] = 'nullable|required_if:type,1';
+            $rules[$language . '.meta_keywords'] = 'nullable|required_if:type,1';
+            $rules[$language . '.title'] = 'required|string|min:3|max:191';
+            $rules[$language . '.brief'] = 'required|string|min:3|max:191';
+            $rules[$language . '.description'] = 'nullable|required_if:type,1';
+            // $rules[$language . '.slug'] = 'required|string|min:3|max:191';
         }
-        // $rules['active'] = 'required|in:yes,no';
-        // $rules['in_navbar'] = 'required|in:yes,no';
-        // $rules['in_footer'] = 'required|in:yes,no';
+
+        $rules['type'] = 'required|in:1,3';
+        $rules['attachment_pdf'] = 'nullable|required_if:type,2|file|mimes:pdf';
+        $rules['photo'] = 'required|image|mimes:jpeg,jpg,png';
+        $rules['image'] = 'nullable|required_if:type,3|image|mimes:jpeg,jpg,png';
 
         return $rules;
     }
 
+    // public static function menu_list()
+    // {
+    //     return [
+    //         2 => 'about',
+    //         3 => 'class_action',
+    //         4 => 'volunteer_and_training',
+    //         5 => 'footer',
+    //     ];
+    // }
 
-    /**
-     * Gets metas for page
-     *
-     * @return Collection
-     */
-    public function metas()
+    // Attachment Pdf
+    public function setAttachmentPdfAttribute($file)
     {
-        return $this->hasOne('App\Models\Meta', 'page_id', 'id');
+        if ($file) {
+            try {
+                $fileName = $this->createFileName($file);
+                $this->saveFile($file, $fileName);
+                $this->attributes['attachment_pdf'] = $fileName;
+            } catch (\Throwable $th) {
+                $this->attributes['attachment_pdf'] = $file;
+            }
+        }
     }
 
-    public function paragraph()
+    public function getAttachmentPdfAttribute($val)
     {
-        return $this->hasMany('App\Models\Paragraph', 'page_id', 'id');
+        return asset('uploads/files/' . $val);
     }
 
-    public function image()
+    // Attachment Pdf
+
+    // Photo Handling
+    public function setPhotoAttribute($file)
     {
-        return $this->hasMany('App\Models\Images', 'page_id', 'id');
+        if ($file) {
+            try {
+                $fileName = $this->createFileName($file);
+
+                $this->originalImage($file, $fileName);
+
+                $this->thumbImage($file, $fileName, 300, 300);
+
+                $this->attributes['photo'] = $fileName;
+            } catch (\Throwable $th) {
+                $this->attributes['photo'] = $file;
+            }
+        }
     }
+
+
+    public function getPhotoAttribute($val)
+    {
+        return $val ? asset('uploads/images/original') . '/' . $val : null;
+    }
+    // End Photo Handling
+
+    // Image Handling
+    public function setImageAttribute($file)
+    {
+        if ($file) {
+            try {
+                $fileName = $this->createFileName($file);
+
+                $this->originalImage($file, $fileName);
+
+                $this->thumbImage($file, $fileName, 300, 300);
+
+                $this->attributes['image'] = $fileName;
+            } catch (\Throwable $th) {
+                $this->attributes['image'] = $file;
+            }
+        }
+    }
+
+
+    public function getImageAttribute($val)
+    {
+        return $val ? asset('uploads/images/original') . '/' . $val : null;
+    }
+    // End Image Handling
 }

@@ -1,18 +1,18 @@
 <?php
 
 return array(
-    'singular' => 'Blog',
-    'plural' => 'Blogs',
+    'singular' => 'المركز الاعلامي',
+    'plural' => 'المركز الاعلامي',
     'fields' =>
     array(
-        'id' => 'ID',
-        'blog_category_id' => 'Category',
-        'photo_sm' => 'Small Photo',
-        'photo_cover' => 'Cover Photo',
-        'title' => 'Title',
-        'brief' => 'Brief',
-        'description' => 'Description',
-        'created_at' => 'Created At',
-        'updated_at' => 'Updated At',
+        'id' => '#',
+        'blog_category_id' => 'الفئة',
+        'photo_sm' => 'المصغرة صورة الخلفية',
+        'photo_cover' => 'صورة الخلفية',
+        'title' => 'العنوان',
+        'brief' => 'نبذة',
+        'description' => 'الوصف',
+        'created_at' => 'تم الانشاء في',
+        'updated_at' => 'تم التعديل في',
     ),
 );

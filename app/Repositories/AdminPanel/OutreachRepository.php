@@ -9,7 +9,7 @@ use App\Repositories\BaseRepository;
  * Class OutreachRepository
  * @package App\Repositories\AdminPanel
  * @version December 20, 2022, 1:31 pm UTC
-*/
+ */
 
 class OutreachRepository extends BaseRepository
 {
@@ -19,9 +19,6 @@ class OutreachRepository extends BaseRepository
     protected $fieldSearchable = [
         'title',
         'brief',
-        'description',
-        'photo',
-        'attachment_pdf',
         'type'
     ];
 
