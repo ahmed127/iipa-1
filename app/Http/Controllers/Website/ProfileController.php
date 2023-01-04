@@ -6,6 +6,7 @@ use App\Models\Country;
 use Laracasts\Flash\Flash;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Follow;
 
 class ProfileController extends Controller
 {
@@ -61,10 +62,53 @@ class ProfileController extends Controller
         return view('website.pages.profile.information', $data);
     }
 
-    public function my_request(Request $request)
+    public function my_requests(Request $request)
     {
+        // dd($request->all());
         $user = auth()->user();
-        $data = [];
-        return view('website.pages.requests.all', $data);
+        $query = Follow::query();
+        $query->where('user_id', $user->id);
+
+        if (request()->filled('name')) $query->where('name', 'LIKE', '%' . request('name') . '%');
+        if (request()->filled('status')) $query->where('status', request('status'));
+        if (request()->filled('department')) $query->where('department', request('department'));
+
+        if (request()->filled('sort') && request('sort') == 'asc') {
+        } else {
+            $query->latest();
+        }
+
+        $data['follow_requests'] = $query->paginate(9);
+        $data['departments'] = Follow::departments();
+        $data['status_types'] = Follow::status_types();
+        $data['sort'] = [
+            'desc' => 'desc',
+            'asc'  => 'asc',
+        ];
+
+        return view('website.pages.profile.requests', $data);
+    }
+
+    public function my_request($id)
+    {
+        $follow_request = Follow::where('user_id', auth()->id())->where('id', $id)->first();
+        if (empty($follow_request)) {
+            Flash::error('Request Not Found.');
+            return back();
+        }
+        $data['follow_request'] = $follow_request;
+        return view('website.pages.profile.request', $data);
+    }
+
+    public function my_request_delete($id)
+    {
+        $follow_request = Follow::where('user_id', auth()->id())->where('id', $id)->first();
+        if (empty($follow_request)) {
+            Flash::error('Request Not Found.');
+            return back();
+        }
+        $follow_request->delete();
+        Flash::success('Request Deleted Successful.');
+        return back();
     }
 }

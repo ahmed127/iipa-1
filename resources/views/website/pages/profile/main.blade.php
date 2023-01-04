@@ -34,7 +34,7 @@
                     </div>
                     <div class="row my-3 p-3">
                         <div class="col-5">Phone :</div>
-                        <div class="col-7">{{ $user->country->code }} {{ $user->phone }}</div>
+                        <div class="col-7">{{ $user->country->code??'' }} {{ $user->phone }}</div>
                     </div>
                     <div class="row my-3 p-3">
                         <div class="col-5">Account Created At :</div>
