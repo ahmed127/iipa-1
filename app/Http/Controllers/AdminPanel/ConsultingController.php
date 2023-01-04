@@ -33,10 +33,16 @@ class ConsultingController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $consultings = $this->consultingRepository->paginate(10);
+        $data['consultings'] = $this->consultingRepository->allQuery($request->all())->paginate($request->pagination ?? 10);
+        $data['countryCodes'] = Country::get()->pluck('code', 'code');
+        $data['countries'] = Country::get()->pluck('name', 'id');
+        $data['jobs'] = Job::get()->pluck('name', 'id');
+        $data['consultantTypes'] = ConsultantType::get()->pluck('name', 'id');
+        $data['types'] = Consulting::types();
+        $data['favLangs'] = Consulting::favLangs();
+        $data['genders'] = Consulting::genders();
 
-        return view('adminPanel.consultings.index')
-            ->with('consultings', $consultings);
+        return view('adminPanel.consultings.index', $data);
     }
 
     /**

@@ -109,6 +109,10 @@ abstract class BaseRepository
                                 break;
                             case 'type':
                                 $query->where($key, 'LIKE', $value . '%');
+                            case 'job_id':
+                                $query->where($key, 'LIKE', $value . '%');
+                            case 'country_id':
+                                $query->where($key, 'LIKE', $value . '%');
                                 break;
                             case 'created_at':
                                 $query->where($key, 'LIKE', $value . '%');

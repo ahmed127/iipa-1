@@ -29,33 +29,33 @@
                                     </a>
                                     <ul class="dropdown-menu">
 
-                                    <li><a class="dropdown-item {{ Request::is('*profile*') ? 'active' : '' }}"
-                                            href="{{ route('website.profile') }}">Profile</a></li>
-                                    <li>
-                                        <a class="dropdown-item {{ Request::is('*update-information*') ? 'active' : '' }}"
-                                            href="{{ route('website.update_information') }}">
-                                            Update Information
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item {{ Request::is('*update-password*') ? 'active' : '' }}"
-                                            href="{{ route('website.update_password') }}">
-                                            Update Password
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item {{ Request::is('*my-request*') ? 'active' : '' }}"
-                                            href="{{ route('website.my_requests') }}">
-                                            My Requests
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item text-danger" href="{{ route('website.logout') }}">
-                                            logout
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
+                                        <li><a class="dropdown-item {{ Request::is('*profile*') ? 'active' : '' }}"
+                                                href="{{ route('website.profile') }}">Profile</a></li>
+                                        <li>
+                                            <a class="dropdown-item {{ Request::is('*update-information*') ? 'active' : '' }}"
+                                                href="{{ route('website.update_information') }}">
+                                                Update Information
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item {{ Request::is('*update-password*') ? 'active' : '' }}"
+                                                href="{{ route('website.update_password') }}">
+                                                Update Password
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item {{ Request::is('*my-request*') ? 'active' : '' }}"
+                                                href="{{ route('website.my_requests') }}">
+                                                My Requests
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item text-danger" href="{{ route('website.logout') }}">
+                                                logout
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
                             @else
                                 <li class="nav-item">
                                     <a class="nav-link pt-0" href="{{ route('website.login') }}">
@@ -243,7 +243,7 @@
 
                                     <li>
                                         <a class="dropdown-item" href="{{ route('website.class_actions_request') }}">
-                                            Cooperative training program for the entities
+                                            Request
                                         </a>
                                     </li>
                                     <li>

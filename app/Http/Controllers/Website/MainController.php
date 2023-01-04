@@ -137,6 +137,7 @@ class MainController extends Controller
     public function advisors_store(CreateConsultingRequest $request)
     {
         $input = $request->all();
+        $input['type'] = array_search(__('lang.legal_advisor'), Consulting::types());
 
         $consulting = Consulting::create($input);
         $this->follow_store($consulting);
@@ -150,11 +151,27 @@ class MainController extends Controller
     // Class Actions
     public function class_actions_request()
     {
-        return view('website.pages.class_actions.request');
+        $data['countryCodes'] = Country::get()->pluck('code', 'code');
+        $data['countries'] = Country::get()->pluck('name', 'id');
+        $data['jobs'] = Job::get()->pluck('name', 'id');
+        $data['consultantTypes'] = ConsultantType::get()->pluck('name', 'id');
+        $data['types'] = Consulting::types();
+        $data['favLangs'] = Consulting::favLangs();
+        $data['genders'] = Consulting::genders();
+
+        return view('website.pages.class_actions.request', $data);
     }
 
-    public function class_actions_request_store()
+    public function class_actions_request_store(CreateConsultingRequest $request)
     {
+        $input = $request->all();
+        $input['type'] = array_search(__('lang.request_lawsuit'), Consulting::types());
+
+        $consulting = Consulting::create($input);
+        $this->follow_store($consulting);
+
+        Flash::success(__('lang.message_sent'));
+
         return back();
     }
 

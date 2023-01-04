@@ -7,6 +7,57 @@
                     {!! Form::open(['route' => 'adminPanel.consultings.index', 'method' => 'GET']) !!}
                     <div class="row">
 
+                        <!-- name Field -->
+                        <div class="form-group col-sm-4">
+                            {!! Form::label('name', __('models/consultings.fields.name') . ':') !!}
+                            {!! Form::text('name', request('name') ?? null, [
+                                'class' => 'form-control',
+                            ]) !!}
+                        </div>
+
+                        <!-- email Field -->
+                        <div class="form-group col-sm-4">
+                            {!! Form::label('email', __('models/consultings.fields.email') . ':') !!}
+                            {!! Form::text('email', request('email') ?? null, [
+                                'class' => 'form-control',
+                            ]) !!}
+                        </div>
+
+                        <!-- phone Field -->
+                        <div class="form-group col-sm-4">
+                            {!! Form::label('phone', __('models/consultings.fields.phone') . ':') !!}
+                            {!! Form::text('phone', request('phone') ?? null, [
+                                'class' => 'form-control',
+                            ]) !!}
+                        </div>
+
+                        <!-- type Field -->
+                        <div class="form-group col-sm-4">
+                            {!! Form::label('type', __('models/consultings.fields.type') . ':') !!}
+                            {!! Form::select('type', $types, request('type') ?? null, [
+                                'class' => 'form-control',
+                                'placeholder' => __('lang.select') . ' ' . __('models/consultings.fields.type'),
+                            ]) !!}
+                        </div>
+
+                        <!-- job_id Field -->
+                        <div class="form-group col-sm-4">
+                            {!! Form::label('job_id', __('models/consultings.fields.job_id') . ':') !!}
+                            {!! Form::select('job_id', $jobs, request('job_id') ?? null, [
+                                'class' => 'form-control',
+                                'placeholder' => __('lang.select') . ' ' . __('models/consultings.fields.job_id'),
+                            ]) !!}
+                        </div>
+
+                        <!-- country_id Field -->
+                        <div class="form-group col-sm-4">
+                            {!! Form::label('country_id', __('models/consultings.fields.country_id') . ':') !!}
+                            {!! Form::select('country_id', $countries, request('country_id') ?? null, [
+                                'class' => 'form-control',
+                                'placeholder' => __('lang.select') . ' ' . __('models/consultings.fields.country_id'),
+                            ]) !!}
+                        </div>
+
                         <!-- pagination Field -->
                         <div class="form-group col-sm-4">
                             {!! Form::label('pagination', __('crud.pagination') . ':') !!}
@@ -22,16 +73,8 @@
                             {!! Form::submit(__('crud.search'), ['class' => 'btn btn-light-success']) !!}
                             <a href="{{ route('adminPanel.consultings.index') }}"
                                 class="btn btn-light-danger font-weight-bold">@lang('crud.reset')</a>
-                            <button type="button" class="btn btn-light-primary font-weight-bold"
-                                id="exportButton">@lang('crud.export')</button>
-                        </div>
-
-                        <div class="form-group col-sm-12">
-                            @error('export_rows')
-                                <h1 class="text-danger">
-                                    @lang('lang.select_to_export', ['model' => __('models/consultings.plural')])
-                                </h1>
-                            @enderror
+                            {{-- <button type="button" class="btn btn-light-primary font-weight-bold"
+                                id="exportButton">@lang('crud.export')</button> --}}
                         </div>
                     </div>
                     {!! Form::close() !!}
@@ -85,7 +128,7 @@
                 <td>{{ $consulting->country->name ?? '' }}</td>
                 <td>{{ $consulting->job->name ?? '' }}</td>
                 <td>{{ $consulting->consultant_type->name ?? '' }}</td>
-                <td>{{ $consulting->type }}</td>
+                <td>{{ $consulting->type_text }}</td>
                 <td>{{ $consulting->fav_lang }}</td>
                 <td>{{ $consulting->gender }}</td>
                 <td>{{ $consulting->nationality }}</td>

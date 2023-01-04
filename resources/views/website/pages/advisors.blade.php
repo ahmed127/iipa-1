@@ -23,12 +23,18 @@
 
                     {!! Form::open(['route' => 'website.advisors_store', 'class' => 'd-flex row', 'files' => true]) !!}
 
+                    <!-- Name Field -->
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
-                        <label for="name" class="form-label px-1">
-                            <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
-                            @lang('lang.name') :
-                            <span class="text-danger">*</span>
-                        </label>
+                        {!! Html::decode(
+                            Form::label(
+                                'name',
+                                '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                                    __('lang.name') .
+                                    ':' .
+                                    '<span class="text-danger">*</span>',
+                                ['class' => 'form-label px-1'],
+                            ),
+                        ) !!}
                         <div class="input-group">
                             {!! Form::text('name', null, [
                                 'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
@@ -37,12 +43,18 @@
                         </div>
                     </div>
 
+                    <!-- email Field -->
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
-                        <label for="email" class="form-label px-1">
-                            <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
-                            @lang('lang.email') :
-                            <span class="text-danger">*</span>
-                        </label>
+                        {!! Html::decode(
+                            Form::label(
+                                'email',
+                                '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                                    __('lang.email') .
+                                    ':' .
+                                    '<span class="text-danger">*</span>',
+                                ['class' => 'form-label px-1'],
+                            ),
+                        ) !!}
                         <div class="input-group">
                             {!! Form::text('email', null, [
                                 'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
@@ -52,12 +64,18 @@
                         </div>
                     </div>
 
+                    <!-- email_confirmation Field -->
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
-                        <label for="email_confirmation" class="form-label px-1">
-                            <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
-                            @lang('lang.email_confirmation') :
-                            <span class="text-danger">*</span>
-                        </label>
+                        {!! Html::decode(
+                            Form::label(
+                                'email_confirmation',
+                                '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                                    __('lang.email_confirmation') .
+                                    ':' .
+                                    '<span class="text-danger">*</span>',
+                                ['class' => 'form-label px-1'],
+                            ),
+                        ) !!}
                         <div class="input-group">
                             {!! Form::text('email_confirmation', null, [
                                 'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
@@ -67,12 +85,18 @@
                         </div>
                     </div>
 
+                    <!-- phone Field -->
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
-                        <label for="phone" class="form-label px-1">
-                            <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
-                            @lang('lang.phone') :
-                            <span class="text-danger">*</span>
-                        </label>
+                        {!! Html::decode(
+                            Form::label(
+                                'phone',
+                                '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                                    __('lang.phone') .
+                                    ':' .
+                                    '<span class="text-danger">*</span>',
+                                ['class' => 'form-label px-1'],
+                            ),
+                        ) !!}
                         <div class="input-group rounded-4 shadow-sm">
                             {!! Form::text('phone', null, [
                                 'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr',
@@ -86,12 +110,18 @@
                         </div>
                     </div>
 
+                    <!-- country_id Field -->
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
-                        <label for="country_id" class="form-label px-1">
-                            <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
-                            @lang('lang.country') :
-                            <span class="text-danger">*</span>
-                        </label>
+                        {!! Html::decode(
+                            Form::label(
+                                'country_id',
+                                '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                                    __('lang.country') .
+                                    ':' .
+                                    '<span class="text-danger">*</span>',
+                                ['class' => 'form-label px-1'],
+                            ),
+                        ) !!}
                         <div class="input-group">
                             {!! Form::select('country_id', $countries, null, [
                                 'class' => 'border py-3 form-select rounded-4',
@@ -100,12 +130,18 @@
                         </div>
                     </div>
 
+                    <!-- job_id Field -->
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
-                        <label for="job_id" class="form-label px-1">
-                            <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
-                            @lang('lang.job') :
-                            <span class="text-danger">*</span>
-                        </label>
+                        {!! Html::decode(
+                            Form::label(
+                                'job_id',
+                                '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                                    __('lang.job') .
+                                    ':' .
+                                    '<span class="text-danger">*</span>',
+                                ['class' => 'form-label px-1'],
+                            ),
+                        ) !!}
                         <div class="input-group">
                             {!! Form::select('job_id', $jobs, null, [
                                 'class' => 'border py-3 form-select rounded-4',
@@ -114,12 +150,18 @@
                         </div>
                     </div>
 
+                    <!-- consultant_type_id Field -->
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
-                        <label for="consultant_type_id" class="form-label px-1">
-                            <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
-                            @lang('lang.consultant_type') :
-                            <span class="text-danger">*</span>
-                        </label>
+                        {!! Html::decode(
+                            Form::label(
+                                'consultant_type_id',
+                                '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                                    __('lang.consultant_type') .
+                                    ':' .
+                                    '<span class="text-danger">*</span>',
+                                ['class' => 'form-label px-1'],
+                            ),
+                        ) !!}
                         <div class="input-group">
                             {!! Form::select('consultant_type_id', $consultantTypes, null, [
                                 'class' => 'border py-3 form-select rounded-4',
@@ -128,26 +170,18 @@
                         </div>
                     </div>
 
+                    <!-- fav_lang Field -->
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
-                        <label for="type" class="form-label px-1">
-                            <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
-                            @lang('lang.type') :
-                            <span class="text-danger">*</span>
-                        </label>
-                        <div class="input-group">
-                            {!! Form::select('type', $types, null, [
-                                'class' => 'border py-3 form-select rounded-4',
-                                'placeholder' => __('lang.select') . ' ' . __('lang.type'),
-                            ]) !!}
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
-                        <label for="fav_lang" class="form-label px-1">
-                            <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
-                            @lang('lang.fav_lang') :
-                            <span class="text-danger">*</span>
-                        </label>
+                        {!! Html::decode(
+                            Form::label(
+                                'fav_lang',
+                                '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                                    __('lang.fav_lang') .
+                                    ':' .
+                                    '<span class="text-danger">*</span>',
+                                ['class' => 'form-label px-1'],
+                            ),
+                        ) !!}
                         <div class="input-group">
                             {!! Form::select('fav_lang', $favLangs, null, [
                                 'class' => 'border py-3 form-select rounded-4',
@@ -156,12 +190,18 @@
                         </div>
                     </div>
 
+                    <!-- gender Field -->
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
-                        <label for="gender" class="form-label px-1">
-                            <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
-                            @lang('lang.gender') :
-                            <span class="text-danger">*</span>
-                        </label>
+                        {!! Html::decode(
+                            Form::label(
+                                'gender',
+                                '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                                    __('lang.gender') .
+                                    ':' .
+                                    '<span class="text-danger">*</span>',
+                                ['class' => 'form-label px-1'],
+                            ),
+                        ) !!}
                         <div class="input-group">
                             {!! Form::select('gender', $genders, null, [
                                 'class' => 'border py-3 form-select rounded-4',
@@ -170,12 +210,18 @@
                         </div>
                     </div>
 
+                    <!-- date_of_birth Field -->
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
-                        <label for="date_of_birth" class="form-label px-1">
-                            <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
-                            @lang('lang.date_of_birth') :
-                            <span class="text-danger">*</span>
-                        </label>
+                        {!! Html::decode(
+                            Form::label(
+                                'date_of_birth',
+                                '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                                    __('lang.date_of_birth') .
+                                    ':' .
+                                    '<span class="text-danger">*</span>',
+                                ['class' => 'form-label px-1'],
+                            ),
+                        ) !!}
                         <div class="input-group">
                             {!! Form::date('date_of_birth', null, [
                                 'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
@@ -183,12 +229,18 @@
                         </div>
                     </div>
 
+                    <!-- description Field -->
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
-                        <label for="description" class="form-label px-1">
-                            <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
-                            @lang('lang.description') :
-                            <span class="text-danger">*</span>
-                        </label>
+                        {!! Html::decode(
+                            Form::label(
+                                'description',
+                                '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                                    __('lang.description') .
+                                    ':' .
+                                    '<span class="text-danger">*</span>',
+                                ['class' => 'form-label px-1'],
+                            ),
+                        ) !!}
                         <div class="input-group">
                             {!! Form::text('description', null, [
                                 'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
@@ -196,12 +248,18 @@
                         </div>
                     </div>
 
+                    <!-- nationality Field -->
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
-                        <label for="nationality" class="form-label px-1">
-                            <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
-                            @lang('lang.nationality') :
-                            <span class="text-danger">*</span>
-                        </label>
+                        {!! Html::decode(
+                            Form::label(
+                                'nationality',
+                                '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                                    __('lang.nationality') .
+                                    ':' .
+                                    '<span class="text-danger">*</span>',
+                                ['class' => 'form-label px-1'],
+                            ),
+                        ) !!}
                         <div class="input-group">
                             {!! Form::text('nationality', null, [
                                 'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
@@ -209,12 +267,18 @@
                         </div>
                     </div>
 
-                    <div class="col-12 px-2 mb-3 fs-6">
-                        <label for="attachment_letter" class="form-label px-1">
-                            <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
-                            @lang('lang.attachment_letter'):
-                            <span class="text-danger">*</span>
-                        </label>
+                    <!-- attachment_letter Field -->
+                    <div class="col-lg-12 col-sm-12 col-md-6 px-2 mb-3 fs-6">
+                        {!! Html::decode(
+                            Form::label(
+                                'attachment_letter',
+                                '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                                    __('lang.attachment_letter') .
+                                    ':' .
+                                    '<span class="text-danger">*</span>',
+                                ['class' => 'form-label px-1'],
+                            ),
+                        ) !!}
                         <div class="input-group">
                             {!! Form::file('attachment_letter', [
                                 'class' => 'form-control shadow-sm',
