@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Eloquent as Model;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 
@@ -22,7 +22,7 @@ class Event extends Model
 
 
     public $table = 'events';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -53,9 +53,5 @@ class Event extends Model
      *
      * @var array
      */
-    public static $rules = [
-        
-    ];
-
-    
+    public static $rules = [];
 }

@@ -3,8 +3,8 @@
 namespace App\Models;
 
 use App\Helpers\ImageUploaderTrait;
+use Illuminate\Database\Eloquent\Model;
 use Astrotomic\Translatable\Translatable;
-use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 

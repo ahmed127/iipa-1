@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Astrotomic\Translatable\Translatable;
-use Eloquent as Model;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**

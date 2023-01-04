@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Eloquent as Model;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -53,7 +53,7 @@ class SocialLink extends Model
 
     /**
      * Timestamps.
-     * 
+     *
      * @var boolean
      */
     public $timestamps = false;

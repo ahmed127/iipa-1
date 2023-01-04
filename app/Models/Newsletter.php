@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Eloquent as Model;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -45,6 +45,4 @@ class Newsletter extends Model
     public static $rules = [
         'email' => 'required|email|min:3|max:191|unique:newsletters'
     ];
-
-
 }

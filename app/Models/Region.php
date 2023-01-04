@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Eloquent as Model;
+use Illuminate\Database\Eloquent\Model;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -45,7 +45,7 @@ class Region extends Model
 
     public $translatedAttributes = ['name'];
 
-    
+
     public static function rules()
     {
         $languages = array_keys(config('langs'));
@@ -57,6 +57,4 @@ class Region extends Model
 
         return $rules;
     }
-
-
 }

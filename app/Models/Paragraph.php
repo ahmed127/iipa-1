@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Eloquent as Model;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
 use Astrotomic\Translatable\Translatable;
@@ -21,7 +21,7 @@ class Paragraph extends Model
     use Translatable;
 
     public $table = 'paragraphs';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -29,11 +29,11 @@ class Paragraph extends Model
 
     public $fillable = [
         'page_id',
-        
+
     ];
 
 
-     /**
+    /**
      * Translated attributes.
      *
      * @var array
@@ -53,16 +53,16 @@ class Paragraph extends Model
     ];
 
 
-   /**
+    /**
      * Timestamps.
-     * 
+     *
      * @var boolean
      */
     public $timestamps = false;
 
 
 
-    
+
     /**
      * Rules validation
      *
@@ -74,7 +74,7 @@ class Paragraph extends Model
         foreach ($languages as $language) {
             $rules[$language . '.text'] = 'required|string';
         }
-        
+
         return $rules;
     }
 
@@ -86,5 +86,4 @@ class Paragraph extends Model
     {
         return $this->belongsTo('App\Models\Page', 'page_id', 'id');
     }
-    
 }

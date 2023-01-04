@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Eloquent as Model;
+use Illuminate\Database\Eloquent\Model;
 use App\Helpers\ImageUploaderTrait;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Astrotomic\Translatable\Translatable;
@@ -22,7 +22,7 @@ class Notification extends Model
     public $fillable = [
         'btn_to',
         'photo',
-        'type'//1 => All, 2 => Driver, 3 => Customer
+        'type' //1 => All, 2 => Driver, 3 => Customer
     ];
 
     /**

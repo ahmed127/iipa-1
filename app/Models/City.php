@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Eloquent as Model;
+use Illuminate\Database\Eloquent\Model;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -47,7 +47,8 @@ class City extends Model
      *
      * @return array vaildations rules
      */
-    public static function rules(){
+    public static function rules()
+    {
         $languages = array_keys(config('langs'));
         foreach ($languages as $language) {
             $rules[$language . '.name'] = 'required|string|min:3|max:191';
@@ -68,6 +69,4 @@ class City extends Model
     {
         return $this->hasMany(Region::class);
     }
-
-
 }
