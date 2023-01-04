@@ -29,7 +29,7 @@ class PartnerController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $partners = $this->partnerRepository->paginate(10);
+        $partners = $this->partnerRepository->allQuery($request->all())->paginate($request->pagination ?? 10);
 
         return view('adminPanel.partners.index')
             ->with('partners', $partners);

@@ -2,25 +2,19 @@
 
 namespace App\Models;
 
-use Eloquent as Model;
+use App\Helpers\ImageUploaderTrait;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 
-/**
- * Class Partner
- * @package App\Models
- * @version December 20, 2022, 1:35 pm UTC
- *
- * @property string $logo
- * @property string $link
- */
+
 class Partner extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, ImageUploaderTrait;
 
 
     public $table = 'partners';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -52,5 +46,27 @@ class Partner extends Model
         'link' => 'required'
     ];
 
-    
+
+    public function setLogoAttribute($file)
+    {
+        if ($file) {
+            try {
+                $fileName = $this->createFileName($file);
+
+                $this->originalImage($file, $fileName);
+
+                $this->thumbImage($file, $fileName, 300, 300);
+
+                $this->attributes['logo'] = $fileName;
+            } catch (\Throwable $th) {
+                $this->attributes['logo'] = $file;
+            }
+        }
+    }
+
+
+    public function getLogoAttribute($val)
+    {
+        return $val ? asset('uploads/images/original') . '/' . $val : null;
+    }
 }

@@ -26,6 +26,7 @@ use App\Models\Package;
 use App\Models\Volunteer;
 use App\Models\VolunteerType;
 use App\Models\Outreach;
+use App\Models\Partner;
 use App\Models\Recruitment;
 
 class MainController extends Controller
@@ -86,7 +87,8 @@ class MainController extends Controller
 
     public function our_partners()
     {
-        return view('website.pages.who_we_are.our_partners');
+        $partners = Partner::all();
+        return view('website.pages.who_we_are.our_partners', compact('partners'));
     }
     // Who We Are
 

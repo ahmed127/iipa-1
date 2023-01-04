@@ -1,12 +1,12 @@
 @extends('adminPanel.layouts.app')
 
 @section('breadcrumb')
-<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
-    <li class="breadcrumb-item">
-         <a href="{!! route('adminPanel.partners.index') !!}">@lang('models/partners.singular')</a>
-    </li>
-    <li class="breadcrumb-item active">@lang('crud.add_new')</li>
-</ul>
+    <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
+        <li class="breadcrumb-item">
+            <a href="{!! route('adminPanel.partners.index') !!}">@lang('models/partners.singular')</a>
+        </li>
+        <li class="breadcrumb-item active">@lang('crud.add_new')</li>
+    </ul>
 @endsection
 @section('content')
     <div class="d-flex flex-column-fluid">
@@ -21,8 +21,8 @@
                             <h3 class="card-title">Create @lang('models/partners.singular')</h3>
                         </div>
                         <div class="card-body">
-                            {!! Form::open(['route' => 'adminPanel.partners.store']) !!}
-                                @include('adminPanel.partners.fields')
+                            {!! Form::open(['route' => 'adminPanel.partners.store', 'files' => true]) !!}
+                            @include('adminPanel.partners.fields')
                             {!! Form::close() !!}
                         </div>
                     </div>

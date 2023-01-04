@@ -100,6 +100,8 @@ abstract class BaseRepository
                                 break;
                             case 'full_name':
                                 $query->where($key, 'LIKE', '%' . $value . '%');
+                            case 'link':
+                                $query->where($key, 'LIKE', '%' . $value . '%');
                             case 'email':
                                 $query->where($key, 'LIKE', '%' . $value . '%');
                             case 'phone':
