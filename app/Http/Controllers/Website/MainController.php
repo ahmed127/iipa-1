@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Website;
 
 use App\Models\Job;
 use App\Models\Law;
+use App\Models\Blog;
 use App\Models\Page;
 use App\Models\Company;
 use App\Models\Contact;
 use App\Models\Country;
 use App\Models\Package;
+use App\Models\Partner;
 use App\Models\Director;
 use App\Models\Outreach;
 use App\Models\Volunteer;
@@ -94,7 +96,8 @@ class MainController extends Controller
 
     public function our_partners()
     {
-        return view('website.pages.who_we_are.our_partners');
+        $partners = Partner::all();
+        return view('website.pages.who_we_are.our_partners', compact('partners'));
     }
     // Who We Are
 
@@ -139,6 +142,7 @@ class MainController extends Controller
     public function advisors_store(CreateConsultingRequest $request)
     {
         $input = $request->all();
+        $input['type'] = array_search(__('lang.legal_advisor'), Consulting::types());
 
         $consulting = Consulting::create($input);
         $this->follow_store($consulting);
@@ -152,11 +156,27 @@ class MainController extends Controller
     // Class Actions
     public function class_actions_request()
     {
-        return view('website.pages.class_actions.request');
+        $data['countryCodes'] = Country::get()->pluck('code', 'code');
+        $data['countries'] = Country::get()->pluck('name', 'id');
+        $data['jobs'] = Job::get()->pluck('name', 'id');
+        $data['consultantTypes'] = ConsultantType::get()->pluck('name', 'id');
+        $data['types'] = Consulting::types();
+        $data['favLangs'] = Consulting::favLangs();
+        $data['genders'] = Consulting::genders();
+
+        return view('website.pages.class_actions.request', $data);
     }
 
-    public function class_actions_request_store()
+    public function class_actions_request_store(CreateConsultingRequest $request)
     {
+        $input = $request->all();
+        $input['type'] = array_search(__('lang.request_lawsuit'), Consulting::types());
+
+        $consulting = Consulting::create($input);
+        $this->follow_store($consulting);
+
+        Flash::success(__('lang.message_sent'));
+
         return back();
     }
 
@@ -224,12 +244,14 @@ class MainController extends Controller
     // Media Center
     public function media_center_all()
     {
-        return view('website.pages.media_center.all');
+        $blogs = Blog::latest()->paginate(9);
+        return view('website.pages.media_center.all', compact('blogs'));
     }
 
     public function media_center_single($id)
     {
-        return view('website.pages.media_center.single');
+        $blog = Blog::findOrFail($id);
+        return view('website.pages.media_center.single', compact('blog'));
     }
     // Media Center
 

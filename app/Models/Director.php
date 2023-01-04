@@ -3,20 +3,11 @@
 namespace App\Models;
 
 use App\Helpers\ImageUploaderTrait;
-use Eloquent as Model;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 
-/**
- * Class Director
- * @package App\Models
- * @version December 19, 2022, 4:27 pm UTC
- *
- * @property string $photo
- * @property string $name
- * @property string $nickname
- * @property string $job_title
- */
+
 class Director extends Model
 {
     use SoftDeletes, ImageUploaderTrait;

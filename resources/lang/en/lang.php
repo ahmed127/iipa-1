@@ -40,6 +40,8 @@ return [
     'created_at' => 'Created At',
     'closed' => 'Closed',
     'currency' => 'SAR',
+    'class_actions_request_intro_heading' => 'Please complete the registration details below',
+    'class_actions_request_intro_text' => 'This service aims to provide advice and legal assistance to members and individual investors with regard to filing complaints, filing class action lawsuits, and hiring lawyers.',
 
     // D d
 
@@ -74,7 +76,7 @@ return [
     // H h
 
     'hidden' => 'Hidden',
-    '' => '',
+    'home' => 'Home',
     '' => '',
 
     // I i
@@ -108,6 +110,8 @@ return [
     'message' => 'Message',
     'message_sent' => 'Message sent successfully!',
     'male' => 'Male',
+    'media_center' => 'Media Center',
+    '' => '',
 
     // N n
 

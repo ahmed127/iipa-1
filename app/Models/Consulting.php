@@ -67,7 +67,7 @@ class Consulting extends Model
         'country_id' => 'required|exists:countries,id',
         'job_id' => 'required|exists:jobs,id',
         'consultant_type_id' => 'required|exists:consultant_types,id',
-        'type' => 'required',
+        'type' => 'nullable',
         'date_of_birth' => 'required',
         'fav_lang' => 'required|in:1,2',
         'description' => 'required',
@@ -85,7 +85,9 @@ class Consulting extends Model
         ];
     }
 
-    public function getTypeAttribute()
+    public $appends = ['type_text'];
+
+    public function getTypeTextAttribute()
     {
         return $this->types()[$this->attributes['type']];
     }

@@ -16,6 +16,7 @@ class CreateFollowsTable extends Migration
         Schema::create('follows', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
+            $table->string('name');
             $table->morphs('forable');
             $table->unsignedTinyInteger('department')->default(1)->comment('1 => advisors, 2 => class_action, 3 => volunteer, 4 => training_entities, 5 => training_individuals');
             $table->unsignedTinyInteger('status')->default(1)->comment('1=>pending, 2 => inprogress, 3 => approved, 4 => rejected');
