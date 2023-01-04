@@ -141,6 +141,8 @@ return [
 
     'rejected' => 'Rejected',
     'request_lawsuit' => 'Request Lawsuit',
+    'recruitment_intro_heading' => 'Please complete the registration details below',
+    'recruitment_intro_text' => 'This service aims to provide advice and legal assistance to members and individual investors with regard to filing complaints, filing class action lawsuits, and hiring lawyers.',
 
     // S s
 

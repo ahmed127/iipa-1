@@ -88,24 +88,31 @@ abstract class BaseRepository
         $query = $this->model->newQuery();
 
         if (count($search)) {
-            foreach($search as $key => $value) {
+            foreach ($search as $key => $value) {
                 if (in_array($key, $this->getFieldsSearchable()) && request()->filled($key)) {
 
-                    if(in_array($key, $this->model->translatedAttributes??[])){
-                        $query->whereTranslationLike($key, '%'.$value.'%');
-                    }else{
+                    if (in_array($key, $this->model->translatedAttributes ?? [])) {
+                        $query->whereTranslationLike($key, '%' . $value . '%');
+                    } else {
                         switch ($key) {
                             case 'name':
-                                $query->where($key,'LIKE', $value.'%');
+                                $query->where($key, 'LIKE', $value . '%');
+                                break;
+                            case 'full_name':
+                                $query->where($key, 'LIKE', '%' . $value . '%');
+                            case 'email':
+                                $query->where($key, 'LIKE', '%' . $value . '%');
+                            case 'phone':
+                                $query->where($key, 'LIKE', '%' . $value . '%');
                                 break;
                             case 'type':
-                                $query->where($key,'LIKE', $value.'%');
+                                $query->where($key, 'LIKE', $value . '%');
                                 break;
                             case 'created_at':
-                                $query->where($key,'LIKE', $value.'%');
+                                $query->where($key, 'LIKE', $value . '%');
                                 break;
                             default:
-                            $query->where($key, $value);
+                                $query->where($key, $value);
                         }
                     }
                 }

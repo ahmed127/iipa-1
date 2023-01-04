@@ -136,6 +136,7 @@ Route::group(
             Route::resource('eventAttendees', EventAttendeeController::class);
             Route::resource('companies', CompanyController::class);
             Route::resource('packages', PackageController::class);
+            Route::resource('recruitments', RecruitmentController::class);
         });
     }
 );

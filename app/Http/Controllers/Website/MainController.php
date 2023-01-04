@@ -11,6 +11,7 @@ use App\Http\Requests\AdminPanel\CreateConsultingRequest;
 use App\Http\Requests\AdminPanel\CreateContactRequest;
 use App\Http\Requests\AdminPanel\CreateCooperativeTrainingRequest;
 use App\Http\Requests\AdminPanel\CreateIndividualTrainingRequest;
+use App\Http\Requests\AdminPanel\CreateRecruitmentRequest;
 use App\Http\Requests\AdminPanel\CreateVolunteerRequest;
 use App\Models\Company;
 use App\Models\ConsultantType;
@@ -25,6 +26,7 @@ use App\Models\Package;
 use App\Models\Volunteer;
 use App\Models\VolunteerType;
 use App\Models\Outreach;
+use App\Models\Recruitment;
 
 class MainController extends Controller
 {
@@ -216,17 +218,24 @@ class MainController extends Controller
     }
     // Media Center
 
-    // Media Center
+    // Recruitment
     public function recruitment()
     {
-        return view('website.pages.recruitment');
+        $countryCodes = Country::get()->pluck('code', 'code');
+        return view('website.pages.recruitment', compact('countryCodes'));
     }
 
-    public function recruitment_store(Request $request)
+    public function recruitment_store(CreateRecruitmentRequest $request)
     {
+        $input = $request->all();
+
+        Recruitment::create($input);
+
+        Flash::success(__('lang.message_sent'));
+
         return back();
     }
-    // Media Center
+    // Recruitment
 
     // Companies
     public function authorized_companies()
