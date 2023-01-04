@@ -21,13 +21,13 @@
                     <div class="col-lg-12 ">
                         <ul class="navbar-nav me-auto mb-2 mb-xxl-0 float-xxl-end">
                             @auth
-                            <li class="nav-item dropdown">
-                                <a class="nav-link pt-0 dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <i class="fa-sharp fa-solid fa-circle-user text-primary"></i>
-                                    {{ auth()->user()->full_name }}
-                                </a>
-                                <ul class="dropdown-menu">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link pt-0 dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="fa-sharp fa-solid fa-circle-user text-primary"></i>
+                                        {{ auth()->user()->full_name }}
+                                    </a>
+                                    <ul class="dropdown-menu">
 
                                     <li><a class="dropdown-item {{ Request::is('*profile*') ? 'active' : '' }}"
                                             href="{{ route('website.profile') }}">Profile</a></li>
@@ -57,12 +57,12 @@
                                 </ul>
                             </li>
                             @else
-                            <li class="nav-item">
-                                <a class="nav-link pt-0" href="{{ route('website.login') }}">
-                                    <i class="fa-sharp fa-solid fa-circle-user text-primary"></i>
-                                    <span class="my-auto"> Register / Login </span>
-                                </a>
-                            </li>
+                                <li class="nav-item">
+                                    <a class="nav-link pt-0" href="{{ route('website.login') }}">
+                                        <i class="fa-sharp fa-solid fa-circle-user text-primary"></i>
+                                        <span class="my-auto"> Register / Login </span>
+                                    </a>
+                                </li>
                             @endauth
                             <span class="vr d-xl-inline-block d-none mx-2 mb-1"></span>
                             <!-- <span class="hr-navbar d-xl-none w-75 my-3 mx-auto"><hr class="dropdown-divider"></span> -->
@@ -95,19 +95,20 @@
                                     aria-expanded="false">
                                     <i class="fa-solid fa-language  text-primary"></i>
                                     @if ($lang_page == 'en')
-                                    <span class="my-auto"> En </span>
+                                        <span class="my-auto"> En </span>
                                     @else
-                                    <span class="my-auto"> Ar </span>
+                                        <span class="my-auto"> Ar </span>
                                     @endif
                                 </a>
                                 <ul class="dropdown-menu">
 
                                     @if ($lang_page == 'ar')
-                                    <li><a class="dropdown-item"
-                                            href="{{ str_replace('/ar', '/en', url()->current()) }}">En</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="{{ str_replace('ar', 'en', url()->current()) }}">En</a>
+                                        </li>
                                     @else
-                                    <li><a class="dropdown-item"
-                                            href="{{ str_replace('/en', '/ar', url()->current()) }}">Ar</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="{{ str_replace('/en', '/ar', url()->current()) }}">Ar</a></li>
                                     @endif
                                 </ul>
                             </li>
@@ -179,22 +180,33 @@
                                 </a>
                                 <ul class="dropdown-menu" style="width: 210px;">
                                     @forelse ($outreaches_app as $outreach)
-                                    <li>
-                                        @if ($outreach->type == 1)
-
-                                        <a class="dropdown-item"
-                                            href="{{ route('website.outreaches', $outreach->id) }}">
-                                            {{ $outreach->title??'' }}
-                                        </a>
-                                        @else
-                                        <a class="dropdown-item" target="_blank"
-                                            href="{{ $outreach->attachment_pdf??'' }}">
-                                            {{ $outreach->title??'' }}
-                                        </a>
-                                        @endif
-                                    </li>
+                                        <li>
+                                            @if ($outreach->type == 1)
+                                                <a class="dropdown-item"
+                                                    href="{{ route('website.outreaches', $outreach->id) }}">
+                                                    {{ $outreach->title ?? '' }}
+                                                </a>
+                                            @else
+                                                <a class="dropdown-item" target="_blank"
+                                                    href="{{ $outreach->attachment_pdf ?? '' }}">
+                                                    {{ $outreach->title ?? '' }}
+                                                </a>
+                                            @endif
+                                        </li>
                                     @empty
                                     @endforelse
+                                    <li class="bg-success">
+                                        <a class="dropdown-item text-light"
+                                            href="{{ route('website.authorized_companies') }}">
+                                            @lang('lang.authorized_companies')
+                                        </a>
+                                    </li>
+                                    <li class="bg-danger">
+                                        <a class="dropdown-item text-light"
+                                            href="{{ route('website.not_authorized_companies') }}">
+                                            @lang('lang.not_authorized_companies')
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                             {{-- End: The Outreach --}}
@@ -235,7 +247,8 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="{{ route('website.class_actions_tutorial') }}">
+                                        <a class="dropdown-item"
+                                            href="{{ route('website.class_actions_tutorial') }}">
                                             How to file a class action
                                         </a>
                                     </li>

@@ -13,6 +13,8 @@ return [
     'active' => 'Active',
     'arabic' => 'Arabic',
     'all' => 'All',
+    'authorized' => 'Authorized',
+    'authorized_companies' => 'Authorized Companies',
     'accountNotActive' => 'account not active',
     'approved' => 'Approved',
     'attachment_letter' => 'Attachment Letter',
@@ -37,6 +39,7 @@ return [
     'contact_us_intro_text' => 'So that you can submit your requests, inquiries and follow-up later',
     'created_at' => 'Created At',
     'closed' => 'Closed',
+    'currency' => 'SAR',
 
     // D d
 
@@ -79,7 +82,8 @@ return [
     'in_progress' => 'In progress',
     'id_no' => 'ID Number',
     'iipa' => 'Individual Investors Protection Association',
-
+    'ithmaar_company' => 'Saudi Ithmaar Financial Consulting Company',
+    'individual_fees' => 'Individual Fees',
     '' => '',
 
     // J j
@@ -95,6 +99,8 @@ return [
     // L l
     'logoutMsg' => 'Successfully logged out',
     'legal_advisor' => 'Legal Advisor',
+    'list_updated_weekly' => 'The list is updated weekly based on the Capital Market Authority website',
+    'office_fees' => 'Office Fees',
     '' => '',
 
     // M m
@@ -109,6 +115,8 @@ return [
     'name' => 'Name',
     'nationality' => 'Nationality',
     'nick_name' => 'Nick Name',
+    'not_authorized' => 'Not Authorized',
+    'not_authorized_companies' => 'Not Authorized Companies',
 
     // O o
 
@@ -126,6 +134,7 @@ return [
     'pending' => 'Pending',
     'password' => 'Password',
     'password_confirmation' => 'Password Confirmation',
+    'packages' => 'Packages',
     'page' => 'Page',
     '' => '',
 
@@ -144,10 +153,13 @@ return [
     'request_training_entities' => 'Request Training Entities',
     'request_training_individuals' => 'Request Training Individuals',
     'request_content_us' => 'Request Content Us',
+    'recruitment_intro_heading' => 'Please complete the registration details below',
+    'recruitment_intro_text' => 'This service aims to provide advice and legal assistance to members and individual investors with regard to filing complaints, filing class action lawsuits, and hiring lawyers.',
     '' => '',
     // S s
 
     'select' => 'Select',
+    'search' => 'Search',
     'status' => 'Status',
     'strategic_goal' => 'Strategic Goal',
     'status' => 'Status',

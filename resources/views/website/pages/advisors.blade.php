@@ -20,7 +20,9 @@
                             @lang('lang.advisors_intro_text')
                         </p>
                     </div>
+
                     {!! Form::open(['route' => 'website.advisors_store', 'class' => 'd-flex row', 'files' => true]) !!}
+
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
                         <label for="name" class="form-label px-1">
                             <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
@@ -34,6 +36,7 @@
                             ]) !!}
                         </div>
                     </div>
+
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
                         <label for="email" class="form-label px-1">
                             <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
@@ -48,6 +51,7 @@
                             ]) !!}
                         </div>
                     </div>
+
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
                         <label for="email_confirmation" class="form-label px-1">
                             <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
@@ -62,6 +66,7 @@
                             ]) !!}
                         </div>
                     </div>
+
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
                         <label for="phone" class="form-label px-1">
                             <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
@@ -204,16 +209,6 @@
                         </div>
                     </div>
 
-
-
-
-
-
-
-
-
-
-
                     <div class="col-12 px-2 mb-3 fs-6">
                         <label for="attachment_letter" class="form-label px-1">
                             <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
@@ -227,13 +222,16 @@
                             ]) !!}
                         </div>
                     </div>
+
                     <div class="row justify-content-center gx-0 pb-3">
                         {!! Form::button('<i class="fa-solid fa-circle-check"></i>' . ' ' . __('lang.send'), [
                             'type' => 'submit',
                             'class' => 'btn btn-primary rounded-4 px-lg-5 py-3 col-lg-4 shadow-custom m-2',
                         ]) !!}
                     </div>
+
                     {!! Form::close() !!}
+
                 </div>
             </div>
         </div>
