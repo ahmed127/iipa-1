@@ -31,6 +31,7 @@ use App\Http\Requests\AdminPanel\CreateConsultingRequest;
 use App\Http\Requests\AdminPanel\CreateRecruitmentRequest;
 use App\Http\Requests\AdminPanel\CreateIndividualTrainingRequest;
 use App\Http\Requests\AdminPanel\CreateCooperativeTrainingRequest;
+use App\Models\FaqCategory;
 
 class MainController extends Controller
 {
@@ -66,7 +67,8 @@ class MainController extends Controller
 
     public function help()
     {
-        return view('website.pages.help');
+        $faqCategories = FaqCategory::with('faqs')->get();
+        return view('website.pages.help', compact('faqCategories'));
     }
 
     // Who We Are

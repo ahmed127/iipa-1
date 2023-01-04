@@ -2,11 +2,11 @@
 
     <!-- Type Field -->
     <div class="form-group col-lg-4 col-sm-12 d-none">
-        {!! Form::label('type', __('models/pages.fields.type').':') !!}
-        <div class="radio-inline radio_switch" type-active='{{ old(' type', @optional($page)->type )== 3 ? 'image' :
-            'page' }}'>
+        {!! Form::label('type', __('models/pages.fields.type') . ':') !!}
+        <div class="radio-inline radio_switch"
+            type-active='{{ old(' type', @optional($page)->type) == 3 ? 'image' : 'page' }}'>
             <label class="radio type_switch" type-switch="page">
-                {!! Form::radio('type', "1", 'Active') !!}
+                {!! Form::radio('type', '1', 'Active') !!}
                 <span></span>
                 @lang('models/pages.fields.page')
             </label>
@@ -18,21 +18,21 @@
             </label> --}}
 
             <label class="radio type_switch" type-switch="image">
-                {!! Form::radio('type', "3", null) !!}
+                {!! Form::radio('type', '3', null) !!}
                 <span></span>
                 @lang('models/pages.fields.image')
             </label>
         </div>
     </div>
     <!-- Photo Field -->
-    <div class="form-group col-lg-4 col-sm-12">
-        {!! Form::label('photo', __('models/pages.fields.photo').':') !!}
+    <div class="form-group col-lg-12 col-sm-12">
+        {!! Form::label('photo', __('models/pages.fields.photo') . ':') !!}
 
         <br>
         <div class="image-input image-input-outline" id="kt_image_4"
-            style="background-image: url({{asset('uploads/images/original/default.png')}})">
+            style="background-image: url('{{ asset('uploads/images/original/default.png') }}')">
             <div class="image-input-wrapper"
-                style="width: 371px; height: 80px;background-image: url({{isset($page) ? $page->photo : ''}})">
+                style="width: 371px; height: 80px;background-image: url('{{ isset($page) ? $page->photo : '' }}')">
             </div>
 
             <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
@@ -56,12 +56,12 @@
 
     <!-- Image Field -->
     <div class="form-group col-lg-4 col-sm-12 type_image">
-        {!! Form::label('image', __('models/pages.fields.image').':') !!}
+        {!! Form::label('image', __('models/pages.fields.image') . ':') !!}
 
         <br>
         <div class="image-input image-input-outline" id="kt_image_3"
-            style="background-image: url({{asset('uploads/images/original/default.png')}})">
-            <div class="image-input-wrapper" style="background-image: url({{isset($page) ? $page->image : ''}})">
+            style="background-image: url({{ asset('uploads/images/original/default.png') }})">
+            <div class="image-input-wrapper" style="background-image: url({{ isset($page) ? $page->image : '' }})">
             </div>
 
             <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
@@ -88,7 +88,7 @@
         {!! Form::label('attachment_pdf', __('models/pages.fields.attachment_pdf').':') !!}
         {!! Form::file('attachment_pdf', ['class' =>
         'form-control']) !!}
-        @isset ($page->attachment_pdf)
+        @isset($page->attachment_pdf)
         <p>
             <a href="{{ $page->attachment_pdf??''}}" target="_blank">
                 File
@@ -97,78 +97,72 @@
         @endisset
     </div> --}}
 
-    @foreach ( config('langs') as $locale => $name)
-    <div class="col-lg-6 col-sm-12">
-        <h2 class="text-center text-danger">{{ __('crud.'.$name) }}</h2>
+    @foreach (config('langs') as $locale => $name)
+        <div class="col-lg-6 col-sm-12">
+            <h2 class="text-center text-danger">{{ __('crud.' . $name) }}</h2>
 
-        <!-- Title Field -->
-        <div class="form-group">
-            {!! Form::label('title', __('models/pages.fields.title').' '. __('crud.'.$name).':') !!}
-            {!! Form::text($locale . '[title]', isset($page)? $page->title ??'' : '', ['class' =>
-            'form-control'])
-            !!}
-        </div>
+            <!-- Title Field -->
+            <div class="form-group">
+                {!! Form::label('title', __('models/pages.fields.title') . ' ' . __('crud.' . $name) . ':') !!}
+                {!! Form::text($locale . '[title]', isset($page) ? $page->title ?? '' : '', ['class' => 'form-control']) !!}
+            </div>
 
-        <!-- Brief Field -->
-        <div class="form-group">
-            {!! Form::label('brief', __('models/pages.fields.brief').' '.__('crud.'.$name).':') !!}
-            {!! Form::text($locale . '[brief]', isset($page)? $page->brief ??'' : '', ['class' =>
-            'form-control'])
-            !!}
-        </div>
+            <!-- Brief Field -->
+            <div class="form-group">
+                {!! Form::label('brief', __('models/pages.fields.brief') . ' ' . __('crud.' . $name) . ':') !!}
+                {!! Form::text($locale . '[brief]', isset($page) ? $page->brief ?? '' : '', ['class' => 'form-control']) !!}
+            </div>
 
-        <!-- Name Field -->
-        <div class="form-group type_page">
-            {!! Form::label('name', __('models/pages.fields.name').' '.__('crud.'.$name).':') !!}
-            {!! Form::text($locale . '[name]', isset($page)? $page->name ??'' : '', ['class' =>
-            'form-control'])
-            !!}
-        </div>
-        <!-- Meta Title Field -->
-        <div class="form-group type_page ">
-            {!! Form::label('meta_title', __('models/pages.fields.meta_title').' '.__('crud.'.$name).':') !!}
-            {!! Form::textarea($locale . '[meta_title]', isset($page)? $page->meta_title ??'' : '', ['class'
-            =>
-            'form-control'])
-            !!}
-        </div>
-        <!-- Meta Title Field -->
-        <div class="form-group type_page ">
-            {!! Form::label('meta_description', __('models/pages.fields.meta_description').'
-            '.__('crud.'.$name).':') !!}
-            {!! Form::textarea($locale . '[meta_description]', isset($page)? $page->meta_description ??'' :
-            '',
-            ['class' =>
-            'form-control'])
-            !!}
-        </div>
-        <!-- Meta Title Field -->
-        <div class="form-group type_page ">
-            {!! Form::label('meta_keywords', __('models/pages.fields.meta_keywords').' '.__('crud.'.$name).':')
-            !!}
-            {!! Form::textarea($locale . '[meta_keywords]', isset($page)? $page->meta_keywords ??'' : '',
-            ['class' =>
-            'form-control'])
-            !!}
-        </div>
+            <!-- Name Field -->
+            <div class="form-group type_page">
+                {!! Form::label('name', __('models/pages.fields.name') . ' ' . __('crud.' . $name) . ':') !!}
+                {!! Form::text($locale . '[name]', isset($page) ? $page->name ?? '' : '', ['class' => 'form-control']) !!}
+            </div>
+            <!-- Meta Title Field -->
+            <div class="form-group type_page ">
+                {!! Form::label('meta_title', __('models/pages.fields.meta_title') . ' ' . __('crud.' . $name) . ':') !!}
+                {!! Form::textarea($locale . '[meta_title]', isset($page) ? $page->meta_title ?? '' : '', [
+                    'class' => 'form-control',
+                ]) !!}
+            </div>
+            <!-- Meta Title Field -->
+            <div class="form-group type_page ">
+                {!! Form::label(
+                    'meta_description',
+                    __('models/pages.fields.meta_description') .
+                        '
+                            ' .
+                        __('crud.' . $name) .
+                        ':',
+                ) !!}
+                {!! Form::textarea($locale . '[meta_description]', isset($page) ? $page->meta_description ?? '' : '', [
+                    'class' => 'form-control',
+                ]) !!}
+            </div>
+            <!-- Meta Title Field -->
+            <div class="form-group type_page ">
+                {!! Form::label('meta_keywords', __('models/pages.fields.meta_keywords') . ' ' . __('crud.' . $name) . ':') !!}
+                {!! Form::textarea($locale . '[meta_keywords]', isset($page) ? $page->meta_keywords ?? '' : '', [
+                    'class' => 'form-control',
+                ]) !!}
+            </div>
 
-        <!-- Description Field -->
-        <div class="form-group type_page type_page_description">
-            {!! Form::label('description', __('models/pages.fields.description').' '.__('crud.'.$name).':') !!}
-            {!! Form::textarea($locale . '[description]', isset($page)? $page->description ??'' : '',
-            ['class'
-            =>
-            'form-control']) !!}
+            <!-- Description Field -->
+            <div class="form-group type_page type_page_description">
+                {!! Form::label('description', __('models/pages.fields.description') . ' ' . __('crud.' . $name) . ':') !!}
+                {!! Form::textarea($locale . '[description]', isset($page) ? $page->description ?? '' : '', [
+                    'class' => 'form-control',
+                ]) !!}
+            </div>
+
+            <script type="text/javascript">
+                CKEDITOR.replace("{{ $locale . '[description]' }}", {
+                    filebrowserUploadUrl: "{{ route('adminPanel.ckeditor.upload', ['_token' => csrf_token()]) }}",
+                    filebrowserUploadMethod: 'form'
+                });
+            </script>
+
         </div>
-
-        <script type="text/javascript">
-            CKEDITOR.replace("{{ $locale . '[description]' }}", {
-                filebrowserUploadUrl: "{{route('adminPanel.ckeditor.upload', ['_token' => csrf_token() ])}}",
-                filebrowserUploadMethod: 'form'
-            });
-        </script>
-
-    </div>
     @endforeach
 
 </div>
