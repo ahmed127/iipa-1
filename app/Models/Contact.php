@@ -2,19 +2,9 @@
 
 namespace App\Models;
 
-use Eloquent as Model;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * Class Contact
- * @package App\Models
- * @version June 7, 2020, 7:21 am UTC
- *
- * @property string $name
- * @property string $email
- * @property string $subject
- * @property string $message
- */
 class Contact extends Model
 {
     use SoftDeletes;

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Website;
 
+use App\Helpers\FollowTrait;
 use App\Models\Job;
 use App\Models\Law;
 use App\Models\Contact;
@@ -26,6 +27,8 @@ use App\Http\Requests\AdminPanel\CreateCooperativeTrainingRequest;
 
 class MainController extends Controller
 {
+    use FollowTrait;
+
     public function home()
     {
         return view('website.pages.home');
@@ -46,7 +49,8 @@ class MainController extends Controller
     {
         $input = $request->all();
 
-        Contact::create($input);
+        $contact = Contact::create($input);
+        $this->follow_store($contact);
 
         Flash::success(__('lang.message_sent'));
 
@@ -128,7 +132,8 @@ class MainController extends Controller
     {
         $input = $request->all();
 
-        Consulting::create($input);
+        $consulting = Consulting::create($input);
+        $this->follow_store($consulting);
 
         Flash::success(__('lang.message_sent'));
 
@@ -165,6 +170,8 @@ class MainController extends Controller
     {
         $input = $request->all();
         $volunteer = Volunteer::create($input);
+        $this->follow_store($volunteer);
+
         Flash::success(__('lang.message_sent'));
 
         return back();
@@ -180,6 +187,8 @@ class MainController extends Controller
     {
         $input = $request->all();
         $training = CooperativeTraining::create($input);
+        $this->follow_store($training);
+
         Flash::success(__('lang.message_sent'));
 
         return back();
@@ -196,6 +205,7 @@ class MainController extends Controller
     {
         $input = $request->all();
         $training = IndividualTraining::create($input);
+        $this->follow_store($training);
         Flash::success(__('lang.message_sent'));
 
         return back();

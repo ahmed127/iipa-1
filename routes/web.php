@@ -175,7 +175,9 @@ Route::group([
         Route::post('update-information-post', $class_name_profile . 'update_information_post')->name('update_information_post');
         Route::get('update-password', $class_name_profile . 'update_password')->name('update_password');
         Route::post('update-password-post', $class_name_profile . 'update_password_post')->name('update_password_post');
-        Route::get('my-request',  $class_name_profile . 'my_request')->name('my_request');
+        Route::get('my-requests',  $class_name_profile . 'my_requests')->name('my_requests');
+        Route::get('my-requests/{id}',  $class_name_profile . 'my_request')->name('my_request');
+        Route::get('my-requests/{id}/deleted',  $class_name_profile . 'my_request_delete')->name('my_request_delete');
 
         $class_name_main = 'MainController@';
 

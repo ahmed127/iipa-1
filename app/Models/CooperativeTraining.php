@@ -3,21 +3,9 @@
 namespace App\Models;
 
 use App\Helpers\ImageUploaderTrait;
-use Eloquent as Model;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-
-/**
- * Class CooperativeTraining
- * @package App\Models
- * @version December 20, 2022, 1:12 pm UTC
- *
- * @property string $entity_name
- * @property string $country_code
- * @property string $phone
- * @property string $email
- * @property string $attachment_letter
- */
 class CooperativeTraining extends Model
 {
     use SoftDeletes, ImageUploaderTrait;

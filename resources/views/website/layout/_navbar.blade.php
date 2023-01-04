@@ -45,7 +45,7 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item {{ Request::is('*my-request*') ? 'active' : '' }}"
-                                            href="{{ route('website.my_request') }}">
+                                            href="{{ route('website.my_requests') }}">
                                             My Requests
                                         </a>
                                     </li>

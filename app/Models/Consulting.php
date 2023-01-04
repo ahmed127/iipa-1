@@ -3,47 +3,20 @@
 namespace App\Models;
 
 use App\Helpers\ImageUploaderTrait;
-use Eloquent as Model;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-
-/**
- * Class Consulting
- * @package App\Models
- * @version December 20, 2022, 1:27 pm UTC
- *
- * @property string $name
- * @property string $email
- * @property string $email_confirmation
- * @property string $country_code
- * @property string $phone
- * @property integer $country_id
- * @property integer $job_id
- * @property integer $consultant_type_id
- * @property integer $type
- * @property string $date_of_birth
- * @property integer $fav_lang
- * @property string $description
- * @property string $attachment_letter
- * @property integer $gender
- * @property string $nationality
- */
 class Consulting extends Model
 {
     use SoftDeletes, ImageUploaderTrait;
 
-
     public $table = 'consultings';
 
-
     protected $dates = ['deleted_at'];
-
-
 
     public $fillable = [
         'name',
         'email',
-        'email_confirmation',
         'country_code',
         'phone',
         'country_id',
@@ -154,7 +127,7 @@ class Consulting extends Model
         return (new \Carbon\Carbon($this->attributes['date_of_birth']))->format('d-m-Y');
     }
     // End Date Of Birth Handling
-    
+
     // Attachment letter Handling
     public function setAttachmentLetterAttribute($file)
     {
@@ -192,5 +165,10 @@ class Consulting extends Model
     public function job()
     {
         return $this->belongsTo(Job::class);
+    }
+
+    public function follow()
+    {
+        return $this->morphOne(Follow::class, 'forable');
     }
 }

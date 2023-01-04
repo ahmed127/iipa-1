@@ -14,7 +14,8 @@
                 class="{{ Request::is('*update-password*') ? 'text-white' : '' }}">Update Password</a>
         </li>
         <li class="list-group-item p-3 {{ Request::is('*my-request*') ? 'bg-primary' : '' }}">
-            <a href="{{ route('website.my_request') }}" class="{{ Request::is('*my-request*') ? 'text-white' : '' }}">My
+            <a href="{{ route('website.my_requests') }}"
+                class="{{ Request::is('*my-request*') ? 'text-white' : '' }}">My
                 Requests</a>
         </li>
         <li class="list-group-item p-3 bg-danger ">

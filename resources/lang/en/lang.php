@@ -20,6 +20,7 @@ return [
     'advisors_intro_heading' => 'Please complete the registration details below',
     'advisors_intro_text' => 'This service aims to provide advice and legal assistance to members and individual investors with regard to filing complaints, filing class action lawsuits, and hiring lawyers.',
     'attachment_pdf' => 'Attachment PDF',
+    'applicant' => 'Applicant',
 
     // B b
 
@@ -34,6 +35,8 @@ return [
     'consultant_type' => 'Consultant Type',
     'contact_us_intro_heading' => 'Communication with the association model',
     'contact_us_intro_text' => 'So that you can submit your requests, inquiries and follow-up later',
+    'created_at' => 'Created At',
+    'closed' => 'Closed',
 
     // D d
 
@@ -41,6 +44,7 @@ return [
     'date_of_birth' => 'Date Of Birth',
     'description' => 'Description',
     'description_initiative' => 'Description Initiative',
+    'department_request' => 'Department Request',
 
     // E e
 
@@ -49,12 +53,14 @@ return [
     'english' => 'English',
     'entity_name' => 'Entity Name',
     'email_confirmation_error' => 'Email and email confirmation not matched',
+    'department' => 'Department',
 
     // F f
 
     'full_name' => 'Full Name',
     'female' => 'Female',
     'fav_lang' => 'Favorite Language',
+    'finished' => 'Finished',
     '' => '',
 
     // G g
@@ -132,13 +138,22 @@ return [
 
     'rejected' => 'Rejected',
     'request_lawsuit' => 'Request Lawsuit',
-
+    'request_your_advisors' => 'Request Your Advisors',
+    'request_class_action' => 'Request Class Action',
+    'request_volunteer' => 'Request Volunteer',
+    'request_training_entities' => 'Request Training Entities',
+    'request_training_individuals' => 'Request Training Individuals',
+    'request_content_us' => 'Request Content Us',
+    '' => '',
     // S s
 
     'select' => 'Select',
     'status' => 'Status',
     'strategic_goal' => 'Strategic Goal',
     'status' => 'Status',
+    'status_request' => 'Status Request',
+    'sort_desc' => 'Display By Latest',
+    'sort_asc' => 'Display By Oldest',
 
 
     // T t
