@@ -24,6 +24,6 @@ class CreateEventRequest extends FormRequest
      */
     public function rules()
     {
-        return Event::$rules;
+        return Event::rules();
     }
 }

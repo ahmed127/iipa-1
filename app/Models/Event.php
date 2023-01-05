@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -18,7 +19,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class Event extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, Translatable;
 
 
     public $table = 'events';
@@ -48,10 +49,20 @@ class Event extends Model
         'date' => 'date'
     ];
 
-    /**
-     * Validation rules
-     *
-     * @var array
-     */
-    public static $rules = [];
+    public $translatedAttributes =  ['title', 'description', 'brief'];
+
+    public static function rules()
+    {
+        $languages = array_keys(config('langs'));
+
+        foreach ($languages as $language) {
+            $rules[$language . '.title'] = 'required|string|max:191';
+            $rules[$language . '.description'] = 'required|string';
+            $rules[$language . '.brief'] = 'required|string';
+        }
+
+        $rules['date'] = 'required';
+
+        return $rules;
+    }
 }

@@ -24,8 +24,8 @@ class UpdateEventRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = Event::$rules;
-        
+        $rules = Event::rules();
+
         return $rules;
     }
 }

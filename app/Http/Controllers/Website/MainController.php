@@ -31,6 +31,7 @@ use App\Http\Requests\AdminPanel\CreateConsultingRequest;
 use App\Http\Requests\AdminPanel\CreateRecruitmentRequest;
 use App\Http\Requests\AdminPanel\CreateIndividualTrainingRequest;
 use App\Http\Requests\AdminPanel\CreateCooperativeTrainingRequest;
+use App\Models\Event;
 use App\Models\FaqCategory;
 use App\Models\Slider;
 
@@ -46,7 +47,8 @@ class MainController extends Controller
 
     public function events()
     {
-        return view('website.pages.events');
+        $events = Event::all();
+        return view('website.pages.events', compact('events'));
     }
 
     public function contact_us()
