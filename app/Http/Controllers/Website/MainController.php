@@ -32,6 +32,7 @@ use App\Http\Requests\AdminPanel\CreateRecruitmentRequest;
 use App\Http\Requests\AdminPanel\CreateIndividualTrainingRequest;
 use App\Http\Requests\AdminPanel\CreateCooperativeTrainingRequest;
 use App\Models\FaqCategory;
+use App\Models\Slider;
 
 class MainController extends Controller
 {
@@ -39,7 +40,8 @@ class MainController extends Controller
 
     public function home()
     {
-        return view('website.pages.home');
+        $data['slider'] = Slider::all();
+        return view('website.pages.home', $data);
     }
 
     public function events()

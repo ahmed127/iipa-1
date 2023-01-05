@@ -111,6 +111,7 @@ return [
     'message_sent' => 'Message sent successfully!',
     'male' => 'Male',
     'media_center' => 'Media Center',
+    'more' => 'Read More ...',
     '' => '',
 
     // N n
@@ -140,6 +141,7 @@ return [
     'password_confirmation' => 'Password Confirmation',
     'packages' => 'Packages',
     'page' => 'Page',
+    'pdf' => 'Pdf',
     '' => '',
 
     // Q q
@@ -180,7 +182,6 @@ return [
     'training_individuals_intro_text' => 'This service aims to provide advice and legal assistance to members and individual investors with regard to filing complaints, filing class action lawsuits, and hiring lawyers.',
     'type' => 'Type',
     'target_group' => 'Target Group',
-    'more' => 'More',
 
     // U u
 

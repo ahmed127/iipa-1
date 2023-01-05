@@ -230,9 +230,9 @@ html[dir="ltr"] .direction-span-ltr {
 .swiper-button-prev::after {
     content: " " !important;
 }
-.swiper-slide {
+/* .swiper-slide {
     height: fit-content !important;
-}
+} */
 html[dir="ltr"] .swiper-btn {
     flex-direction: row-reverse;
 }
