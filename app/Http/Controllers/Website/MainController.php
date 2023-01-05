@@ -6,6 +6,8 @@ use App\Models\Job;
 use App\Models\Law;
 use App\Models\Blog;
 use App\Models\Page;
+use App\Models\Event;
+use App\Models\Slider;
 use App\Models\Company;
 use App\Models\Contact;
 use App\Models\Country;
@@ -17,6 +19,7 @@ use App\Models\Volunteer;
 use App\Models\Consulting;
 use App\Models\Initiative;
 use Laracasts\Flash\Flash;
+use App\Models\FaqCategory;
 use App\Models\Recruitment;
 use App\Helpers\FollowTrait;
 use Illuminate\Http\Request;
@@ -31,9 +34,6 @@ use App\Http\Requests\AdminPanel\CreateConsultingRequest;
 use App\Http\Requests\AdminPanel\CreateRecruitmentRequest;
 use App\Http\Requests\AdminPanel\CreateIndividualTrainingRequest;
 use App\Http\Requests\AdminPanel\CreateCooperativeTrainingRequest;
-use App\Models\Event;
-use App\Models\FaqCategory;
-use App\Models\Slider;
 
 class MainController extends Controller
 {
@@ -47,7 +47,7 @@ class MainController extends Controller
 
     public function events()
     {
-        $events = Event::all();
+        $events = Event::get();
         return view('website.pages.events', compact('events'));
     }
 

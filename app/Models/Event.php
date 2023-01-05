@@ -65,4 +65,16 @@ class Event extends Model
 
         return $rules;
     }
+
+
+    public $appends = ['date_from_timestamp', 'date_to_timestamp'];
+
+    public function getDateFromTimestampAttribute()
+    {
+        return \Carbon\Carbon::parse($this->attributes['date'])->format('Ymd');
+    }
+    public function getDateToTimestampAttribute()
+    {
+        return \Carbon\Carbon::parse($this->attributes['date'])->addHour()->format('Ymd');
+    }
 }
