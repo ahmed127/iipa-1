@@ -28,13 +28,14 @@ class Slider extends Model
 
     protected $dates = ['deleted_at'];
 
-    public $translatedAttributes =  ['title', 'subtitle', 'content', 'button_text'];
+    public $translatedAttributes =  ['title', 'brief', 'description'];
 
 
     public $fillable = [
         'in_order_to',
+        'attachment_pdf',
         'photo',
-        'status',
+        'type',
         'link',
     ];
 
@@ -63,13 +64,13 @@ class Slider extends Model
 
         foreach ($languages as $language) {
             $rules[$language . '.title'] = 'nullable';
-            $rules[$language . '.subtitle'] = 'nullable';
-            $rules[$language . '.button_text'] = 'nullable';
-            $rules[$language . '.content'] = 'nullable';
+            $rules[$language . '.brief'] = 'nullable';
+            $rules[$language . '.description'] = 'nullable';
         }
 
-        $rules['status'] = 'required|in:0,1';
+        $rules['attachment_pdf'] = 'nullable';
         $rules['in_order_to'] = 'nullable';
+        $rules['type'] = 'nullable';
         $rules['photo'] = 'required|image|mimes:jpeg,jpg,png';
         $rules['link'] = 'nullable';
 
@@ -103,13 +104,25 @@ class Slider extends Model
         return asset('uploads/images/thumbnail/' . $this->photo);
     }
 
-    // In Order To ///////////////////////////
 
-    public function scopeActive($query)
+    public function setAttachmentPdfAttribute($file)
     {
-        return $query->where('status', 1);
+        if ($file) {
+            try {
+                $fileName = $this->createFileName($file);
+
+                $this->saveFile($file, $fileName);
+
+                $this->attributes['attachment_pdf'] = $fileName;
+            } catch (\Throwable $th) {
+                $this->attributes['attachment_pdf'] = $file;
+            }
+        }
     }
 
+    public function getAttachmentPdfAttribute()
+    {
+        return asset('uploads/files/' . $this->attributes['attachment_pdf']);
+    }
 
-    // In Order To ///////////////////////////
 }

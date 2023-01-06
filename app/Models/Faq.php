@@ -48,4 +48,6 @@ class Faq extends Model
 
         return $rules;
     }
+
+    
 }

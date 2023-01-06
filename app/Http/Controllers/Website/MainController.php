@@ -6,6 +6,8 @@ use App\Models\Job;
 use App\Models\Law;
 use App\Models\Blog;
 use App\Models\Page;
+use App\Models\Event;
+use App\Models\Slider;
 use App\Models\Company;
 use App\Models\Contact;
 use App\Models\Country;
@@ -17,6 +19,7 @@ use App\Models\Volunteer;
 use App\Models\Consulting;
 use App\Models\Initiative;
 use Laracasts\Flash\Flash;
+use App\Models\FaqCategory;
 use App\Models\Recruitment;
 use App\Helpers\FollowTrait;
 use Illuminate\Http\Request;
@@ -38,12 +41,14 @@ class MainController extends Controller
 
     public function home()
     {
-        return view('website.pages.home');
+        $data['slider'] = Slider::all();
+        return view('website.pages.home', $data);
     }
 
     public function events()
     {
-        return view('website.pages.events');
+        $events = Event::get();
+        return view('website.pages.events', compact('events'));
     }
 
     public function contact_us()
@@ -66,7 +71,8 @@ class MainController extends Controller
 
     public function help()
     {
-        return view('website.pages.help');
+        $faqCategories = FaqCategory::with('faqs')->get();
+        return view('website.pages.help', compact('faqCategories'));
     }
 
     // Who We Are

@@ -131,7 +131,7 @@ return [
     'my_requests' => 'My Requests',
     'media_centre' => 'Media Centre',
     'marine' => 'Marine :',
-    'more' => 'More',
+    'more' => 'Read More',
     '' => '',
 
     // N n
@@ -167,6 +167,7 @@ return [
     'page' => 'Page',
     'profile' => 'Profile',
     'powered_by' => 'Powered By',
+    'pdf' => 'Pdf',
     '' => '',
 
     // Q q
