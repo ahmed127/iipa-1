@@ -17,8 +17,8 @@
                 <div class="row gx-0 p-3">
                     <div class="col-12 text-center py-2">
                         <i class="fa-solid fa-key fs-3 text-info"></i>
-                        <h3 class="firstWordInfo d-inline">Forget Password</h3>
-                        <p class="mt-2">Enter the email to receive the password reset message.</p>
+                        <h3 class="firstWordInfo d-inline">@lang('lang.forget_password_h')</h3>
+                        <p class="mt-2">@lang('lang.forget_password_p')</p>
                     </div>
                     <div class="col-lg-6 col-sm-12 m-auto p-1">
                         <label for="email" class="form-label px-1">
@@ -36,12 +36,12 @@
                     <div class="row justify-content-center gx-0 pb-3">
                         <button class="btn btn-primary rounded-4 px-lg-5 py-3 col-lg-4 col-sm-10 shadow-custom m-3">
                             <i class="fa-solid fa-circle-check"></i>
-                            Submit
+                            @lang('lang.send')
                         </button>
                         <a href="{{ route('website.login') }}"
                             class="btn btn-light rounded-4 px-lg-4 py-3 col-lg-4 col-sm-10 shadow-custom m-3">
                             <i class="fa-solid fa-user-plus"></i>
-                            تسجيل الدخول
+                            @lang('lang.login')
                         </a>
                     </div>
                 </div>

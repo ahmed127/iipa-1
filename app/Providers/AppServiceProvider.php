@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Information;
 use App\Models\Outreach;
+use App\Models\Page;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -31,6 +32,7 @@ class AppServiceProvider extends ServiceProvider
         try {
             $data['information_app'] = Information::first();
             $data['outreaches_app'] = Outreach::get();
+            $data['page_app'] = Page::all();
             View::share($data);
         } catch (\Throwable $th) {
             //throw $th;

@@ -31,11 +31,6 @@ Route::post(
     'generator_builder/generate-from-file',
     '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generateFromFile'
 )->name('io_generator_builder_generate_from_file');
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -185,7 +180,7 @@ Route::group([
         $class_name_main = 'MainController@';
 
         // Pages
-        Route::get('home', $class_name_main . 'home')->name('home');
+        Route::get('/', $class_name_main . 'home')->name('home');
         Route::get('events', $class_name_main . 'events')->name('events');
         Route::get('contact-us', $class_name_main . 'contact_us')->name('contact_us');
         Route::post('contact-us', $class_name_main . 'contact_us_store')->name('contact_us_store');

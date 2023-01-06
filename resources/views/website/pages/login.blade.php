@@ -1,12 +1,12 @@
 @extends('website.layout.app')
 
-@section('title', 'Login')
+@section('title', __('lang.login'))
 
 @section('content')
 
 @include('website.layout._header_page', [
-'title' => 'Login Now',
-'pageName' => 'Login',
+'title' => __('lang.login'),
+'pageName' => __('lang.login'),
 ])
 <section class="bg-content-custom p-custom">
     <div class="container-fluid p-0">

@@ -4,14 +4,10 @@ use Symfony\Component\HttpKernel\Profiler\Profile;
 
 return [
 
-    //////////////////////////////////////////////////////////////
-    ////////////////////////// 4GO ///////////////////////////////
-    //////////////////////////////////////////////////////////////
-
     // A a
 
     'active' => 'Active',
-    'arabic' => 'Arabic',
+    'arabic' => 'عربي',
     'all' => 'All',
     'authorized' => 'Authorized',
     'authorized_companies' => 'Authorized Companies',
@@ -23,10 +19,13 @@ return [
     'advisors_intro_text' => 'This service aims to provide advice and legal assistance to members and individual investors with regard to filing complaints, filing class action lawsuits, and hiring lawyers.',
     'attachment_pdf' => 'Attachment PDF',
     'applicant' => 'Applicant',
+    'all_rights_are_save' => 'All Rights Are Save',
+    'arab_engravings' => 'Arab Engravings :',
+    '' => '',
 
     // B b
 
-    '' => '',
+    'board_of_directors' => 'Board Of Directors',
     '' => '',
 
     // C c
@@ -42,6 +41,12 @@ return [
     'currency' => 'SAR',
     'class_actions_request_intro_heading' => 'Please complete the registration details below',
     'class_actions_request_intro_text' => 'This service aims to provide advice and legal assistance to members and individual investors with regard to filing complaints, filing class action lawsuits, and hiring lawyers.',
+    'create_new_account' => 'Create New Account',
+    'cancel' => 'Cancel',
+    'class_actions' => 'Class Action',
+    'cooperative_training_program_for_the_entities' => 'Cooperative training program for the entities',
+    'cooperative_training_program_for_individuals' => 'Cooperative training program for individuals',
+    '' => '',
 
     // D d
 
@@ -59,6 +64,8 @@ return [
     'entity_name' => 'Entity Name',
     'email_confirmation_error' => 'Email and email confirmation not matched',
     'department' => 'Department',
+    'events' => 'Events',
+    '' => '',
 
     // F f
 
@@ -66,6 +73,9 @@ return [
     'female' => 'Female',
     'fav_lang' => 'Favorite Language',
     'finished' => 'Finished',
+    'forget_password_a' => 'Are you forget the password?',
+    'forget_password_h' => 'Forget Password',
+    'forget_password_p' => 'Enter the email to receive the password reset message.',
     '' => '',
 
     // G g
@@ -77,15 +87,17 @@ return [
 
     'hidden' => 'Hidden',
     'home' => 'Home',
+    'help' => 'Help',
     '' => '',
 
     // I i
     'inactive' => 'Inactive',
     'in_progress' => 'In progress',
-    'id_no' => '# ',
+    'id_no' => 'National ID',
     'iipa' => 'Individual Investors Protection Association',
     'ithmaar_company' => 'Saudi Ithmaar Financial Consulting Company',
     'individual_fees' => 'Individual Fees',
+    'important_url' => 'Important URLs',
     '' => '',
 
     // J j
@@ -103,6 +115,11 @@ return [
     'legal_advisor' => 'Legal Advisor',
     'list_updated_weekly' => 'The list is updated weekly based on the Capital Market Authority website',
     'office_fees' => 'Office Fees',
+    'logout' => 'Logout',
+    'login' => 'Login',
+    'login_h' => 'Please Login Or Register',
+    'login_p' => 'So that you can submit requests, and your inquiries and follow them up later',
+    'laws' => 'The Laws',
     '' => '',
 
     // M m
@@ -111,7 +128,10 @@ return [
     'message_sent' => 'Message sent successfully!',
     'male' => 'Male',
     'media_center' => 'Media Center',
-    'more' => 'Read More ...',
+    'my_requests' => 'My Requests',
+    'media_centre' => 'Media Centre',
+    'marine' => 'Marine :',
+    'more' => 'Read More',
     '' => '',
 
     // N n
@@ -122,6 +142,8 @@ return [
     'nick_name' => 'Nick Name',
     'not_authorized' => 'Not Authorized',
     'not_authorized_companies' => 'Not Authorized Companies',
+    'new_password' => 'New Password',
+    '' => '',
 
     // O o
 
@@ -129,8 +151,10 @@ return [
     'send' => 'Send',
     'our_office' => 'Our Office',
     'otp_msg' => 'OTP :otp',
-    'otp' => 'OTP',
+    'otp' => 'Code OTP',
     'open_file' => 'Open File',
+    'old_password' => 'Current Password',
+    'our_partners' => 'Our Partners',
     '' => '',
 
     // P p
@@ -141,6 +165,8 @@ return [
     'password_confirmation' => 'Password Confirmation',
     'packages' => 'Packages',
     'page' => 'Page',
+    'profile' => 'Profile',
+    'powered_by' => 'Powered By',
     'pdf' => 'Pdf',
     '' => '',
 
@@ -161,6 +187,15 @@ return [
     'request_content_us' => 'Request Content Us',
     'recruitment_intro_heading' => 'Please complete the registration details below',
     'recruitment_intro_text' => 'This service aims to provide advice and legal assistance to members and individual investors with regard to filing complaints, filing class action lawsuits, and hiring lawyers.',
+    'register_h' => 'Create New Account',
+    'register_p' => 'So that you can submit requests, and your inquiries and follow them up later',
+    'register' => 'Register',
+    'reset_password' => 'Reset Password',
+    'reset_password_h' => 'Reset Password',
+    'reset_password_p' => 'Enter the code you received in your inbox, the new password and the confirmation password.',
+    'resend_otp' => 'Do not received Mail?',
+    'register_or_login' => 'Register Or Login',
+    'recruitment' => 'Recruitment',
     '' => '',
     // S s
 
@@ -172,6 +207,9 @@ return [
     'status_request' => 'Status Request',
     'sort_desc' => 'Display By Latest',
     'sort_asc' => 'Display By Oldest',
+    'save' => 'Save',
+    'stock_prices_now' => 'Stock Prices Now',
+    '' => '',
 
 
     // T t
@@ -182,10 +220,15 @@ return [
     'training_individuals_intro_text' => 'This service aims to provide advice and legal assistance to members and individual investors with regard to filing complaints, filing class action lawsuits, and hiring lawyers.',
     'type' => 'Type',
     'target_group' => 'Target Group',
+    'the_drees' => 'The Drees :',
+    'the_authorized_companies' => 'The Authorized Companies',
+    'the_not_authorized_companies' => 'The Not Authorized Companies',
+    '' => '',
 
     // U u
 
-    '' => '',
+    'update_information' => 'Update Information',
+    'update_password' => 'Update Password',
     '' => '',
 
     // V v
@@ -194,11 +237,14 @@ return [
     'volunteer_type_id' => 'Volunteer Type',
     'volunteer_request_intro_heading' => 'Please complete the registration details below',
     'volunteer_request_intro_text' => 'This service aims to provide advice and legal assistance to members and individual investors with regard to filing complaints, filing class action lawsuits, and hiring lawyers.',
+    'volunteer_request' => 'Volunteer Request',
+    'volunteering_and_training' => 'Volunteering & Training',
+    '' => '',
 
     // W w
     'wrongCredential' => 'wrong email or password',
     'wrongOldPassword' => 'old password not correct',
-    '' => '',
+    'who_we_are' => 'Who We Are',
     '' => '',
 
     // X x
@@ -209,7 +255,8 @@ return [
     // Y y
     'your_code' => 'your code is : :model',
     'yes' => 'Yes',
-    '' => '',
+    'your_advisors' => 'Your Legal Advisor',
+    'your_legal_advisor' => 'Your Legal Advisor',
     '' => '',
 
     // Z z

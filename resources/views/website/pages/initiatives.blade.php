@@ -1,11 +1,11 @@
 @extends('website.layout.app')
 
-@section('title', 'Initiatives')
+@section('title', __('models/initiatives.plural'))
 
 @section('content')
 @include('website.layout._header_page', [
-'title' => 'Initiatives',
-'pageName' => 'Initiatives',
+'title' => __('models/initiatives.plural'),
+'pageName' => __('models/initiatives.plural'),
 ])
 
 <section class="bg-content-custom p-custom">

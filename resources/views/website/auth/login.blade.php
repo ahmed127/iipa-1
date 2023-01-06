@@ -17,8 +17,8 @@
                 <div class="row gx-0 p-3">
                     <div class="col-12 text-center py-2">
                         <i class="fa-solid fa-arrow-right-to-bracket fs-3 text-info"></i>
-                        <h3 class="firstWordInfo d-inline">Pleace Login Or Register</h3>
-                        <p class="mt-2">حتي تتمكن من تقيدم طلباتك, واستفسارتك ومتابعتها لاحقًا</p>
+                        <h3 class="firstWordInfo d-inline">@lang('lang.login_h')</h3>
+                        <p class="mt-2">@lang('lang.login_p')</p>
                     </div>
                     <div class="col-lg-6 col-sm-12 p-1">
                         <label for="email" class="form-label px-1">
@@ -44,7 +44,7 @@
                         <div class="input-group shadow-sm rounded-4">
                             <input type="password" name="password" value="{{ old('password') }}"
                                 class="form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr"
-                                id="password" placeholder="كلمة المرور" autocomplete="off">
+                                id="password" placeholder="{{ __('lang.password') }}" autocomplete="off">
                             <span
                                 class="input-group-text bg-white border border-start-0 direction-span-rtl direction-span-ltr"
                                 id="basic-addon1">
@@ -56,23 +56,20 @@
                         @enderror
                     </div>
                     <div class="col-lg-6 col-sm-12 p-2">
-                        <a class="float-start fs-6 w-auto m-0" href="{{ route('website.forget_password') }}">
-                            استرجع
-                            <span class="text-info fw-bold">
-                                كلمة المرور
-                            </span>
-                            الخاصة بك.
+                        <a class="float-start fs-6 w-auto m-0 text-info" href="{{ route('website.forget_password') }}">
+                            @lang('lang.forget_password_a')
                         </a>
                     </div>
                     <div class="row justify-content-center gx-0 pb-3">
                         <button class="btn btn-primary rounded-4 px-lg-5 py-3 col-lg-4 col-sm-10 shadow-custom m-3">
                             <i class="fa-solid fa-circle-check"></i>
-                            تسجيل دخول
+                            @lang('lang.login')
                         </button>
                         <a href="{{ route('website.register') }}"
                             class="btn btn-light rounded-4 px-lg-4 py-3 col-lg-4 col-sm-10 shadow-custom m-3">
                             <i class="fa-solid fa-user-plus"></i>
-                            سجل حساب جديد
+
+                            @lang('lang.create_new_account')
                         </a>
                     </div>
                 </div>

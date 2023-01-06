@@ -15,19 +15,10 @@
         <form action="{{ route('website.register_post') }}" method="POST">
             @csrf
             <div class="row gx-0 p-5">
-                <div class="col-12 text-center">
-                    <h3 class="text-center h4">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M15.7933 31.3385V26.9561H27.6176V4.38243H15.7933V0H27.6176C28.8303 0 29.8639 0.420051 30.7183 1.26015C31.5728 2.10136 32 3.14212 32 4.38243V26.9561C32 28.1964 31.5728 29.2366 30.7183 30.0767C29.8639 30.9179 28.8303 31.3385 27.6176 31.3385H15.7933ZM11.9897 25.0543L8.93023 21.9535L13.0233 17.8605H0V13.478H13.0233L8.93023 9.38501L11.9897 6.28424L21.3747 15.6693L11.9897 25.0543Z"
-                                fill="#11B0F9" />
-                        </svg>
-                        <span class="text-info">
-                            يرجى
-                        </span>
-                        تسجيل الدخول او تسجيل حساب جديد
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, earum.4/p>
+                <div class="col-12 text-center py-2">
+                    <i class="fa-solid fa-arrow-right-to-bracket fs-3 text-info"></i>
+                    <h3 class="firstWordInfo d-inline">@lang('lang.register_h')</h3>
+                    <p class="mt-2">@lang('lang.register_p')</p>
                 </div>
                 <div class="col-lg-4 col-sm-12 px-3 mb-3 fs-6">
                     <label for="fullName" class="form-label px-1">
@@ -55,6 +46,7 @@
                         'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl
                         direction-input-ltr',
                         'id' => 'phone',
+                        'placeholder' => __('lang.phone') ,
                         ]) !!}
                         <label for="country_code">
                             {!! Form::select('country_code', $countryCodes, null, [
@@ -88,11 +80,11 @@
                     <div class="input-group shadow-sm rounded-4">
                         <input type="password" name="password" value="{{ old('password') }}"
                             class="form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr"
-                            id="password" placeholder="@lang('lang.password')">
+                            id="password" placeholder="{{ __('lang.password') }}">
                         <span
                             class="input-group-text bg-white border border-start-0 direction-span-rtl direction-span-ltr"
                             id="basic-addon1">
-                            <i class="fa-solid fa-pen text-secondary opacity-50 fa-sm"></i>
+                            <i class="fa-solid fa-eye text-secondary opacity-50 fa-sm"></i>
                         </span>
                     </div>
                     @error('password')
@@ -102,17 +94,17 @@
                 <div class="col-lg-6 col-sm-12 px-3 mb-3">
                     <label for="password_confirmation" class="form-label px-1">
                         <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
-                        @lang('lang.confirm_password:') :
+                        @lang('lang.password_confirmation') :
                         <span class="text-danger">*</span>
                     </label>
                     <div class="input-group shadow-sm rounded-4">
                         <input type="password" name="password_confirmation" value="{{ old('password_confirmation') }}"
                             class="form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr"
-                            id="password_confirmation" placeholder="@lang('lang.confirm_password:')">
+                            id="password_confirmation" placeholder="{{ __('lang.password_confirmation') }}">
                         <span
                             class="input-group-text bg-white border border-start-0 direction-span-rtl direction-span-ltr"
                             id="basic-addon1">
-                            <i class="fa-solid fa-pen text-secondary opacity-50 fa-sm"></i>
+                            <i class="fa-solid fa-eye text-secondary opacity-50 fa-sm"></i>
                         </span>
                     </div>
                     @error('password_confirmation')
@@ -122,11 +114,11 @@
                 <div class="pt-4 text-center">
                     <button class="btn btn-primary rounded-4 px-5 py-2 shadow-custom mx-2">
                         <i class="fa-solid fa-circle-check"></i>
-                        تسجيل الان
+                        @lang('lang.register')
                     </button>
                     <a href="{{ route('website.home') }}" class="btn btn-light rounded-4 px-5 py-2 shadow-custom mx-2">
                         <i class="fa-solid fa-circle-xmark"></i>
-                        الغاء الأن
+                        @lang('lang.cancel')
                     </a>
                 </div>
             </div>

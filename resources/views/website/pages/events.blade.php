@@ -8,25 +8,25 @@
 @endpush
 
 @section('content')
-    @include('website.layout._header_page', [
-        'title' => 'Our Events',
-        'pageName' => 'events',
-    ])
+@include('website.layout._header_page', [
+'title' => 'Our Events',
+'pageName' => 'events',
+])
 
-    {{-- https://calendar.google.com/calendar/u/0/r/eventedit?dates=20210528T065000Z/20210528T070000Z&text=cool+event --}}
+{{-- https://calendar.google.com/calendar/u/0/r/eventedit?dates=20210528T065000Z/20210528T070000Z&text=cool+event --}}
 
 
-    <section class="bg-content-custom p-custom">
-        <div class="container-fluid p-0">
-            <!--begin::Card-->
-            <div class="card card-custom">
-                <div class="card-body">
-                    <div id="kt_calendar"></div>
-                </div>
+<section class="bg-content-custom p-custom">
+    <div class="container-fluid p-0">
+        <!--begin::Card-->
+        <div class="card card-custom">
+            <div class="card-body">
+                <div id="kt_calendar"></div>
             </div>
-            <!--end::Card-->
         </div>
-    </section>
+        <!--end::Card-->
+    </div>
+</section>
 @endsection
 
 @push('js_stack')

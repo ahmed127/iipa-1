@@ -1,11 +1,11 @@
 @extends('website.layout.app')
 
-@section('title', 'Training Individuals')
+@section('title', __('lang.cooperative_training_program_for_individuals'))
 
 @section('content')
 @include('website.layout._header_page', [
-'title' => 'Individuals training program',
-'pageName' => 'Training Individual',
+'title' => __('lang.cooperative_training_program_for_individuals'),
+'pageName' => __('lang.cooperative_training_program_for_individuals'),
 ])
 
 <section class="bg-content-custom">

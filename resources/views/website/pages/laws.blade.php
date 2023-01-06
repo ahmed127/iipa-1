@@ -1,11 +1,11 @@
 @extends('website.layout.app')
 
-@section('title', 'Laws')
+@section('title', __('lang.laws'))
 
 @section('content')
 @include('website.layout._header_page', [
-'title' => 'The Laws',
-'pageName' => 'The Laws',
+'title' => __('lang.laws'),
+'pageName' => __('lang.laws'),
 ])
 
 <section class="bg-content-custom p-custom">

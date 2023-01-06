@@ -116,6 +116,8 @@ return [
     'uploaded' => 'The :attribute failed to upload.',
     'url' => 'The :attribute format is invalid.',
     'uuid' => 'The :attribute must be a valid UU#.',
+    'current_password' => 'Current Password is incorrect.',
+
 
     /*
     |--------------------------------------------------------------------------
@@ -132,6 +134,8 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
             'recaptcha' => 'Hey!!! :attribute is wrong!',
+            'current_password' => 'Current Password is incorrect.',
+
         ],
     ],
 
@@ -146,6 +150,8 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'current_password' => 'Current Password is incorrect.',
+    ],
 
 ];
