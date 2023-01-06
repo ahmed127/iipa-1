@@ -1,6 +1,6 @@
 @extends('website.layout.app')
 
-@section('title', 'home')
+@section('title', __('lang.home'))
 
 @section('content')
 

@@ -46,7 +46,7 @@
                         @include('adminPanel.consultings.show_fields', ['consulting' => $follow_request->forable])
                         @break
                         @case(2)
-
+                        @include('adminPanel.consultings.show_fields', ['consulting' => $follow_request->forable])
                         @break
                         @case(3)
                         @include('adminPanel.volunteers.show_fields', ['volunteer' => $follow_request->forable])

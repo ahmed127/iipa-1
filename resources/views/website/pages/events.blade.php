@@ -33,7 +33,7 @@
 <script src="{{ asset('metronic') }}/assets/plugins/global/plugins.bundle.js"></script>
 <script src="{{ asset('metronic') }}/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 <script src="{{ asset('metronic') }}/assets/js/scripts.bundle.js"></script>
-<script src="https://keenthemes.com/metronic/assets/js/engage_code.js"></script>
+{{-- <script src="https://keenthemes.com/metronic/assets/js/engage_code.js"></script> --}}
 <!--end::Global Theme Bundle-->
 {{-- <script src="{{ asset('metronic') }}/js/calander.js"></script> --}}
 <!--begin::Page Vendors(used by this page)-->

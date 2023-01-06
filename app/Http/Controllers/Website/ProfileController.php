@@ -52,19 +52,18 @@ class ProfileController extends Controller
         $user = auth()->user();
 
         $request->validate([
-            'full_name' => 'required',
-            'email'     => 'required|unique:users,email,' . $user->id . ',id',
-            'password'  => 'required|confirmed',
+            'old_password'  => 'required|current_password',
+            'password'      => 'required|confirmed',
         ]);
 
-        $user->update($request->only('full_name', 'email', 'password'));
+        $user->update($request->only('password'));
+        Flash::success('Updated Password Successfully.');
 
-        return view('website.pages.profile.information', $data);
+        return back();
     }
 
     public function my_requests(Request $request)
     {
-        // dd($request->all());
         $user = auth()->user();
         $query = Follow::query();
         $query->where('user_id', $user->id);

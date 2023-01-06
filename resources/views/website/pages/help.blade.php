@@ -1,11 +1,11 @@
 @extends('website.layout.app')
 
-@section('title', 'Help')
+@section('title', __('lang.help'))
 
 @section('content')
 @include('website.layout._header_page', [
-'title' => 'Help',
-'pageName' => 'Help',
+'title' => __('lang.help'),
+'pageName' => __('lang.help'),
 ])
 <section class="bg-content-custom p-custom">
     <div class="container-fluid p-0">

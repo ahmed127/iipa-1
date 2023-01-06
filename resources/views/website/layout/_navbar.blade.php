@@ -29,86 +29,91 @@
                                 </a>
                                 <ul class="dropdown-menu">
 
-                                        <li><a class="dropdown-item {{ Request::is('*profile*') ? 'active' : '' }}"
-                                                href="{{ route('website.profile') }}">Profile</a></li>
-                                        <li>
-                                            <a class="dropdown-item {{ Request::is('*update-information*') ? 'active' : '' }}"
-                                                href="{{ route('website.update_information') }}">
-                                                Update Information
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item {{ Request::is('*update-password*') ? 'active' : '' }}"
-                                                href="{{ route('website.update_password') }}">
-                                                Update Password
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item {{ Request::is('*my-request*') ? 'active' : '' }}"
-                                                href="{{ route('website.my_requests') }}">
-                                                My Requests
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item text-danger" href="{{ route('website.logout') }}">
-                                                logout
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                    <li>
+                                        <a class="dropdown-item {{ Request::is('*profile*') ? 'active' : '' }}"
+                                            href="{{ route('website.profile') }}">
+                                            @lang('lang.profile')
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item {{ Request::is('*update-information*') ? 'active' : '' }}"
+                                            href="{{ route('website.update_information') }}">
+                                            @lang('lang.update_information')
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item {{ Request::is('*update-password*') ? 'active' : '' }}"
+                                            href="{{ route('website.update_password') }}">
+                                            @lang('lang.update_password')
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item {{ Request::is('*my-request*') ? 'active' : '' }}"
+                                            href="{{ route('website.my_requests') }}">
+                                            @lang('lang.my_requests')
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item text-danger" href="{{ route('website.logout') }}">
+                                            @lang('lang.logout')
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
                             @else
                             <li class="nav-item">
                                 <a class="nav-link pt-0" href="{{ route('website.login') }}">
                                     <i class="fa-sharp fa-solid fa-circle-user text-primary"></i>
-                                    <span class="my-auto"> Register / Login </span>
+                                    <span class="my-auto">@lang('lang.register_or_login')</span>
                                 </a>
                             </li>
                             @endauth
                             <span class="vr d-xl-inline-block d-none mx-2 mb-1"></span>
-                            <!-- <span class="hr-navbar d-xl-none w-75 my-3 mx-auto"><hr class="dropdown-divider"></span> -->
                             <li class="nav-item">
                                 <a class="nav-link pt-0" href="{{ route('website.events') }}">
                                     <i class="fa-regular fa-calendar-days text-primary"></i>
-                                    <span class="my-auto"> Events </span>
+                                    <span class="my-auto">@lang('lang.events')</span>
                                 </a>
                             </li>
                             <span class="vr d-xl-inline-block d-none mx-2 mb-1"></span>
-                            <!-- <span class="hr-navbar d-xl-none w-75 my-3 mx-auto"><hr class="dropdown-divider"></span> -->
                             <li class="nav-item">
                                 <a class="nav-link pt-0 " href="{{ route('website.contact_us') }}">
                                     <i class="fa-solid fa-envelope text-primary"></i>
-                                    <span class="my-auto"> Contact Us </span>
+                                    <span class="my-auto">@lang('lang.contact_us')</span>
                                 </a>
                             </li>
                             <span class="vr d-xl-inline-block d-none mx-2 mb-1"></span>
-                            <!-- <span class="hr-navbar d-xl-none w-75 my-3 mx-auto"><hr class="dropdown-divider"></span> -->
                             <li class="nav-item">
                                 <a class="nav-link pt-0" href="{{ route('website.help') }}">
                                     <i class="fa-solid fa-circle-info text-primary"></i>
-                                    <span class="my-auto"> Help </span>
+                                    <span class="my-auto">@lang('lang.help')</span>
                                 </a>
                             </li>
                             <span class="vr d-xl-inline-block d-none mx-2 mb-1"></span>
-                            <!-- <span class="hr-navbar d-xl-none w-75 my-3 mx-auto"><hr class="dropdown-divider"></span> -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link pt-0 dropdown-toggle" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     <i class="fa-solid fa-language  text-primary"></i>
                                     @if ($lang_page == 'en')
-                                    <span class="my-auto"> En </span>
+                                    <span class="my-auto"> @lang('lang.english') </span>
                                     @else
-                                    <span class="my-auto"> Ar </span>
+                                    <span class="my-auto">@lang('lang.arabic')</span>
                                     @endif
                                 </a>
                                 <ul class="dropdown-menu">
-
                                     @if ($lang_page == 'ar')
-                                    <li><a class="dropdown-item"
-                                            href="{{ str_replace('ar', 'en', url()->current()) }}">En</a>
+                                    <li>
+                                        <a class="dropdown-item" href="{{ str_replace('ar', 'en', url()->current()) }}">
+                                            @lang('lang.english')
+                                        </a>
                                     </li>
                                     @else
-                                    <li><a class="dropdown-item"
-                                            href="{{ str_replace('/en', '/ar', url()->current()) }}">Ar</a></li>
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="{{ str_replace('/en', '/ar', url()->current()) }}">
+                                            @lang('lang.arabic')
+                                        </a>
+                                    </li>
                                     @endif
                                 </ul>
                             </li>
@@ -124,7 +129,7 @@
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('*home*') ? 'active' : '' }}" aria-current="page"
                                     href="{{ route('website.home') }}">
-                                    Home
+                                    @lang('lang.home')
                                 </a>
                             </li>
                             {{-- End: Home --}}
@@ -133,38 +138,38 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle {{ Request::is('*who-we-are*') ? 'active' : '' }}"
                                     href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Who we are
+                                    @lang('lang.who_we_are')
                                 </a>
                                 <ul class="dropdown-menu" style="width: 210px;">
 
                                     <li>
                                         <a class="dropdown-item {{ Request::is('*incorporation*') ? 'active' : '' }}"
                                             href="{{ route('website.incorporation') }}">
-                                            Incorporation
+                                            {{ $page_app->where('id', 1)->first()->title??'' }}
                                         </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item  {{ Request::is('*our-goals*') ? 'active' : '' }}"
                                             href="{{ route('website.our_goals') }}">
-                                            Our Goals
+                                            {{ $page_app->where('id', 2)->first()->title??'' }}
                                         </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item  {{ Request::is('*board-of-directors*') ? 'active' : '' }}"
                                             href="{{ route('website.board_of_directors') }}">
-                                            Board of Directors
+                                            @lang('lang.board_of_directors')
                                         </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item  {{ Request::is('*organizational-structure*') ? 'active' : '' }}"
                                             href="{{ route('website.organizational_structure') }}">
-                                            Organizational Structure
+                                            {{ $page_app->where('id', 3)->first()->title??'' }}
                                         </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item  {{ Request::is('*our-partners*') ? 'active' : '' }}"
                                             href="{{ route('website.our_partners') }}">
-                                            Our partners
+                                            @lang('lang.our_partners')
                                         </a>
                                     </li>
                                 </ul>
@@ -214,21 +219,27 @@
                             {{-- Start: The Laws --}}
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('*laws*') ? 'active' : '' }}"
-                                    href="{{ route('website.laws') }}">The Laws</a>
+                                    href="{{ route('website.laws') }}">
+                                    @lang('lang.laws')
+                                </a>
                             </li>
                             {{-- End: The Laws --}}
 
                             {{-- Start: The Initiatives --}}
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('*initiatives*') ? 'active' : '' }}"
-                                    href="{{ route('website.initiatives') }}">@lang('models/initiatives.plural')</a>
+                                    href="{{ route('website.initiatives') }}">
+                                    @lang('models/initiatives.plural')
+                                </a>
                             </li>
                             {{-- End: The Initiatives --}}
 
                             {{-- Start: Your Advisor --}}
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('*advisors*') ? 'active' : '' }}"
-                                    href="{{ route('website.advisors') }}">Your Advisor</a>
+                                    href="{{ route('website.advisors') }}">
+                                    @lang('lang.your_advisors')
+                                </a>
                             </li>
                             {{-- End: Your Advisor --}}
 
@@ -236,21 +247,20 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle {{ Request::is('*class-actions*') ? 'active' : '' }}"
                                     href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Class Action
-
+                                    @lang('lang.class_actions')
                                 </a>
                                 <ul class="dropdown-menu" style="width: 340px;">
 
                                     <li>
                                         <a class="dropdown-item {{ Request::is('*request*') ? 'active' : '' }}"
                                             href="{{ route('website.class_actions_request') }}">
-                                            Cooperative training program for the entities
+                                            @lang('lang.cooperative_training_program_for_the_entities')
                                         </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item {{ Request::is('*tutorial*') ? 'active' : '' }}"
                                             href="{{ route('website.class_actions_tutorial') }}">
-                                            How to file a class action
+                                            {{ $page_app->where('id', 4)->first()->title??'' }}
                                         </a>
                                     </li>
                                 </ul>
@@ -261,28 +271,28 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle {{ Request::is('*volunteer*') ? 'active' : '' }} {{ Request::is('*training*') ? 'active' : '' }}"
                                     href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Volunteering & Training
+                                    @lang('lang.volunteering_and_training')
                                 </a>
                                 <ul class="dropdown-menu" style="width: 340px;">
 
                                     <li>
                                         <a class="dropdown-item {{ Request::is('*volunteer-request*') ? 'active' : '' }}"
                                             href="{{ route('website.volunteer_request') }}">
-                                            Volunteer request
+                                            @lang('lang.volunteer_request')
                                         </a>
                                     </li>
 
                                     <li>
                                         <a class="dropdown-item {{ Request::is('*training-entities*') ? 'active' : '' }}"
                                             href="{{ route('website.training_entities') }}">
-                                            Cooperative training program for the entities
+                                            @lang('lang.cooperative_training_program_for_the_entities')
                                         </a>
                                     </li>
 
                                     <li>
                                         <a class="dropdown-item {{ Request::is('*training-individuals*') ? 'active' : '' }}"
                                             href="{{ route('website.training_individuals') }}">
-                                            Cooperative training program for individuals
+                                            @lang('lang.cooperative_training_program_for_individuals')
                                         </a>
                                     </li>
 
@@ -293,7 +303,9 @@
                             {{-- Start: Media Center --}}
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('*media-center*') ? 'active' : '' }}"
-                                    href="{{ route('website.media_center_all') }}">Media Center</a>
+                                    href="{{ route('website.media_center_all') }}">
+                                    @lang('lang.media_centre')
+                                </a>
                             </li>
                             {{-- End: Media Center --}}
 

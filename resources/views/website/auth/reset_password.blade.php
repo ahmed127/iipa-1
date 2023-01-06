@@ -14,10 +14,10 @@
             @include('flash::message')
             <form action="{{ route('website.reset_password_post') }}" method="POST">
                 @csrf
-                <div class="row gx-0 p-3">
+                <div class="row gx-0 p-3 w-75 m-auto">
                     <div class="col-12 text-center py-2">
-                        <h3 class="firstWordInfo">Reset Password</h3>
-                        <p class="mt-2">You can reset password.</p>
+                        <h3 class="firstWordInfo">@lang('lang.reset_password_h')</h3>
+                        <p class="mt-2 mb-5">@lang('lang.reset_password_p')</p>
                     </div>
 
                     <div class="col-lg-6 col-sm-12 p-1 d-none">
@@ -40,7 +40,7 @@
                             <span class="text-danger">*</span>
                         </label>
                         <div class="input-group">
-                            <input type="otp_code" name="otp_code" value="{{ old('otp_code') }}"
+                            <input type="text" name="otp_code" value="{{ old('otp_code') }}"
                                 class="form-control border text-start py-3 shadow-sm rounded-4" id="otp_code"
                                 autocomplete="off">
                         </div>
@@ -88,12 +88,12 @@
                     <div class="row justify-content-center gx-0 pb-3">
                         <button class="btn btn-primary rounded-4 px-lg-5 py-3 col-lg-4 col-sm-10 shadow-custom m-3">
                             <i class="fa-solid fa-circle-check"></i>
-                            Reset Password
+                            @lang('lang.reset_password')
                         </button>
                         <span class="btn btn-light rounded-4 px-lg-4 py-3 col-lg-4 col-sm-10 shadow-custom m-3"
                             onclick="document.getElementById('resend').submit();">
                             <i class="fa-solid fa-circle-check"></i>
-                            Resend OTP
+                            @lang('lang.resend_otp')
                         </span>
                     </div>
                 </div>

@@ -1,11 +1,11 @@
 @extends('website.layout.app')
 
-@section('title', 'Volunteer Request')
+@section('title', __('lang.volunteer_request'))
 
 @section('content')
 @include('website.layout._header_page', [
-'title' => 'Volunteer Request',
-'pageName' => 'Volunteer Request',
+'title' => __('lang.volunteer_request'),
+'pageName' => __('lang.volunteer_request'),
 ])
 
 <section class="bg-content-custom">
@@ -95,7 +95,7 @@
                         </label>
                     </div>
                 </div>
-                <div class="col-12 px-2 mb-3 fs-6">
+                <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
                     <label for="message" class="form-label px-1">
                         <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
                         @lang('lang.attachment_cv'):
@@ -103,7 +103,8 @@
                     </label>
                     <div class="input-group">
                         {!! Form::file('attachment_cv', [
-                        'class' => 'form-control shadow-sm',
+                        'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl
+                        direction-input-ltr',
                         'id' => 'attachment_cv',
                         ]) !!}
                     </div>

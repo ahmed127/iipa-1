@@ -1,13 +1,13 @@
 @extends('website.layout.app')
 
-@section('title', 'Contact Us')
+@section('title', __('contact_us'))
 
 @section('content')
 @include('website.layout._header_page', [
-'title' => 'Contact Us',
-'pageName' => 'Contact Us',
+'title' => __('contact_us'),
+'pageName' => __('contact_us'),
 ])
-<section class="">
+<div class="">
     <div class="container-fluid p-0">
         @include('website.inc._error')
         @include('flash::message')
@@ -176,5 +176,5 @@
                 </div>
             </div>
     </div>
-</section>
+</div>
 @endsection
