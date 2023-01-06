@@ -49,7 +49,7 @@
     <!-- Date Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('date', __('models/events.fields.date') . ':') !!}
-        {!! Form::date('date', isset($event) ? $event->date ?? '' : '', ['class' => 'form-control']) !!}
+        {!! Form::datetimeLocal('date', isset($event) ? $event->date ?? '' : '', ['class' => 'form-control']) !!}
     </div>
 
     <!-- Submit Field -->

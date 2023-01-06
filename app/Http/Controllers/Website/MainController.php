@@ -47,7 +47,11 @@ class MainController extends Controller
 
     public function events()
     {
-        $events = Event::get();
+        $events = Event::get()->pluck('event_json');
+        
+        if (request()->ajax()) {
+            return response()->json(compact('events'));
+        }
         return view('website.pages.events', compact('events'));
     }
 
