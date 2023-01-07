@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Model;
+use Astrotomic\Translatable\Translatable;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 
@@ -46,7 +47,7 @@ class Event extends Model
         'title' => 'string',
         'brief' => 'string',
         'description' => 'string',
-        'date' => 'date'
+        'date' => 'datetime'
     ];
 
     public $translatedAttributes =  ['title', 'description', 'brief'];
@@ -67,14 +68,21 @@ class Event extends Model
     }
 
 
-    public $appends = ['date_from_timestamp', 'date_to_timestamp'];
+    public $appends = ['event_json'];
 
-    public function getDateFromTimestampAttribute()
+    public function getEventJsonAttribute()
     {
-        return \Carbon\Carbon::parse($this->attributes['date'])->format('Ymd');
-    }
-    public function getDateToTimestampAttribute()
-    {
-        return \Carbon\Carbon::parse($this->attributes['date'])->addHour()->format('Ymd');
+        $from = \Carbon\Carbon::parse($this->attributes['date'])->format('Ymd His');
+        $to = \Carbon\Carbon::parse($this->attributes['date'])->addHour()->format('Ymd His');
+
+        $data = (object)[
+            'title' => $this->title,
+            'url' => "https://calendar.google.com/calendar/u/0/r/eventedit?dates=$from/$to&text=$this->title",
+            'start' => $this->date,
+            'description' => $this->description,
+            'className' => 'fc-event-danger fc-event-solid-warning'
+        ];
+
+        return $data;
     }
 }
