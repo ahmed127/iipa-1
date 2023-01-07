@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\AdminPanel;
 
+use App\Helpers\FollowTrait;
 use App\Http\Requests\AdminPanel\CreateRecruitmentRequest;
 use App\Http\Requests\AdminPanel\UpdateRecruitmentRequest;
 use App\Repositories\AdminPanel\RecruitmentRepository;
@@ -12,6 +13,8 @@ use Response;
 
 class RecruitmentController extends AppBaseController
 {
+    use FollowTrait;
+
     /** @var RecruitmentRepository $recruitmentRepository*/
     private $recruitmentRepository;
 
@@ -122,6 +125,8 @@ class RecruitmentController extends AppBaseController
         }
 
         $recruitment = $this->recruitmentRepository->update($request->all(), $id);
+
+        $this->follow_update($recruitment);
 
         Flash::success(__('messages.updated', ['model' => __('models/recruitments.singular')]));
 

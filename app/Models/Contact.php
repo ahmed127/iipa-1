@@ -21,7 +21,9 @@ class Contact extends Model
         'email',
         'phone',
         'country_code',
-        'message'
+        'message',
+        'user_id',
+        'status', // 1=>pending, 2 => inprogress, 3 => approved, 4 => rejected, 5 => closed, 6 => finished
     ];
 
     /**

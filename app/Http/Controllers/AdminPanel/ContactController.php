@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\AdminPanel;
 
+use App\Helpers\FollowTrait;
 use App\Http\Requests\AdminPanel\CreateContactRequest;
 use App\Http\Requests\AdminPanel\UpdateContactRequest;
 use App\Repositories\AdminPanel\ContactRepository;
@@ -12,6 +13,8 @@ use Response;
 
 class ContactController extends AppBaseController
 {
+    use FollowTrait;
+
     /** @var  ContactRepository */
     private $contactRepository;
 
@@ -122,7 +125,7 @@ class ContactController extends AppBaseController
         }
 
         $contact = $this->contactRepository->update($request->all(), $id);
-
+        $this->follow_update($contact);
         Flash::success(__('messages.updated', ['model' => __('models/contacts.singular')]));
 
         return redirect(route('adminPanel.contacts.index'));

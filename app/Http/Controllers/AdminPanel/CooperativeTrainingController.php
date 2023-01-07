@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\AdminPanel;
 
+use App\Helpers\FollowTrait;
 use App\Http\Requests\AdminPanel\CreateCooperativeTrainingRequest;
 use App\Http\Requests\AdminPanel\UpdateCooperativeTrainingRequest;
 use App\Repositories\AdminPanel\CooperativeTrainingRepository;
@@ -12,6 +13,8 @@ use Response;
 
 class CooperativeTrainingController extends AppBaseController
 {
+    use FollowTrait;
+
     /** @var CooperativeTrainingRepository $cooperativeTrainingRepository*/
     private $cooperativeTrainingRepository;
 
@@ -122,6 +125,8 @@ class CooperativeTrainingController extends AppBaseController
         }
 
         $cooperativeTraining = $this->cooperativeTrainingRepository->update($request->all(), $id);
+
+        $this->follow_update($cooperativeTraining);
 
         Flash::success(__('messages.updated', ['model' => __('models/cooperativeTrainings.singular')]));
 

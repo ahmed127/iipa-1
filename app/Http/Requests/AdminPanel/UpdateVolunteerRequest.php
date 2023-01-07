@@ -24,8 +24,9 @@ class UpdateVolunteerRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = Volunteer::$rules;
-        
+        // $rules = Volunteer::$rules;
+        $rules['status'] = 'required';
+
         return $rules;
     }
 }

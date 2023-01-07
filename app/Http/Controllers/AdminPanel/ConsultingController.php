@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\AdminPanel;
 
+use App\Helpers\FollowTrait;
 use Flash;
 use Response;
 use App\Models\Job;
@@ -16,6 +17,8 @@ use App\Http\Requests\AdminPanel\UpdateConsultingRequest;
 
 class ConsultingController extends AppBaseController
 {
+    use FollowTrait;
+
     /** @var ConsultingRepository $consultingRepository*/
     private $consultingRepository;
 
@@ -148,6 +151,7 @@ class ConsultingController extends AppBaseController
 
         $consulting = $this->consultingRepository->update($request->all(), $id);
 
+        $this->follow_update($consulting);
         Flash::success(__('messages.updated', ['model' => __('models/consultings.singular')]));
 
         return redirect(route('adminPanel.consultings.index'));

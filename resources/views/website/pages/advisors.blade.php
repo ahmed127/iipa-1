@@ -28,7 +28,7 @@
                     {!! Html::decode(
                     Form::label(
                     'name',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('lang.name') .
                     ':' .
                     '<span class="text-danger">*</span>',
@@ -48,7 +48,7 @@
                     {!! Html::decode(
                     Form::label(
                     'email',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('lang.email') .
                     ':' .
                     '<span class="text-danger">*</span>',
@@ -69,7 +69,7 @@
                     {!! Html::decode(
                     Form::label(
                     'email_confirmation',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('lang.email_confirmation') .
                     ':' .
                     '<span class="text-danger">*</span>',
@@ -90,7 +90,7 @@
                     {!! Html::decode(
                     Form::label(
                     'phone',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('lang.phone') .
                     ':' .
                     '<span class="text-danger">*</span>',
@@ -117,7 +117,7 @@
                     {!! Html::decode(
                     Form::label(
                     'country_id',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('lang.country') .
                     ':' .
                     '<span class="text-danger">*</span>',
@@ -137,7 +137,7 @@
                     {!! Html::decode(
                     Form::label(
                     'job_id',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('lang.job') .
                     ':' .
                     '<span class="text-danger">*</span>',
@@ -157,7 +157,7 @@
                     {!! Html::decode(
                     Form::label(
                     'consultant_type_id',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('lang.consultant_type') .
                     ':' .
                     '<span class="text-danger">*</span>',
@@ -177,7 +177,7 @@
                     {!! Html::decode(
                     Form::label(
                     'fav_lang',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('lang.fav_lang') .
                     ':' .
                     '<span class="text-danger">*</span>',
@@ -197,7 +197,7 @@
                     {!! Html::decode(
                     Form::label(
                     'gender',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('lang.gender') .
                     ':' .
                     '<span class="text-danger">*</span>',
@@ -217,7 +217,7 @@
                     {!! Html::decode(
                     Form::label(
                     'date_of_birth',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('lang.date_of_birth') .
                     ':' .
                     '<span class="text-danger">*</span>',
@@ -236,7 +236,7 @@
                     {!! Html::decode(
                     Form::label(
                     'description',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('lang.description') .
                     ':' .
                     '<span class="text-danger">*</span>',
@@ -255,7 +255,7 @@
                     {!! Html::decode(
                     Form::label(
                     'nationality',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('lang.nationality') .
                     ':' .
                     '<span class="text-danger">*</span>',
@@ -274,7 +274,7 @@
                     {!! Html::decode(
                     Form::label(
                     'attachment_letter',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('lang.attachment_letter') .
                     ':' .
                     '<span class="text-danger">*</span>',

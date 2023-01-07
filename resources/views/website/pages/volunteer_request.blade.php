@@ -25,7 +25,7 @@
                 !!}
                 <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
                     <label for="volunteer_type_id" class="form-label px-1">
-                        <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
+                        <i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i>
                         @lang('lang.volunteer_type_id') :
                         <span class="text-danger">*</span>
                     </label>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
                     <label for="full_name" class="form-label px-1">
-                        <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
+                        <i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i>
                         @lang('lang.full_name') :
                         <span class="text-danger">*</span>
                     </label>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
                     <label for="id_no" class="form-label px-1">
-                        <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
+                        <i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i>
                         @lang('lang.id_no') :
                         <span class="text-danger">*</span>
                     </label>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
                     <label for="email" class="form-label px-1">
-                        <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
+                        <i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i>
                         @lang('lang.email') :
                         <span class="text-danger">*</span>
                     </label>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
                     <label for="phone" class="form-label px-1">
-                        <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
+                        <i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i>
                         @lang('lang.phone') :
                         <span class="text-danger">*</span>
                     </label>
@@ -97,7 +97,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
                     <label for="message" class="form-label px-1">
-                        <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
+                        <i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i>
                         @lang('lang.attachment_cv'):
                         <span class="text-danger">*</span>
                     </label>

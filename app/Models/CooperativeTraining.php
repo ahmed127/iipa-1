@@ -23,7 +23,9 @@ class CooperativeTraining extends Model
         'country_code',
         'phone',
         'email',
-        'attachment_letter'
+        'attachment_letter',
+        'user_id',
+        'status', // 1=>pending, 2 => inprogress, 3 => approved, 4 => rejected, 5 => closed, 6 => finished
     ];
 
     /**

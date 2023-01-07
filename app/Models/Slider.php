@@ -49,7 +49,6 @@ class Slider extends Model
         'in_order_to' => 'integer',
         'photo' => 'string',
         'content' => 'string',
-        'status' => 'string',
     ];
 
 
@@ -124,5 +123,4 @@ class Slider extends Model
     {
         return asset('uploads/files/' . $this->attributes['attachment_pdf']);
     }
-
 }

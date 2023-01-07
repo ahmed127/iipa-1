@@ -36,7 +36,7 @@
 
                         <div class="col-lg-12 col-md-12 px-2 mb-3 fs-6 d-flex">
                             <label for="old_password" class="form-label px-1 w-25 m-auto">
-                                <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
+                                <i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i>
                                 @lang('lang.old_password')
                             </label>
                             <div class="input-group w-75">
@@ -49,7 +49,7 @@
                         </div>
                         <div class="col-lg-12 col-md-12 px-2 mb-3 fs-6 d-flex">
                             <label for="password" class="form-label px-1 w-25 m-auto">
-                                <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
+                                <i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i>
                                 @lang('lang.new_password')
                             </label>
                             <div class="input-group w-75">
@@ -62,7 +62,7 @@
                         </div>
                         <div class="col-lg-12 col-md-12 px-2 mb-3 fs-6 d-flex">
                             <label for="password_confirmation" class="form-label px-1 w-25 m-auto">
-                                <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
+                                <i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i>
                                 @lang('lang.password_confirmation')
                             </label>
                             <div class="input-group w-75">

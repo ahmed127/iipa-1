@@ -19,7 +19,7 @@
                 </div>
                 <div class="col-lg-6 col-sm-12 p-1">
                     <label for="email" class="form-label px-1">
-                        <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
+                        <i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i>
                         @lang('lang.email') :
                         <span class="text-danger">*</span>
                     </label>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="col-lg-6 col-sm-12 p-1">
                     <label for="password" class="form-label px-1">
-                        <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
+                        <i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i>
                         @lang('lang.password') :
                         <span class="text-danger">*</span>
                     </label>

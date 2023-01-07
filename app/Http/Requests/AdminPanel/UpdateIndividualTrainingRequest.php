@@ -24,8 +24,9 @@ class UpdateIndividualTrainingRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = IndividualTraining::$rules;
-        
+        // $rules = IndividualTraining::$rules;
+        $rules['status'] = 'required';
+
         return $rules;
     }
 }

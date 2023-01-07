@@ -70,7 +70,7 @@
     <div class="menu-submenu "><i class="menu-arrow"></i>
         <ul class="menu-subnav">
 
-            @can('information view')
+            {{-- @can('information view')
             <li class="menu-item  {{ Request::is('*information*') ? 'menu-item-active' : '' }}" aria-haspopup="true">
                 <a href="{{ route('adminPanel.information.index') }}" class="menu-link ">
                     <span class="svg-icon menu-icon">
@@ -92,7 +92,7 @@
                     <span class="menu-text">@lang('models/information.plural')</span>
                 </a>
             </li>
-            @endcan
+            @endcan --}}
 
             @can('sliders view')
             <li class="menu-item  {{ Request::is('*sliders*') ? 'menu-item-active' : '' }}" aria-haspopup="true">
@@ -189,7 +189,7 @@
                 </a>
             </li>
             @endcan
-            
+
             @can('faqCategories view')
             <li class="menu-item  {{ Request::is('*faqCategories*') ? 'menu-item-active' : '' }}" aria-haspopup="true">
                 <a href="{{ route('adminPanel.faqCategories.index') }}" class="menu-link ">
@@ -254,7 +254,7 @@
             $pages = \App\Models\Page::get();
             @endphp
             @forelse ($pages as $page)
-            <li class="menu-item  {{ Request::is("*pages/$page->id/edit*") ? 'menu-item-active' : '' }}"
+            <li class="menu-item  {{ Request::is(" *pages/$page->id/edit*") ? 'menu-item-active' : '' }}"
                 aria-haspopup="true">
                 <a href="{{ route('adminPanel.pages.edit', $page->id) }}" class="menu-link ">
                     <span class="svg-icon menu-icon">

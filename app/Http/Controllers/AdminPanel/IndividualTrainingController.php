@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\AdminPanel;
 
+use App\Helpers\FollowTrait;
 use App\Http\Requests\AdminPanel\CreateIndividualTrainingRequest;
 use App\Http\Requests\AdminPanel\UpdateIndividualTrainingRequest;
 use App\Repositories\AdminPanel\IndividualTrainingRepository;
@@ -12,6 +13,8 @@ use Response;
 
 class IndividualTrainingController extends AppBaseController
 {
+    use FollowTrait;
+
     /** @var IndividualTrainingRepository $individualTrainingRepository*/
     private $individualTrainingRepository;
 
@@ -122,6 +125,8 @@ class IndividualTrainingController extends AppBaseController
         }
 
         $individualTraining = $this->individualTrainingRepository->update($request->all(), $id);
+
+        $this->follow_update($individualTraining);
 
         Flash::success(__('messages.updated', ['model' => __('models/individualTrainings.singular')]));
 

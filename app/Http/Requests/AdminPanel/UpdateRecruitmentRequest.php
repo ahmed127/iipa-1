@@ -24,8 +24,9 @@ class UpdateRecruitmentRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = Recruitment::$rules;
-        
+        // $rules = Recruitment::$rules;
+        $rules['status'] = 'required';
+
         return $rules;
     }
 }
