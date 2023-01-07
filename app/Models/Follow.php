@@ -39,6 +39,7 @@ class Follow extends Model
             4 => __('lang.request_training_entities'),
             5 => __('lang.request_training_individuals'),
             6 => __('lang.request_content_us'),
+            7 => __('lang.request_recruitment'),
 
         ];
     }

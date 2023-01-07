@@ -18,7 +18,7 @@ return array(
         'date_of_birth' => 'تاريخ الميلاد',
         'fav_lang' => 'اللغة المفضلة',
         'description' => 'الوصف',
-        'attachment_letter' => 'Attachment Letter',
+        'attachment_letter' => 'ارفاق ملف',
         'gender' => 'الجنس',
         'nationality' => 'الجنسية',
         'created_at' => 'تم الانشاء في',

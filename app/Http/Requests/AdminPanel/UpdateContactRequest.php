@@ -25,8 +25,9 @@ class UpdateContactRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = Contact::$rules;
-        
+        // $rules = Contact::$rules;
+
+        $rules['status'] = 'required';
         return $rules;
     }
 }

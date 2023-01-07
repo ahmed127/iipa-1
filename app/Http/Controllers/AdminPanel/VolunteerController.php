@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\AdminPanel;
 
+use App\Helpers\FollowTrait;
 use App\Http\Requests\AdminPanel\CreateVolunteerRequest;
 use App\Http\Requests\AdminPanel\UpdateVolunteerRequest;
 use App\Repositories\AdminPanel\VolunteerRepository;
@@ -12,6 +13,8 @@ use Response;
 
 class VolunteerController extends AppBaseController
 {
+    use FollowTrait;
+
     /** @var VolunteerRepository $volunteerRepository*/
     private $volunteerRepository;
 
@@ -123,6 +126,7 @@ class VolunteerController extends AppBaseController
 
         $volunteer = $this->volunteerRepository->update($request->all(), $id);
 
+        $this->follow_update($volunteer);
         Flash::success(__('messages.updated', ['model' => __('models/volunteers.singular')]));
 
         return redirect(route('adminPanel.volunteers.index'));

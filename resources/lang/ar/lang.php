@@ -221,6 +221,7 @@ return [
     'the_drees' => 'الدريس :',
     'the_authorized_companies' => 'الشركات المرخص لها',
     'the_not_authorized_companies' => 'الشركات الغير مرخص لها',
+    'request_recruitment' => 'طلب توظيف',
     '' => '',
 
     // U u

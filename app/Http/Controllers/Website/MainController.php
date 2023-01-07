@@ -28,6 +28,7 @@ use App\Models\ConsultantType;
 use App\Models\IndividualTraining;
 use App\Models\CooperativeTraining;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\AdminPanel\CreateContactRequest;
 use App\Http\Requests\AdminPanel\CreateVolunteerRequest;
 use App\Http\Requests\AdminPanel\CreateConsultingRequest;
@@ -64,7 +65,9 @@ class MainController extends Controller
     public function contact_us_store(CreateContactRequest $request)
     {
         $input = $request->all();
-
+        if (Auth::user()) {
+            $input['user_id'] = auth()->id();
+        }
         $contact = Contact::create($input);
         $this->follow_store($contact);
 
@@ -153,7 +156,9 @@ class MainController extends Controller
     {
         $input = $request->all();
         $input['type'] = array_search(__('lang.legal_advisor'), Consulting::types());
-
+        if (Auth::user()) {
+            $input['user_id'] = auth()->id();
+        }
         $consulting = Consulting::create($input);
         $this->follow_store($consulting);
 
@@ -181,7 +186,9 @@ class MainController extends Controller
     {
         $input = $request->all();
         $input['type'] = array_search(__('lang.request_lawsuit'), Consulting::types());
-
+        if (Auth::user()) {
+            $input['user_id'] = auth()->id();
+        }
         $consulting = Consulting::create($input);
         $this->follow_store($consulting);
 
@@ -208,6 +215,9 @@ class MainController extends Controller
     public function volunteer_request_store(CreateVolunteerRequest $request)
     {
         $input = $request->all();
+        if (Auth::user()) {
+            $input['user_id'] = auth()->id();
+        }
         $volunteer = Volunteer::create($input);
         $this->follow_store($volunteer);
 
@@ -225,6 +235,9 @@ class MainController extends Controller
     public function training_entities_store(CreateCooperativeTrainingRequest $request)
     {
         $input = $request->all();
+        if (Auth::user()) {
+            $input['user_id'] = auth()->id();
+        }
         $training = CooperativeTraining::create($input);
         $this->follow_store($training);
 
@@ -243,6 +256,9 @@ class MainController extends Controller
     public function training_individuals_store(CreateIndividualTrainingRequest $request)
     {
         $input = $request->all();
+        if (Auth::user()) {
+            $input['user_id'] = auth()->id();
+        }
         $training = IndividualTraining::create($input);
         $this->follow_store($training);
         Flash::success(__('lang.message_sent'));
@@ -275,8 +291,11 @@ class MainController extends Controller
     public function recruitment_store(CreateRecruitmentRequest $request)
     {
         $input = $request->all();
-
-        Recruitment::create($input);
+        if (Auth::user()) {
+            $input['user_id'] = auth()->id();
+        }
+        $recruitment = Recruitment::create($input);
+        $this->follow_store($recruitment);
 
         Flash::success(__('lang.message_sent'));
 

@@ -16,11 +16,13 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->string('name');
             $table->string('country_code');
             $table->string('phone');
             $table->string('email');
             $table->text('message');
+            $table->unsignedTinyInteger('status')->default(1)->comment('1=>pending, 2 => inprogress, 3 => approved, 4 => rejected');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -21,8 +21,7 @@ class DatabaseSeeder extends Seeder
             SliderTableSeeder::class,
             PageTableSeeder::class,
             InformationTableSeeder::class,
-            SocialLinkTableSeeder::class,
-            MenuSeeder::class,
+            WebsiteTablesSeeder::class,
         ]);
     }
 }

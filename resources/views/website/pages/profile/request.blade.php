@@ -62,6 +62,9 @@
                         @case(6)
                         @include('adminPanel.contacts.show_fields', ['contact' => $follow_request->forable])
                         @break
+                        @case(7)
+                        @include('adminPanel.recruitments.show_fields', ['recruitment' => $follow_request->forable])
+                        @break
                         @default
 
                         @endswitch

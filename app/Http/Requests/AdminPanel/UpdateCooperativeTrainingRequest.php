@@ -24,8 +24,9 @@ class UpdateCooperativeTrainingRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = CooperativeTraining::$rules;
-        
+        // $rules = CooperativeTraining::$rules;
+
+        $rules['status'] = 'required';
         return $rules;
     }
 }

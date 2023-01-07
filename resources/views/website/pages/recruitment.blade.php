@@ -30,7 +30,7 @@
                     {!! Html::decode(
                     Form::label(
                     'full_name',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('models/recruitments.fields.full_name') .
                     ':' .
                     '<span class="text-danger">*</span>',
@@ -51,7 +51,7 @@
                     {!! Html::decode(
                     Form::label(
                     'email',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('models/recruitments.fields.email') .
                     ':' .
                     '<span class="text-danger">*</span>',
@@ -71,7 +71,7 @@
                     {!! Html::decode(
                     Form::label(
                     'phone',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('models/recruitments.fields.phone') .
                     ':' .
                     '<span class="text-danger">*</span>',
@@ -97,7 +97,7 @@
                     {!! Html::decode(
                     Form::label(
                     'attachment_cv',
-                    '<i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i> ' .
+                    '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                     __('models/recruitments.fields.attachment_cv') .
                     ':' .
                     '<span class="text-danger">*</span>',

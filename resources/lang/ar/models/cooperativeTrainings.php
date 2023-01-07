@@ -10,7 +10,7 @@ return array(
         'country_code' => 'رمز الدولة',
         'phone' => 'الهاتف',
         'email' => 'البريد الالكتروني',
-        'attachment_letter' => 'Attachment Letter',
+        'attachment_letter' => 'ارفاق ملف',
         'created_at' => 'تم الانشاء في',
         'updated_at' => 'تم التعديل في',
     ),

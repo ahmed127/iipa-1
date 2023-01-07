@@ -24,9 +24,11 @@ class UpdateConsultingRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = Consulting::$rules;
-        $rules['email'] = 'email';
-        $rules['attachment_letter'] = 'nullable';
+        // $rules = Consulting::$rules;
+        // $rules['email'] = 'email';
+        // $rules['attachment_letter'] = 'nullable';
+
+        $rules['status'] = 'required';
 
         return $rules;
     }

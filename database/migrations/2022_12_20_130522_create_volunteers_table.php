@@ -16,14 +16,15 @@ class CreateVolunteersTable extends Migration
     {
         Schema::create('volunteers', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->foreignId('volunteer_type_id')->constrained();
-            
             $table->string('full_name');
             $table->string('id_no');
             $table->string('email');
             $table->string('country_code');
             $table->string('phone');
             $table->string('attachment_cv');
+            $table->unsignedTinyInteger('status')->default(1)->comment('1=>pending, 2 => inprogress, 3 => approved, 4 => rejected');
             $table->timestamps();
             $table->softDeletes();
         });

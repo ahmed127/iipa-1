@@ -16,10 +16,10 @@ class CreateConsultingsTable extends Migration
     {
         Schema::create('consultings', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->foreignId('country_id')->constrained();
             $table->foreignId('job_id')->constrained();
             $table->foreignId('consultant_type_id')->constrained();
-
             $table->string('name');
             $table->string('email');
             $table->string('country_code');
@@ -31,6 +31,7 @@ class CreateConsultingsTable extends Migration
             $table->unsignedTinyInteger('fav_lang')->comment('1 => En - 2 => Ar');
             $table->unsignedTinyInteger('type')->comment('1 => request lawsuit - 2 => legal advisor');
             $table->unsignedTinyInteger('gender')->comment('1 => male - 2 => female');
+            $table->unsignedTinyInteger('status')->default(1)->comment('1=>pending, 2 => inprogress, 3 => approved, 4 => rejected');
             $table->timestamps();
             $table->softDeletes();
         });
