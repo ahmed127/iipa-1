@@ -1,5 +1,5 @@
 <!-- Id Field -->
-<div class="form-group">
+<div class="form-group show">
     {!! Form::label('id', __('models/faqCategories.fields.id').':') !!}
     <b>{{ $faqCategory->id }}</b>
 </div>

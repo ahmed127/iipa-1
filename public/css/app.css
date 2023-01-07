@@ -34,3 +34,35 @@ tr.datatable-row {
 /* End Permissions checkboxes */
 
 
+/* Show fields */
+
+.form-group.show {
+    float: left;
+}
+
+.form-group.show {
+    display: flex;
+    min-width: 48%;
+    background: #efefef;
+    padding: 10px;
+    margin-right: 1rem;
+    border: 2px solid #e4e4e4;
+    border-radius: 5px;
+}
+
+.form-group.show label {
+    margin-right: 1rem;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.form-group.show p {
+    margin-bottom: 0;
+}
+
+.sidebar .sidebar-minimizer {
+    display: none;
+}
+
+
+/* End Show fields */
