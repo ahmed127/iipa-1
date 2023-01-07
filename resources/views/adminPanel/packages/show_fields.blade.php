@@ -5,19 +5,6 @@
 </div>
 
 
-<!-- Name Field -->
-<div class="form-group show">
-    {!! Form::label('name', __('models/packages.fields.name') . ':') !!}
-    <b>{{ $package->name }}</b>
-</div>
-
-
-<!-- Description Field -->
-<div class="form-group show">
-    {!! Form::label('description', __('models/packages.fields.description') . ':') !!}
-    <b>{{ $package->description }}</b>
-</div>
-
 
 <!-- Fees Field -->
 <div class="form-group show">
@@ -45,3 +32,19 @@
     {!! Form::label('updated_at', __('models/packages.fields.updated_at') . ':') !!}
     <b>{{ $package->updated_at }}</b>
 </div>
+
+
+@foreach (config('langs') as $locale => $name)
+    <!-- Name Field -->
+    <div class="form-group show">
+        {!! Form::label('name', $name . ' ' . __('models/packages.fields.name') . ':') !!}
+        <b>{{ $package->translate($locale)->name }}</b>
+    </div>
+
+
+    <!-- Description Field -->
+    <div class="form-group show">
+        {!! Form::label('description', $name . ' ' . __('models/packages.fields.description') . ':') !!}
+        <b>{!! $package->translate($locale)->description !!}</b>
+    </div>
+@endforeach

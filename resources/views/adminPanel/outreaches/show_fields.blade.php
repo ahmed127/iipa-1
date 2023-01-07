@@ -24,19 +24,21 @@
         @endif
     </div>
 
+    <!-- Type Field -->
+    <div class="form-group show col-lg-2 col-sm-12">
+        {!! Form::label('type', __('models/outreaches.fields.type') . ':') !!}
+        <div>{{ $outreach->type == 1 ? __('lang.page') : __('lang.attachment_pdf') }}</div>
+    </div>
+
     <!-- Photo Field -->
-    <div class="form-group show col-lg-4 col-sm-12">
+    <div class="form-group show col-lg-12 col-sm-12">
         {!! Form::label('photo', __('models/outreaches.fields.photo') . ':') !!}
         <div>
             <img src="{{ $outreach->photo }}" width="308" height="80">
         </div>
     </div>
 
-    <!-- Type Field -->
-    <div class="form-group show col-lg-2 col-sm-12">
-        {!! Form::label('type', __('models/outreaches.fields.type') . ':') !!}
-        <div>{{ $outreach->type == 1 ? __('lang.page') : __('lang.attachment_pdf') }}</div>
-    </div>
+
 
     @foreach (config('langs') as $locale => $name)
         <div class="col-lg-6 col-sm-12">

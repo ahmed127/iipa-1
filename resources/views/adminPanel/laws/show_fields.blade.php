@@ -4,19 +4,20 @@
     <b>{{ $law->id }}</b>
 </div>
 
+@foreach (config('langs') as $locale => $name)
+    <!-- Title Field -->
+    <div class="form-group show">
+        {!! Form::label('title', $name . ' ' . __('models/laws.fields.title') . ':') !!}
+        <b>{{ $law->translate($locale)->title }}</b>
+    </div>
 
-<!-- Title Field -->
-<div class="form-group show">
-    {!! Form::label('title', __('models/laws.fields.title') . ':') !!}
-    <b>{{ $law->title }}</b>
-</div>
 
-
-<!-- Description Field -->
-<div class="form-group show">
-    {!! Form::label('description', __('models/laws.fields.description') . ':') !!}
-    <b>{{ $law->description }}</b>
-</div>
+    <!-- Description Field -->
+    <div class="form-group show">
+        {!! Form::label('description', $name . ' ' . __('models/laws.fields.description') . ':') !!}
+        <b>{{ $law->translate($locale)->description }}</b>
+    </div>
+@endforeach
 
 
 <!-- Attachment Pdf Field -->
