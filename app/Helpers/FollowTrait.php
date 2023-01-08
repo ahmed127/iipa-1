@@ -2,14 +2,18 @@
 
 namespace App\Helpers;
 
-use App\Mail\SendOtpMail;
 use App\Models\Follow;
+use App\Mail\SendOtpMail;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 trait FollowTrait
 {
     public function follow_store($model)
     {
+        if (!Auth::user()) {
+            return 1;
+        }
         $departments = [
             'App\Models\Consulting'             => 1,
             // 'App\Models\Consulting'          => 2,
