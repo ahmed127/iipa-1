@@ -195,6 +195,7 @@ return [
     'resend_otp' => 'لم تتلق البريد؟',
     'register_or_login' => 'تسجيل أو تسجيل الدخول',
     'recruitment' => 'التوظيف',
+    'requests' => 'الطلبات',
     '' => '',
     // S s
 

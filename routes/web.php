@@ -70,7 +70,6 @@ Route::group(
 
             Route::resource('admins', AdminController::class);
 
-            Route::resource('socialLinks', SocialLinkController::class);
             Route::post('ckeditor/upload', 'CkeditorController@upload')->name('ckeditor.upload');
             Route::resource('information', InformationController::class);
             Route::resource('sliders', SliderController::class);

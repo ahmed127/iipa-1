@@ -197,6 +197,7 @@ return [
     'register_or_login' => 'Register Or Login',
     'recruitment' => 'Recruitment',
     'request_recruitment' => 'Request Recruitment',
+    'requests' => 'Requests',
     '' => '',
     // S s
 
