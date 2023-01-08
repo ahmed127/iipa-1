@@ -2,7 +2,8 @@
     <div class="p-lg-5 p-3">
         <div class="row gx-0">
             <div class="col-lg-3 col-md-4 col-sm-12 mx-md-auto me-lg-5 mx-sm-0 my-auto">
-                <img class="w-100 d-flex justify-content-end" src="{{ $information_app->logo_original_path }}" alt="">
+                <img class="w-100 d-flex justify-content-end"
+                    src="{{ $information_app->translate(App::getLocale())->logo_original_path }}" alt="">
             </div>
             <span class="vr d-lg-inline-block d-none"></span>
             <span class="hr-navbar d-lg-none w-100 my-4">
@@ -17,13 +18,13 @@
                     <li class="py-3">
                         <a class="px-1 fs-6 fw-bold" href="{{ route('website.incorporation') }}">
                             <i class="fa-solid fa-link fa-sm text-primary ps-2 pe-1"></i>
-                            {{ $page_app->where('id', 1)->first()->title??'' }}
+                            {{ $page_app->where('id', 1)->first()->title ?? '' }}
                         </a>
                     </li>
                     <li class="pb-3">
                         <a class="px-1 fs-6 fw-bold" href="{{ route('website.our_goals') }}">
                             <i class="fa-solid fa-link fa-sm text-primary ps-2 pe-1"></i>
-                            {{ $page_app->where('id', 2)->first()->title??'' }}
+                            {{ $page_app->where('id', 2)->first()->title ?? '' }}
                         </a>
                     </li>
                     <li class="pb-3">
@@ -35,7 +36,7 @@
                     <li class="pb-3">
                         <a class="px-1 fs-6 fw-bold" href="{{ route('website.organizational_structure') }}">
                             <i class="fa-solid fa-link fa-sm text-primary ps-2 pe-1"></i>
-                            {{ $page_app->where('id', 3)->first()->title??'' }}
+                            {{ $page_app->where('id', 3)->first()->title ?? '' }}
                         </a>
                     </li>
                     <li class="pb-3">
@@ -109,33 +110,33 @@
                     </p>
                     <div class="d-flex justify-content-between pt-2 ">
                         @if ($information_app->linkedin_visible)
-                        <a href="{{ $information_app->linkedin_link }}">
-                            <i class="fa-brands fa-linkedin-in fa-2xl text-black-50"></i>
-                        </a>
+                            <a href="{{ $information_app->linkedin_link }}">
+                                <i class="fa-brands fa-linkedin-in fa-2xl text-black-50"></i>
+                            </a>
                         @endif
 
                         @if ($information_app->youtube_visible)
-                        <a href="{{ $information_app->youtube_link }}">
-                            <i class="fa-brands fa-youtube fa-2xl text-black-50"></i>
-                        </a>
+                            <a href="{{ $information_app->youtube_link }}">
+                                <i class="fa-brands fa-youtube fa-2xl text-black-50"></i>
+                            </a>
                         @endif
 
                         @if ($information_app->instagram_visible)
-                        <a href="{{ $information_app->instagram_link }}">
-                            <i class="fa-brands fa-instagram fa-2xl text-black-50"></i>
-                        </a>
+                            <a href="{{ $information_app->instagram_link }}">
+                                <i class="fa-brands fa-instagram fa-2xl text-black-50"></i>
+                            </a>
                         @endif
 
                         @if ($information_app->facebook_visible)
-                        <a href="{{ $information_app->facebook_link }}">
-                            <i class="fa-brands fa-facebook-f fa-2xl text-black-50"></i>
-                        </a>
+                            <a href="{{ $information_app->facebook_link }}">
+                                <i class="fa-brands fa-facebook-f fa-2xl text-black-50"></i>
+                            </a>
                         @endif
 
                         @if ($information_app->twitter_visible)
-                        <a href="{{ $information_app->twitter_link }}">
-                            <i class="fa-brands fa-twitter fa-2xl text-black-50"></i>
-                        </a>
+                            <a href="{{ $information_app->twitter_link }}">
+                                <i class="fa-brands fa-twitter fa-2xl text-black-50"></i>
+                            </a>
                         @endif
                     </div>
                 </div>
