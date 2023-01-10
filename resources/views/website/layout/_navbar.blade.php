@@ -21,52 +21,52 @@
                     <div class="col-lg-12 ">
                         <ul class="navbar-nav me-auto mb-2 mb-xxl-0 float-xxl-end">
                             @auth
-                            <li class="nav-item dropdown">
-                                <a class="nav-link pt-0 dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <i class="fa-sharp fa-solid fa-circle-user text-primary"></i>
-                                    {{ auth()->user()->full_name }}
-                                </a>
-                                <ul class="dropdown-menu">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link pt-0 dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="fa-sharp fa-solid fa-circle-user text-primary"></i>
+                                        {{ auth()->user()->full_name }} <i class="fa fa-chevron-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
 
-                                    <li>
-                                        <a class="dropdown-item {{ Request::is('*profile*') ? 'active' : '' }}"
-                                            href="{{ route('website.profile') }}">
-                                            @lang('lang.profile')
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item {{ Request::is('*update-information*') ? 'active' : '' }}"
-                                            href="{{ route('website.update_information') }}">
-                                            @lang('lang.update_information')
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item {{ Request::is('*update-password*') ? 'active' : '' }}"
-                                            href="{{ route('website.update_password') }}">
-                                            @lang('lang.update_password')
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item {{ Request::is('*my-request*') ? 'active' : '' }}"
-                                            href="{{ route('website.my_requests') }}">
-                                            @lang('lang.my_requests')
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item text-danger" href="{{ route('website.logout') }}">
-                                            @lang('lang.logout')
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
+                                        <li>
+                                            <a class="dropdown-item {{ Request::is('*profile*') ? 'active' : '' }}"
+                                                href="{{ route('website.profile') }}">
+                                                @lang('lang.profile')
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item {{ Request::is('*update-information*') ? 'active' : '' }}"
+                                                href="{{ route('website.update_information') }}">
+                                                @lang('lang.update_information')
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item {{ Request::is('*update-password*') ? 'active' : '' }}"
+                                                href="{{ route('website.update_password') }}">
+                                                @lang('lang.update_password')
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item {{ Request::is('*my-request*') ? 'active' : '' }}"
+                                                href="{{ route('website.my_requests') }}">
+                                                @lang('lang.my_requests')
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item text-danger" href="{{ route('website.logout') }}">
+                                                @lang('lang.logout')
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
                             @else
-                            <li class="nav-item">
-                                <a class="nav-link pt-0" href="{{ route('website.login') }}">
-                                    <i class="fa-sharp fa-solid fa-circle-user text-primary"></i>
-                                    <span class="my-auto">@lang('lang.register_or_login')</span>
-                                </a>
-                            </li>
+                                <li class="nav-item">
+                                    <a class="nav-link pt-0" href="{{ route('website.login') }}">
+                                        <i class="fa-sharp fa-solid fa-circle-user text-primary"></i>
+                                        <span class="my-auto">@lang('lang.register_or_login')</span>
+                                    </a>
+                                </li>
                             @endauth
                             <span class="vr d-xl-inline-block d-none mx-2 mb-1"></span>
                             <li class="nav-item">
@@ -95,25 +95,28 @@
                                     aria-expanded="false">
                                     <i class="fa-solid fa-language  text-primary"></i>
                                     @if ($lang_page == 'en')
-                                    <span class="my-auto"> @lang('lang.english') </span>
+                                        <span class="my-auto"> @lang('lang.english') <i
+                                                class="fa fa-chevron-down"></i></span>
                                     @else
-                                    <span class="my-auto">@lang('lang.arabic')</span>
+                                        <span class="my-auto">@lang('lang.arabic') <i
+                                                class="fa fa-chevron-down"></i></span>
                                     @endif
                                 </a>
                                 <ul class="dropdown-menu">
                                     @if ($lang_page == 'ar')
-                                    <li>
-                                        <a class="dropdown-item" href="{{ str_replace('ar', 'en', url()->current()) }}">
-                                            @lang('lang.english')
-                                        </a>
-                                    </li>
+                                        <li>
+                                            <a class="dropdown-item"
+                                                href="{{ str_replace('ar', 'en', url()->current()) }}">
+                                                @lang('lang.english')
+                                            </a>
+                                        </li>
                                     @else
-                                    <li>
-                                        <a class="dropdown-item"
-                                            href="{{ str_replace('/en', '/ar', url()->current()) }}">
-                                            @lang('lang.arabic')
-                                        </a>
-                                    </li>
+                                        <li>
+                                            <a class="dropdown-item"
+                                                href="{{ str_replace('/en', '/ar', url()->current()) }}">
+                                                @lang('lang.arabic')
+                                            </a>
+                                        </li>
                                     @endif
                                 </ul>
                             </li>
@@ -138,20 +141,20 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle {{ Request::is('*who-we-are*') ? 'active' : '' }}"
                                     href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                                    @lang('lang.who_we_are')
+                                    @lang('lang.who_we_are') <i class="fa fa-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu" style="width: 210px;">
 
                                     <li>
                                         <a class="dropdown-item {{ Request::is('*incorporation*') ? 'active' : '' }}"
                                             href="{{ route('website.incorporation') }}">
-                                            {{ $page_app->where('id', 1)->first()->title??'' }}
+                                            {{ $page_app->where('id', 1)->first()->title ?? '' }}
                                         </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item  {{ Request::is('*our-goals*') ? 'active' : '' }}"
                                             href="{{ route('website.our_goals') }}">
-                                            {{ $page_app->where('id', 2)->first()->title??'' }}
+                                            {{ $page_app->where('id', 2)->first()->title ?? '' }}
                                         </a>
                                     </li>
                                     <li>
@@ -163,7 +166,7 @@
                                     <li>
                                         <a class="dropdown-item  {{ Request::is('*organizational-structure*') ? 'active' : '' }}"
                                             href="{{ route('website.organizational_structure') }}">
-                                            {{ $page_app->where('id', 3)->first()->title??'' }}
+                                            {{ $page_app->where('id', 3)->first()->title ?? '' }}
                                         </a>
                                     </li>
                                     <li>
@@ -180,24 +183,24 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle {{ Request::is('*awareness*') ? 'active' : '' }}"
                                     href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                                    @lang('models/outreaches.plural')
+                                    @lang('models/outreaches.plural') <i class="fa fa-chevron-down"></i>
 
                                 </a>
                                 <ul class="dropdown-menu" style="width: 210px;">
                                     @forelse ($outreaches_app as $outreach)
-                                    <li>
-                                        @if ($outreach->type == 1)
-                                        <a class="dropdown-item"
-                                            href="{{ route('website.outreaches', $outreach->id) }}">
-                                            {{ $outreach->title ?? '' }}
-                                        </a>
-                                        @else
-                                        <a class="dropdown-item" target="_blank"
-                                            href="{{ $outreach->attachment_pdf ?? '' }}">
-                                            {{ $outreach->title ?? '' }}
-                                        </a>
-                                        @endif
-                                    </li>
+                                        <li>
+                                            @if ($outreach->type == 1)
+                                                <a class="dropdown-item"
+                                                    href="{{ route('website.outreaches', $outreach->id) }}">
+                                                    {{ $outreach->title ?? '' }}
+                                                </a>
+                                            @else
+                                                <a class="dropdown-item" target="_blank"
+                                                    href="{{ $outreach->attachment_pdf ?? '' }}">
+                                                    {{ $outreach->title ?? '' }}
+                                                </a>
+                                            @endif
+                                        </li>
                                     @empty
                                     @endforelse
                                     <li class="bg-success">
@@ -247,7 +250,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle {{ Request::is('*class-actions*') ? 'active' : '' }}"
                                     href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                                    @lang('lang.class_actions')
+                                    @lang('lang.class_actions') <i class="fa fa-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu" style="width: 340px;">
 
@@ -260,7 +263,7 @@
                                     <li>
                                         <a class="dropdown-item {{ Request::is('*tutorial*') ? 'active' : '' }}"
                                             href="{{ route('website.class_actions_tutorial') }}">
-                                            {{ $page_app->where('id', 4)->first()->title??'' }}
+                                            {{ $page_app->where('id', 4)->first()->title ?? '' }}
                                         </a>
                                     </li>
                                 </ul>
@@ -271,7 +274,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle {{ Request::is('*volunteer*') ? 'active' : '' }} {{ Request::is('*training*') ? 'active' : '' }}"
                                     href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                                    @lang('lang.volunteering_and_training')
+                                    @lang('lang.volunteering_and_training') <i class="fa fa-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu" style="width: 340px;">
 
