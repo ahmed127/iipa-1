@@ -199,6 +199,8 @@ return [
     'recruitment' => 'Recruitment',
     'request_recruitment' => 'Request Recruitment',
     'requests' => 'Requests',
+    'request_mail_thanks' => 'Thanks for your request',
+    'reply_by_email' => 'Reply by email',
     '' => '',
     // S s
 

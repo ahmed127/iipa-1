@@ -16,6 +16,7 @@ use App\Models\Partner;
 use App\Models\Director;
 use App\Models\Outreach;
 use App\Models\Volunteer;
+use App\Mail\RequestReply;
 use App\Models\Consulting;
 use App\Models\Initiative;
 use Laracasts\Flash\Flash;
@@ -29,6 +30,7 @@ use App\Models\IndividualTraining;
 use App\Models\CooperativeTraining;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\AdminPanel\CreateContactRequest;
 use App\Http\Requests\AdminPanel\CreateVolunteerRequest;
 use App\Http\Requests\AdminPanel\CreateConsultingRequest;
@@ -49,7 +51,7 @@ class MainController extends Controller
     public function events()
     {
         $events = Event::get()->pluck('event_json');
-        
+
         if (request()->ajax()) {
             return response()->json(compact('events'));
         }
