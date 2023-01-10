@@ -5,6 +5,20 @@
 </div>
 
 
+<!-- user Field -->
+<div class="form-group show">
+    {!! Form::label('user', __('lang.user') . ':') !!}
+    <b>
+        @if ($consulting->user)
+            <a href="{{ route('adminPanel.users.show', $consulting->user->id) }}">
+                {{ $consulting->user->full_name }}
+            </a>
+        @else
+            {{ __('lang.guest') }}
+        @endif
+    </b>
+</div>
+
 <!-- Name Field -->
 <div class="form-group show">
     {!! Form::label('name', __('models/consultings.fields.name') . ':') !!}

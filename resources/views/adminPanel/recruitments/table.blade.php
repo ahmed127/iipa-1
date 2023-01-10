@@ -77,6 +77,7 @@
                     <span></span>
                 </label>
             </th>
+            <th>@lang('lang.user')</th>
             <th>@lang('models/recruitments.fields.full_name')</th>
             <th>@lang('models/recruitments.fields.email')</th>
             <th>@lang('models/recruitments.fields.country_code')</th>
@@ -95,6 +96,15 @@
                             value="{{ $recruitment->id }}" name="export_rows[]">
                         <span></span>
                     </label>
+                </td>
+                <td>
+                    @if ($recruitment->user)
+                        <a href="{{ route('adminPanel.users.show', $recruitment->user->id) }}">
+                            {{ $recruitment->user->full_name }}
+                        </a>
+                    @else
+                        {{ __('lang.guest') }}
+                    @endif
                 </td>
                 <td>{{ $recruitment->full_name }}</td>
                 <td>{{ $recruitment->email }}</td>

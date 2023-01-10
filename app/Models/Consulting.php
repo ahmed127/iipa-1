@@ -175,4 +175,9 @@ class Consulting extends Model
     {
         return $this->morphOne(Follow::class, 'forable');
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

@@ -77,5 +77,8 @@ class CooperativeTraining extends Model
         return $val ? asset('uploads/files') . '/' . $val : null;
     }
 
-
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

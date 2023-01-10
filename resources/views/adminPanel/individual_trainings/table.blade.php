@@ -53,6 +53,7 @@
                     <span></span>
                 </label>
             </th>
+            <th>@lang('lang.user')</th>
             <th>@lang('models/individualTrainings.fields.full_name')</th>
             <th>@lang('models/individualTrainings.fields.country_code')</th>
             <th>@lang('models/individualTrainings.fields.phone')</th>
@@ -71,6 +72,15 @@
                             value="{{ $individualTraining->id }}" name="export_rows[]">
                         <span></span>
                     </label>
+                </td>
+                <td>
+                    @if ($individualTraining->user)
+                        <a href="{{ route('adminPanel.users.show', $individualTraining->user->id) }}">
+                            {{ $individualTraining->user->full_name }}
+                        </a>
+                    @else
+                        {{ __('lang.guest') }}
+                    @endif
                 </td>
                 <td>{{ $individualTraining->full_name }}</td>
                 <td>{{ $individualTraining->country_code }}</td>

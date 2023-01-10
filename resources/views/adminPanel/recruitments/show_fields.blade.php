@@ -5,6 +5,20 @@
 </div>
 
 
+<!-- user Field -->
+<div class="form-group show">
+    {!! Form::label('user', __('lang.user') . ':') !!}
+    <b>
+        @if ($recruitment->user)
+            <a href="{{ route('adminPanel.users.show', $recruitment->user->id) }}">
+                {{ $recruitment->user->full_name }}
+            </a>
+        @else
+            {{ __('lang.guest') }}
+        @endif
+    </b>
+</div>
+
 <!-- Full Name Field -->
 <div class="form-group show">
     {!! Form::label('full_name', __('models/recruitments.fields.full_name') . ':') !!}

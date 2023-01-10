@@ -81,6 +81,7 @@ return [
     // G g
 
     'gender' => 'Gender',
+    'guest' => 'Guest',
     '' => '',
 
     // H h
@@ -231,6 +232,7 @@ return [
 
     'update_information' => 'Update Information',
     'update_password' => 'Update Password',
+    'user' => 'User',
     '' => '',
 
     // V v

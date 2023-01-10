@@ -8,9 +8,23 @@
 <!-- Volunteer Type Id Field -->
 <div class="form-group show">
     {!! Form::label('volunteer_type_id', __('models/volunteers.fields.volunteer_type_id') . ':') !!}
-    <b>{{ $volunteer->volunteer_type_id }}</b>
+    <b>{{ $volunteer->volunteer_type->name ?? '' }}</b>
 </div>
 
+
+<!-- Full Name Field -->
+<div class="form-group show">
+    {!! Form::label('full_name', __('lang.user') . ':') !!}
+    <b>
+        @if ($volunteer->user)
+            <a href="{{ route('adminPanel.users.show', $volunteer->user->id) }}">
+                {{ $volunteer->user->full_name }}
+            </a>
+        @else
+            {{ __('lang.guest') }}
+        @endif
+    </b>
+</div>
 
 <!-- Full Name Field -->
 <div class="form-group show">

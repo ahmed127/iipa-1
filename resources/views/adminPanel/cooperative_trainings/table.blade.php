@@ -53,6 +53,7 @@
                     <span></span>
                 </label>
             </th>
+            <th>@lang('lang.user')</th>
             <th>@lang('models/cooperativeTrainings.fields.entity_name')</th>
             <th>@lang('models/cooperativeTrainings.fields.country_code')</th>
             <th>@lang('models/cooperativeTrainings.fields.phone')</th>
@@ -71,6 +72,15 @@
                             value="{{ $cooperativeTraining->id }}" name="export_rows[]">
                         <span></span>
                     </label>
+                </td>
+                <td>
+                    @if ($cooperativeTraining->user)
+                        <a href="{{ route('adminPanel.users.show', $cooperativeTraining->user->id) }}">
+                            {{ $cooperativeTraining->user->full_name }}
+                        </a>
+                    @else
+                        {{ __('lang.guest') }}
+                    @endif
                 </td>
                 <td>{{ $cooperativeTraining->entity_name }}</td>
                 <td>{{ $cooperativeTraining->country_code }}</td>

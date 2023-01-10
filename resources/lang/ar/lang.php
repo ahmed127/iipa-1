@@ -81,6 +81,7 @@ return [
     // G g
 
     'gender' => 'الجنس',
+    'guest' => 'ضيف',
     '' => '',
 
     // H h
@@ -229,6 +230,7 @@ return [
 
     'update_information' => 'تعديل بيانات الحساب',
     'update_password' => 'تعديل كلمة المرور',
+    'user' => 'مستخدم',
     '' => '',
 
     // V v

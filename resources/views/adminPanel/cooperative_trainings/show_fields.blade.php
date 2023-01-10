@@ -7,6 +7,20 @@
 
 <!-- Entity Name Field -->
 <div class="form-group show">
+    {!! Form::label('user', __('lang.user') . ':') !!}
+    <b>
+        @if ($cooperativeTraining->user)
+            <a href="{{ route('adminPanel.users.show', $cooperativeTraining->user->id) }}">
+                {{ $cooperativeTraining->user->full_name }}
+            </a>
+        @else
+            {{ __('lang.guest') }}
+        @endif
+    </b>
+</div>
+
+<!-- Entity Name Field -->
+<div class="form-group show">
     {!! Form::label('entity_name', __('models/cooperativeTrainings.fields.entity_name') . ':') !!}
     <b>{{ $cooperativeTraining->entity_name }}</b>
 </div>

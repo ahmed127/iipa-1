@@ -11,7 +11,7 @@
                         <div class="form-group col-sm-4">
                             {!! Form::label('name', __('models/consultings.fields.name') . ':') !!}
                             {!! Form::text('name', request('name') ?? null, [
-                            'class' => 'form-control',
+                                'class' => 'form-control',
                             ]) !!}
                         </div>
 
@@ -19,7 +19,7 @@
                         <div class="form-group col-sm-4">
                             {!! Form::label('email', __('models/consultings.fields.email') . ':') !!}
                             {!! Form::text('email', request('email') ?? null, [
-                            'class' => 'form-control',
+                                'class' => 'form-control',
                             ]) !!}
                         </div>
 
@@ -27,7 +27,7 @@
                         <div class="form-group col-sm-4">
                             {!! Form::label('phone', __('models/consultings.fields.phone') . ':') !!}
                             {!! Form::text('phone', request('phone') ?? null, [
-                            'class' => 'form-control',
+                                'class' => 'form-control',
                             ]) !!}
                         </div>
 
@@ -35,8 +35,8 @@
                         <div class="form-group col-sm-4">
                             {!! Form::label('type', __('models/consultings.fields.type') . ':') !!}
                             {!! Form::select('type', $types, request('type') ?? null, [
-                            'class' => 'form-control',
-                            'placeholder' => __('lang.select') . ' ' . __('models/consultings.fields.type'),
+                                'class' => 'form-control',
+                                'placeholder' => __('lang.select') . ' ' . __('models/consultings.fields.type'),
                             ]) !!}
                         </div>
 
@@ -44,8 +44,8 @@
                         <div class="form-group col-sm-4">
                             {!! Form::label('job_id', __('models/consultings.fields.job_id') . ':') !!}
                             {!! Form::select('job_id', $jobs, request('job_id') ?? null, [
-                            'class' => 'form-control',
-                            'placeholder' => __('lang.select') . ' ' . __('models/consultings.fields.job_id'),
+                                'class' => 'form-control',
+                                'placeholder' => __('lang.select') . ' ' . __('models/consultings.fields.job_id'),
                             ]) !!}
                         </div>
 
@@ -53,17 +53,16 @@
                         <div class="form-group col-sm-4">
                             {!! Form::label('country_id', __('models/consultings.fields.country_id') . ':') !!}
                             {!! Form::select('country_id', $countries, request('country_id') ?? null, [
-                            'class' => 'form-control',
-                            'placeholder' => __('lang.select') . ' ' . __('models/consultings.fields.country_id'),
+                                'class' => 'form-control',
+                                'placeholder' => __('lang.select') . ' ' . __('models/consultings.fields.country_id'),
                             ]) !!}
                         </div>
 
                         <!-- pagination Field -->
                         <div class="form-group col-sm-4">
                             {!! Form::label('pagination', __('crud.pagination') . ':') !!}
-                            {!! Form::select('pagination', config('statusSystem.pagination'), request('pagination') ??
-                            null, [
-                            'class' => 'form-control',
+                            {!! Form::select('pagination', config('statusSystem.pagination'), request('pagination') ?? null, [
+                                'class' => 'form-control',
                             ]) !!}
                         </div>
 
@@ -97,6 +96,7 @@
                     <span></span>
                 </label>
             </th>
+            <th>@lang('lang.user')</th>
             <th>@lang('models/consultings.fields.name')</th>
             <th>@lang('models/consultings.fields.email')</th>
             <th>@lang('models/consultings.fields.country_code')</th>
@@ -114,54 +114,63 @@
     <tbody>
         {!! Form::open(['route' => ['adminPanel.data.export', 'consultings'], 'id' => 'export-data']) !!}
         @foreach ($consultings as $consulting)
-        <tr>
-            <td>
-                <label class="checkbox">
-                    <input type="checkbox" class="check_inputs inputs-permmission control-input"
-                        value="{{ $consulting->id }}" name="export_rows[]">
-                    <span></span>
-                </label>
-            </td>
-            <td>{{ $consulting->name }}</td>
-            <td>{{ $consulting->email }}</td>
-            <td>{{ $consulting->country_code }}</td>
-            <td>{{ $consulting->phone }}</td>
-            <td>{{ $consulting->country->name ?? '' }}</td>
-            <td>{{ $consulting->job->name ?? '' }}</td>
-            <td>{{ $consulting->consultant_type->name ?? '' }}</td>
-            <td>{{ $consulting->type_text }}</td>
-            <td>{{ $consulting->fav_lang }}</td>
-            <td>{{ $consulting->gender }}</td>
-            <td>{{ $consulting->nationality }}</td>
-            <td>
-                {{-- {!! Form::open(['route' => ['adminPanel.consultings.destroy', $consulting->id], 'method' =>
+            <tr>
+                <td>
+                    <label class="checkbox">
+                        <input type="checkbox" class="check_inputs inputs-permmission control-input"
+                            value="{{ $consulting->id }}" name="export_rows[]">
+                        <span></span>
+                    </label>
+                </td>
+                <td>
+                    @if ($consulting->user)
+                        <a href="{{ route('adminPanel.users.show', $consulting->user->id) }}">
+                            {{ $consulting->user->full_name }}
+                        </a>
+                    @else
+                        {{ __('lang.guest') }}
+                    @endif
+                </td>
+                <td>{{ $consulting->name }}</td>
+                <td>{{ $consulting->email }}</td>
+                <td>{{ $consulting->country_code }}</td>
+                <td>{{ $consulting->phone }}</td>
+                <td>{{ $consulting->country->name ?? '' }}</td>
+                <td>{{ $consulting->job->name ?? '' }}</td>
+                <td>{{ $consulting->consultant_type->name ?? '' }}</td>
+                <td>{{ $consulting->type_text }}</td>
+                <td>{{ $consulting->fav_lang }}</td>
+                <td>{{ $consulting->gender }}</td>
+                <td>{{ $consulting->nationality }}</td>
+                <td>
+                    {{-- {!! Form::open(['route' => ['adminPanel.consultings.destroy', $consulting->id], 'method' =>
                 'delete']) !!} --}}
-                <div class='btn btn-sm-group'>
-                    @can('consultings view')
-                    <a href="{{ route('adminPanel.consultings.show', [$consulting->id]) }}"
-                        class='btn btn-sm btn-shadow mx-1 btn-transparent-success'>
-                        <i class="fa fa-eye"></i>
-                    </a>
-                    @endcan
-                    {{-- @can('consultings edit')
+                    <div class='btn btn-sm-group'>
+                        @can('consultings view')
+                            <a href="{{ route('adminPanel.consultings.show', [$consulting->id]) }}"
+                                class='btn btn-sm btn-shadow mx-1 btn-transparent-success'>
+                                <i class="fa fa-eye"></i>
+                            </a>
+                        @endcan
+                        {{-- @can('consultings edit')
                     <a href="{{ route('adminPanel.consultings.edit', [$consulting->id]) . '?languages=en' }}"
                         class='btn btn-sm btn-shadow mx-1 btn-transparent-primary'>
                         <i class="fa fa-edit"></i>
                     </a>
                     @endcan --}}
-                    @can('consultings destroy')
-                    {{-- {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-sm
+                        @can('consultings destroy')
+                            {{-- {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-sm
                     btn-shadow mx-1 btn-transparent-danger', 'onclick' => 'return
                     confirm("'.__('crud.are_you_sure').'")']) !!} --}}
-                    <button type="button" class="btn btn-sm btn-shadow mx-1 btn-transparent-danger" data-toggle="modal"
-                        data-target="#country-{{ $consulting->id }}-modal">
-                        <i class="fa fa-trash"></i>
-                    </button>
-                    @endcan
-                </div>
-                {{-- {!! Form::close() !!} --}}
-            </td>
-        </tr>
+                            <button type="button" class="btn btn-sm btn-shadow mx-1 btn-transparent-danger"
+                                data-toggle="modal" data-target="#country-{{ $consulting->id }}-modal">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        @endcan
+                    </div>
+                    {{-- {!! Form::close() !!} --}}
+                </td>
+            </tr>
         @endforeach
         {!! Form::close() !!}
     </tbody>
@@ -169,27 +178,29 @@
 <!--end: Datatable-->
 
 @can('consultings destroy')
-@foreach ($consultings as $consulting)
-<!-- Modal -->
-<div class="modal fade" id="country-{{ $consulting->id }}-modal" tabindex="-1" role="dialog"
-    aria-labelledby="country-{{ $consulting->id }}" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <h2 class="text-danger">
-                    @lang('crud.are_you_sure')
-                </h2>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">@lang('crud.close')</button>
-                {!! Form::open(['route' => ['adminPanel.consultings.destroy', $consulting->id], 'method' => 'delete'])
-                !!}
-                {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn
-                btn-transparent-danger']) !!}
-                {!! Form::close() !!}
+    @foreach ($consultings as $consulting)
+        <!-- Modal -->
+        <div class="modal fade" id="country-{{ $consulting->id }}-modal" tabindex="-1" role="dialog"
+            aria-labelledby="country-{{ $consulting->id }}" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h2 class="text-danger">
+                            @lang('crud.are_you_sure')
+                        </h2>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">@lang('crud.close')</button>
+                        {!! Form::open(['route' => ['adminPanel.consultings.destroy', $consulting->id], 'method' => 'delete']) !!}
+                        {!! Form::button('<i class="fa fa-trash"></i>', [
+                            'type' => 'submit',
+                            'class' => 'btn
+                                        btn-transparent-danger',
+                        ]) !!}
+                        {!! Form::close() !!}
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-@endforeach
+    @endforeach
 @endcan

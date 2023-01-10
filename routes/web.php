@@ -69,6 +69,7 @@ Route::group(
             Route::post('/export/{forable}', 'ExportController@export')->name('data.export');
 
             Route::resource('admins', AdminController::class);
+            Route::resource('users', UserController::class);
 
             Route::post('ckeditor/upload', 'CkeditorController@upload')->name('ckeditor.upload');
             Route::resource('information', InformationController::class);

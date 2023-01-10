@@ -6,7 +6,7 @@ return array(
     'fields' =>
     array(
         'id' => '#',
-        'volunteer_type_id' => 'Volunteer Type #',
+        'volunteer_type_id' => 'Volunteer Type',
         'full_name' => 'Full Name',
         'id_no' => 'National ID',
         'email' => 'Email',

@@ -79,4 +79,11 @@ class Recruitment extends Model
     }
 
     // Attachment Cv
+
+
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

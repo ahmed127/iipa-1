@@ -90,4 +90,9 @@ class Volunteer extends Model
     {
         return $this->belongsTo(VolunteerType::class);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
