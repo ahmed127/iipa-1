@@ -24,6 +24,6 @@ class CreateRegulationRequest extends FormRequest
      */
     public function rules()
     {
-        return Regulation::$rules;
+        return Regulation::rules();
     }
 }

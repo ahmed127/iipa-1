@@ -201,6 +201,7 @@ return [
     'requests' => 'Requests',
     'request_mail_thanks' => 'Thanks for your request',
     'reply_by_email' => 'Reply by email',
+    'regulations' => 'Regulations',
     '' => '',
     // S s
 

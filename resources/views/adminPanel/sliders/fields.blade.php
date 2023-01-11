@@ -56,24 +56,7 @@
         @php $i = 0; @endphp
     @endforeach
 
-    <!-- type Field -->
-    <div class="form-group col-sm-12">
-        {!! Form::label('type', __('models/sliders.fields.type') . ':') !!}
-        <div class="radio-inline">
-            <label class="radio">
-                {!! Form::radio('type', 1, 'Active', ['id' => 'type1']) !!}
-                <span></span>
-                @lang('lang.pdf')
-            </label>
-
-            <label class="radio">
-                {!! Form::radio('type', 2, null, ['id' => 'type2']) !!}
-                <span></span>
-                @lang('lang.page')
-            </label>
-        </div>
-    </div>
-
+    <!-- photo Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('photo', __('models/sliders.fields.photo') . ':') !!}
         <br>
@@ -103,6 +86,26 @@
 
     </div>
 
+    <!-- type Field -->
+    <div class="form-group col-sm-12">
+        {!! Form::label('type', __('models/sliders.fields.type') . ':') !!}
+        <div class="radio-inline">
+            <label class="radio">
+                {!! Form::radio('type', 1, 'Active', ['id' => 'type1']) !!}
+                <span></span>
+                @lang('lang.pdf')
+            </label>
+
+            <label class="radio">
+                {!! Form::radio('type', 2, null, ['id' => 'type2']) !!}
+                <span></span>
+                @lang('lang.page')
+            </label>
+        </div>
+    </div>
+
+
+
     <!-- Link Field -->
     <div class="form-group col-sm-6 d-none" id="link">
         {!! Form::label('link', __('models/sliders.fields.link') . ':') !!}
@@ -114,6 +117,8 @@
         {!! Form::label('attachment_pdf', __('models/sliders.fields.attachment_pdf') . ':') !!}
         {!! Form::file('attachment_pdf', ['class' => 'form-control']) !!}
     </div>
+
+
 
     <!-- Sort Field -->
     <div class="form-group col-sm-6">

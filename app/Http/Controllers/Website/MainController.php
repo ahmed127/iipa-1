@@ -19,6 +19,7 @@ use App\Models\Volunteer;
 use App\Mail\RequestReply;
 use App\Models\Consulting;
 use App\Models\Initiative;
+use App\Models\Regulation;
 use Laracasts\Flash\Flash;
 use App\Models\FaqCategory;
 use App\Models\Recruitment;
@@ -45,6 +46,7 @@ class MainController extends Controller
     public function home()
     {
         $data['slider'] = Slider::all();
+        $data['regulations'] = Regulation::all();
         return view('website.pages.home', $data);
     }
 
@@ -126,6 +128,12 @@ class MainController extends Controller
     {
         $laws = Law::paginate(9);
         return view('website.pages.laws', compact('laws'));
+    }
+
+    public function regulations()
+    {
+        $regulations = Regulation::paginate(9);
+        return view('website.pages.regulations', compact('regulations'));
     }
 
     public function initiatives()

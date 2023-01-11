@@ -24,8 +24,8 @@ class UpdateRegulationRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = Regulation::$rules;
-        
+        $rules = Regulation::rules();
+
         return $rules;
     }
 }

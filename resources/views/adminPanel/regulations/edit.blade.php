@@ -1,12 +1,12 @@
 @extends('adminPanel.layouts.app')
 
 @section('breadcrumb')
-<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
-    <li class="breadcrumb-item">
-        <a href="{!! route('adminPanel.regulations.index') !!}">@lang('models/regulations.singular')</a>
-    </li>
-    <li class="breadcrumb-item active">@lang('crud.edit')</li>
-</ul>
+    <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
+        <li class="breadcrumb-item">
+            <a href="{!! route('adminPanel.regulations.index') !!}">@lang('models/regulations.singular')</a>
+        </li>
+        <li class="breadcrumb-item active">@lang('crud.edit')</li>
+    </ul>
 @endsection
 @section('content')
     <div class="d-flex flex-column-fluid">
@@ -21,8 +21,12 @@
                             <h3 class="card-title">Edit @lang('models/regulations.singular')</h3>
                         </div>
                         <div class="card-body">
-                            {!! Form::model($regulation, ['route' => ['adminPanel.regulations.update', $regulation->id], 'method' => 'patch']) !!}
-                              @include('adminPanel.regulations.fields')
+                            {!! Form::model($regulation, [
+                                'route' => ['adminPanel.regulations.update', $regulation->id],
+                                'method' => 'patch',
+                                'files' => true,
+                            ]) !!}
+                            @include('adminPanel.regulations.fields')
                             {!! Form::close() !!}
                         </div>
                     </div>

@@ -21,7 +21,7 @@
                             <h3 class="card-title">Create @lang('models/regulations.singular')</h3>
                         </div>
                         <div class="card-body">
-                            {!! Form::open(['route' => 'adminPanel.regulations.store']) !!}
+                            {!! Form::open(['route' => 'adminPanel.regulations.store', 'files' => true]) !!}
                                 @include('adminPanel.regulations.fields')
                             {!! Form::close() !!}
                         </div>

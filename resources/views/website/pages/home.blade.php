@@ -47,37 +47,46 @@
             <h2>
                 <!-- <img class="" src="images/local_police.svg" alt=""> -->
                 <i class="fa-solid fa-shield fa-lg text-info"></i>
-                اللوائح و الأنظمة
+                @lang('lang.regulations')
             </h2>
             <span class="px-2">
-                <a class="fw-light fs-6 text-secondary" href="#">
+                <a class="fw-light fs-6 text-secondary" href="{{ route('website.regulations') }}">
                     <!-- <img class="" src="images/window.svg" alt=""> -->
                     <i class="fa-solid fa-window-restore fa-lg"></i>
-                    عرض الكل
+                    @lang('lang.all')
                 </a>
             </span>
         </div>
         <div class="swiper mySwiperslide slide-swiper">
             <div class="swiper-wrapper col-3 h-50 pb-5">
-                <div class="swiper-slide shadow-custom rounded-4"
-                    style="background-image: linear-gradient(105.09deg, rgba(0, 17, 61, 0) 0%, #00113D 78.13%),
-                    url({{ asset('website') }}/images/bg-card.png); height: 24vh!important; background-size: cover;">
-                    <div class="d-flex flex-column justify-content-between h-100">
-                        <span>
-                            <img class="img-fluid m-3 d-block" src="{{ asset('website') }}/images/Logo-card.png"
-                                alt="">
-                        </span>
-                        <span class="text-white p-3 pb-0 d-flex justify-content-between ">
-                            <span class="py-3">
-                                نظام السوق المالي
-                            </span>
-                            <span class="py-3">
-                                <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
-                            </span>
-                        </span>
+                @foreach ($regulations as $regulation)
+                    <div class="swiper-slide shadow-custom rounded-4"
+                        style="background-image: linear-gradient(105.09deg, rgba(0, 17, 61, 0) 0%, #00113D 78.13%),
+    url('{{ $regulation->photo_original_path }}'); height: 24vh!important; background-size: cover;">
+                        <a @if ($regulation->type == 1) href="{{ $regulation->attachment_pdf }}"
+                        @else
+                        href="{{ $regulation->link }}" @endif
+                            target="_blank">
+                            <div class="d-flex flex-column justify-content-between h-100">
+                                <span>
+                                    <img class="img-fluid m-3 d-block"
+                                        src="{{ $information_app->translate(App::getLocale())->logo_original_path }}"
+                                        alt="{{ $regulation->title }}" width="100">
+                                </span>
+                                <span class="text-white p-3 pb-0 d-flex justify-content-between ">
+                                    <span class="py-3">
+                                        {{ $regulation->title }}
+                                    </span>
+                                    <span class="py-3">
+                                        <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="swiper-slide shadow-custom rounded-4"
+                @endforeach
+
+                {{-- <div class="swiper-slide shadow-custom rounded-4"
                     style="background-image: linear-gradient(105.09deg, rgba(0, 17, 61, 0) 0%, #00113D 78.13%),
                     url({{ asset('website') }}/images/bg-card.png); height: 24vh!important; background-size: cover;">
                     <div class="d-flex flex-column justify-content-between h-100">
@@ -267,7 +276,7 @@
                     <span class="float-end text-white p-3 pb-2 h-50 d-grid align-items-end">
                         <i class="fa-solid fa-file-pdf fa-lg fa-fade"></i>
                     </span>
-                </div>
+                </div> --}}
             </div>
             <span class="d-lg-flex d-none align-items-center gap-4 justify-content-center py-3 swiper-btn">
                 <div class="swiper-button-prev text-white"><i class="fa-solid fa-arrow-right"></i></div>

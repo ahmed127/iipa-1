@@ -225,6 +225,7 @@ return [
     'the_not_authorized_companies' => 'الشركات الغير مرخص لها',
     'request_recruitment' => 'طلب توظيف',
     'reply_by_email' => 'الرد عن طريق البريد الالكتروني',
+    'regulations' => 'اللوائح والانظمة',
     '' => '',
 
     // U u

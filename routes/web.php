@@ -200,6 +200,7 @@ Route::group([
     Route::get('awareness', $class_name_main . 'outreaches')->name('outreaches');
     Route::get('awareness/{outreach}', $class_name_main . 'outreaches')->name('outreaches');
     Route::get('the-laws', $class_name_main . 'laws')->name('laws');
+    Route::get('regulations', $class_name_main . 'regulations')->name('regulations');
     Route::get('the-initiatives', $class_name_main . 'initiatives')->name('initiatives');
     Route::get('the-initiative/{initiative}', $class_name_main . 'initiative')->name('initiative');
 

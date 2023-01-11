@@ -16,9 +16,10 @@ class CreateRegulationsTable extends Migration
     {
         Schema::create('regulations', function (Blueprint $table) {
             $table->id();
-            
+
             $table->string('photo');
-            $table->string('attachment_pdf');
+            $table->string('attachment_pdf')->nullable();
+            $table->string('link')->nullable();
             $table->unsignedTinyInteger('type')->comment(' 1=> page - 2 => pdf');
             $table->timestamps();
             $table->softDeletes();
