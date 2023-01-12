@@ -19,9 +19,10 @@ class DatabaseSeeder extends Seeder
             RolesPermissionsTableSeeder::class,
             SettingTableSeeder::class,
             SliderTableSeeder::class,
-            PageTableSeeder::class,
             InformationTableSeeder::class,
+            PageTableSeeder::class,
             WebsiteTablesSeeder::class,
+            RegulationSeeder::class,
         ]);
     }
 }

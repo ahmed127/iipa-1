@@ -442,25 +442,28 @@
         <div class="row h-100 align-items-center gx-0">
             <div class="col-lg-8 col-sm-12 mx-lg-auto mx-2">
                 <span class="w-75 px-5 text-wrap">
-                    <h2 class="px-2">
-                        <span class="text-info">
-                            شركاؤنا
-                        </span>
-                        في النجاح
+                    <h2 class="px-2 firstWordInfo">
+                        @lang('lang.our_partners')
                     </h2>
                     <p class="px-2 py-3">
-                        هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل
-                        الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.
+                        @lang('lang.partners_intro')
                     </p>
                     <div class="d-flex  align-items-center">
-                        <span> <img class="w-100" src="{{ asset('website') }}/images/company-3.png" alt="company-3">
-                        </span>
-                        <span class="vr mx-3"></span>
-                        <span> <img class="w-100" src="{{ asset('website') }}/images/company-2.png" alt="company-2">
+                        @forelse ($partners as $partner)
+                            <span>
+                                <a href="{{ $partner->link }}">
+                                    <img class="w-100" src="{{ $partner->logo }}" alt="company-3">
+                                </a>
+                            </span>
+                            <span class="vr mx-3"></span>
+
+                        @empty
+                        @endforelse
+                        {{-- <span> <img class="w-100" src="{{ asset('website') }}/images/company-2.png" alt="company-2">
                         </span>
                         <span class="vr mx-3"></span>
                         <span> <img class="w-100" src="{{ asset('website') }}/images/company-1.png" alt="company-1">
-                        </span>
+                        </span> --}}
                     </div>
 
                 </span>

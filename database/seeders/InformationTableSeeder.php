@@ -14,11 +14,10 @@ class InformationTableSeeder extends Seeder
      */
     public function run()
     {
-            Information::create([
-                'phone' => '0110203049',
-                'ar' => ['name' => 'test name'],
-                'en' => ['name' => 'test name']
-            ]);
-        }
-
+        Information::create([
+            'phone' => '0110203049',
+            'ar' => ['name' => 'test name', 'logo' => 'logo.png'],
+            'en' => ['name' => 'test name', 'logo' => 'logo.png']
+        ]);
+    }
 }

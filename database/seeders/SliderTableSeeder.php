@@ -14,75 +14,69 @@ class SliderTableSeeder extends Seeder
      */
     public function run()
     {
+
         $sliders = [
             [
-                'photo' => 'slider_1.jpg',
-                'link' => '#',
-                'type' => 'page',
                 'en' => [
-                    'title' => 'Earn. Connect. Contribute to Socity',
-                    'brief' => 'Partner with us to drive your own livelihood and more.',
-                    'description' => 'Partner with us to drive your own livelihood and more.',
-                    // 'button_text' => 'Sign up Now',
+                    'title' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                    'brief' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde ut accusantium in aut corporis reiciendis fugit fugiat odio at hic!',
+                    'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam voluptate provident optio, explicabo ea ullam corporis blanditiis eaque distinctio deleniti magnam nemo accusantium inventore esse deserunt quaerat dolorum. Esse, quae nemo adipisci explicabo eligendi deleniti blanditiis corporis ullam maiores, ea eius laborum tempore fugiat libero voluptatem architecto at id cum.'
                 ],
                 'ar' => [
-                    'title' => 'Earn. Connect. Contribute to Socity',
-                    'brief' => 'Partner with us to drive your own livelihood and more.',
-                    'description' => 'Partner with us to drive your own livelihood and more.',
-                    // 'button_text' => 'Sign up Now',
+                    'title' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                    'brief' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde ut accusantium in aut corporis reiciendis fugit fugiat odio at hic!',
+                    'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam voluptate provident optio, explicabo ea ullam corporis blanditiis eaque distinctio deleniti magnam nemo accusantium inventore esse deserunt quaerat dolorum. Esse, quae nemo adipisci explicabo eligendi deleniti blanditiis corporis ullam maiores, ea eius laborum tempore fugiat libero voluptatem architecto at id cum.'
                 ],
+                'photo' => 'slider.png',
+                'type'  => 2,
+                'link'  => '#',
             ],
             [
-                'photo' => 'slider_2.jpg',
-                'link' => '#',
-                'type' => 'page',
                 'en' => [
-                    'title' => 'Earn. Connect. Contribute to Socity',
-                    'brief' => 'Partner with us to drive your own livelihood and more.',
-                    'description' => 'Partner with us to drive your own livelihood and more.',
-                    // 'button_text' => 'Sign up Now',
+                    'title' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                    'brief' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde ut accusantium in aut corporis reiciendis fugit fugiat odio at hic!',
+                    'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam voluptate provident optio, explicabo ea ullam corporis blanditiis eaque distinctio deleniti magnam nemo accusantium inventore esse deserunt quaerat dolorum. Esse, quae nemo adipisci explicabo eligendi deleniti blanditiis corporis ullam maiores, ea eius laborum tempore fugiat libero voluptatem architecto at id cum.'
                 ],
                 'ar' => [
-                    'title' => 'Earn. Connect. Contribute to Socity',
-                    'brief' => 'Partner with us to drive your own livelihood and more.',
-                    'description' => 'Partner with us to drive your own livelihood and more.',
-                    // 'button_text' => 'Sign up Now',
+                    'title' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                    'brief' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde ut accusantium in aut corporis reiciendis fugit fugiat odio at hic!',
+                    'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam voluptate provident optio, explicabo ea ullam corporis blanditiis eaque distinctio deleniti magnam nemo accusantium inventore esse deserunt quaerat dolorum. Esse, quae nemo adipisci explicabo eligendi deleniti blanditiis corporis ullam maiores, ea eius laborum tempore fugiat libero voluptatem architecto at id cum.'
                 ],
+                'photo' => 'slider.png',
+                'type'  => 2,
+                'link'  => '#',
             ],
             [
-                'photo' => 'slider_3.jpg',
-                'link' => '#',
-                'type' => 'page',
                 'en' => [
-                    'title' => 'Earn. Connect. Contribute to Socity',
-                    'brief' => 'Partner with us to drive your own livelihood and more.',
-                    'description' => 'Partner with us to drive your own livelihood and more.',
-                    // 'button_text' => 'Sign up Now',
+                    'title' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                    'brief' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde ut accusantium in aut corporis reiciendis fugit fugiat odio at hic!',
+                    'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam voluptate provident optio, explicabo ea ullam corporis blanditiis eaque distinctio deleniti magnam nemo accusantium inventore esse deserunt quaerat dolorum. Esse, quae nemo adipisci explicabo eligendi deleniti blanditiis corporis ullam maiores, ea eius laborum tempore fugiat libero voluptatem architecto at id cum.'
                 ],
                 'ar' => [
-                    'title' => 'Earn. Connect. Contribute to Socity',
-                    'brief' => 'Partner with us to drive your own livelihood and more.',
-                    'description' => 'Partner with us to drive your own livelihood and more.',
-                    // 'button_text' => 'Sign up Now',
+                    'title' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                    'brief' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde ut accusantium in aut corporis reiciendis fugit fugiat odio at hic!',
+                    'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam voluptate provident optio, explicabo ea ullam corporis blanditiis eaque distinctio deleniti magnam nemo accusantium inventore esse deserunt quaerat dolorum. Esse, quae nemo adipisci explicabo eligendi deleniti blanditiis corporis ullam maiores, ea eius laborum tempore fugiat libero voluptatem architecto at id cum.'
                 ],
+                'photo' => 'slider.png',
+                'type'  => 2,
+                'link'  => '#',
             ],
             [
-                'photo' => 'slider_4.jpg',
-                'link' => '#',
-                'type' => 'page',
                 'en' => [
-                    'title' => 'Earn. Connect. Contribute to Socity',
-                    'brief' => 'Partner with us to drive your own livelihood and more.',
-                    'description' => 'Partner with us to drive your own livelihood and more.',
-                    // 'button_text' => 'Sign up Now',
+                    'title' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                    'brief' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde ut accusantium in aut corporis reiciendis fugit fugiat odio at hic!',
+                    'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam voluptate provident optio, explicabo ea ullam corporis blanditiis eaque distinctio deleniti magnam nemo accusantium inventore esse deserunt quaerat dolorum. Esse, quae nemo adipisci explicabo eligendi deleniti blanditiis corporis ullam maiores, ea eius laborum tempore fugiat libero voluptatem architecto at id cum.'
                 ],
                 'ar' => [
-                    'title' => 'Earn. Connect. Contribute to Socity',
-                    'brief' => 'Partner with us to drive your own livelihood and more.',
-                    'description' => 'Partner with us to drive your own livelihood and more.',
-                    // 'button_text' => 'Sign up Now',
+                    'title' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                    'brief' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde ut accusantium in aut corporis reiciendis fugit fugiat odio at hic!',
+                    'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam voluptate provident optio, explicabo ea ullam corporis blanditiis eaque distinctio deleniti magnam nemo accusantium inventore esse deserunt quaerat dolorum. Esse, quae nemo adipisci explicabo eligendi deleniti blanditiis corporis ullam maiores, ea eius laborum tempore fugiat libero voluptatem architecto at id cum.'
                 ],
+                'photo' => 'slider.png',
+                'type'  => 2,
+                'link'  => '#',
             ],
+
 
 
         ];

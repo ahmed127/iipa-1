@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Page;
+use App\Models\Partner;
 use Illuminate\Database\Seeder;
 
 class PageTableSeeder extends Seeder
@@ -122,8 +123,20 @@ class PageTableSeeder extends Seeder
         ];
 
 
+
+        $partners = [
+            ['logo' => 'company-1.png', 'link' => '#'],
+            ['logo' => 'company-2.png', 'link' => '#'],
+            ['logo' => 'company-3.png', 'link' => '#'],
+        ];
+
+
         foreach ($pages as $page) {
             Page::create($page);
+        }
+
+        foreach ($partners as $partner) {
+            Partner::create($partner);
         }
     }
 }
