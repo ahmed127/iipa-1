@@ -16,8 +16,17 @@ class InformationTableSeeder extends Seeder
     {
         Information::create([
             'phone' => '0110203049',
-            'ar' => ['name' => 'test name', 'logo' => 'logo.png'],
-            'en' => ['name' => 'test name', 'logo' => 'logo.png']
+            'email' => 'info@iipa.org.sa',
+            'ar' => [
+                'name' => 'test name',
+                'logo' => 'logo.png',
+                'address' => 'المملكة العربية السعودية الرياض – المعذر الشمالي920016543'
+            ],
+            'en' => [
+                'name' => 'test name',
+                'logo' => 'logo.png',
+                'address' => 'المملكة العربية السعودية الرياض – المعذر الشمالي920016543'
+            ]
         ]);
     }
 }

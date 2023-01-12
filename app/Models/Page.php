@@ -64,7 +64,6 @@ class Page extends Model
 
         foreach ($languages as $language) {
             $rules[$language . '.name'] = 'nullable|required_if:type,1';
-            $rules[$language . '.btn_name'] = 'nullable|required_if:type,1';
             $rules[$language . '.meta_title'] = 'nullable|required_if:type,1';
             $rules[$language . '.meta_description'] = 'nullable|required_if:type,1';
             $rules[$language . '.meta_keywords'] = 'nullable|required_if:type,1';

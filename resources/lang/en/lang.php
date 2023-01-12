@@ -46,6 +46,7 @@ return [
     'class_actions' => 'Class Action',
     'cooperative_training_program_for_the_entities' => 'Cooperative training program for the entities',
     'cooperative_training_program_for_individuals' => 'Cooperative training program for individuals',
+    'class_action_tutorial' => 'Class Action Tutorial',
     '' => '',
 
     // D d
@@ -156,6 +157,7 @@ return [
     'open_file' => 'Open File',
     'old_password' => 'Current Password',
     'our_partners' => 'Our Partners',
+    'our_goals' => 'Our Goals',
     '' => '',
 
     // P p

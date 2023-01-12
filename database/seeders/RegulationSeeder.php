@@ -17,12 +17,12 @@ class RegulationSeeder extends Seeder
         $regulations = [
             [
                 'en' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
+                    'title' => 'Investor Protection Guide',
                     'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
                     'brief' => 'Lorem ipsum dolor sit amet.'
                 ],
                 'ar' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
+                    'title' => 'دليل حماية المستثمر',
                     'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
                     'brief' => 'Lorem ipsum dolor sit amet.'
                 ],
@@ -32,12 +32,12 @@ class RegulationSeeder extends Seeder
             ],
             [
                 'en' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
+                    'title' => 'Investor protection document',
                     'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
                     'brief' => 'Lorem ipsum dolor sit amet.'
                 ],
                 'ar' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
+                    'title' => 'وثيقة حماية المستثمر',
                     'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
                     'brief' => 'Lorem ipsum dolor sit amet.'
                 ],
@@ -47,12 +47,12 @@ class RegulationSeeder extends Seeder
             ],
             [
                 'en' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
+                    'title' => 'List of terms used',
                     'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
                     'brief' => 'Lorem ipsum dolor sit amet.'
                 ],
                 'ar' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
+                    'title' => 'قائمة المصطلحات المستخدمة',
                     'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
                     'brief' => 'Lorem ipsum dolor sit amet.'
                 ],
@@ -62,12 +62,12 @@ class RegulationSeeder extends Seeder
             ],
             [
                 'en' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
+                    'title' => 'financial market system',
                     'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
                     'brief' => 'Lorem ipsum dolor sit amet.'
                 ],
                 'ar' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
+                    'title' => 'نظام السوق المالي',
                     'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
                     'brief' => 'Lorem ipsum dolor sit amet.'
                 ],
@@ -77,12 +77,12 @@ class RegulationSeeder extends Seeder
             ],
             [
                 'en' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
+                    'title' => 'List of procedures for settling financial disputes',
                     'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
                     'brief' => 'Lorem ipsum dolor sit amet.'
                 ],
                 'ar' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
+                    'title' => 'لائحة اجراءات الفصل في المنازعات المالية',
                     'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
                     'brief' => 'Lorem ipsum dolor sit amet.'
                 ],
@@ -92,162 +92,12 @@ class RegulationSeeder extends Seeder
             ],
             [
                 'en' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
+                    'title' => 'market behavior chart',
                     'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
                     'brief' => 'Lorem ipsum dolor sit amet.'
                 ],
                 'ar' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'photo' => 'bg-card.png',
-                'type' => 2,
-                'link' => '#',
-            ],
-            [
-                'en' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'ar' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'photo' => 'bg-card.png',
-                'type' => 2,
-                'link' => '#',
-            ],
-            [
-                'en' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'ar' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'photo' => 'bg-card.png',
-                'type' => 2,
-                'link' => '#',
-            ],
-            [
-                'en' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'ar' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'photo' => 'bg-card.png',
-                'type' => 2,
-                'link' => '#',
-            ],
-            [
-                'en' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'ar' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'photo' => 'bg-card.png',
-                'type' => 2,
-                'link' => '#',
-            ],
-            [
-                'en' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'ar' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'photo' => 'bg-card.png',
-                'type' => 2,
-                'link' => '#',
-            ],
-            [
-                'en' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'ar' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'photo' => 'bg-card.png',
-                'type' => 2,
-                'link' => '#',
-            ],
-            [
-                'en' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'ar' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'photo' => 'bg-card.png',
-                'type' => 2,
-                'link' => '#',
-            ],
-            [
-                'en' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'ar' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'photo' => 'bg-card.png',
-                'type' => 2,
-                'link' => '#',
-            ],
-            [
-                'en' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'ar' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'photo' => 'bg-card.png',
-                'type' => 2,
-                'link' => '#',
-            ],
-            [
-                'en' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
-                    'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
-                    'brief' => 'Lorem ipsum dolor sit amet.'
-                ],
-                'ar' => [
-                    'title' => 'Lorem ipsum dolor sit amet.',
+                    'title' => 'لائحة سلوكيات السوق',
                     'description' => 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.',
                     'brief' => 'Lorem ipsum dolor sit amet.'
                 ],

@@ -46,6 +46,7 @@ return [
     'class_actions' => 'دعوي جماعية',
     'cooperative_training_program_for_the_entities' => 'برنامج التدريب التعاوني للجهات',
     'cooperative_training_program_for_individuals' => 'برنامج التدريب التعاوني للأفراد',
+    'class_action_tutorial' => 'كيفية تقديم دعوى جماعية',
     '' => '',
 
     // D d
@@ -156,6 +157,7 @@ return [
     'open_file' => 'افتح الملف',
     'old_password' => 'كلمة المرور الحالية',
     'our_partners' => 'شركاؤنا',
+    'our_goals' => 'اهداف الجمعية',
     '' => '',
 
     // P p

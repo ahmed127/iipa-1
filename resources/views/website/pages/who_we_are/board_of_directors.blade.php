@@ -1,12 +1,12 @@
 @extends('website.layout.app')
 
-@section('title', 'Board Of Directors')
+@section('title', __('lang.board_of_directors'))
 
 @section('content')
 
 @include('website.layout._header_page', [
-'title' => 'Board Of Directors',
-'pageName' => 'Board Of Directors',
+'title' => __('lang.board_of_directors'),
+'pageName' => __('lang.board_of_directors'),
 ])
 
 <section class="bg-content-custom">

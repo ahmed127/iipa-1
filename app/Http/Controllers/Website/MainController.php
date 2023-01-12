@@ -48,6 +48,8 @@ class MainController extends Controller
         $data['slider'] = Slider::all();
         $data['regulations'] = Regulation::all();
         $data['partners'] = Partner::all();
+        $data['our_goals'] = Page::find(2)->description;
+        $data['class_action_tutorial'] = Page::find(4)->description;
         return view('website.pages.home', $data);
     }
 
