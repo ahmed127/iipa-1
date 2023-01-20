@@ -33,9 +33,9 @@ class UserController extends Controller
         return view('adminPanel.users.show', compact('user'));
     }
 
-    public function request_reply_mail($to)
+    public function request_reply_mail()
     {
-        Mail::to($to)->send(new RequestReply(request('mail_body')));
+        Mail::to(request('email'))->send(new RequestReply(request('mail_body')));
         Flash::success(__('lang.message_sent'));
         return back();
     }

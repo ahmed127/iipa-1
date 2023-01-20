@@ -71,7 +71,7 @@ Route::group(
 
             Route::resource('admins', AdminController::class);
             Route::resource('users', UserController::class);
-            Route::post('users/request-reply-mail/{to}', 'UserController@request_reply_mail')->name('users.request_reply_mail');
+            Route::post('users/request-reply-mail', 'UserController@request_reply_mail')->name('users.request_reply_mail');
 
             Route::post('ckeditor/upload', 'CkeditorController@upload')->name('ckeditor.upload');
             Route::resource('information', InformationController::class);
