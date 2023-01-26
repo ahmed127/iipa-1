@@ -26,6 +26,8 @@ class UpdateRegulationRequest extends FormRequest
     {
         $rules = Regulation::rules();
 
+        $rules['photo'] = 'nullable|image|mimes:jpeg,jpg,png';
+
         return $rules;
     }
 }
