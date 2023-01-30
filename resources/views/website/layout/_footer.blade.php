@@ -11,36 +11,36 @@
             </span>
             <div class="col-lg-2 mx-lg-auto mx-sm-0 col-sm-12">
                 <ul class="px-0 ms-xl-4 ms-lg-0 text-lg-start text-center">
-                    <span class="px-1 fs-6 fw-bold">
+                    <span class="px-1 fs-5 fw-bold">
                         <i class="fa-solid fa-briefcase fa-lg px-1 text-primary"></i>
-                        @lang('lang.who_we_are')
+                        @lang('lang.about_us')
                     </span>
                     <li class="py-3">
-                        <a class="px-1 fs-6 fw-bold" href="{{ route('website.incorporation') }}">
+                        <a class="px-1 " href="{{ route('website.incorporation') }}">
                             <i class="fa-solid fa-link fa-sm text-primary ps-2 pe-1"></i>
                             {{ $page_app->where('id', 1)->first()->title ?? '' }}
                         </a>
                     </li>
                     <li class="pb-3">
-                        <a class="px-1 fs-6 fw-bold" href="{{ route('website.our_goals') }}">
+                        <a class="px-1 " href="{{ route('website.our_goals') }}">
                             <i class="fa-solid fa-link fa-sm text-primary ps-2 pe-1"></i>
                             {{ $page_app->where('id', 2)->first()->title ?? '' }}
                         </a>
                     </li>
                     <li class="pb-3">
-                        <a class="px-1 fs-6 fw-bold" href="{{ route('website.board_of_directors') }}">
+                        <a class="px-1 " href="{{ route('website.board_of_directors') }}">
                             <i class="fa-solid fa-link fa-sm text-primary ps-2 pe-1"></i>
                             @lang('lang.board_of_directors')
                         </a>
                     </li>
                     <li class="pb-3">
-                        <a class="px-1 fs-6 fw-bold" href="{{ route('website.organizational_structure') }}">
+                        <a class="px-1 " href="{{ route('website.organizational_structure') }}">
                             <i class="fa-solid fa-link fa-sm text-primary ps-2 pe-1"></i>
                             {{ $page_app->where('id', 3)->first()->title ?? '' }}
                         </a>
                     </li>
                     <li class="pb-3">
-                        <a class="px-1 fs-6 fw-bold" href="{{ route('website.recruitment') }}">
+                        <a class="px-1 " href="{{ route('website.recruitment') }}">
                             <i class="fa-solid fa-link fa-sm text-primary ps-2 pe-1"></i>
                             @lang('lang.recruitment')
                         </a>
@@ -53,24 +53,24 @@
             </span>
             <div class="col-lg-2 mx-lg-auto mx-sm-0 col-sm-12">
                 <ul class="px-0 ms-xl-4 ms-lg-0 text-lg-start text-center">
-                    <span class="px-1 fs-6 fw-bold">
+                    <span class="px-1 fs-5 fw-bold">
                         <i class="fa-solid fa-circle-question fa-lg text-primary"></i>
-                        @lang('lang.important_url')
+                        @lang('lang.media_centre')
                     </span>
                     <li class="py-3">
-                        <a class="fs-6 fw-bold" href="{{ route('website.events') }}">
+                        <a class="" href="{{ route('website.events') }}">
                             <i class="fa-solid fa-link fa-sm text-primary ps-2 pe-1"></i>
                             @lang('lang.events')
                         </a>
                     </li>
                     <li class="pb-3">
-                        <a class="fs-6 fw-bold" href="{{ route('website.media_center_all') }}">
+                        <a class="" href="{{ route('website.media_center_all') }}">
                             <i class="fa-solid fa-link fa-sm text-primary ps-2 pe-1"></i>
                             @lang('lang.media_centre')
                         </a>
                     </li>
                     <li class="pb-3">
-                        <a class="fs-6 fw-bold" href="{{ route('website.packages') }}">
+                        <a class="" href="{{ route('website.packages') }}">
                             <i class="fa-solid fa-link fa-sm text-primary ps-2 pe-1"></i>
                             @lang('lang.packages')
                         </a>
@@ -86,14 +86,14 @@
                     <p class="fw-bold ">
                         @lang('lang.contact_us') :
                     </p>
-
+                    {{--
                     <p class="fw-bold pt-2">
                         <i class="fa-solid fa-location-dot text-primary fa-2xl"></i>
                         <span class="fw-lighter px-1">
                             @lang('lang.our_office'):
                         </span>
                         {{ $information_app->address ?? '' }}
-                    </p>
+                    </p> --}}
                     <p class="fw-bold pt-2">
                         <i class="fa-solid fa-envelope-open text-primary fa-xl"></i>
                         <span class="fw-lighter px-1">
@@ -108,35 +108,35 @@
                         </span>
                         {{ $information_app->phone ?? '' }}
                     </p>
-                    <div class="d-flex justify-content-between pt-2 ">
+                    <div class="d-flex justify-content-between pt-2 col-8">
                         @if ($information_app->linkedin_visible)
-                            <a href="{{ $information_app->linkedin_link }}">
-                                <i class="fa-brands fa-linkedin-in fa-2xl text-black-50"></i>
-                            </a>
+                        <a href="{{ $information_app->linkedin_link }}">
+                            <i class="fa-brands fa-linkedin-in fa-2xl text-black-50"></i>
+                        </a>
                         @endif
 
                         @if ($information_app->youtube_visible)
-                            <a href="{{ $information_app->youtube_link }}">
-                                <i class="fa-brands fa-youtube fa-2xl text-black-50"></i>
-                            </a>
+                        <a href="{{ $information_app->youtube_link }}">
+                            <i class="fa-brands fa-youtube fa-2xl text-black-50"></i>
+                        </a>
                         @endif
 
                         @if ($information_app->instagram_visible)
-                            <a href="{{ $information_app->instagram_link }}">
-                                <i class="fa-brands fa-instagram fa-2xl text-black-50"></i>
-                            </a>
+                        <a href="{{ $information_app->instagram_link }}">
+                            <i class="fa-brands fa-instagram fa-2xl text-black-50"></i>
+                        </a>
                         @endif
 
                         @if ($information_app->facebook_visible)
-                            <a href="{{ $information_app->facebook_link }}">
-                                <i class="fa-brands fa-facebook-f fa-2xl text-black-50"></i>
-                            </a>
+                        <a href="{{ $information_app->facebook_link }}">
+                            <i class="fa-brands fa-facebook-f fa-2xl text-black-50"></i>
+                        </a>
                         @endif
 
                         @if ($information_app->twitter_visible)
-                            <a href="{{ $information_app->twitter_link }}">
-                                <i class="fa-brands fa-twitter fa-2xl text-black-50"></i>
-                            </a>
+                        <a href="{{ $information_app->twitter_link }}">
+                            <i class="fa-brands fa-twitter fa-2xl text-black-50"></i>
+                        </a>
                         @endif
                     </div>
                 </div>

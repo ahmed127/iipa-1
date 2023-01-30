@@ -21,6 +21,8 @@ return [
     'applicant' => 'Applicant',
     'all_rights_are_save' => 'All Rights Are Save',
     'arab_engravings' => 'Arab Engravings :',
+    'about_us' => 'About Us',
+
     '' => '',
 
     // B b
@@ -184,6 +186,8 @@ return [
     'rejected' => 'Rejected',
     'request_lawsuit' => 'Request Lawsuit',
     'request_your_advisors' => 'Request Your Advisors',
+    'request_advisors' => 'Request for advice for a class action lawsuit',
+
     'request_class_action' => 'Request Class Action',
     'request_volunteer' => 'Request Volunteer',
     'request_training_entities' => 'Request Training Entities',
@@ -249,6 +253,8 @@ return [
     'volunteer_request_intro_text' => 'This service aims to provide advice and legal assistance to members and individual investors with regard to filing complaints, filing class action lawsuits, and hiring lawyers.',
     'volunteer_request' => 'Volunteer Request',
     'volunteering_and_training' => 'Volunteering & Training',
+    'volunteering_and_training_text' => 'There is a proven fact from a long time ago that the readable content of a page will not distract the reader from focusing on the external appearance of the text or the form of paragraphs placed on the page that he reads.',
+
     '' => '',
 
     // W w

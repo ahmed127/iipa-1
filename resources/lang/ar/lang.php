@@ -21,11 +21,12 @@ return [
     'applicant' => 'المتقدم',
     'all_rights_are_save' => 'جميع الحقوق محفوظة',
     'arab_engravings' => 'الحفر العربي :',
+    'about_us' => 'عن الجمعية',
     '' => '',
 
     // B b
 
-    'board_of_directors' => 'مجلس إدارة',
+    'board_of_directors' => 'مجلس الإدارة',
     '' => '',
 
     // C c
@@ -46,7 +47,7 @@ return [
     'class_actions' => 'دعوي جماعية',
     'cooperative_training_program_for_the_entities' => 'برنامج التدريب التعاوني للجهات',
     'cooperative_training_program_for_individuals' => 'برنامج التدريب التعاوني للأفراد',
-    'class_action_tutorial' => 'كيفية تقديم دعوى جماعية',
+    'class_action_tutorial' => 'كيف تقدم دعوى جماعية',
     '' => '',
 
     // D d
@@ -65,7 +66,7 @@ return [
     'entity_name' => 'اسم المؤسسة',
     'email_confirmation_error' => 'البريد الإلكتروني وتأكيد البريد الإلكتروني غير متطابقين',
     'department' => 'القسم',
-    'events' => 'الفاعليات',
+    'events' => 'الفعاليات',
     '' => '',
 
     // F f
@@ -97,7 +98,8 @@ return [
     'in_progress' => 'يتم العمل عليها',
     'id_no' => 'رقم الهوية الوطنية',
     'iipa' => 'جمعية حماية المستثمرين الأفراد',
-    'ithmaar_company' => 'شركة الإثمار السعودية للاستشارات المالية',
+    'ithmaar_company' => 'مؤسسات السوق المالية المرخص لها من قبل هيئة السوق المالية',
+    'ithmaar_not_company' => 'مؤسسات السوق المالية الغير المرخص لها من قبل هيئة السوق المالية',
     'individual_fees' => 'الرسوم للفرد',
     'important_url' => 'روابط مهمة',
     '' => '',
@@ -156,8 +158,8 @@ return [
     'otp' => 'الرمز المرسل',
     'open_file' => 'افتح الملف',
     'old_password' => 'كلمة المرور الحالية',
-    'our_partners' => 'شركاؤنا',
-    'our_goals' => 'اهداف الجمعية',
+    'our_partners' => 'شركاؤنا في النجاح',
+    'our_goals' => 'أهداف الجمعية',
     '' => '',
 
     // P p
@@ -165,7 +167,7 @@ return [
     'phone' => 'رقم الهاتف',
     'pending' => 'قيد الانتظار',
     'password' => 'كلمة المرور',
-    'password_confirmation' => 'تآكيد كلمة المرور',
+    'password_confirmation' => 'تأكيد كلمة المرور',
     'packages' => 'العضويات',
     'page' => 'صفحة',
     'profile' => 'حسابي',
@@ -183,6 +185,7 @@ return [
     'rejected' => 'تم الرفض',
     'request_lawsuit' => 'طلب دعوى',
     'request_your_advisors' => 'اطلب مستشارك الخاص',
+    'request_advisors' => 'طلب استشارة لدعوى جماعية',
     'request_class_action' => 'طلب دعوى جماعية',
     'request_volunteer' => 'طلب تطوع',
     'request_training_entities' => 'طلب تدريب للمؤسسات',
@@ -246,6 +249,7 @@ return [
     'volunteer_request_intro_text' => 'تهدف هذه الخدمة إلى تقديم المشورة والمساعدة القانونية للأعضاء والمستثمرين الأفراد فيما يتعلق بتقديم الشكاوى ورفع الدعاوى الجماعية وتعيين المحامين.',
     'volunteer_request' => 'طلب تطوع',
     'volunteering_and_training' => 'التطوع والتديب',
+    'volunteering_and_training_text' => 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.',
     '' => '',
 
     // W w

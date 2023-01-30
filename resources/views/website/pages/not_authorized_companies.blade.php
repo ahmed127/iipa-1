@@ -18,7 +18,7 @@
                         <div class="row p-3 align-items-center">
                             <div class="col-lg-5 col-sm-12">
                                 <h5 class="m-0">
-                                    @lang('lang.ithmaar_company')
+                                    @lang('lang.ithmaar_not_company')
                                 </h5>
                             </div>
                             <div class="col-lg-5 col-sm-12">
