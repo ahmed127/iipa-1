@@ -130,7 +130,7 @@ class PageController extends AppBaseController
 
         Flash::success(__('messages.updated', ['model' => __('models/pages.singular')]));
 
-        return redirect(route('adminPanel.pages.index'));
+        return back();
     }
 
     /**

@@ -174,6 +174,7 @@ return [
     'powered_by' => 'Powered By',
     'pdf' => 'Pdf',
     'partners_intro' => 'There is a proven fact from a long time ago that the readable content of a page will not distract the reader from focusing on the external appearance of the text or the form of paragraphs placed on the page that he reads.',
+    'page_sections' => 'Page sections',
     '' => '',
 
     // Q q

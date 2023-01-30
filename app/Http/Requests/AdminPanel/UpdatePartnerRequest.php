@@ -25,7 +25,8 @@ class UpdatePartnerRequest extends FormRequest
     public function rules()
     {
         $rules = Partner::$rules;
-        
+        $rules['logo'] = 'nullable|image|mimes:jpeg,jpg,png';
+
         return $rules;
     }
 }

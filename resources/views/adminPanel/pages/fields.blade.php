@@ -131,7 +131,7 @@
                     'meta_description',
                     __('models/pages.fields.meta_description') .
                         '
-                            ' .
+                                                                                                                                                                                                            ' .
                         __('crud.' . $name) .
                         ':',
                 ) !!}
@@ -149,7 +149,10 @@
 
             <!-- Description Field -->
             <div class="form-group type_page type_page_description">
-                {!! Form::label('description', __('models/pages.fields.description') . ' ' . __('crud.' . $name) . ':') !!}
+                {!! Form::label(
+                    'description',
+                    __('models/pages.fields.description') . ' ' . __('crud.' . $name) . ' ' . '(' . __('lang.home') . ')' . ':',
+                ) !!}
                 {!! Form::textarea($locale . '[description]', isset($page) ? $page->description ?? '' : '', [
                     'class' => 'form-control',
                 ]) !!}
@@ -165,6 +168,11 @@
         </div>
     @endforeach
 
+</div>
+
+<div class="sections d-flex">
+    <a href="{{ route('adminPanel.pages.paragraphs.index', $page->id) }}"
+        class="btn btn-primary m-auto">@lang('lang.page_sections')</a>
 </div>
 
 <!-- Submit Field -->

@@ -7,6 +7,7 @@ return array(
         'id'                => '#',
         'title'             => 'Title',
         'name'              => 'Name',
+        'description'       => 'Description',
         'slug'              => 'Slug',
         'meta_title'        => 'Meta Title',
         'meta_description'  => 'Meta Description',

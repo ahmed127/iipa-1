@@ -39,6 +39,7 @@ class Paragraph extends Model
      * @var array
      */
     public $translatedAttributes =  [
+        'title',
         'text',
     ];
 
@@ -72,6 +73,7 @@ class Paragraph extends Model
     {
         $languages = array_keys(config('langs'));
         foreach ($languages as $language) {
+            $rules[$language . '.title'] = 'required|string';
             $rules[$language . '.text'] = 'required|string';
         }
 
@@ -84,6 +86,6 @@ class Paragraph extends Model
 
     public function page()
     {
-        return $this->belongsTo('App\Models\Page', 'page_id', 'id');
+        return $this->belongsTo(Page::class);
     }
 }

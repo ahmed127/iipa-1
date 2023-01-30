@@ -161,4 +161,11 @@ class Page extends Model
         return $val ? asset('uploads/images/original') . '/' . $val : null;
     }
     // End Image Handling
+
+
+
+    public function paragraphs()
+    {
+        return $this->hasMany(Paragraph::class);
+    }
 }

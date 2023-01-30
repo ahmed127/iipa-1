@@ -18,43 +18,41 @@
 <table class="table table-bordered table-hover" id="kt_datatableasd">
     <thead>
         <tr>
-            <th>@lang('models/paragraphs.fields.id')</th>
+            {{-- <th>@lang('models/paragraphs.fields.id')</th> --}}
             <th>@lang('models/paragraphs.fields.text')</th>
             <th>@lang('models/paragraphs.fields.page_id')</th>
             <th>@lang('crud.action')</th>
         </tr>
     </thead>
     <tbody>
-        @foreach($paragraphs as $paragraph)
-        @php $i = 1; @endphp
-        @foreach (config('langs') as $locale => $name)
+        @foreach ($paragraphs as $paragraph)
+            <tr>
+                {{-- {{dd($paragraph)}} --}}
+                {{-- <td>{{ $paragraph->id }}</td> --}}
+                <td>{!! $paragraph->text !!}</td>
+                <td>{{ $paragraph->page->name }}</td>
+                <td nowrap>
 
-
-        <tr>
-            {{-- {{dd($paragraph)}} --}}
-            <td>{{ $paragraph->id }}</td>
-            <td>{!! $paragraph->translateOrNew($locale)->text !!}</td>
-            <td>{{ $paragraph->page->name }}</td>
-            <td nowrap>
-                @if ($i == 1)
-                {!! Form::open(['route' => ['adminPanel.paragraphs.destroy', $paragraph->id], 'method' => 'delete']) !!}
-                <div class='btn btn-sm-group'>
-                    @can('paragraphs view')
+                    {!! Form::open(['route' => ['adminPanel.paragraphs.destroy', $paragraph->id], 'method' => 'delete']) !!}
+                    <div class='btn btn-sm-group'>
+                        {{-- @can('paragraphs view')
                     <a href="{{ route('adminPanel.paragraphs.show', [$paragraph->id]) }}" class='btn btn-sm btn-shadow mx-1 btn-transparent-success'><i class="fa fa-eye"></i></a>
-                    @endcan
-                    @can('paragraphs edit')
-                    <a href="{{ route('adminPanel.paragraphs.edit', [$paragraph->id]) }}" class='btn btn-sm btn-shadow mx-1 btn-transparent-primary'><i class="fa fa-edit"></i></a>
-                    @endcan
-                    @can('paragraphs destroy')
-                    {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-sm btn-shadow mx-1 btn-transparent-danger', 'onclick' => 'return confirm("'.__('crud.are_you_sure').'")']) !!}
-                    @endcan
-                </div>
-                {!! Form::close() !!}
-                @endif
-            </td>
-        </tr>
-        @php $i = 0; @endphp
-        @endforeach
+                    @endcan --}}
+                        @can('paragraphs edit')
+                            <a href="{{ route('adminPanel.paragraphs.edit', [$paragraph->id]) }}"
+                                class='btn btn-sm btn-shadow mx-1 btn-transparent-primary'><i class="fa fa-edit"></i></a>
+                        @endcan
+                        @can('paragraphs destroy')
+                            {!! Form::button('<i class="fa fa-trash"></i>', [
+                                'type' => 'submit',
+                                'class' => 'btn btn-sm btn-shadow mx-1 btn-transparent-danger',
+                                'onclick' => 'return confirm("' . __('crud.are_you_sure') . '")',
+                            ]) !!}
+                        @endcan
+                    </div>
+                    {!! Form::close() !!}
+                </td>
+            </tr>
         @endforeach
     </tbody>
 </table>

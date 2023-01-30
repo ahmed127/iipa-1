@@ -12,22 +12,24 @@ tr.datatable-row {
     text-align: center;
 }
 
-.table-bordered th, .table-bordered td {
+.table-bordered th,
+.table-bordered td {
     vertical-align: middle;
 }
 
-.table th, .table td{
+.table th,
+.table td {
     padding: 0.5rem;
 }
 
-.checkbox > span {
+.checkbox>span {
     margin: auto;
 }
 
 /* End Tables customization */
 
 /* Permissions checkboxes */
-.checkbox.checkbox-outline.checkbox-primary > span{
+.checkbox.checkbox-outline.checkbox-primary>span {
     margin: 0;
 }
 
