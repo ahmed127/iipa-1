@@ -30,7 +30,9 @@ class Law extends Model
 
 
     public $fillable = [
-        'attachment_pdf'
+        'attachment_pdf',
+        'btn_link',
+        'type',
     ];
 
     /**
@@ -54,7 +56,10 @@ class Law extends Model
             $rules[$language . '.title'] = 'required|string|min:3|max:191';
             $rules[$language . '.description'] = 'required|string';
         }
-        $rules['attachment_pdf'] = 'required';
+        // $rules['attachment_pdf'] = 'required';
+        $rules['type'] = 'required|in:1,2';
+        $rules['attachment_pdf'] = 'required_if:type,2|file|mimes:pdf';
+        $rules['btn_link'] = 'required_if:type,1';
 
         return $rules;
     }

@@ -15,7 +15,14 @@
 
                     @forelse ($laws as $law)
                         <div class="col-lg-4 col-md-6 col-sm-12">
-                            <a href="{{ $law->attachment_pdf }}" target="_blank">
+                            @php
+                                if ($law->type == 1) {
+                                    $link = $law->btn_link;
+                                } else {
+                                    $link = $law->attachment_pdf;
+                                }
+                            @endphp
+                            <a href="{{ $link }}" target="_blank">
                                 <div class="card m-3 rounded-4 shadow-custom p-0">
                                     <img src="{{ $information_app->translate(App::getLocale())->logo_original_path }}"
                                         class="p-5" style="border-radius: 16px 16px 0 0;" alt="...">

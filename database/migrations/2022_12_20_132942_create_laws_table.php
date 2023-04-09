@@ -16,7 +16,9 @@ class CreateLawsTable extends Migration
     {
         Schema::create('laws', function (Blueprint $table) {
             $table->id();
-            $table->string('attachment_pdf');
+            $table->string('attachment_pdf')->nullable();
+            $table->string('btn_link')->nullable();
+            $table->unsignedTinyInteger('type')->comment('1=> page - 2 => pdf');
             $table->timestamps();
             $table->softDeletes();
         });

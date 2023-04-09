@@ -1,11 +1,11 @@
 @extends('website.layout.app')
 
-@section('title', 'Media Center')
+@section('title', __('lang.media_center'))
 
 @section('content')
     @include('website.layout._header_page', [
-        'title' => 'Media Center',
-        'pageName' => 'Media Center',
+        'title' => __('lang.media_center'),
+        'pageName' => __('lang.media_center'),
     ])
     <section class="bg-content-custom">
         <div class="row gx-0 ">
@@ -18,7 +18,7 @@
                             <img src="{{ $blog->photo_sm_original_path }}" class=" card-img-top"
                                 style="border-radius: 16px 16px 0 0;" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">{{ $blog->title }}</h5>
+                                <h5 class="card-title">{{ Str::limit($blog->title, 80, '...') }}</h5>
                                 <p class="card-text fw-lighter text-truncate">{{ $blog->breif }}</p>
                                 <p class="fw-bold m-0">
                                     <i class="fa-regular fa-calendar-days text-info"></i>
@@ -37,3 +37,13 @@
         </div>
     </section>
 @endsection
+
+<style>
+    h5.card-title {
+        height: 5rem;
+    }
+
+    img.card-img-top {
+        height: 14rem;
+    }
+</style>

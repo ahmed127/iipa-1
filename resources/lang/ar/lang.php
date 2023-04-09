@@ -153,7 +153,7 @@ return [
 
     'Settings' => 'الاعدادات',
     'send' => 'ارسال',
-    'our_office' => 'مكتبنا',
+    'our_office' => 'موقعنا',
     'otp_msg' => 'الرمز :otp',
     'otp' => 'الرمز المرسل',
     'open_file' => 'افتح الملف',

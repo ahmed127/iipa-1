@@ -68,20 +68,20 @@
                                     </a>
                                 </li>
                             @endauth
-                            <span class="vr d-xl-inline-block d-none mx-2 mb-1"></span>
+                            {{-- <span class="vr d-xl-inline-block d-none mx-2 mb-1"></span>
                             <li class="nav-item">
                                 <a class="nav-link pt-0" href="{{ route('website.events') }}">
                                     <i class="fa-regular fa-calendar-days text-primary"></i>
                                     <span class="my-auto">@lang('lang.events')</span>
                                 </a>
-                            </li>
-                            <span class="vr d-xl-inline-block d-none mx-2 mb-1"></span>
+                            </li> --}}
+                            {{-- <span class="vr d-xl-inline-block d-none mx-2 mb-1"></span>
                             <li class="nav-item">
                                 <a class="nav-link pt-0 " href="{{ route('website.contact_us') }}">
                                     <i class="fa-solid fa-envelope text-primary"></i>
                                     <span class="my-auto">@lang('lang.contact_us')</span>
                                 </a>
-                            </li>
+                            </li> --}}
                             <span class="vr d-xl-inline-block d-none mx-2 mb-1"></span>
                             <li class="nav-item">
                                 <a class="nav-link pt-0" href="{{ route('website.help') }}">

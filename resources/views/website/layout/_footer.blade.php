@@ -169,7 +169,7 @@
     </div>
 </div>
 
-<div class="section-market sticky-bottom">
+{{-- <div class="section-market sticky-bottom">
     <div class="container-fluid text-white p-0">
         <p class="fw-bold py-0 mb-0">
             <span class="">
@@ -200,4 +200,4 @@
             <span class="text-danger">29.00 0.00 (0.00%)</span>
         </div>
     </div>
-</div>
+</div> --}}

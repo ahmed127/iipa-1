@@ -734,7 +734,8 @@ class PageTableSeeder extends Seeder
                     'title' => 'نظام السوق المالي',
                     'description' => 'description'
                 ],
-                'attachment_pdf' => 'dummy.pdf'
+                'attachment_pdf' => 'dummy.pdf',
+                'type' => 2
             ],
             [
                 'en' => [
@@ -745,7 +746,8 @@ class PageTableSeeder extends Seeder
                     'title' => 'دليل حماية المستثمر',
                     'description' => 'description'
                 ],
-                'attachment_pdf' => 'dummy.pdf'
+                'attachment_pdf' => 'dummy.pdf',
+                'type' => 2
             ],
             [
                 'en' => [
@@ -756,7 +758,8 @@ class PageTableSeeder extends Seeder
                     'title' => 'وثيقة حماية المستثمر',
                     'description' => 'description'
                 ],
-                'attachment_pdf' => 'dummy.pdf'
+                'attachment_pdf' => 'dummy.pdf',
+                'type' => 2
             ],
             [
                 'en' => [
@@ -767,7 +770,8 @@ class PageTableSeeder extends Seeder
                     'title' => 'قائمة المصطلحات المستخدمة',
                     'description' => 'description'
                 ],
-                'attachment_pdf' => 'dummy.pdf'
+                'attachment_pdf' => 'dummy.pdf',
+                'type' => 2
             ],
             [
                 'en' => [
@@ -778,7 +782,8 @@ class PageTableSeeder extends Seeder
                     'title' => 'لائحة اجراءات الفصل في منازعات الاوراق المالية',
                     'description' => 'description'
                 ],
-                'attachment_pdf' => 'dummy.pdf'
+                'attachment_pdf' => 'dummy.pdf',
+                'type' => 2
             ],
             [
                 'en' => [
@@ -789,7 +794,8 @@ class PageTableSeeder extends Seeder
                     'title' => 'لائحة سلوكيات السوق',
                     'description' => 'description'
                 ],
-                'attachment_pdf' => 'dummy.pdf'
+                'attachment_pdf' => 'dummy.pdf',
+                'type' => 2
             ],
             [
                 'en' => [
@@ -800,7 +806,9 @@ class PageTableSeeder extends Seeder
                     'title' => 'التعاميم',
                     'description' => 'description'
                 ],
-                'attachment_pdf' => 'dummy.pdf'
+                'attachment_pdf' => 'dummy.pdf',
+                'type' => 1,
+                'btn_link' => '#'
             ],
         ];
 
