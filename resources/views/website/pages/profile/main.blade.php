@@ -5,8 +5,8 @@
 @section('content')
 
     @include('website.layout._header_page', [
-        'title' => 'Profile',
-        'pageName' => 'Profile',
+        'title' => __('lang.profile'),
+        'pageName' => __('lang.profile'),
     ])
     <section class="bg-content-custom p-custom">
         <div class="row">
