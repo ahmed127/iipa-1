@@ -1,7 +1,5 @@
 <?php
 
-use Symfony\Component\HttpKernel\Profiler\Profile;
-
 return [
 
     // A a
