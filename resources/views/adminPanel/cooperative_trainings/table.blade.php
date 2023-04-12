@@ -7,6 +7,15 @@
                     {!! Form::open(['route' => 'adminPanel.cooperativeTrainings.index', 'method' => 'GET']) !!}
                     <div class="row">
 
+                        <!-- status Field -->
+                        <div class="form-group col-sm-4">
+                            {!! Form::label('status', __('lang.status') . ':') !!}
+                            {!! Form::select('status', \App\Models\Follow::status_types(), null, [
+                                'class' => 'form-control',
+                                'placeholder' => __('lang.status'),
+                            ]) !!}
+                        </div>
+
                         <!-- pagination Field -->
                         <div class="form-group col-sm-4">
                             {!! Form::label('pagination', __('crud.pagination') . ':') !!}
@@ -58,6 +67,7 @@
             <th>@lang('models/cooperativeTrainings.fields.country_code')</th>
             <th>@lang('models/cooperativeTrainings.fields.phone')</th>
             <th>@lang('models/cooperativeTrainings.fields.email')</th>
+            <th>@lang('lang.status')</th>
             <th>@lang('models/cooperativeTrainings.fields.attachment_letter')</th>
             <th>@lang('crud.action')</th>
         </tr>
@@ -86,6 +96,7 @@
                 <td>{{ $cooperativeTraining->country_code }}</td>
                 <td>{{ $cooperativeTraining->phone }}</td>
                 <td>{{ $cooperativeTraining->email }}</td>
+                <td>{{ $cooperativeTraining->status_text }}</td>
                 <td>
                     <a href="{{ $cooperativeTraining->attachment_letter }}" target="_blank"
                         class="btn btn-sm btn-primary">@lang('lang.open_file')</a>

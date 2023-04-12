@@ -31,7 +31,8 @@ class ConsultingRepository extends BaseRepository
         'description',
         'attachment_letter',
         'gender',
-        'nationality'
+        'nationality',
+        'status',
     ];
 
     /**

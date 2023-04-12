@@ -87,13 +87,18 @@ class Consulting extends Model
         ];
     }
 
-    public $appends = ['type_text'];
+    public $appends = ['type_text','status_text'];
 
     public function getTypeTextAttribute()
     {
         return $this->types()[$this->attributes['type']];
     }
     // End Types Handling
+
+    public function getStatusTextAttribute($val)
+    {
+        return Follow::status_types()[$this->attributes['status']];
+    }
 
     // FavLangs Handling
     public static function favLangs()

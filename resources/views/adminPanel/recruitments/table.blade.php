@@ -31,6 +31,15 @@
                             ]) !!}
                         </div>
 
+                        <!-- status Field -->
+                        <div class="form-group col-sm-4">
+                            {!! Form::label('status', __('lang.status') . ':') !!}
+                            {!! Form::select('status', \App\Models\Follow::status_types(), null, [
+                                'class' => 'form-control',
+                                'placeholder' => __('lang.status'),
+                            ]) !!}
+                        </div>
+
                         <!-- pagination Field -->
                         <div class="form-group col-sm-4">
                             {!! Form::label('pagination', __('crud.pagination') . ':') !!}
@@ -82,6 +91,7 @@
             <th>@lang('models/recruitments.fields.email')</th>
             <th>@lang('models/recruitments.fields.country_code')</th>
             <th>@lang('models/recruitments.fields.phone')</th>
+            <th>@lang('lang.status')</th>
             <th>@lang('models/recruitments.fields.attachment_cv')</th>
             <th>@lang('crud.action')</th>
         </tr>
@@ -110,6 +120,7 @@
                 <td>{{ $recruitment->email }}</td>
                 <td>{{ $recruitment->country_code }}</td>
                 <td>{{ $recruitment->phone }}</td>
+                <td>{{ $recruitment->status_text }}</td>
                 <td><a href="{{ $recruitment->attachment_cv }}" target="_blank"
                         class="btn btn-sm btn-primary">@lang('lang.open_file')</a></td>
                 <td>
