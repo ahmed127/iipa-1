@@ -71,11 +71,20 @@ class IndividualTraining extends Model
     }
 
 
+
     public function getAttachmentLetterAttribute($val)
     {
         return $val ? asset('uploads/files') . '/' . $val : null;
     }
 
+
+    public $appends = ['status_text'];
+
+    public function getStatusTextAttribute($val)
+    {
+        return Follow::status_types()[$this->attributes['status']];
+    }
+    
     public function user()
     {
         return $this->belongsTo(User::class);

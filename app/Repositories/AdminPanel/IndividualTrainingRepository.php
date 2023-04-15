@@ -21,6 +21,7 @@ class IndividualTrainingRepository extends BaseRepository
         'country_code',
         'phone',
         'email',
+        'status',
         'attachment_letter'
     ];
 

@@ -7,6 +7,15 @@
                     {!! Form::open(['route' => 'adminPanel.volunteers.index', 'method' => 'GET']) !!}
                     <div class="row">
 
+                        <!-- status Field -->
+                        <div class="form-group col-sm-4">
+                            {!! Form::label('status', __('lang.status') . ':') !!}
+                            {!! Form::select('status', \App\Models\Follow::status_types(), null, [
+                                'class' => 'form-control',
+                                'placeholder' => __('lang.status'),
+                            ]) !!}
+                        </div>
+
                         <!-- pagination Field -->
                         <div class="form-group col-sm-4">
                             {!! Form::label('pagination', __('crud.pagination') . ':') !!}
@@ -61,6 +70,7 @@
             <th>@lang('models/volunteers.fields.email')</th>
             <th>@lang('models/volunteers.fields.country_code')</th>
             <th>@lang('models/volunteers.fields.phone')</th>
+            <th>@lang('lang.status')</th>
             <th>@lang('models/volunteers.fields.attachment_cv')</th>
             <th>@lang('crud.action')</th>
         </tr>
@@ -92,6 +102,7 @@
                 <td>{{ $volunteer->email }}</td>
                 <td>{{ $volunteer->country_code }}</td>
                 <td>{{ $volunteer->phone }}</td>
+                <td>{{ $volunteer->status_text }}</td>
                 <td>
                     <a href="{{ $volunteer->attachment_cv }}" target="_blank"
                         class="btn btn-sm btn-primary">@lang('lang.open_file')</a>
@@ -149,7 +160,7 @@
                         {!! Form::button('<i class="fa fa-trash"></i>', [
                             'type' => 'submit',
                             'class' => 'btn
-                                                                                                                                                                                                                                                                btn-transparent-danger',
+                                                                                                                                                                                                                                                                                                                btn-transparent-danger',
                         ]) !!}
                         {!! Form::close() !!}
                     </div>

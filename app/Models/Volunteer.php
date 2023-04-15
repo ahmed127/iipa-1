@@ -84,6 +84,13 @@ class Volunteer extends Model
         return $val ? asset('uploads/files') . '/' . $val : null;
     }
 
+    public $appends = ['status_text'];
+
+    public function getStatusTextAttribute($val)
+    {
+        return Follow::status_types()[$this->attributes['status']];
+    }
+
 
 
     public function volunteer_type()

@@ -32,7 +32,7 @@ class CooperativeTrainingController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $cooperativeTrainings = $this->cooperativeTrainingRepository->paginate(10);
+        $cooperativeTrainings = $this->cooperativeTrainingRepository->allQuery($request->all())->paginate($request->pagination ?? 10);
 
         return view('adminPanel.cooperative_trainings.index')
             ->with('cooperativeTrainings', $cooperativeTrainings);

@@ -32,7 +32,7 @@ class VolunteerController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $volunteers = $this->volunteerRepository->paginate(10);
+        $volunteers = $this->volunteerRepository->allQuery($request->all())->paginate($request->pagination ?? 10);
 
         return view('adminPanel.volunteers.index')
             ->with('volunteers', $volunteers);

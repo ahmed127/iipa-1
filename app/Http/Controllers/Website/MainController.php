@@ -319,7 +319,7 @@ class MainController extends Controller
     // Companies
     public function authorized_companies()
     {
-        $companies = Company::authorized()->paginate(2);
+        $companies = Company::authorized()->paginate(10);
         return view('website.pages.authorized_companies', compact('companies'));
     }
     public function authorized_companies_search()
