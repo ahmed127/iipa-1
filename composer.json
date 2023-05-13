@@ -10,11 +10,10 @@
     "repositories": [
         {
             "type": "vcs",
-            "name":"infyomlabs/coreui-templates",
-            "version":"dev-develop-metronic",
+            "name": "infyomlabs/coreui-templates",
+            "version": "dev-develop-metronic",
             "url": "https://github.com/ahmed127/coreui-templates.git"
         }
-
     ],
     "require": {
         "php": "^7.3|^8.0",

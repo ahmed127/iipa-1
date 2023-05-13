@@ -25,7 +25,7 @@ return [
     // B b
 
     'board_of_directors' => 'مجلس الإدارة',
-    '' => '',
+    'general_assembly_members' => 'الجمعية العمومية',
 
     // C c
 

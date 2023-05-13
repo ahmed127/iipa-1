@@ -104,8 +104,14 @@ class MainController extends Controller
 
     public function board_of_directors()
     {
-        $directors = Director::all();
+        $directors = Director::where('type', 'directors')->get();
         return view('website.pages.who_we_are.board_of_directors', compact('directors'));
+    }
+
+    public function general_assembly_members()
+    {
+        $generals = Director::where('type', 'generals')->get();
+        return view('website.pages.who_we_are.general_assembly_members', compact('generals'));
     }
 
     public function organizational_structure()

@@ -2,7 +2,7 @@
 
 @section('breadcrumb')
     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
-        <li class="breadcrumb-item">@lang('models/directors.plural')</li>
+        <li class="breadcrumb-item">@lang('models/generals.plural')</li>
     </ul>
 @endsection
 @section('content')
@@ -12,14 +12,14 @@
         <div class="card-header flex-wrap border-0 pt-6 pb-0">
             <div class="card-title">
                 <h3 class="card-label">
-                    @lang('models/directors.plural')
+                    @lang('models/generals.plural')
                     {{-- <span class="d-block text-muted pt-2 font-size-sm">Descriptions</span> --}}
                 </h3>
             </div>
-            @can('directors create')
+            @can('generals create')
                 <div class="card-toolbar">
                     <!--begin::Button-->
-                    <a href="{{ route('adminPanel.directors.create') }}" class="btn btn-primary font-weight-bolder">
+                    <a href="{{ route('adminPanel.generals.create') }}" class="btn btn-primary font-weight-bolder">
                         <span class="svg-icon svg-icon-md">
                             <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Flatten.svg-->
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -42,9 +42,9 @@
         </div>
 
         <div class="card-body">
-            @include('adminPanel.directors.table')
+            @include('adminPanel.generals.table')
             <div class="pull-right mr-3">
-                @include('coreui-templates::common.paginate', ['records' => $directors])
+                @include('coreui-templates::common.paginate', ['records' => $generals])
 
             </div>
         </div>

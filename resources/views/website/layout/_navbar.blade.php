@@ -164,6 +164,12 @@
                                         </a>
                                     </li>
                                     <li>
+                                        <a class="dropdown-item  {{ Request::is('*general-assembly-members*') ? 'active' : '' }}"
+                                            href="{{ route('website.general_assembly_members') }}">
+                                            @lang('lang.general_assembly_members')
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a class="dropdown-item  {{ Request::is('*organizational-structure*') ? 'active' : '' }}"
                                             href="{{ route('website.organizational_structure') }}">
                                             {{ $page_app->where('id', 3)->first()->title ?? '' }}

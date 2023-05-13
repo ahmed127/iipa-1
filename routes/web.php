@@ -117,6 +117,7 @@ Route::group(
 
 
             Route::resource('directors', DirectorController::class);
+            Route::resource('generals', GeneralController::class);
             Route::resource('volunteerTypes', VolunteerTypeController::class);
             Route::resource('volunteers', VolunteerController::class);
             Route::resource('cooperativeTrainings', CooperativeTrainingController::class);
@@ -193,6 +194,7 @@ Route::group([
     Route::get('about_us/incorporation', $class_name_main . 'incorporation')->name('incorporation');
     Route::get('about_us/our-goals', $class_name_main . 'our_goals')->name('our_goals');
     Route::get('about_us/board-of-directors', $class_name_main . 'board_of_directors')->name('board_of_directors');
+    Route::get('about_us/general-assembly-members', $class_name_main . 'general_assembly_members')->name('general_assembly_members');
     Route::get('about_us/organizational-structure', $class_name_main . 'organizational_structure')->name('organizational_structure');
     Route::get('about_us/our-partners', $class_name_main . 'our_partners')->name('our_partners');
     // about_us

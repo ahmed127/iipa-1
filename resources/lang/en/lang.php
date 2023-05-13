@@ -26,7 +26,7 @@ return [
     // B b
 
     'board_of_directors' => 'Board Of Directors',
-    '' => '',
+    'general_assembly_members' => 'General Assembly',
 
     // C c
 
