@@ -1,4 +1,4 @@
-<div class="shadow-custom rounded-4 bg-white ">
+<div class="shadow-custom rounded-4 bg-white">
     <ul class="list-group text-center">
         <li class="list-group-item p-3 {{ Request::is('**profile*') ? 'bg-primary' : '' }}">
             <a href="{{ route('website.profile') }}"

@@ -60,6 +60,20 @@
     <b>{{ $consulting->job->name ?? '' }}</b>
 </div>
 
+<!-- Identification File Field -->
+<div class="form-group show">
+    {!! Form::label('identification_file', __('models/consultings.fields.identification_file') . ':') !!}
+    <a href="{{ $consulting->identification_file }}" target="_blank"
+        class="btn btn-sm btn-primary">@lang('lang.open_file')</a>
+</div>
+
+
+<!-- Identification Num Field -->
+<div class="form-group show">
+    {!! Form::label('identification_num', __('models/consultings.fields.identification_num') . ':') !!}
+    <b>{{ $consulting->identification_num }}</b>
+</div>
+
 
 <!-- Consultant Type Id Field -->
 <div class="form-group show">

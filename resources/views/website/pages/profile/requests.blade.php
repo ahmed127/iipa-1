@@ -10,10 +10,10 @@
 
     <section class="bg-content-custom p-custom">
         <div class="row">
-            <div class="col-2">
+            <div class="col-2 d-none d-sm-block">
                 @include('website.pages.profile._aside')
             </div>
-            <div class="col-10">
+            <div class="col-xs-12 col-sm-10">
                 @include('website.inc._error')
                 @include('flash::message')
                 <div class="container-fluid p-0">

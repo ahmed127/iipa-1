@@ -15,10 +15,10 @@
     </style>
     <section class="bg-content-custom p-custom">
         <div class="row">
-            <div class="col-2">
+            <div class="col-2 d-none d-sm-block">
                 @include('website.pages.profile._aside')
             </div>
-            <div class="col-10">
+            <div class="col-xs-12 col-sm-10">
                 <div class="shadow-custom rounded-4  bg-white ">
                     @include('website.inc._error')
                     @include('flash::message')

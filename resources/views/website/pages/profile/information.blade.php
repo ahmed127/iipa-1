@@ -10,10 +10,10 @@
     ])
     <section class="bg-content-custom p-custom">
         <div class="row">
-            <div class="col-2">
+            <div class="col-2 d-none d-sm-block">
                 @include('website.pages.profile._aside')
             </div>
-            <div class="col-10">
+            <div class="col-xs-12 col-sm-10">
                 @include('website.inc._error')
                 @include('flash::message')
                 <div class="shadow-custom rounded-4  bg-white ">
@@ -67,8 +67,8 @@
                                     <label for="country_code">
                                         {!! Form::select('country_code', $countryCodes, $user->country_code ?? null, [
                                             'class' => 'border
-                                                                                                                    border-end-0 py-3
-                                                                                                                    form-select bg-primary text-white',
+                                                                                                                                                            border-end-0 py-3
+                                                                                                                                                            form-select bg-primary text-white',
                                             'required' => 'required',
                                         ]) !!}
                                     </label>

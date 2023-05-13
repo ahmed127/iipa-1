@@ -10,10 +10,10 @@
     ])
     <section class="bg-content-custom p-custom">
         <div class="row">
-            <div class="col-2">
+            <div class="col-2 d-none d-sm-block">
                 @include('website.pages.profile._aside')
             </div>
-            <div class="col-10">
+            <div class="col-xs-12 col-sm-10">
                 <div class="shadow-custom rounded-4  bg-white ">
                     @include('website.inc._error')
                     @include('flash::message')
@@ -21,24 +21,24 @@
                         <div class="col-lg-12 col-md-12 py-3 px-2">
                             <i class="fa-sharp fa-solid fa-circle-user fa-lg text-info d-inline"></i>
                             <p class="firstWordInfo d-inline">
-                                My Account
+                                @lang('lang.profile')
                             </p>
                         </div>
                         <div class="row my-3 p-3">
-                            <div class="col-5">Full Name :</div>
-                            <div class="col-7">{{ $user->full_name }}</div>
+                            <div class="col-xs-12 col-sm-5">@lang('lang.full_name') :</div>
+                            <div class="col-xs-12 col-sm-7">{{ $user->full_name }}</div>
                         </div>
                         <div class="row my-3 p-3">
-                            <div class="col-5">Email :</div>
-                            <div class="col-7">{{ $user->email }}</div>
+                            <div class="col-xs-12 col-sm-5">@lang('lang.email') :</div>
+                            <div class="col-xs-12 col-sm-7">{{ $user->email }}</div>
                         </div>
                         <div class="row my-3 p-3">
-                            <div class="col-5">Phone :</div>
-                            <div class="col-7">{{ $user->country->code ?? '' }} {{ $user->phone }}</div>
+                            <div class="col-xs-12 col-sm-5">@lang('lang.phone') :</div>
+                            <div class="col-xs-12 col-sm-7">{{ $user->country->code ?? '' }} {{ $user->phone }}</div>
                         </div>
                         <div class="row my-3 p-3">
-                            <div class="col-5">Account Created At :</div>
-                            <div class="col-7">{{ $user->created_at }}</div>
+                            <div class="col-xs-12 col-sm-5">@lang('lang.created_at') :</div>
+                            <div class="col-xs-12 col-sm-7">{{ $user->created_at }}</div>
                         </div>
                         {{-- <div class="row my-3 p-3">
                         <div class="col-5">Request to Advisor :</div>

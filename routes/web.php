@@ -160,7 +160,7 @@ Route::group([
         Route::post('register-post',  $class_name_auth . 'register_post')->name('register_post');
         Route::get('forget_password',  $class_name_auth . 'forget_password')->name('forget_password');
         Route::post('forget_password_post',  $class_name_auth . 'forget_password_post')->name('forget_password_post');
-        Route::get('reset_password/{email}',  $class_name_auth . 'reset_password')->name('reset_password');
+        Route::get('reset_password',  $class_name_auth . 'reset_password')->name('reset_password');
         Route::post('reset_password_post',  $class_name_auth . 'reset_password_post')->name('reset_password_post');
     });
 

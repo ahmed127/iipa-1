@@ -251,7 +251,7 @@
                         @lang('lang.our_partners')
                     </h2>
                     <p class="px-2 py-3">
-                        @lang('lang.partners_intro')
+                        {{-- @lang('lang.partners_intro') --}}
                     </p>
                     <div class="d-flex align-items-center row">
                         @forelse ($partners as $partner)
@@ -288,7 +288,7 @@
 
                     <h2 class="firstWordInfo d-inline">@lang('lang.volunteering_and_training')</h2>
                     <p class="fs-6 fw-light py-3 mx-auto col-lg-6 col-sm-12">
-                        @lang('lang.volunteering_and_training_text')
+                        {{-- @lang('lang.volunteering_and_training_text') --}}
                     </p>
                     <div class="row gx-0 w-100 px-2 justify-content-center">
                         <a href="{{ route('website.volunteer_request') }}"

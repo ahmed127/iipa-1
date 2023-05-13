@@ -106,7 +106,7 @@
                     <p class="fw-bold pt-2">
                         <i class="fa-solid fa-phone text-primary fa-xl"></i>
                         <span class="fw-lighter px-1">
-                            @lang('lang.phone') :
+                            @lang('lang.contact_phone') :
                         </span>
                         {{ $information_app->phone ?? '' }}
                     </p>
