@@ -1,8 +1,8 @@
 <?php
 
 return array(
-    'singular' => 'لائحة او نظام',
-    'plural' => 'اللوائح والانظمة',
+    'singular' => 'القوائم المالية',
+    'plural' => 'القوائم المالية',
     'fields' =>
     array(
         'id' => '#',

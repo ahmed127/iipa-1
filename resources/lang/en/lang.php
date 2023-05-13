@@ -27,6 +27,7 @@ return [
 
     'board_of_directors' => 'Board Of Directors',
     'general_assembly_members' => 'General Assembly',
+    'financials' => 'Financial',
 
     // C c
 

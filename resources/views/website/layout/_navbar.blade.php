@@ -176,6 +176,12 @@
                                         </a>
                                     </li>
                                     <li>
+                                        <a class="dropdown-item  {{ Request::is('*financials*') ? 'active' : '' }}"
+                                            href="{{ route('website.financials') }}">
+                                            @lang('lang.financials')
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a class="dropdown-item  {{ Request::is('*our-partners*') ? 'active' : '' }}"
                                             href="{{ route('website.our_partners') }}">
                                             @lang('lang.our_partners')

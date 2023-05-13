@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\AdminPanel;
 
-use App\Http\Requests\AdminPanel\CreateRegulationRequest;
-use App\Http\Requests\AdminPanel\UpdateRegulationRequest;
-use App\Repositories\AdminPanel\RegulationRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
 use Response;
+use App\Models\Regulation;
+use Illuminate\Http\Request;
+use App\Http\Controllers\AppBaseController;
+use App\Repositories\AdminPanel\RegulationRepository;
+use App\Http\Requests\AdminPanel\CreateRegulationRequest;
+use App\Http\Requests\AdminPanel\UpdateRegulationRequest;
 
 class RegulationController extends AppBaseController
 {
@@ -29,7 +30,7 @@ class RegulationController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $regulations = $this->regulationRepository->paginate(10);
+        $regulations = Regulation::where('type_for', 'regulation')->paginate(10);
 
         return view('adminPanel.regulations.index')
             ->with('regulations', $regulations);
@@ -55,6 +56,7 @@ class RegulationController extends AppBaseController
     public function store(CreateRegulationRequest $request)
     {
         $input = $request->all();
+        $input['type_for'] = 'regulation';
 
         $regulation = $this->regulationRepository->create($input);
 

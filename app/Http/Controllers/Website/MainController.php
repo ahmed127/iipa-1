@@ -141,8 +141,14 @@ class MainController extends Controller
 
     public function regulations()
     {
-        $regulations = Regulation::paginate(9);
+        $regulations = Regulation::where('type_for', 'regulation')->paginate(9);
         return view('website.pages.regulations', compact('regulations'));
+    }
+
+    public function financials()
+    {
+        $financials = Regulation::where('type_for', 'financial')->paginate(9);
+        return view('website.pages.financials', compact('financials'));
     }
 
     public function initiatives()
