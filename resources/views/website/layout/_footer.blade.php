@@ -34,6 +34,12 @@
                         </a>
                     </li>
                     <li class="pb-3">
+                        <a class="px-1 " href="{{ route('website.policies') }}" style="font-size: 90%">
+                            <i class="fa-solid fa-link fa-sm text-primary ps-2 pe-1"></i>
+                            @lang('lang.policies')
+                        </a>
+                    </li>
+                    <li class="pb-3">
                         <a class="px-1 " href="{{ route('website.organizational_structure') }}">
                             <i class="fa-solid fa-link fa-sm text-primary ps-2 pe-1"></i>
                             {{ $page_app->where('id', 3)->first()->title ?? '' }}
