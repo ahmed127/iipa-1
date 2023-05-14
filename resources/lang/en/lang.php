@@ -29,6 +29,7 @@ return [
     'general_assembly_members' => 'General Assembly',
     'financials' => 'Financial',
     'policies' => 'Organizational Policies',
+    'association_strategy' => 'Association Strategy',
 
     // C c
 

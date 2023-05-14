@@ -182,6 +182,12 @@
                                         </a>
                                     </li>
                                     <li>
+                                        <a class="dropdown-item" target="_blank"
+                                            href="{{ asset('website/files/استراتيجية إنسان.pdf') }}">
+                                            @lang('lang.association_strategy')
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a class="dropdown-item  {{ Request::is('*financials*') ? 'active' : '' }}"
                                             href="{{ route('website.financials') }}">
                                             @lang('lang.financials')

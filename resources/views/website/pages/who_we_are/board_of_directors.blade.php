@@ -17,8 +17,10 @@
                     @forelse ($directors as $director)
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="card m-3 rounded-4 shadow-custom p-0">
-                                <img src="{{ $director->photo }}" class="px-5"
-                                    style="border-radius: 16px 16px 0 0; max-height: 163px;" alt="...">
+                                @if ($director->photo)
+                                    <img src="{{ $director->photo }}" class="px-5"
+                                        style="border-radius: 16px 16px 0 0; max-height: 163px;" alt="...">
+                                @endif
                                 <div class=" text-white  text-center p-3"
                                     style="background-color: #00113D;border-radius: 0 0 16px 16px;">
                                     <p class="fw-lighter fs-6 mb-1">{{ $director->nickname }}</p>

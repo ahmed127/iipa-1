@@ -74,6 +74,7 @@ class Director extends Model
 
     public function getPhotoAttribute($val)
     {
-        return $val ? asset('uploads/images/original') . '/' . $val : asset('website/images/Portrait_Placeholder.png');
+        // return $val ? asset('uploads/images/original') . '/' . $val : asset('website/images/Portrait_Placeholder.png');
+        return $val ? asset('uploads/images/original') . '/' . $val : null;
     }
 }

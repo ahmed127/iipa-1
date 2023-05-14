@@ -46,7 +46,7 @@ class MainController extends Controller
     public function home()
     {
         $data['slider'] = Slider::all();
-        $data['regulations'] = Regulation::all();
+        $data['regulations'] = Regulation::where('type_for', 'regulation')->get();
         $data['partners'] = Partner::orderBy('id', 'DESC')->get();
         $data['our_goals'] = Page::find(2)->description;
         $data['class_action_tutorial'] = Page::find(4)->description;
