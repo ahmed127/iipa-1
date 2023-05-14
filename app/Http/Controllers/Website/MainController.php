@@ -151,6 +151,12 @@ class MainController extends Controller
         return view('website.pages.financials', compact('financials'));
     }
 
+    public function policies()
+    {
+        $policies = Regulation::where('type_for', 'policy')->paginate(9);
+        return view('website.pages.policies', compact('policies'));
+    }
+
     public function initiatives()
     {
         $initiatives = Initiative::paginate(9);
