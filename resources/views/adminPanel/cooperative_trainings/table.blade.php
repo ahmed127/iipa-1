@@ -146,6 +146,10 @@
                 </td>
             </tr>
         @endforeach
+        <tr>
+            <td class="h2 p-5">@lang('lang.total')</td>
+            <td class="h1 text-success text-bold" colspan="3">{{ $cooperativeTrainings->count() }}</td>
+        </tr>
         {!! Form::close() !!}
     </tbody>
 </table>
