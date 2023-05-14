@@ -90,7 +90,7 @@
                                 </a>
                             </li>
                             <span class="vr d-xl-inline-block d-none mx-2 mb-1"></span>
-                            <li class="nav-item dropdown">
+                            {{-- <li class="nav-item dropdown">
                                 <a class="nav-link pt-0 dropdown-toggle" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     <i class="fa-solid fa-language  text-primary"></i>
@@ -119,6 +119,12 @@
                                         </li>
                                     @endif
                                 </ul>
+                            </li> --}}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link pt-0"
+                                    href="{{ app()->getLocale() == 'ar' ? str_replace('ar', 'en', url()->current()) : str_replace('en', 'ar', url()->current()) }}">
+                                    <i class="fa-solid fa-language  text-primary"></i>
+                                </a>
                             </li>
                         </ul>
                     </div>

@@ -45,7 +45,7 @@ return [
     'class_actions_request_intro_text' => 'This service aims to provide advice and legal assistance to members and individual investors with regard to filing complaints, filing class action lawsuits, and hiring lawyers.',
     'create_new_account' => 'Create New Account',
     'cancel' => 'Cancel',
-    'class_actions' => 'Class Action Rules',
+    'class_actions' => 'Class Action Lawsuit',
     'cooperative_training_program_for_the_entities' => 'Cooperative training program for the entities',
     'cooperative_training_program_for_individuals' => 'Cooperative training program for individuals',
     'class_action_tutorial' => 'Class Action Tutorial',

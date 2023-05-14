@@ -47,10 +47,10 @@ class Director extends Model
      * @var array
      */
     public static $rules = [
-        'photo' => 'required|mimes:jpeg,jpg,png|max:10000',
+        'photo' => 'nullable|mimes:jpeg,jpg,png|max:10000',
         'name' => 'required|string|min:3|max:191',
         'nickname' => 'required',
-        'job_title' => 'required|string|min:3|max:191'
+        'job_title' => 'nullable|string|min:3|max:191'
     ];
 
 
