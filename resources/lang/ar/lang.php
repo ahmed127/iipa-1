@@ -27,6 +27,7 @@ return [
     'board_of_directors' => 'مجلس الإدارة',
     'general_assembly_members' => 'الجمعية العمومية',
     'financials' => 'القوائم المالية',
+    'policies' => 'السياسات التنظيمية',
 
     // C c
 

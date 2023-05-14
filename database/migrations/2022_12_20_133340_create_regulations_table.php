@@ -17,7 +17,7 @@ class CreateRegulationsTable extends Migration
         Schema::create('regulations', function (Blueprint $table) {
             $table->id();
 
-            $table->string('type_for')->default('regulation')->comment('regulation, financial');
+            $table->string('type_for')->default('regulation')->comment('regulation, financial, policy');
             $table->string('photo');
             $table->string('attachment_pdf')->nullable();
             $table->string('link')->nullable();

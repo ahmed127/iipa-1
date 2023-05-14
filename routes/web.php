@@ -130,6 +130,7 @@ Route::group(
             Route::resource('outreaches', OutreachController::class);
             Route::resource('regulations', RegulationController::class);
             Route::resource('financials', FinancialController::class);
+            Route::resource('policies', PolicyController::class);
             Route::resource('partners', PartnerController::class);
             Route::resource('events', EventController::class);
             Route::resource('eventAttendees', EventAttendeeController::class);
@@ -205,6 +206,7 @@ Route::group([
     Route::get('awareness/{outreach}', $class_name_main . 'outreaches')->name('outreaches');
     Route::get('the-laws', $class_name_main . 'laws')->name('laws');
     Route::get('regulations', $class_name_main . 'regulations')->name('regulations');
+    Route::get('policies', $class_name_main . 'policies')->name('policies');
     Route::get('the-initiatives', $class_name_main . 'initiatives')->name('initiatives');
     Route::get('the-initiative/{initiative}', $class_name_main . 'initiative')->name('initiative');
 
