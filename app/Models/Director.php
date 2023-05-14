@@ -21,6 +21,7 @@ class Director extends Model
 
 
     public $fillable = [
+        'type',
         'photo',
         'name',
         'nickname',
@@ -73,6 +74,6 @@ class Director extends Model
 
     public function getPhotoAttribute($val)
     {
-        return $val ? asset('uploads/images/original') . '/' . $val : null;
+        return $val ? asset('uploads/images/original') . '/' . $val : asset('website/images/Portrait_Placeholder.png');
     }
 }

@@ -1,7 +1,5 @@
 <?php
 
-use Symfony\Component\HttpKernel\Profiler\Profile;
-
 return [
 
     // A a
@@ -28,7 +26,8 @@ return [
     // B b
 
     'board_of_directors' => 'Board Of Directors',
-    '' => '',
+    'general_assembly_members' => 'General Assembly',
+    'financials' => 'Financial',
 
     // C c
 
@@ -45,7 +44,7 @@ return [
     'class_actions_request_intro_text' => 'This service aims to provide advice and legal assistance to members and individual investors with regard to filing complaints, filing class action lawsuits, and hiring lawyers.',
     'create_new_account' => 'Create New Account',
     'cancel' => 'Cancel',
-    'class_actions' => 'Class Action',
+    'class_actions' => 'Class Action Rules',
     'cooperative_training_program_for_the_entities' => 'Cooperative training program for the entities',
     'cooperative_training_program_for_individuals' => 'Cooperative training program for individuals',
     'class_action_tutorial' => 'Class Action Tutorial',
@@ -123,7 +122,7 @@ return [
     'login' => 'Login',
     'login_h' => 'Please Login Or Register',
     'login_p' => 'So that you can submit requests, and your inquiries and follow them up later',
-    'laws' => 'The Laws',
+    'laws' => 'Regulations',
     '' => '',
 
     // M m
@@ -164,6 +163,7 @@ return [
 
     // P p
 
+    'contact_phone' => 'Phone',
     'phone' => 'Phone',
     'pending' => 'Pending',
     'password' => 'Password',
@@ -174,6 +174,7 @@ return [
     'powered_by' => 'Powered By',
     'pdf' => 'Pdf',
     'partners_intro' => 'There is a proven fact from a long time ago that the readable content of a page will not distract the reader from focusing on the external appearance of the text or the form of paragraphs placed on the page that he reads.',
+    'page_sections' => 'Page sections',
     '' => '',
 
     // Q q
@@ -202,13 +203,15 @@ return [
     'reset_password_h' => 'Reset Password',
     'reset_password_p' => 'Enter the code you received in your inbox, the new password and the confirmation password.',
     'resend_otp' => 'Do not received Mail?',
-    'register_or_login' => 'Register Or Login',
+    'register_or_login' => 'Register / Login',
     'recruitment' => 'Recruitment',
     'request_recruitment' => 'Request Recruitment',
     'requests' => 'Requests',
     'request_mail_thanks' => 'Thanks for your request',
     'reply_by_email' => 'Reply by email',
     'regulations' => 'Regulations',
+    'identification_num' => 'Identification Number',
+    'identification_file' => 'Identification File',
     '' => '',
     // S s
 

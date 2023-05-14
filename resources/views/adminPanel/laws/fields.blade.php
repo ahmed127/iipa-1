@@ -33,10 +33,42 @@
         </div>
     @endforeach
 
+    <!-- Type Field -->
+    <div class="form-group col-lg-4 col-sm-12">
+        {!! Form::label('type', __('models/outreaches.fields.type') . ':') !!}
+        <div class="radio-inline radio_switch"
+            type-active='{{ old(' type', @optional($law)->type) == 2 ? 'pdf' : 'page' }}'>
+            <label class="radio type_switch" type-switch="page">
+                {!! Form::radio('type', '1', 'Active') !!}
+                <span></span>
+                @lang('models/outreaches.fields.page')
+            </label>
+
+            <label class="radio type_switch" type-switch="pdf">
+                {!! Form::radio('type', '2', null) !!}
+                <span></span>
+                @lang('models/outreaches.fields.attachment_pdf')
+            </label>
+        </div>
+    </div>
+
     <!-- Attachment Pdf Field -->
-    <div class="form-group col-sm-6">
-        {!! Form::label('attachment_pdf', __('models/laws.fields.attachment_pdf') . ':') !!}
+    <div class="form-group col-lg-4 col-sm-12 type_pdf">
+        {!! Form::label('attachment_pdf', __('models/outreaches.fields.attachment_pdf') . ':') !!}
         {!! Form::file('attachment_pdf', ['class' => 'form-control']) !!}
+        @isset($law->attachment_pdf)
+            <p>
+                <a href="{{ $law->attachment_pdf ?? '' }}" target="_blank" class="btn btn-primary m-5">
+                    File
+                </a>
+            </p>
+        @endisset
+    </div>
+
+    <!-- Btn Name Field -->
+    <div class="form-group col-lg-4 col-sm-12 type_page">
+        {!! Form::label('btn_link', __('models/outreaches.fields.btn_link') . ' :') !!}
+        {!! Form::text('btn_link', isset($law) ? $law->btn_link ?? '' : '', ['class' => 'form-control']) !!}
     </div>
 
     <!-- Submit Field -->

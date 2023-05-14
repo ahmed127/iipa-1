@@ -2,7 +2,7 @@
 
 return array(
     'singular' => 'لائحة او نظام',
-    'plural' => 'الوائح والانظمة',
+    'plural' => 'اللوائح والانظمة',
     'fields' =>
     array(
         'id' => '#',

@@ -1,7 +1,5 @@
 <?php
 
-use Symfony\Component\HttpKernel\Profiler\Profile;
-
 return [
 
     // A a
@@ -13,7 +11,7 @@ return [
     'authorized_companies' => 'الشركات المرخص لها',
     'accountNotActive' => 'الحساب غير نشط',
     'approved' => 'تم القبول',
-    'attachment_letter' => 'ادراج خطاب',
+    'attachment_letter' => 'ادراج ملف',
     'attachment_cv' => 'ادراج السي في',
     'advisors_intro_heading' => 'الرجاء إكمال تفاصيل التسجيل أدناه',
     'advisors_intro_text' => 'تهدف هذه الخدمة إلى تقديم المشورة والمساعدة القانونية للأعضاء والمستثمرين الأفراد فيما يتعلق بتقديم الشكاوى ورفع الدعاوى الجماعية وتعيين المحامين.',
@@ -27,7 +25,8 @@ return [
     // B b
 
     'board_of_directors' => 'مجلس الإدارة',
-    '' => '',
+    'general_assembly_members' => 'الجمعية العمومية',
+    'financials' => 'القوائم المالية',
 
     // C c
 
@@ -123,7 +122,7 @@ return [
     'login' => 'تسجيل دخول',
     'login_h' => 'تسجل دخول',
     'login_p' => 'بحيث يمكنك تقديم الطلبات والاستفسارات ومتابعتها لاحقًا',
-    'laws' => 'القوانين',
+    'laws' => 'اللوائح والانظمة',
     '' => '',
 
     // M m
@@ -153,7 +152,7 @@ return [
 
     'Settings' => 'الاعدادات',
     'send' => 'ارسال',
-    'our_office' => 'مكتبنا',
+    'our_office' => 'موقعنا',
     'otp_msg' => 'الرمز :otp',
     'otp' => 'الرمز المرسل',
     'open_file' => 'افتح الملف',
@@ -164,6 +163,7 @@ return [
 
     // P p
 
+    'contact_phone' => 'الرقم الموحد',
     'phone' => 'رقم الهاتف',
     'pending' => 'قيد الانتظار',
     'password' => 'كلمة المرور',
@@ -173,6 +173,7 @@ return [
     'profile' => 'حسابي',
     'powered_by' => 'تم التطوير بواسطة',
     'partners_intro' => 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.',
+    'page_sections' => 'اقسام الصفحة',
     '' => '',
 
     // Q q
@@ -185,7 +186,7 @@ return [
     'rejected' => 'تم الرفض',
     'request_lawsuit' => 'طلب دعوى',
     'request_your_advisors' => 'اطلب مستشارك الخاص',
-    'request_advisors' => 'طلب استشارة لدعوى جماعية',
+    'request_advisors' => 'طلب استفسار عن دعوى جماعية',
     'request_class_action' => 'طلب دعوى جماعية',
     'request_volunteer' => 'طلب تطوع',
     'request_training_entities' => 'طلب تدريب للمؤسسات',
@@ -200,7 +201,7 @@ return [
     'reset_password_h' => 'اعادة تعين كلمة المرور',
     'reset_password_p' => 'أدخل الرمز الذي تلقيته في صندوق الوارد الخاص بك ، وكلمة المرور الجديدة وكلمة مرور التأكيد.',
     'resend_otp' => 'لم تتلق البريد؟',
-    'register_or_login' => 'تسجيل أو تسجيل الدخول',
+    'register_or_login' => 'تسجيل / تسجيل الدخول',
     'recruitment' => 'التوظيف',
     'requests' => 'الطلبات',
     '' => '',
@@ -231,7 +232,9 @@ return [
     'the_not_authorized_companies' => 'الشركات الغير مرخص لها',
     'request_recruitment' => 'طلب توظيف',
     'reply_by_email' => 'الرد عن طريق البريد الالكتروني',
-    'regulations' => 'اللوائح والانظمة',
+    'regulations' => 'اللوائح والأنظمة',
+    'identification_num' => 'رقم الهوية',
+    'identification_file' => 'إرفاق الهوية',
     '' => '',
 
     // U u

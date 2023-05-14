@@ -83,9 +83,11 @@
             </span>
             <div class="col-lg-3 col-sm-12">
                 <div class="text-lg-start text-center px-0 ms-lg-5 me-0 mx-sm-0 my-0">
-                    <p class="fw-bold ">
-                        @lang('lang.contact_us') :
-                    </p>
+                    <a class="" href="{{ route('website.contact_us') }}">
+                        <p class="fw-bold ">
+                            @lang('lang.contact_us') :
+                        </p>
+                    </a>
                     {{--
                     <p class="fw-bold pt-2">
                         <i class="fa-solid fa-location-dot text-primary fa-2xl"></i>
@@ -104,39 +106,39 @@
                     <p class="fw-bold pt-2">
                         <i class="fa-solid fa-phone text-primary fa-xl"></i>
                         <span class="fw-lighter px-1">
-                            @lang('lang.phone') :
+                            @lang('lang.contact_phone') :
                         </span>
                         {{ $information_app->phone ?? '' }}
                     </p>
                     <div class="d-flex justify-content-between pt-2 col-8">
                         @if ($information_app->linkedin_visible)
-                        <a href="{{ $information_app->linkedin_link }}">
-                            <i class="fa-brands fa-linkedin-in fa-2xl text-black-50"></i>
-                        </a>
+                            <a href="{{ $information_app->linkedin_link }}">
+                                <i class="fa-brands fa-linkedin-in fa-2xl text-black-50"></i>
+                            </a>
                         @endif
 
                         @if ($information_app->youtube_visible)
-                        <a href="{{ $information_app->youtube_link }}">
-                            <i class="fa-brands fa-youtube fa-2xl text-black-50"></i>
-                        </a>
+                            <a href="{{ $information_app->youtube_link }}">
+                                <i class="fa-brands fa-youtube fa-2xl text-black-50"></i>
+                            </a>
                         @endif
 
                         @if ($information_app->instagram_visible)
-                        <a href="{{ $information_app->instagram_link }}">
-                            <i class="fa-brands fa-instagram fa-2xl text-black-50"></i>
-                        </a>
+                            <a href="{{ $information_app->instagram_link }}">
+                                <i class="fa-brands fa-instagram fa-2xl text-black-50"></i>
+                            </a>
                         @endif
 
                         @if ($information_app->facebook_visible)
-                        <a href="{{ $information_app->facebook_link }}">
-                            <i class="fa-brands fa-facebook-f fa-2xl text-black-50"></i>
-                        </a>
+                            <a href="{{ $information_app->facebook_link }}">
+                                <i class="fa-brands fa-facebook-f fa-2xl text-black-50"></i>
+                            </a>
                         @endif
 
                         @if ($information_app->twitter_visible)
-                        <a href="{{ $information_app->twitter_link }}">
-                            <i class="fa-brands fa-twitter fa-2xl text-black-50"></i>
-                        </a>
+                            <a href="{{ $information_app->twitter_link }}">
+                                <i class="fa-brands fa-twitter fa-2xl text-black-50"></i>
+                            </a>
                         @endif
                     </div>
                 </div>
@@ -169,7 +171,7 @@
     </div>
 </div>
 
-<div class="section-market sticky-bottom">
+{{-- <div class="section-market sticky-bottom">
     <div class="container-fluid text-white p-0">
         <p class="fw-bold py-0 mb-0">
             <span class="">
@@ -200,4 +202,4 @@
             <span class="text-danger">29.00 0.00 (0.00%)</span>
         </div>
     </div>
-</div>
+</div> --}}

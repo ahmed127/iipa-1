@@ -58,6 +58,15 @@
                             ]) !!}
                         </div>
 
+                        <!-- status Field -->
+                        <div class="form-group col-sm-4">
+                            {!! Form::label('status', __('lang.status') . ':') !!}
+                            {!! Form::select('status', \App\Models\Follow::status_types(), null, [
+                                'class' => 'form-control',
+                                'placeholder' => __('lang.status'),
+                            ]) !!}
+                        </div>
+
                         <!-- pagination Field -->
                         <div class="form-group col-sm-4">
                             {!! Form::label('pagination', __('crud.pagination') . ':') !!}
@@ -108,6 +117,7 @@
             <th>@lang('models/consultings.fields.fav_lang')</th>
             <th>@lang('models/consultings.fields.gender')</th>
             <th>@lang('models/consultings.fields.nationality')</th>
+            <th>@lang('lang.status')</th>
             <th>@lang('crud.action')</th>
         </tr>
     </thead>
@@ -142,6 +152,7 @@
                 <td>{{ $consulting->fav_lang }}</td>
                 <td>{{ $consulting->gender }}</td>
                 <td>{{ $consulting->nationality }}</td>
+                <td>{{ $consulting->status_text }}</td>
                 <td>
                     {{-- {!! Form::open(['route' => ['adminPanel.consultings.destroy', $consulting->id], 'method' =>
                 'delete']) !!} --}}

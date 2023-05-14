@@ -82,6 +82,14 @@ class Recruitment extends Model
 
 
 
+    public $appends = ['status_text'];
+
+    public function getStatusTextAttribute($val)
+    {
+        return Follow::status_types()[$this->attributes['status']];
+    }
+
+    
     public function user()
     {
         return $this->belongsTo(User::class);

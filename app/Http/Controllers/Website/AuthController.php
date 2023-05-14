@@ -81,11 +81,12 @@ class AuthController extends Controller
 
         Flash::success('Mail Send Successful, check Your inbox');
 
-        return redirect(route('website.reset_password', $user->email));
+        return redirect(route('website.reset_password', ['email' => $user->email]));
     }
 
-    public function reset_password($email)
+    public function reset_password()
     {
+        $email = request('email');
         return view('website.auth.reset_password', compact('email'));
     }
 

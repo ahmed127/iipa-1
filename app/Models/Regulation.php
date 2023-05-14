@@ -33,6 +33,7 @@ class Regulation extends Model
 
 
     public $fillable = [
+        'type_for',
         'title',
         'brief',
         'description',

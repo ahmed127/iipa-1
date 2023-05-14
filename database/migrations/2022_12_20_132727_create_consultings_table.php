@@ -24,9 +24,11 @@ class CreateConsultingsTable extends Migration
             $table->string('email');
             $table->string('country_code');
             $table->string('phone');
+            $table->string('identification_num')->nullable();
+            $table->string('identification_file')->nullable();
             $table->date('date_of_birth');
             $table->text('description');
-            $table->string('attachment_letter');
+            $table->string('attachment_letter')->nullable();
             $table->string('nationality');
             $table->unsignedTinyInteger('fav_lang')->comment('1 => En - 2 => Ar');
             $table->unsignedTinyInteger('type')->comment('1 => request lawsuit - 2 => legal advisor');

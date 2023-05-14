@@ -19,6 +19,8 @@ class Consulting extends Model
         'email',
         'country_code',
         'phone',
+        'identification_num',
+        'identification_file',
         'country_id',
         'job_id',
         'consultant_type_id',
@@ -66,6 +68,8 @@ class Consulting extends Model
         'email' => 'required|email|confirmed',
         'country_code' => 'required',
         'phone' => 'required',
+        'identification_num' => 'required',
+        'identification_file' => 'required|image',
         'country_id' => 'required|exists:countries,id',
         'job_id' => 'required|exists:jobs,id',
         'consultant_type_id' => 'required|exists:consultant_types,id',
@@ -73,7 +77,7 @@ class Consulting extends Model
         'date_of_birth' => 'required',
         'fav_lang' => 'required|in:1,2',
         'description' => 'required',
-        'attachment_letter' => 'required',
+        'attachment_letter' => 'nullable',
         'gender' => 'required|in:1,2',
         'nationality' => 'required'
     ];
@@ -87,13 +91,18 @@ class Consulting extends Model
         ];
     }
 
-    public $appends = ['type_text'];
+    public $appends = ['type_text', 'status_text'];
 
     public function getTypeTextAttribute()
     {
         return $this->types()[$this->attributes['type']];
     }
     // End Types Handling
+
+    public function getStatusTextAttribute($val)
+    {
+        return Follow::status_types()[$this->attributes['status']];
+    }
 
     // FavLangs Handling
     public static function favLangs()
@@ -154,6 +163,30 @@ class Consulting extends Model
         return $val ? asset('uploads/files') . '/' . $val : null;
     }
     // End Attachment letter Handling
+    /////////////////////// Relations ///////////////////////
+
+    // Identification File Handling
+    public function setIdentificationFileAttribute($file)
+    {
+        if ($file) {
+            try {
+                $fileName = $this->createFileName($file);
+
+                $this->saveFile($file, $fileName);
+
+                $this->attributes['identification_file'] = $fileName;
+            } catch (\Throwable $th) {
+                $this->attributes['identification_file'] = $file;
+            }
+        }
+    }
+
+
+    public function getIdentificationFileAttribute($val)
+    {
+        return $val ? asset('uploads/files') . '/' . $val : null;
+    }
+    // End Identification File Handling
     /////////////////////// Relations ///////////////////////
 
     public function country()

@@ -35,7 +35,7 @@
                 <p class="fw-bold">
                     <i class="fa-solid fa-phone text-primary fa-xl"></i>
                     <span class="fw-lighter px-1">
-                        @lang('lang.phone') :
+                        @lang('lang.contact_phone') :
                     </span>
                     {{ $information_app->phone ?? '' }}
                 </p>
@@ -140,13 +140,13 @@
                             <div class="input-group rounded-4 shadow-sm">
                                 {!! Form::text('phone', null, [
                                     'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl
-                                                                direction-input-ltr',
+                                                                                                direction-input-ltr',
                                     'id' => 'phone',
                                 ]) !!}
                                 <label for="country_code">
                                     {!! Form::select('country_code', $countryCodes, null, [
                                         'class' => 'border border-end-0 py-3 form-select bg-primary text-white
-                                                                        direction-span-rtl direction-span-ltr',
+                                                                                                            direction-span-rtl direction-span-ltr',
                                     ]) !!}
                                 </label>
                             </div>

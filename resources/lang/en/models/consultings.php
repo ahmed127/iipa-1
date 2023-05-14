@@ -9,6 +9,8 @@ return array(
         'name' => 'Name',
         'email' => 'Email',
         'email_confirmation' => 'Email Confirmation',
+        'identification_num' => 'Identification Number',
+        'identification_file' => 'Identification File',
         'country_code' => 'Country Code',
         'phone' => 'Phone',
         'country_id' => 'Country',

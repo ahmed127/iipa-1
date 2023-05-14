@@ -117,6 +117,7 @@ Route::group(
 
 
             Route::resource('directors', DirectorController::class);
+            Route::resource('generals', GeneralController::class);
             Route::resource('volunteerTypes', VolunteerTypeController::class);
             Route::resource('volunteers', VolunteerController::class);
             Route::resource('cooperativeTrainings', CooperativeTrainingController::class);
@@ -128,6 +129,7 @@ Route::group(
             Route::resource('laws', LawController::class);
             Route::resource('outreaches', OutreachController::class);
             Route::resource('regulations', RegulationController::class);
+            Route::resource('financials', FinancialController::class);
             Route::resource('partners', PartnerController::class);
             Route::resource('events', EventController::class);
             Route::resource('eventAttendees', EventAttendeeController::class);
@@ -160,7 +162,7 @@ Route::group([
         Route::post('register-post',  $class_name_auth . 'register_post')->name('register_post');
         Route::get('forget_password',  $class_name_auth . 'forget_password')->name('forget_password');
         Route::post('forget_password_post',  $class_name_auth . 'forget_password_post')->name('forget_password_post');
-        Route::get('reset_password/{email}',  $class_name_auth . 'reset_password')->name('reset_password');
+        Route::get('reset_password',  $class_name_auth . 'reset_password')->name('reset_password');
         Route::post('reset_password_post',  $class_name_auth . 'reset_password_post')->name('reset_password_post');
     });
 
@@ -193,6 +195,8 @@ Route::group([
     Route::get('about_us/incorporation', $class_name_main . 'incorporation')->name('incorporation');
     Route::get('about_us/our-goals', $class_name_main . 'our_goals')->name('our_goals');
     Route::get('about_us/board-of-directors', $class_name_main . 'board_of_directors')->name('board_of_directors');
+    Route::get('about_us/general-assembly-members', $class_name_main . 'general_assembly_members')->name('general_assembly_members');
+    Route::get('about_us/financials', $class_name_main . 'financials')->name('financials');
     Route::get('about_us/organizational-structure', $class_name_main . 'organizational_structure')->name('organizational_structure');
     Route::get('about_us/our-partners', $class_name_main . 'our_partners')->name('our_partners');
     // about_us

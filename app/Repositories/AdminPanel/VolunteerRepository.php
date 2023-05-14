@@ -23,6 +23,7 @@ class VolunteerRepository extends BaseRepository
         'email',
         'country_code',
         'phone',
+        'status',
         'attachment_cv'
     ];
 

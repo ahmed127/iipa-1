@@ -15,29 +15,23 @@ class CreateParagraphsTable extends Migration
     public function up()
     {
         Schema::create('paragraphs', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('page_id');
-            
+            $table->id();
+            $table->foreignId('page_id')->constrained();
             $table->softDeletes();
         });
 
 
-        Schema::create('paragraph_translations', function(Blueprint $table)
-        {
-            $table->increments('trans_id');
-            $table->integer('paragraph_id')->unsigned();
+        Schema::create('paragraph_translations', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('paragraph_id')->constrained();
+
             $table->string('locale', 2)->index();
-           $table->longText('text');
 
-            $table->unique(['paragraph_id','locale']);
+            $table->string('title');
+            $table->longText('text');
 
-            $table->foreign('paragraph_id')
-                        ->references('id')
-                            ->on('paragraphs')
-                                ->onDelete('cascade');
+            $table->unique(['paragraph_id', 'locale']);
         });
-
-        
     }
 
     /**

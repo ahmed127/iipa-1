@@ -44,6 +44,7 @@
     --bs-body-color-rgb: 33, 37, 41;
     --bs-body-bg-rgb: 255, 255, 255;
 }
+
 /* // X-Small devices (portrait phones, less than 576px)
   // No media query for `xs` since this is the default in Bootstrap
 
@@ -61,6 +62,7 @@
     .p-custom {
         padding: 5% 8%;
     }
+
     .section-custom {
         padding-top: 14vh;
     }
@@ -78,10 +80,12 @@
     .p-custom {
         padding: 5% 15%;
     }
+
     .swiper-button {
         top: 78%;
         left: 29%;
     }
+
     .section-h {
         height: 63vh;
     }
@@ -92,10 +96,12 @@
     .p-custom-custom {
         padding: 5% 15%;
     }
+
     .swiper-button {
         top: 74%;
         left: 30%;
     }
+
     .section-h {
         height: 84vh;
     }
@@ -106,10 +112,12 @@
     .section-custom {
         padding-top: 10vh;
     }
+
     .swiper-button {
         top: 76%;
         left: 35%;
     }
+
     .section-h {
         height: 77vh;
     }
@@ -120,20 +128,18 @@
     .section-custom {
         padding-top: 10vh;
     }
+
     .swiper-button {
         top: 72%;
         left: 35%;
     }
 }
+
 .swiper-button {
     z-index: 3 !important;
 }
 
-body {
-    font-family: "29LT Bukra";
-    font-style: normal;
-    color: #00113d;
-}
+
 body a,
 li {
     text-decoration: none;
@@ -162,12 +168,14 @@ html[dir="rtl"] .direction-span-rtl {
 html[dir="ltr"] .direction-span-ltr {
     border-radius: 0px 16px 16px 0px !important;
 }
+
 .form-control:focus,
 .input-group-text:focus,
 .form-select:focus {
     border-color: #dee2e6 !important;
     box-shadow: 0 0 0 0rem rgba(255, 255, 255, 0.25) !important;
 }
+
 .breadcrumb-item {
     list-style-type: none;
 }
@@ -176,9 +184,11 @@ html[dir="ltr"] .direction-span-ltr {
 .color-primary {
     color: #00113d;
 }
+
 .btn-primary {
     background: var(--bs-color-primary);
 }
+
 .btn .button-style {
     padding: 14px 18px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16),
@@ -204,17 +214,18 @@ html[dir="ltr"] .direction-span-ltr {
     background: #00113d !important;
 }
 
-.btn-check:checked + .btn,
+.btn-check:checked+.btn,
 .btn.active,
 .btn.show,
 .btn:first-child:active,
-:not(.btn-check) + .btn:active {
+:not(.btn-check)+.btn:active {
     border-color: #fff !important;
 }
 
 .dropdown-menu {
     min-width: auto !important;
 }
+
 /* End Nav Bar */
 
 /* Section Info */
@@ -224,18 +235,22 @@ html[dir="ltr"] .direction-span-ltr {
     width: 100%;
     height: 500px;
 }
+
 .swiper-button-next::after {
     content: " " !important;
 }
+
 .swiper-button-prev::after {
     content: " " !important;
 }
+
 /* .swiper-slide {
     height: fit-content !important;
 } */
 html[dir="ltr"] .swiper-btn {
     flex-direction: row-reverse;
 }
+
 .swiper-button-next,
 .swiper-button-prev {
     position: initial !important;
@@ -254,15 +269,18 @@ html[dir="ltr"] .swiper-btn {
         0px 2px 10px rgba(0, 0, 0, 0.12);
     border-radius: 200px;
 }
+
 .swiper-pagination {
     background-size: cover;
     width: 100%;
     height: fit-content !important;
     margin-bottom: 0.2rem;
 }
+
 .swiper-slide {
     position: initial !important;
 }
+
 .swiper-pagination-bullet {
     width: 18px !important;
     height: 8px !important;
@@ -272,6 +290,7 @@ html[dir="ltr"] .swiper-btn {
     border-radius: 13px !important;
     opacity: 1 !important;
 }
+
 .swiper-pagination-bullet-active {
     width: 38px !important;
     height: 8px !important;
@@ -280,6 +299,7 @@ html[dir="ltr"] .swiper-btn {
         0px 2px 5px rgba(0, 0, 0, 0.16);
     border-radius: 13px !important;
 }
+
 .swiper-pagination {
     position: unset !important;
     width: fit-content !important;
@@ -290,9 +310,11 @@ html[dir="ltr"] .swiper-btn {
     width: 100%;
     padding: 60px;
 }
+
 .slide-swiper {
     height: 100%;
 }
+
 /* Section Organization */
 .section-organization {
     width: 100%;
@@ -300,6 +322,7 @@ html[dir="ltr"] .swiper-btn {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .shadow-custom {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16),
         0px 2px 10px rgba(0, 0, 0, 0.12);
@@ -308,12 +331,15 @@ html[dir="ltr"] .swiper-btn {
 .section-custom-header {
     padding: 1%;
 }
+
 .section-custom-body {
     padding: 1%;
 }
+
 .bg-size-cover {
     background-size: cover;
 }
+
 .section-slider {
     width: 100%;
     height: 574px;
@@ -321,6 +347,7 @@ html[dir="ltr"] .swiper-btn {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .card-slider {
     padding: 18px;
     background: #ffffff;
@@ -333,15 +360,18 @@ html[dir="ltr"] .swiper-btn {
 .col-3 {
     height: fit-content;
 }
+
 /* Section Footer */
 
 ul {
     list-style-type: none;
     padding: 0;
 }
+
 ol {
     list-style-type: disc;
 }
+
 /* section Market */
 
 .section-market {
@@ -445,6 +475,7 @@ ol {
     border-radius: 0.375rem !important;
     border-bottom: none !important;
 }
+
 body {
     height: 100% !important;
 }
@@ -466,12 +497,61 @@ section {
     color: #11b0f9 !important;
     background-color: #f8f9fa !important;
 }
+
 .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
 }
+
 .reversed {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
 
+
+
+/* Add Fonts */
+
+@font-face {
+    font-family: '29LT Bukra';
+    src: url('../fonts/') format('woff2'),
+        url('../fonts/29LTBukra-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '29LT Bukra';
+    src: url('../fonts/29LTBukra-Bold.woff2') format('woff2'),
+        url('../fonts/29LTBukra-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '29LT Bukra';
+    src: url('../fonts/29LTBukra-BoldItalic.woff2') format('woff2'),
+        url('../fonts/29LTBukra-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '29LT Bukra';
+    src: url('../fonts/29LTBukra-Regular.woff2') format('woff2'),
+        url('../fonts/29LTBukra-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: "29LT Bukra" !important;
+    font-style: normal;
+    color: #00113d;
+}
+
+/* End Add Fonts */

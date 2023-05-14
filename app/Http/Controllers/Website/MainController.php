@@ -104,8 +104,14 @@ class MainController extends Controller
 
     public function board_of_directors()
     {
-        $directors = Director::all();
+        $directors = Director::where('type', 'directors')->get();
         return view('website.pages.who_we_are.board_of_directors', compact('directors'));
+    }
+
+    public function general_assembly_members()
+    {
+        $generals = Director::where('type', 'generals')->get();
+        return view('website.pages.who_we_are.general_assembly_members', compact('generals'));
     }
 
     public function organizational_structure()
@@ -135,8 +141,14 @@ class MainController extends Controller
 
     public function regulations()
     {
-        $regulations = Regulation::paginate(9);
+        $regulations = Regulation::where('type_for', 'regulation')->paginate(9);
         return view('website.pages.regulations', compact('regulations'));
+    }
+
+    public function financials()
+    {
+        $financials = Regulation::where('type_for', 'financial')->paginate(9);
+        return view('website.pages.financials', compact('financials'));
     }
 
     public function initiatives()
@@ -319,7 +331,7 @@ class MainController extends Controller
     // Companies
     public function authorized_companies()
     {
-        $companies = Company::authorized()->paginate(2);
+        $companies = Company::authorized()->paginate(10);
         return view('website.pages.authorized_companies', compact('companies'));
     }
     public function authorized_companies_search()

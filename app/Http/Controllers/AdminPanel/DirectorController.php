@@ -5,6 +5,7 @@ namespace App\Http\Controllers\AdminPanel;
 use Flash;
 use Response;
 use App\Models\Country;
+use App\Models\Director;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use App\Repositories\AdminPanel\DirectorRepository;
@@ -30,7 +31,7 @@ class DirectorController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $directors = $this->directorRepository->paginate(10);
+        $directors = Director::where('type', 'directors')->paginate(10);
 
         return view('adminPanel.directors.index')
             ->with('directors', $directors);
@@ -57,6 +58,7 @@ class DirectorController extends AppBaseController
     public function store(CreateDirectorRequest $request)
     {
         $input = $request->all();
+        $input['type'] = 'directors';
 
         $director = $this->directorRepository->create($input);
 

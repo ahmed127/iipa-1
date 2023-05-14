@@ -21,7 +21,8 @@ class CooperativeTrainingRepository extends BaseRepository
         'country_code',
         'phone',
         'email',
-        'attachment_letter'
+        'attachment_letter',
+        'status',
     ];
 
     /**

@@ -9,6 +9,8 @@ return array(
         'name' => 'الاسم',
         'email' => 'البريد الالكتروني',
         'email_confirmation' => 'تاكيد البريد الالكتروني',
+        'identification_num' => 'رقم الهوية',
+        'identification_file' => 'إرفاق الهوية',
         'country_code' => 'رمز الدولة',
         'phone' => 'الهاتف',
         'country_id' => 'الدولة',

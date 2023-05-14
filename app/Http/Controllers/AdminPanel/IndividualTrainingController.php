@@ -32,7 +32,7 @@ class IndividualTrainingController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $individualTrainings = $this->individualTrainingRepository->paginate(10);
+        $individualTrainings = $this->individualTrainingRepository->allQuery($request->all())->paginate($request->pagination ?? 10);
 
         return view('adminPanel.individual_trainings.index')
             ->with('individualTrainings', $individualTrainings);

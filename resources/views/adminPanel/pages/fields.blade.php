@@ -104,24 +104,30 @@
             <!-- Title Field -->
             <div class="form-group">
                 {!! Form::label('title', __('models/pages.fields.title') . ' ' . __('crud.' . $name) . ':') !!}
-                {!! Form::text($locale . '[title]', isset($page) ? $page->title ?? '' : '', ['class' => 'form-control']) !!}
+                {!! Form::text($locale . '[title]', isset($page) ? $page->translate($locale)->title ?? '' : '', [
+                    'class' => 'form-control',
+                ]) !!}
             </div>
 
             <!-- Brief Field -->
             <div class="form-group">
                 {!! Form::label('brief', __('models/pages.fields.brief') . ' ' . __('crud.' . $name) . ':') !!}
-                {!! Form::text($locale . '[brief]', isset($page) ? $page->brief ?? '' : '', ['class' => 'form-control']) !!}
+                {!! Form::text($locale . '[brief]', isset($page) ? $page->translate($locale)->brief ?? '' : '', [
+                    'class' => 'form-control',
+                ]) !!}
             </div>
 
             <!-- Name Field -->
             <div class="form-group type_page">
                 {!! Form::label('name', __('models/pages.fields.name') . ' ' . __('crud.' . $name) . ':') !!}
-                {!! Form::text($locale . '[name]', isset($page) ? $page->name ?? '' : '', ['class' => 'form-control']) !!}
+                {!! Form::text($locale . '[name]', isset($page) ? $page->translate($locale)->name ?? '' : '', [
+                    'class' => 'form-control',
+                ]) !!}
             </div>
             <!-- Meta Title Field -->
             <div class="form-group type_page ">
                 {!! Form::label('meta_title', __('models/pages.fields.meta_title') . ' ' . __('crud.' . $name) . ':') !!}
-                {!! Form::textarea($locale . '[meta_title]', isset($page) ? $page->meta_title ?? '' : '', [
+                {!! Form::textarea($locale . '[meta_title]', isset($page) ? $page->translate($locale)->meta_title ?? '' : '', [
                     'class' => 'form-control',
                 ]) !!}
             </div>
@@ -131,26 +137,37 @@
                     'meta_description',
                     __('models/pages.fields.meta_description') .
                         '
-                            ' .
+                                                                                                                                                                                                                            ' .
                         __('crud.' . $name) .
                         ':',
                 ) !!}
-                {!! Form::textarea($locale . '[meta_description]', isset($page) ? $page->meta_description ?? '' : '', [
-                    'class' => 'form-control',
-                ]) !!}
+                {!! Form::textarea(
+                    $locale . '[meta_description]',
+                    isset($page) ? $page->translate($locale)->meta_description ?? '' : '',
+                    [
+                        'class' => 'form-control',
+                    ],
+                ) !!}
             </div>
             <!-- Meta Title Field -->
             <div class="form-group type_page ">
                 {!! Form::label('meta_keywords', __('models/pages.fields.meta_keywords') . ' ' . __('crud.' . $name) . ':') !!}
-                {!! Form::textarea($locale . '[meta_keywords]', isset($page) ? $page->meta_keywords ?? '' : '', [
-                    'class' => 'form-control',
-                ]) !!}
+                {!! Form::textarea(
+                    $locale . '[meta_keywords]',
+                    isset($page) ? $page->translate($locale)->meta_keywords ?? '' : '',
+                    [
+                        'class' => 'form-control',
+                    ],
+                ) !!}
             </div>
 
             <!-- Description Field -->
             <div class="form-group type_page type_page_description">
-                {!! Form::label('description', __('models/pages.fields.description') . ' ' . __('crud.' . $name) . ':') !!}
-                {!! Form::textarea($locale . '[description]', isset($page) ? $page->description ?? '' : '', [
+                {!! Form::label(
+                    'description',
+                    __('models/pages.fields.description') . ' ' . __('crud.' . $name) . ' ' . '(' . __('lang.home') . ')' . ':',
+                ) !!}
+                {!! Form::textarea($locale . '[description]', isset($page) ? $page->translate($locale)->description ?? '' : '', [
                     'class' => 'form-control',
                 ]) !!}
             </div>
@@ -165,6 +182,11 @@
         </div>
     @endforeach
 
+</div>
+
+<div class="sections d-flex">
+    <a href="{{ route('adminPanel.pages.paragraphs.index', $page->id) }}"
+        class="btn btn-primary m-auto">@lang('lang.page_sections')</a>
 </div>
 
 <!-- Submit Field -->

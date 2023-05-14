@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers\AdminPanel;
 
-use App\Helpers\FollowTrait;
-use App\Http\Requests\AdminPanel\CreateVolunteerRequest;
-use App\Http\Requests\AdminPanel\UpdateVolunteerRequest;
-use App\Repositories\AdminPanel\VolunteerRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
 use Response;
+use App\Helpers\FollowTrait;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\RequestStatusNotification;
+use App\Http\Controllers\AppBaseController;
+use App\Repositories\AdminPanel\VolunteerRepository;
+use App\Http\Requests\AdminPanel\CreateVolunteerRequest;
+use App\Http\Requests\AdminPanel\UpdateVolunteerRequest;
 
 class VolunteerController extends AppBaseController
 {
@@ -32,7 +34,7 @@ class VolunteerController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $volunteers = $this->volunteerRepository->paginate(10);
+        $volunteers = $this->volunteerRepository->allQuery($request->all())->paginate($request->pagination ?? 10);
 
         return view('adminPanel.volunteers.index')
             ->with('volunteers', $volunteers);
@@ -128,6 +130,9 @@ class VolunteerController extends AppBaseController
 
         $this->follow_update($volunteer);
         Flash::success(__('messages.updated', ['model' => __('models/volunteers.singular')]));
+
+        // $message = '';
+        // Mail::to($volunteer->email)->send(new RequestStatusNotification($message));
 
         return redirect(route('adminPanel.volunteers.index'));
     }
