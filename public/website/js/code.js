@@ -25,9 +25,9 @@ function view() {
 view();
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 0,
     autoplay: {
-        delay: 2000,
+        delay: 5000,
     },
     loop: true,
     loopFillGroupWithBlank: true,

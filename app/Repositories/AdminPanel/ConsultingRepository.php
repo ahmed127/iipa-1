@@ -33,6 +33,8 @@ class ConsultingRepository extends BaseRepository
         'gender',
         'nationality',
         'status',
+        'from',
+        'to'
     ];
 
     /**

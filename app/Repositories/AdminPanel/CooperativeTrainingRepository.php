@@ -23,6 +23,8 @@ class CooperativeTrainingRepository extends BaseRepository
         'email',
         'attachment_letter',
         'status',
+        'from',
+        'to'
     ];
 
     /**

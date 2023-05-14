@@ -22,7 +22,9 @@ class RecruitmentRepository extends BaseRepository
         'country_code',
         'phone',
         'status',
-        'attachment_cv'
+        'attachment_cv',
+        'from',
+        'to'
     ];
 
     /**

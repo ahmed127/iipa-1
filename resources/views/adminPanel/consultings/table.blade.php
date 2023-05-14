@@ -67,6 +67,24 @@
                             ]) !!}
                         </div>
 
+                        <!-- from Field -->
+                        <div class="form-group col-sm-4">
+                            {!! Form::label('from', __('lang.from') . ':') !!}
+                            {!! Form::date('from', request('from') ?? null, [
+                                'class' => 'form-control',
+                                'placeholder' => __('lang.from'),
+                            ]) !!}
+                        </div>
+
+                        <!-- to Field -->
+                        <div class="form-group col-sm-4">
+                            {!! Form::label('to', __('lang.to') . ':') !!}
+                            {!! Form::date('to', request('to') ?? null, [
+                                'class' => 'form-control',
+                                'placeholder' => __('lang.to'),
+                            ]) !!}
+                        </div>
+
                         <!-- pagination Field -->
                         <div class="form-group col-sm-4">
                             {!! Form::label('pagination', __('crud.pagination') . ':') !!}
