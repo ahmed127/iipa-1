@@ -13,7 +13,7 @@
 
             @forelse ($partners as $partner)
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card m-3 rounded-4 shadow-custom p-0" style="height: 300px">
+                    <div class="card m-3 rounded-4 shadow-custom p-0" style="height: 150px">
                         <a href="{{ $partner->link }}" target="_blank" class="m-auto">
                             <img src="{{ $partner->logo }}" class=" card-img-top" style="border-radius: 16px 16px 0 0;"
                                 alt="{{ $partner->link }}">

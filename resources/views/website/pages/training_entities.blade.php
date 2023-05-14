@@ -6,6 +6,7 @@
     @include('website.layout._header_page', [
         'title' => __('lang.cooperative_training_program_for_the_entities'),
         'pageName' => __('lang.cooperative_training_program_for_the_entities'),
+        'heroImage' => asset('website/images/training.jpeg'),
     ])
 
     <section class="bg-content-custom">
@@ -58,13 +59,13 @@
                         <div class="input-group rounded-4 shadow-sm">
                             {!! Form::text('phone', null, [
                                 'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl
-                                                    direction-input-ltr',
+                                                                                direction-input-ltr',
                                 'id' => 'phone',
                             ]) !!}
                             <label for="country_code">
                                 {!! Form::select('country_code', $countryCodes, null, [
                                     'class' => 'border border-end-0 py-3 form-select bg-primary text-white direction-span-rtl
-                                                            direction-span-ltr',
+                                                                                            direction-span-ltr',
                                 ]) !!}
                             </label>
                         </div>

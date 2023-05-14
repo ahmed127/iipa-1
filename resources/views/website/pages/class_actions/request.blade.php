@@ -314,8 +314,7 @@
                                 'attachment_letter',
                                 '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                                     __('lang.attachment_letter') .
-                                    ':' .
-                                    '<span class="text-danger">*</span>',
+                                    ':',
                                 ['class' => 'form-label px-1'],
                             ),
                         ) !!}

@@ -213,7 +213,7 @@ Route::group([
     // volunteer-training
     Route::get('volunteer-request',  $class_name_main . 'volunteer_request')->name('volunteer_request');
     Route::post('volunteer-request',  $class_name_main . 'volunteer_request_store')->name('volunteer_request_store');
-    Route::get('training-entities',  $class_name_main . 'training_entities')->name('training_entities');
+    Route::get('training-entities', $class_name_main . 'training_entities')->name('training_entities');
     Route::post('training-entities',  $class_name_main . 'training_entities_store')->name('training_entities_store');
     Route::get('training-individuals',  $class_name_main . 'training_individuals')->name('training_individuals');
     Route::post('training-individuals',  $class_name_main . 'training_individuals_store')->name('training_individuals_store');

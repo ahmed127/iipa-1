@@ -45,7 +45,7 @@ return [
     'class_actions_request_intro_text' => 'تهدف هذه الخدمة إلى تقديم المشورة والمساعدة القانونية للأعضاء والمستثمرين الأفراد فيما يتعلق بتقديم الشكاوى ورفع الدعاوى الجماعية وتعيين المحامين.',
     'create_new_account' => 'انشاء حساب جديد',
     'cancel' => 'الغاء',
-    'class_actions' => 'دعوي جماعية',
+    'class_actions' => 'دعوى جماعية',
     'cooperative_training_program_for_the_entities' => 'برنامج التدريب التعاوني للجهات',
     'cooperative_training_program_for_individuals'  => 'برنامج التدريب التعاوني للأفراد',
     'class_action_tutorial'                         => 'كيف تقدم دعوى جماعية',
