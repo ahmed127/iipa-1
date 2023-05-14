@@ -116,6 +116,11 @@ abstract class BaseRepository
                                 break;
                             case 'created_at':
                                 $query->where($key, 'LIKE', $value . '%');
+                            case 'from':
+                                $query->whereDate('created_at', '>=', $value);
+                                break;
+                            case 'to':
+                                $query->whereDate('created_at', '<=', $value);
                                 break;
                             default:
                                 $query->where($key, $value);

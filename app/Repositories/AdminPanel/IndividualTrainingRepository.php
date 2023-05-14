@@ -22,7 +22,9 @@ class IndividualTrainingRepository extends BaseRepository
         'phone',
         'email',
         'status',
-        'attachment_letter'
+        'attachment_letter',
+        'from',
+        'to'
     ];
 
     /**
