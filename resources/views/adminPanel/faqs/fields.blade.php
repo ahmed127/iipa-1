@@ -3,47 +3,63 @@
 
         <ul class="nav nav-light-success nav-pills" id="myTab" role="tablist">
             @php $i = 1; @endphp
-            @foreach ( config('langs') as $locale => $name)
+            @foreach (config('langs') as $locale => $name)
+                <li class="nav-item">
+                    <a class="nav-link {{ $i ? 'active' : '' }}" id="{{ $name }}-tab" data-toggle="pill"
+                        href="#{{ $name }}" role="tab" aria-controls="{{ $name }}"
+                        aria-selected="{{ $i ? 'true' : 'false' }}">{{ $name }}</a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link {{$i?'active':''}}" id="{{$name}}-tab" data-toggle="pill" href="#{{$name}}" role="tab" aria-controls="{{$name}}" aria-selected="{{ $i ? 'true' : 'false'}}">{{$name}}</a>
-            </li>
-
-            @php $i = 0; @endphp
+                @php $i = 0; @endphp
             @endforeach
         </ul>
 
         <div class="tab-content mt-5" id="myTabContent">
 
             @php $i = 1; @endphp
-            @foreach ( config('langs') as $locale => $name)
+            @foreach (config('langs') as $locale => $name)
+                <div class="tab-pane fade {{ $i ? 'show active' : '' }}" id="{{ $name }}" role="tabpanel"
+                    aria-labelledby="{{ $name }}-tab">
 
-            <div class="tab-pane fade {{$i?'show active':''}}" id="{{$name}}" role="tabpanel" aria-labelledby="{{$name}}-tab">
+                    <!-- question Field -->
+                    <div class="form-group col-sm-12">
+                        {!! Form::label('question', __('models/faqs.fields.question') . ':') !!}
+                        {!! Form::text($locale . '[question]', isset($faq) ? $faq->translateOrNew($locale)->question : '', [
+                            'class' => 'form-control',
+                            'placeholder' => $name . ' name',
+                        ]) !!}
+                    </div>
 
-                <!-- question Field -->
-                <div class="form-group col-sm-12">
-                    {!! Form::label('question', __('models/faqs.fields.question').':') !!}
-                    {!! Form::text($locale . '[question]', isset($faq)? $faq->translateOrNew($locale)->question : '' ,
-                    ['class' =>
-                    'form-control', 'placeholder' => $name . ' name']) !!}
+                    <!-- answer Field -->
+                    <div class="form-group type_faq type_faq_answer">
+                        {!! Form::label(
+                            'answer',
+                            __('models/faqs.fields.answer') . ' ' . __('crud.' . $name) . ' ' . '(' . __('lang.home') . ')' . ':',
+                        ) !!}
+                        {!! Form::textarea($locale . '[answer]', isset($faq) ? $faq->translate($locale)->answer ?? '' : '', [
+                            'class' => 'form-control',
+                        ]) !!}
+                    </div>
+
+                    <script type="text/javascript">
+                        CKEDITOR.replace("{{ $locale . '[answer]' }}", {
+                            filebrowserUploadUrl: "{{ route('adminPanel.ckeditor.upload', ['_token' => csrf_token()]) }}",
+                            filebrowserUploadMethod: 'form'
+                        });
+                    </script>
                 </div>
-                <!-- answer Field -->
-                <div class="form-group col-sm-12">
-                    {!! Form::label('answer', __('models/faqs.fields.answer').':') !!}
-                    {!! Form::textarea($locale . '[answer]', isset($faq)? $faq->translateOrNew($locale)->answer : '' ,
-                    ['class' =>
-                    'form-control', 'placeholder' => $name . ' name']) !!}
-                </div>
-            </div>
 
-            @php $i = 0; @endphp
+                @php $i = 0; @endphp
             @endforeach
 
 
 
             <div class="form-group col-sm-12">
                 {!! Form::label('faq_category_id', 'Faq Category') !!}
-                {!! Form::select('faq_category_id', $faqCategories, null, ['class' => 'form-control', 'placeholder' => 'Select Category']) !!}
+                {!! Form::select('faq_category_id', $faqCategories, null, [
+                    'class' => 'form-control',
+                    'placeholder' => 'Select Category',
+                ]) !!}
             </div>
 
 

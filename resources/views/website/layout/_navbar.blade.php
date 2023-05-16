@@ -1,7 +1,7 @@
 <nav class="navbar bg-light navbar-expand-xxl shadow-custom sticky-top p-lg-4 p-sm-0">
     <div class="container-fluid flex-sm-nowrap">
         <a class="navbar-brand m-0" href="{{ route('website.home') }}">
-            <img style="max-height: 300px; max-width: 300px"
+            <img style="max-height: 300px; max-width: 300px; width: 100%"
                 src="{{ $information_app->translate(App::getLocale())->logo_original_path }}" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"

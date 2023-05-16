@@ -2,3 +2,8 @@
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
+
+.accordion-button::after {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}

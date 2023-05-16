@@ -99,10 +99,10 @@
                                                         <i
                                                             class="fa-solid fa-eye shadow-custom text-black-50 p-1 rounded-5"></i>
                                                     </a>
-                                                    <a href="{{ route('website.my_request_delete', $follow->id) }}">
+                                                    {{-- <a href="{{ route('website.my_request_delete', $follow->id) }}">
                                                         <i
                                                             class="fa-solid fa-ban shadow-custom text-black-50 p-1 rounded-5"></i>
-                                                    </a>
+                                                    </a> --}}
                                                 </td>
                                             </tr>
                                         @empty
