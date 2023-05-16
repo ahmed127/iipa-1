@@ -4,6 +4,7 @@ return [
 
     // A a
 
+    'new_from'               => 'جديد من',
     'active'                 => 'نشط',
     'arabic'                 => 'عربي',
     'all'                    => 'الكل',

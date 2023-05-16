@@ -95,7 +95,8 @@
                                                 <td>{{ $follow->status_name ?? '' }}</td>
                                                 <td>{{ $follow->user->created_at ?? '' }}</td>
                                                 <td>
-                                                    <a href="{{ route('website.my_request', $follow->id) }}">
+                                                    <a href="{{ route('website.my_request', $follow->id) }}"
+                                                        class="px-3">
                                                         <i
                                                             class="fa-solid fa-eye shadow-custom text-black-50 p-1 rounded-5"></i>
                                                     </a>

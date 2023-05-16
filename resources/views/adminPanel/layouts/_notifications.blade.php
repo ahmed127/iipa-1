@@ -14,7 +14,7 @@
     $notifications = [];
     foreach ($newRequests as $newRequest) {
         $notifications[] = [
-            'message' => "$newRequest->department_name جديد من $newRequest->name",
+            'message' => $newRequest->department_name . ' ' . __('lang.new_from') . ' ' . $newRequest->name,
             'url' => route($showRoutes[$newRequest->forable_type], $newRequest->forable_id),
             'created_at' => $newRequest->created_at,
         ];
