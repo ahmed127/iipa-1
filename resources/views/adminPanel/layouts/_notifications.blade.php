@@ -1,12 +1,22 @@
 @php
-    $volunteers = \App\Models\Volunteer::where('status', 1)->get();
+    $newRequests = \App\Models\Follow::where('status', 1)
+        ->latest()
+        ->get();
 
+    $showRoutes = [
+        'App\Models\Consulting' => 'adminPanel.consultings.show',
+        'App\Models\Volunteer' => 'adminPanel.volunteers.show',
+        'App\Models\CooperativeTraining' => 'adminPanel.cooperativeTrainings.show',
+        'App\Models\IndividualTraining' => 'adminPanel.individualTrainings.show',
+        'App\Models\Contact' => 'adminPanel.contacts.show',
+        'App\Models\Recruitment' => 'adminPanel.recruitments.show',
+    ];
     $notifications = [];
-    foreach ($volunteers as $volunteer) {
+    foreach ($newRequests as $newRequest) {
         $notifications[] = [
-            'message' => 'طلب تطوع جديد من ' . $volunteer->full_name,
-            'url' => route('adminPanel.volunteers.show', $volunteer->id),
-            'created_at' => $volunteer->created_at,
+            'message' => "$newRequest->department_name جديد من $newRequest->name",
+            'url' => route($showRoutes[$newRequest->forable_type], $newRequest->forable_id),
+            'created_at' => $newRequest->created_at,
         ];
     }
 @endphp
@@ -17,7 +27,7 @@
     <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
         <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
             <span class="svg-icon svg-icon-xl svg-icon-primary">
-                <i class="fa fa-bell text-danger"></i>
+                <i class="fa fa-bell text-warning"></i> {{ count($notifications) }}
             </span>
             <span class="pulse-ring"></span>
         </div>
@@ -37,7 +47,7 @@
                         <a href="{{ $notification['url'] }}" class="navi-item">
                             <div class="navi-link">
                                 <div class="navi-icon mr-2">
-                                    <i class="fa fa-bell text-danger"></i>
+                                    <i class="fa fa-bell text-warning"></i>
                                 </div>
                                 <div class="navi-text">
                                     <div class="font-weight-bold">{{ $notification['message'] }}</div>

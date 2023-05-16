@@ -11,9 +11,9 @@ trait FollowTrait
 {
     public function follow_store($model)
     {
-        if (!Auth::user()) {
-            return 1;
-        }
+        // if (!Auth::user()) {
+        //     return 1;
+        // }
         $departments = [
             'App\Models\Consulting'             => 1,
             // 'App\Models\Consulting'          => 2,
@@ -64,7 +64,7 @@ trait FollowTrait
                 break;
 
             default:
-                # code...
+                $name = $model->full_name;
                 break;
         }
         return $name;

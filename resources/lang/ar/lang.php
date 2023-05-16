@@ -187,7 +187,7 @@ return [
 
     'rejected'                     => 'تم الرفض',
     'request_lawsuit'              => 'طلب دعوى',
-    'request_your_advisors'        => 'اطلب مستشارك الخاص',
+    'request_your_advisors'        => 'طلب مستشارك الخاص',
     'request_advisors'             => 'طلب استفسار عن دعوى جماعية',
     'request_class_action'         => 'طلب دعوى جماعية',
     'request_volunteer'            => 'طلب تطوع',

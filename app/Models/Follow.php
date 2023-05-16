@@ -55,6 +55,7 @@ class Follow extends Model
             6 => __('lang.finished'),
         ];
     }
+
     protected $appends = ['status_name', 'department_name'];
 
     public function getStatusNameAttribute()
