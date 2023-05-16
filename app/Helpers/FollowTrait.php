@@ -4,6 +4,7 @@ namespace App\Helpers;
 
 use App\Models\Follow;
 use App\Mail\SendOtpMail;
+use App\Mail\NewRequestNotification;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
@@ -29,7 +30,7 @@ trait FollowTrait
         if ($department == 1) {
             $department = $model->type;
         }
-        Follow::create([
+        $request = Follow::create([
             'user_id'       => auth()->id(),
             'name'          => $this->getName($model, $departments[$class_name]),
             'forable_type'  => $class_name,
@@ -37,6 +38,9 @@ trait FollowTrait
             'department'    => $department, // 1 => advisors, 2 => class_action, 3 => volunteer, 4 => training_entities, 5 => training_individuals, 6 => content_us
             'status'        => 1,
         ]);
+
+        Mail::to($model->email)->send(new NewRequestNotification($request));
+
         return true;
     }
 
