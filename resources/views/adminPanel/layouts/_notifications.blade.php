@@ -27,7 +27,7 @@
     <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
         <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
             <span class="svg-icon svg-icon-xl svg-icon-primary">
-                <i class="fa fa-bell text-warning"></i> {{ count($notifications) }}
+                <i class="fa fa-bell text-warning"></i> <span class="text-danger">{{ count($notifications) }}</span>
             </span>
             <span class="pulse-ring"></span>
         </div>

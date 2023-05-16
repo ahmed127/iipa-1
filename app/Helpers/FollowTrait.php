@@ -7,6 +7,7 @@ use App\Mail\SendOtpMail;
 use App\Mail\NewRequestNotification;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\RequestStatusNotification;
 
 trait FollowTrait
 {
@@ -81,12 +82,12 @@ trait FollowTrait
         $follow = Follow::where([
             'forable_type'  => $class_name,
             'forable_id'    => $model->id
-        ]);
+        ])->first();
+
         if ($follow) {
             $follow->update(['status' => $model->status]);
 
-            $message = '';
-            Mail::to($volunteer->email)->send(new RequestStatusNotification($message));
+            Mail::to($model->email)->send(new RequestStatusNotification($follow));
         }
         return true;
     }

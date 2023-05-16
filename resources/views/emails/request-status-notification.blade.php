@@ -1,8 +1,8 @@
 @component('mail::message')
-    # @lang('lang.request_mail_thanks')
+    # أهلاً وسهلاً {{ $body->name }} ،
 
-    {{ $body }}
+    تم تغير حالة {{ $body->department_name }} إلي {{ $body->status_name }}
 
-    Thanks,
+    ونتطلع لخدمتكم دائماً،،،
     {{ config('app.name') }}
 @endcomponent
