@@ -131,9 +131,6 @@ class VolunteerController extends AppBaseController
         $this->follow_update($volunteer);
         Flash::success(__('messages.updated', ['model' => __('models/volunteers.singular')]));
 
-        // $message = '';
-        // Mail::to($volunteer->email)->send(new RequestStatusNotification($message));
-
         return redirect(route('adminPanel.volunteers.index'));
     }
 

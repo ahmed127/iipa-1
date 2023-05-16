@@ -30,16 +30,17 @@ trait FollowTrait
         if ($department == 1) {
             $department = $model->type;
         }
-        $request = Follow::create([
+        $name = $this->getName($model, $departments[$class_name]);
+        Follow::create([
             'user_id'       => auth()->id(),
-            'name'          => $this->getName($model, $departments[$class_name]),
+            'name'          => $name,
             'forable_type'  => $class_name,
             'forable_id'    => $model->id,
             'department'    => $department, // 1 => advisors, 2 => class_action, 3 => volunteer, 4 => training_entities, 5 => training_individuals, 6 => content_us
             'status'        => 1,
         ]);
 
-        Mail::to($model->email)->send(new NewRequestNotification($request));
+        Mail::to($model->email)->send(new NewRequestNotification($name));
 
         return true;
     }
@@ -83,6 +84,9 @@ trait FollowTrait
         ]);
         if ($follow) {
             $follow->update(['status' => $model->status]);
+
+            $message = '';
+            Mail::to($volunteer->email)->send(new RequestStatusNotification($message));
         }
         return true;
     }
