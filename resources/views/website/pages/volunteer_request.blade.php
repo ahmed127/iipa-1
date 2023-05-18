@@ -41,9 +41,10 @@
                             <span class="text-danger">*</span>
                         </label>
                         <div class="input-group">
-                            {!! Form::text('full_name', null, [
+                            {!! Form::text('full_name', auth()->check() ? auth()->user()->full_name : null, [
                                 'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
                                 'id' => 'full_name',
+                                'readonly' => auth()->check(),
                             ]) !!}
                         </div>
                     </div>
@@ -67,10 +68,11 @@
                             <span class="text-danger">*</span>
                         </label>
                         <div class="input-group">
-                            {!! Form::text('email', null, [
+                            {!! Form::text('email', auth()->check() ? auth()->user()->email : null, [
                                 'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
                                 'id' => 'email',
                                 'placeholder' => 'name@example.com',
+                                'readonly' => auth()->check(),
                             ]) !!}
                         </div>
                     </div>
@@ -81,15 +83,15 @@
                             <span class="text-danger">*</span>
                         </label>
                         <div class="input-group rounded-4 shadow-sm">
-                            {!! Form::text('phone', null, [
-                                'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl
-                                                    direction-input-ltr',
+                            {!! Form::text('phone', auth()->check() ? auth()->user()->phone : null, [
+                                'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr',
                                 'id' => 'phone',
+                                'readonly' => auth()->check(),
                             ]) !!}
                             <label for="country_code">
-                                {!! Form::select('country_code', $countryCodes, null, [
-                                    'class' => 'border border-end-0 py-3 form-select bg-primary text-white direction-span-rtl
-                                                            direction-span-ltr',
+                                {!! Form::select('country_code', $countryCodes, auth()->check() ? auth()->user()->country_code : null, [
+                                    'class' => 'border border-end-0 py-3 form-select bg-primary text-white direction-span-rtl direction-span-ltr',
+                                    'readonly' => auth()->check(),
                                 ]) !!}
                             </label>
                         </div>
@@ -103,7 +105,7 @@
                         <div class="input-group">
                             {!! Form::file('attachment_cv', [
                                 'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl
-                                                    direction-input-ltr',
+                                                                                direction-input-ltr',
                                 'id' => 'attachment_cv',
                             ]) !!}
                         </div>

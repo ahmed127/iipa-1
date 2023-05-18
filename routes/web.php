@@ -220,13 +220,13 @@ Route::group([
     // volunteer-training
 
     // your-advisors
-    Route::get('your-advisors', $class_name_main . 'advisors')->name('advisors');
-    Route::post('your-advisors-store', $class_name_main . 'advisors_store')->name('advisors_store');
+    Route::get('your-advisors', $class_name_main . 'advisors')->name('advisors')->middleware('auth');
+    Route::post('your-advisors-store', $class_name_main . 'advisors_store')->name('advisors_store')->middleware('auth');
     // your-advisors
 
     // class-actions
-    Route::get('class-actions-request', $class_name_main . 'class_actions_request')->name('class_actions_request');
-    Route::post('class-actions-request-store', $class_name_main . 'class_actions_request_store')->name('class_actions_request_store');
+    Route::get('class-actions-request', $class_name_main . 'class_actions_request')->name('class_actions_request')->middleware('auth');
+    Route::post('class-actions-request-store', $class_name_main . 'class_actions_request_store')->name('class_actions_request_store')->middleware('auth');
     Route::get('class-actions-tutorial', $class_name_main . 'class_actions_tutorial')->name('class_actions_tutorial');
     // class-actions
 

@@ -38,10 +38,11 @@
                             ),
                         ) !!}
                         <div class="input-group">
-                            {!! Form::text('full_name', isset($recruitment) ? $recruitment->full_name ?? '' : '', [
+                            {!! Form::text('full_name', auth()->check() ? auth()->user()->full_name : null, [
                                 'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
                                 'minlength' => 3,
                                 'maxlength' => 191,
+                                'readonly' => auth()->check(),
                             ]) !!}
                         </div>
                     </div>
@@ -59,9 +60,10 @@
                             ),
                         ) !!}
                         <div class="input-group">
-                            {!! Form::text('email', isset($recruitment) ? $recruitment->email ?? '' : '', [
+                            {!! Form::text('email', auth()->check() ? auth()->user()->email : null, [
                                 'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
                                 'placeholder' => 'name@example.com',
+                                'readonly' => auth()->check(),
                             ]) !!}
                         </div>
                     </div>
@@ -79,15 +81,15 @@
                             ),
                         ) !!}
                         <div class="input-group rounded-4 shadow-sm">
-                            {!! Form::text('phone', null, [
-                                'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl
-                                                    direction-input-ltr',
+                            {!! Form::text('phone', auth()->check() ? auth()->user()->phone : null, [
+                                'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr',
+                                'readonly' => auth()->check(),
                             ]) !!}
                             <label for="country_code">
-                                {!! Form::select('country_code', $countryCodes, null, [
-                                    'class' => 'border border-end-0 py-3 form-select bg-primary text-white direction-span-rtl
-                                                            direction-span-ltr',
+                                {!! Form::select('country_code', $countryCodes, auth()->check() ? auth()->user()->country_code : null, [
+                                    'class' => 'border border-end-0 py-3 form-select bg-primary text-white direction-span-rtl direction-span-ltr',
                                     'placeholder' => '',
+                                    'readonly' => auth()->check(),
                                 ]) !!}
                             </label>
                         </div>
