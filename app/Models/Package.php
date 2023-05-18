@@ -19,7 +19,6 @@ class Package extends Model
     protected $dates = ['deleted_at'];
 
 
-
     public $fillable = [
         'fees',
         'office_fees'
@@ -34,7 +33,7 @@ class Package extends Model
         'id' => 'integer',
         'name' => 'string',
         'description' => 'string',
-        'fees' => 'string',
+        'fees' => 'array',
         'office_fees' => 'string'
     ];
 
@@ -48,8 +47,17 @@ class Package extends Model
             $rules[$language . '.note'] = 'nullable|string|min:3|max:191';
             $rules[$language . '.description'] = 'required|string';
         }
-        $rules['fees'] = 'required';
+        $rules['fees'] = 'required|array';
+        $rules["fees.0.name.en"] = "required|string";
+        $rules["fees.0.name.ar"] = "required|string";
+        $rules["fees.0.amount"] = "required|integer";
         $rules['office_fees'] = 'nullable';
+
+        for ($i = 1; $i < 3; $i++) {
+            $rules["fees.$i.name.en"] = "nullable|string";
+            $rules["fees.$i.name.ar"] = "required_with:fees.$i.name.en";
+            $rules["fees.$i.amount"] = "required_with:fees.$i.name.en";
+        }
 
         return $rules;
     }

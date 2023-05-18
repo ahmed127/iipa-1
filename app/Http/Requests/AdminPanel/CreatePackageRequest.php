@@ -24,6 +24,7 @@ class CreatePackageRequest extends FormRequest
      */
     public function rules()
     {
+        // dd($this->all());
         return Package::rules();
     }
 }

@@ -54,8 +54,8 @@
                 </label>
             </th>
             <th>@lang('models/packages.fields.name')</th>
-            <th>@lang('models/packages.fields.fees')</th>
-            <th>@lang('models/packages.fields.office_fees')</th>
+            <th>@lang('models/packages.fields.fees_name')</th>
+            <th>@lang('models/packages.fields.fees_amount')</th>
             <th>@lang('crud.action')</th>
         </tr>
     </thead>
@@ -71,8 +71,8 @@
                     </label>
                 </td>
                 <td>{{ $package->name }}</td>
-                <td>{{ $package->fees }}</td>
-                <td>{{ $package->office_fees }}</td>
+                <td>{{ $package->fees[0]['name'][app()->getLocale()] }}</td>
+                <td>{{ $package->fees[0]['amount'] }}</td>
                 <td>
                     {{-- {!! Form::open(['route' => ['adminPanel.packages.destroy', $package->id], 'method' => 'delete']) !!} --}}
                     <div class='btn btn-sm-group'>

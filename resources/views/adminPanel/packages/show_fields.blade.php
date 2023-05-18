@@ -5,18 +5,40 @@
 </div>
 
 
-
-<!-- Fees Field -->
+<!-- Name Field -->
 <div class="form-group show">
-    {!! Form::label('fees', __('models/packages.fields.fees') . ':') !!}
-    <b>{{ $package->fees }}</b>
+    {!! Form::label('name', __('models/packages.fields.name') . ':') !!}
+    <b>{{ $package->name }}</b>
 </div>
 
 
-<!-- Office Fees Field -->
+@for ($i = 0; $i < 3; $i++)
+    <!-- Fees Name Field -->
+    <div class="form-group show">
+        {!! Form::label('fees', __('models/packages.fields.fees_name') . ' ' . $i + 1 . ':') !!}
+        <b>{{ $package->fees[$i]['name'][app()->getLocale()] }}</b>
+    </div>
+
+
+    <!-- Fees Amount Field -->
+    <div class="form-group show">
+        {!! Form::label('fees_amount', __('models/packages.fields.fees_amount') . ' ' . $i + 1 . ':') !!}
+        <b>{{ $package->fees[$i]['amount'] }}</b>
+    </div>
+@endfor
+
+
+<!-- Note Field -->
 <div class="form-group show">
-    {!! Form::label('office_fees', __('models/packages.fields.office_fees') . ':') !!}
-    <b>{{ $package->office_fees }}</b>
+    {!! Form::label('note', __('models/packages.fields.note') . ':') !!}
+    <b>{{ $package->note }}</b>
+</div>
+
+
+<!-- Description Field -->
+<div class="form-group show">
+    {!! Form::label('description', __('models/packages.fields.description') . ':') !!}
+    <b>{!! $package->description !!}</b>
 </div>
 
 

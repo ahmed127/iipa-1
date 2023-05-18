@@ -17,7 +17,7 @@ class CreatePackagesTable extends Migration
         Schema::create('packages', function (Blueprint $table) {
             $table->id();
 
-            $table->string('fees');
+            $table->text('fees');
             $table->string('office_fees')->nullable();
 
             $table->timestamps();
