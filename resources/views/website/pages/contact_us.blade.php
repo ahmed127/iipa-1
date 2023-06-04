@@ -6,6 +6,7 @@
     @include('website.layout._header_page', [
         'title' => __('lang.contact_us'),
         'pageName' => __('lang.contact_us'),
+        'heroImage' => asset('website/images/contact-us.jpg'),
     ])
     <div class="">
         <div class="container-fluid p-0">

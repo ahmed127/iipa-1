@@ -6,6 +6,7 @@
     @include('website.layout._header_page', [
         'title' => __('lang.volunteer_request'),
         'pageName' => __('lang.volunteer_request'),
+        'heroImage' => asset('website/images/volunteer_request.jpg'),
     ])
 
     <section class="bg-content-custom">
@@ -105,7 +106,7 @@
                         <div class="input-group">
                             {!! Form::file('attachment_cv', [
                                 'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl
-                                                                                direction-input-ltr',
+                                                                                                            direction-input-ltr',
                                 'id' => 'attachment_cv',
                             ]) !!}
                         </div>

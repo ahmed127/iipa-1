@@ -7,6 +7,7 @@
     @include('website.layout._header_page', [
         'title' => __('lang.general_assembly_members'),
         'pageName' => __('lang.general_assembly_members'),
+        'heroImage' => asset('website/images/general_assembly.jpg'),
     ])
 
     <section class="bg-content-custom">

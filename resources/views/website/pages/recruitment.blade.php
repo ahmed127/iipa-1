@@ -7,6 +7,7 @@
     @include('website.layout._header_page', [
         'title' => __('lang.recruitment'),
         'pageName' => __('lang.recruitment'),
+        'heroImage' => asset('website/images/recruitment.jpg'),
     ])
 
     <section class="bg-content-custom p-custom">

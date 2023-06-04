@@ -6,6 +6,7 @@
     @include('website.layout._header_page', [
         'title' => __('lang.help'),
         'pageName' => __('lang.help'),
+        'heroImage' => asset('website/images/help.jpg'),
     ])
     <section class="bg-content-custom p-custom">
         <div class="container-fluid p-0">

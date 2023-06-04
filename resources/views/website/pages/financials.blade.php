@@ -6,6 +6,7 @@
     @include('website.layout._header_page', [
         'title' => __('lang.financials'),
         'pageName' => __('lang.financials'),
+        'heroImage' => asset('website/images/financials.jpg'),
     ])
 
     <section class="bg-content-custom p-custom">

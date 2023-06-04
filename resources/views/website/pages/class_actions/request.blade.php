@@ -6,6 +6,7 @@
     @include('website.layout._header_page', [
         'title' => __('lang.class_actions'),
         'pageName' => __('lang.class_actions'),
+        'heroImage' => asset('website/images/class_actions.jpg'),
     ])
     <section class="bg-content-custom">
         <div class="container-fluid p-0">

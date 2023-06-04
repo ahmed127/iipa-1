@@ -6,6 +6,7 @@
     @include('website.layout._header_page', [
         'title' => __('lang.media_center'),
         'pageName' => __('lang.media_center'),
+        'heroImage' => asset('website/images/media_center.jpg'),
     ])
     <section class="bg-content-custom">
         <div class="row gx-0 ">

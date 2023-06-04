@@ -7,6 +7,7 @@
     @include('website.layout._header_page', [
         'title' => __('lang.board_of_directors'),
         'pageName' => __('lang.board_of_directors'),
+        'heroImage' => asset('website/images/directors.jpg'),
     ])
 
     <section class="bg-content-custom">
