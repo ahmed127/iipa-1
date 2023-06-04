@@ -11,6 +11,7 @@ return array(
         'nickname' => 'Nickname',
         'photo' => 'Photo',
         'job_title' => 'Job title',
+        'period' => 'Period',
 
         'created_at' => 'Created At',
         'updated_at' => 'Updated At',

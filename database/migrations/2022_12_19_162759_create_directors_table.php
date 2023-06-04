@@ -17,10 +17,11 @@ class CreateDirectorsTable extends Migration
         Schema::create('directors', function (Blueprint $table) {
             $table->id();
             $table->string('type')->default('directors')->comment('directors,generals');
-            $table->string('photo');
+            $table->string('photo')->nullable();
             $table->string('name');
             $table->string('nickname');
-            $table->string('job_title');
+            $table->string('job_title')->nullable();
+            $table->string('period')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

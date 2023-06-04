@@ -33,6 +33,13 @@
 </div>
 
 
+<!-- Period Field -->
+<div class="form-group show">
+    {!! Form::label('period', __('models/directors.fields.period') . ':') !!}
+    <b>{{ $director->period }}</b>
+</div>
+
+
 <!-- Created At Field -->
 <div class="form-group show">
     {!! Form::label('created_at', __('models/directors.fields.created_at') . ':') !!}

@@ -25,7 +25,8 @@ class Director extends Model
         'photo',
         'name',
         'nickname',
-        'job_title'
+        'job_title',
+        'period'
     ];
 
     /**
@@ -38,7 +39,8 @@ class Director extends Model
         'photo' => 'string',
         'name' => 'string',
         'nickname' => 'string',
-        'job_title' => 'string'
+        'job_title' => 'string',
+        'period' => 'string',
     ];
 
     /**
@@ -50,7 +52,8 @@ class Director extends Model
         'photo' => 'nullable|mimes:jpeg,jpg,png|max:10000',
         'name' => 'required|string|min:3|max:191',
         'nickname' => 'required',
-        'job_title' => 'nullable|string|min:3|max:191'
+        'job_title' => 'nullable|string|min:3|max:191',
+        'period' => 'nullable|string|min:3|max:191'
     ];
 
 

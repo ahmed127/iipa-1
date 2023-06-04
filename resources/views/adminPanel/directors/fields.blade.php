@@ -55,6 +55,16 @@
     ]) !!}
 </div>
 
+<!-- Period Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('period', __('models/directors.fields.period') . ':') !!}
+    {!! Form::text('period', isset($director) ? $director->period ?? '' : '', [
+        'class' => 'form-control',
+        'minlength' => 3,
+        'maxlength' => 191,
+    ]) !!}
+</div>
+
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit(__('crud.save'), ['class' => 'btn btn-primary']) !!}
