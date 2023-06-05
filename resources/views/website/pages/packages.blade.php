@@ -12,7 +12,7 @@
         <div class="row gx-0 p-lg-5 p-3">
 
             @forelse ($packages as $package)
-                <div class="col-lg-3 col-md-6 col-sm-12 p-3">
+                <div class="col-lg-4 col-md-6 col-sm-12 p-3">
                     <div class="card h-100">
                         <div class="card-header text-center bg-primary text-white p-3">
                             <p class="m-0 fw-bold fs-5">
@@ -22,7 +22,7 @@
                                 {{ $package->note }}
                             </span>
                         </div>
-                        <div class="card-header text-center bg-info text-white p-3">
+                        <div class="card-header text-center bg-info text-white p-3" style="height:104px">
                             <p class="m-0 fw-bold">
                                 @for ($i = 0; $i < 3; $i++)
                                     @if ($package->fees[$i]['amount'])
