@@ -96,6 +96,8 @@ Route::group(
             Route::resource('countries.cities', CityController::class)->shallow();
             Route::resource('cities.regions', RegionController::class)->shallow();
 
+            Route::resource('statistics', StatisticController::class);
+
             Route::controller(MenuController::class)->as('menus.')->prefix('menus')->group(function () {
 
                 Route::get('/', 'menu_index')->name('menu_index');
