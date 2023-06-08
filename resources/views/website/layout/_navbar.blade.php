@@ -199,6 +199,12 @@
                                             @lang('lang.our_partners')
                                         </a>
                                     </li>
+                                    <li>
+                                        <a class="dropdown-item  {{ Request::is('*statistics*') ? 'active' : '' }}"
+                                            href="{{ route('website.statistics') }}">
+                                            @lang('lang.statistics')
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                             {{-- End: How We Are --}}

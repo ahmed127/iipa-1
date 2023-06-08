@@ -99,25 +99,10 @@
         style="background-image: url({{ asset('website') }}/images/section-1.png);height: 81vh;">
         <div class="row gx-0 h-100 align-items-center">
             <div class="col-12 text-white fs-5">
-                <h2 class="firstWordInfo d-inline">@lang('lang.our_goals')</h2>
+                <h2 class="firstWordInfo d-inline">{{ $our_goals->title }}</h2>
 
-                {{-- <p class="fw-bold text-break col-lg-10 col-sm-12 fs-5 p-2">
-                أولا:
-                <span class="fw-light">
-                    وفق استراتيجية الأعمال لجمعية حماية المستثمرين الأفراد تم التركيز على هدفين استراتيجيين، تُبنى
-                    على أساسه كل الأهداف الفرعية والتشغيلية
-                </span>
-            </p>
-            <p class="fw-bold text-break col-lg-10 col-sm-12 fs-5 p-2">
-                ثانياً:
-                <span class="fw-light">
-                    وفق استراتيجية الأعمال لجمعية حماية المستثمرين الأفراد تم التركيز على هدفين استراتيجيين، تُبنى
-                    على أساسه كل الأهداف الفرعية والتشغيلية
-                </span>
-            </p> --}}
-
-                <div class="content my-4">
-                    {!! Str::limit($our_goals, 700, '...') !!}
+                <div class="content my-4" style="color: #fff !important">
+                    {!! Str::limit($our_goals->description, 700, '...') !!}
                 </div>
 
 
@@ -221,9 +206,9 @@
         style="background-image: url({{ asset('website') }}/images/section-2.png)">
         <div class="row gx-0 h-100 align-items-center w-75">
             <div class="col-12 text-whit text-white">
-                <h2 class="firstWordInfo d-inline">@lang('lang.class_action_tutorial')</h2>
-                <div class="content my-4">
-                    {!! Str::limit($class_action_tutorial, 539, ' ...') !!}
+                <h2 class="firstWordInfo d-inline">{{ $class_action_tutorial->title }}</h2>
+                <div class="content my-4" style="color: #fff !important;">
+                    {!! Str::limit($class_action_tutorial->description, 539, ' ...') !!}
                 </div>
 
                 <div class="row gx-0 w-100 pt-md-5 px-2">
