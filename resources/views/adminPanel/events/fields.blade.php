@@ -52,6 +52,24 @@
         {!! Form::datetimeLocal('date', isset($event) ? $event->date ?? '' : '', ['class' => 'form-control']) !!}
     </div>
 
+    <!-- Status Field -->
+    <div class="form-group col-sm-12">
+        {!! Form::label('open_calendar', __('models/events.fields.open_calendar') . ':') !!}
+        <div class="radio-inline">
+            <label class="radio">
+                {!! Form::radio('open_calendar', '1', 'Active') !!}
+                <span></span>
+                @lang('lang.yes')
+            </label>
+
+            <label class="radio">
+                {!! Form::radio('open_calendar', ' 0', null) !!}
+                <span></span>
+                @lang('lang.no')
+            </label>
+        </div>
+    </div>
+
     <!-- Submit Field -->
     <div class="form-group col-sm-12">
         {!! Form::submit(__('crud.save'), ['class' => 'btn btn-primary']) !!}

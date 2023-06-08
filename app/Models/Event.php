@@ -34,7 +34,8 @@ class Event extends Model
         'title',
         'brief',
         'description',
-        'date'
+        'date',
+        'open_calendar'
     ];
 
     /**
@@ -63,6 +64,7 @@ class Event extends Model
         }
 
         $rules['date'] = 'required';
+        $rules['open_calendar'] = 'required';
 
         return $rules;
     }
@@ -77,9 +79,10 @@ class Event extends Model
 
         $data = (object)[
             'title' => $this->title,
-            'url' => "https://calendar.google.com/calendar/u/0/r/eventedit?dates=$from/$to&text=$this->title",
+            'link' => "https://calendar.google.com/calendar/u/0/r/eventedit?dates=$from/$to&text=$this->title",
             'start' => $this->date,
             'description' => $this->description,
+            'open_calendar' => $this->open_calendar,
             'className' => 'fc-event-danger fc-event-solid-warning'
         ];
 
