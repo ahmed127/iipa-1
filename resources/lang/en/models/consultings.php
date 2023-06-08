@@ -16,6 +16,7 @@ return array(
         'country_id' => 'Country',
         'job_id' => 'Job',
         'consultant_type_id' => 'Consultant Type',
+        'advice_type' => 'Advice Type',
         'type' => 'Type',
         'date_of_birth' => 'Date Of Birth',
         'fav_lang' => 'Fav Lang',

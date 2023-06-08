@@ -16,6 +16,7 @@ return array(
         'country_id' => 'الدولة',
         'job_id' => 'الوظيفة',
         'consultant_type_id' => 'نوع الاستشارة',
+        'advice_type' => 'نوع الاستشارة',
         'type' => 'النوع',
         'date_of_birth' => 'تاريخ الميلاد',
         'fav_lang' => 'اللغة المفضلة',

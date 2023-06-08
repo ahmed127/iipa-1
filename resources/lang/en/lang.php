@@ -281,6 +281,8 @@ return [
     'yes'                => 'Yes',
     'your_advisors'      => 'Your Legal Advisor',
     'your_legal_advisor' => 'Your Legal Advisor',
+    'outside_advice'     => 'Outside Advice',
+    'advice_type'        => 'Advice Type',
     ''                   => '',
 
     // Z z

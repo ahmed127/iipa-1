@@ -19,7 +19,8 @@ class CreateConsultingsTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreignId('country_id')->constrained();
             $table->foreignId('job_id')->constrained();
-            $table->foreignId('consultant_type_id')->constrained();
+            $table->foreignId('consultant_type_id')->nullable()->constrained();
+            $table->string('advice_type')->nullable();
             $table->string('name');
             $table->string('email');
             $table->string('country_code');

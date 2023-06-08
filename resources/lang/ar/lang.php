@@ -276,6 +276,8 @@ return [
     'yes'                => 'Yes',
     'your_advisors'      => 'مستشارك القانوني',
     'your_legal_advisor' => 'مستشارك القانوني',
+    'outside_advice'     => 'مشورة خارجة عن الإختصاص',
+    'advice_type'        => 'نوع الاستشارة',
     ''                   => '',
 
     // Z z

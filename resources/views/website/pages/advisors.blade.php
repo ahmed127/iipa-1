@@ -172,6 +172,26 @@
                             {!! Form::select('consultant_type_id', $consultantTypes, null, [
                                 'class' => 'border py-3 form-select rounded-4',
                                 'placeholder' => __('lang.select') . ' ' . __('lang.consultant_type'),
+                                'id' => 'consultant_type_id',
+                            ]) !!}
+                        </div>
+                    </div>
+
+                    <!-- advice_type Field -->
+                    <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6" style="display: none;" id="advice_type">
+                        {!! Html::decode(
+                            Form::label(
+                                'advice_type',
+                                '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
+                                    __('lang.advice_type') .
+                                    ':' .
+                                    '<span class="text-danger">*</span>',
+                                ['class' => 'form-label px-1'],
+                            ),
+                        ) !!}
+                        <div class="input-group">
+                            {!! Form::text('advice_type', null, [
+                                'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
                             ]) !!}
                         </div>
                     </div>
@@ -305,4 +325,15 @@
             </div>
         </div>
     </section>
+    <script>
+        var selectElement = document.getElementById("consultant_type_id");
+        var divElement = document.getElementById("advice_type");
+        selectElement.addEventListener("change", function() {
+            if (selectElement.value == 0) {
+                divElement.style.display = "block";
+            } else {
+                divElement.style.display = "none";
+            }
+        });
+    </script>
 @endsection

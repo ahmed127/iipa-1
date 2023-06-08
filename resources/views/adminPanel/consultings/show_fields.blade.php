@@ -78,7 +78,7 @@
 <!-- Consultant Type Id Field -->
 <div class="form-group show">
     {!! Form::label('consultant_type_id', __('models/consultings.fields.consultant_type_id') . ':') !!}
-    <b>{{ $consulting->consultant_type->name ?? '' }}</b>
+    <b>{{ $consulting->consultant_type->name ?? __('lang.outside_advice') }}</b>
 </div>
 
 
@@ -86,6 +86,13 @@
 <div class="form-group show">
     {!! Form::label('type', __('models/consultings.fields.type') . ':') !!}
     <b>{{ $consulting->type }}</b>
+</div>
+
+
+<!-- Advice Type Field -->
+<div class="form-group show">
+    {!! Form::label('advice_type', __('models/consultings.fields.advice_type') . ':') !!}
+    <b>{{ $consulting->advice_type }}</b>
 </div>
 
 
