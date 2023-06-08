@@ -228,6 +228,8 @@ return [
     'sort_asc'         => 'Display By Oldest',
     'save'             => 'Save',
     'stock_prices_now' => 'Stock Prices Now',
+    'statistics'        => 'Statistics',
+    'statistic'        => 'Publish accurate statistics on the beneficiaries of the association’s services during 2022:',
     ''                 => '',
 
 

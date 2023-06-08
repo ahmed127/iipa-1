@@ -15,6 +15,7 @@ use App\Models\Package;
 use App\Models\Partner;
 use App\Models\Director;
 use App\Models\Outreach;
+use App\Models\Statistic;
 use App\Models\Volunteer;
 use App\Mail\RequestReply;
 use App\Models\Consulting;
@@ -379,5 +380,13 @@ class MainController extends Controller
         return view('website.pages.packages', compact('packages'));
     }
     // End Packages
+
+    // Statistics
+    public function statistics()
+    {
+        $statistics = Statistic::all();
+        return view('website.pages.statistics', compact('statistics'));
+    }
+    // End Statistics
 
 }

@@ -258,4 +258,8 @@ Route::group([
     // Packages
     Route::get('packages', $class_name_main . 'packages')->name('packages');
     // End Packages
+
+    // Statistics
+    Route::get('statistics', $class_name_main . 'statistics')->name('statistics');
+    // End Statistics
 });

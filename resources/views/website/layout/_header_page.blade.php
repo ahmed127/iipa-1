@@ -4,7 +4,11 @@
             @isset($heroImage)
             style="background:url('{{ $heroImage }}');background-repeat: no-repeat;background-size: cover;" @endisset>
             <div class="col-12 text-white p-5 mt-5">
-                <h1 class="py-2 firstWordInfo">{{ $title }}</h1>
+                @if (!isset($size))
+                    <h1 class="py-2 firstWordInfo">{{ $title }}</h1>
+                @else
+                    <h4 class="py-2 firstWordInfo">{{ $title }}</h4>
+                @endif
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <i class="fa-solid fa-link px-2 py-1"></i>
