@@ -51,6 +51,7 @@ return [
     'cooperative_training_program_for_the_entities' => 'Cooperative training program for the entities',
     'cooperative_training_program_for_individuals'  => 'Cooperative training program for individuals',
     'class_action_tutorial'                         => 'Class Action Tutorial',
+    'company_members' => 'Companies Membership',
     ''                                              => '',
 
     // D d

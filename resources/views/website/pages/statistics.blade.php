@@ -15,7 +15,7 @@
             @forelse ($statistics as $statistic)
                 <div class="col-lg-4 col-md-6 col-sm-12 p-3 text-center">
                     <div>
-                        <span style="font-size:40px; color: {{ $statistic->color ?? '#0245FB' }}">
+                        <span style="font-size:40px; font-weight: bold; color: {{ $statistic->color ?? '#0245FB' }}">
                             {{ $statistic->symbol }} <span class="statistic" value="{{ $statistic->value }}">0</span>
                         </span>
                         <span style="font-size:25px;">{{ $statistic->title }}</span>

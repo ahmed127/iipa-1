@@ -136,7 +136,7 @@
                         eventClick: function(info) {
                             Swal.fire({
                                 title: info.event.title,
-                                text: info.event.extendedProps.description,
+                                html: info.event.extendedProps.description,
                                 icon: 'info',
                                 showConfirmButton: info.event.extendedProps.open_calendar == 1,
                                 showCancelButton: true,

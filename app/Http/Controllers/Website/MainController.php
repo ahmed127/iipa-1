@@ -211,7 +211,8 @@ class MainController extends Controller
         $data['countryCodes'] = Country::get()->pluck('code', 'code');
         $data['countries'] = Country::get()->pluck('name', 'id');
         $data['jobs'] = Job::get()->pluck('name', 'id');
-        $data['consultantTypes'] = ConsultantType::get()->pluck('name', 'id');
+        $consultantTypes = ConsultantType::get()->pluck('name', 'id')->toArray();
+        $data['consultantTypes'] = $consultantTypes + [0 => __('lang.outside_advice')];
         $data['types'] = Consulting::types();
         $data['favLangs'] = Consulting::favLangs();
         $data['genders'] = Consulting::genders();
@@ -225,6 +226,9 @@ class MainController extends Controller
         $input['type'] = array_search(__('lang.request_lawsuit'), Consulting::types());
         if (Auth::user()) {
             $input['user_id'] = auth()->id();
+        }
+        if ($input['consultant_type_id'] == 0) {
+            $input['consultant_type_id'] = null;
         }
         $consulting = Consulting::create($input);
         $this->follow_store($consulting);

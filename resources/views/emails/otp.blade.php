@@ -1,7 +1,6 @@
 @component('mail::message')
+    # {{ $message }}
 
-# {{ $message }}
-
-Thanks,<br>
-{{ config('app.name') }}
+    Thanks,<br>
+    جمعية حماية المستثمرين الأفراد
 @endcomponent

@@ -50,6 +50,7 @@ return [
     'cooperative_training_program_for_the_entities' => 'برنامج التدريب التعاوني للجهات',
     'cooperative_training_program_for_individuals'  => 'برنامج التدريب التعاوني للأفراد',
     'class_action_tutorial'                         => 'كيف تقدم دعوى جماعية',
+    'company_members' => 'عضوية الشركات',
     ''                                              => '',
 
     // D d

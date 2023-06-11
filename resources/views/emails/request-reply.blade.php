@@ -1,8 +1,8 @@
 @component('mail::message')
-    # @lang('lang.request_mail_thanks')
+    # نقدر لك تواصلك معنا
 
     {{ $body }}
 
-    Thanks,
-    {{ config('app.name') }}
+    نتطلع لخدمتكم دائما,
+    جمعية حماية المستثمرين الأفراد
 @endcomponent

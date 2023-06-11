@@ -73,7 +73,7 @@
             <!-- Btn Name Field -->
             <div class="form-group type_page">
                 {!! Form::label('btn_name', __('models/outreaches.fields.btn_name') . ' ' . __('crud.' . $name) . ':') !!}
-                {!! Form::text($locale . '[btn_name]', isset($outreach) ? $outreach->btn_name ?? '' : '', [
+                {!! Form::text($locale . '[btn_name]', isset($outreach) ? $outreach->translate($locale)->btn_name ?? '' : '', [
                     'class' => 'form-control',
                 ]) !!}
             </div>
@@ -81,26 +81,36 @@
             <!-- Title Field -->
             <div class="form-group">
                 {!! Form::label('title', __('models/outreaches.fields.title') . ' ' . __('crud.' . $name) . ':') !!}
-                {!! Form::text($locale . '[title]', isset($outreach) ? $outreach->title ?? '' : '', ['class' => 'form-control']) !!}
+                {!! Form::text($locale . '[title]', isset($outreach) ? $outreach->translate($locale)->title ?? '' : '', [
+                    'class' => 'form-control',
+                ]) !!}
             </div>
 
             <!-- Brief Field -->
             <div class="form-group">
                 {!! Form::label('brief', __('models/outreaches.fields.brief') . ' ' . __('crud.' . $name) . ':') !!}
-                {!! Form::text($locale . '[brief]', isset($outreach) ? $outreach->brief ?? '' : '', ['class' => 'form-control']) !!}
+                {!! Form::text($locale . '[brief]', isset($outreach) ? $outreach->translate($locale)->brief ?? '' : '', [
+                    'class' => 'form-control',
+                ]) !!}
             </div>
 
             <!-- Name Field -->
             <div class="form-group type_page">
                 {!! Form::label('name', __('models/outreaches.fields.name') . ' ' . __('crud.' . $name) . ':') !!}
-                {!! Form::text($locale . '[name]', isset($outreach) ? $outreach->name ?? '' : '', ['class' => 'form-control']) !!}
+                {!! Form::text($locale . '[name]', isset($outreach) ? $outreach->translate($locale)->name ?? '' : '', [
+                    'class' => 'form-control',
+                ]) !!}
             </div>
             <!-- Meta Title Field -->
             <div class="form-group type_page">
                 {!! Form::label('meta_title', __('models/outreaches.fields.meta_title') . ' ' . __('crud.' . $name) . ':') !!}
-                {!! Form::textarea($locale . '[meta_title]', isset($outreach) ? $outreach->meta_title ?? '' : '', [
-                    'class' => 'form-control',
-                ]) !!}
+                {!! Form::textarea(
+                    $locale . '[meta_title]',
+                    isset($outreach) ? $outreach->translate($locale)->meta_title ?? '' : '',
+                    [
+                        'class' => 'form-control',
+                    ],
+                ) !!}
             </div>
             <!-- Meta Title Field -->
             <div class="form-group type_page">
@@ -108,28 +118,40 @@
                     'meta_description',
                     __('models/outreaches.fields.meta_description') .
                         '
-                            ' .
+                                            ' .
                         __('crud.' . $name) .
                         ':',
                 ) !!}
-                {!! Form::textarea($locale . '[meta_description]', isset($outreach) ? $outreach->meta_description ?? '' : '', [
-                    'class' => 'form-control',
-                ]) !!}
+                {!! Form::textarea(
+                    $locale . '[meta_description]',
+                    isset($outreach) ? $outreach->translate($locale)->meta_description ?? '' : '',
+                    [
+                        'class' => 'form-control',
+                    ],
+                ) !!}
             </div>
             <!-- Meta Title Field -->
             <div class="form-group type_page">
                 {!! Form::label('meta_keywords', __('models/outreaches.fields.meta_keywords') . ' ' . __('crud.' . $name) . ':') !!}
-                {!! Form::textarea($locale . '[meta_keywords]', isset($outreach) ? $outreach->meta_keywords ?? '' : '', [
-                    'class' => 'form-control',
-                ]) !!}
+                {!! Form::textarea(
+                    $locale . '[meta_keywords]',
+                    isset($outreach) ? $outreach->translate($locale)->meta_keywords ?? '' : '',
+                    [
+                        'class' => 'form-control',
+                    ],
+                ) !!}
             </div>
 
             <!-- Description Field -->
             <div class="form-group type_page">
                 {!! Form::label('description', __('models/outreaches.fields.description') . ' ' . __('crud.' . $name) . ':') !!}
-                {!! Form::textarea($locale . '[description]', isset($outreach) ? $outreach->description ?? '' : '', [
-                    'class' => 'form-control',
-                ]) !!}
+                {!! Form::textarea(
+                    $locale . '[description]',
+                    isset($outreach) ? $outreach->translate($locale)->description ?? '' : '',
+                    [
+                        'class' => 'form-control',
+                    ],
+                ) !!}
             </div>
 
             <script type="text/javascript">

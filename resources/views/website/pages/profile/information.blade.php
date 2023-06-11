@@ -44,7 +44,8 @@
                             </div>
                             <div class="col-12 px-2 mb-3 fs-6 d-flex">
                                 <div class="input-group">
-                                    <input type="text" class="form-control border border-end-0 text-start py-3 rounded-4 shadow-sm"
+                                    <input type="text"
+                                        class="form-control border border-end-0 text-start py-3 rounded-4 shadow-sm"
                                         id="old_password" value="{{ $user->full_name }}" name="old_password" required>
                                 </div>
                             </div>
@@ -57,8 +58,8 @@
                             </div>
                             <div class="col-12 px-2 mb-3 fs-6 d-flex">
                                 <div class="input-group">
-                                    <input type="email" class="form-control border text-start py-3 rounded-4 shadow-sm" id="email"
-                                        name="email" value="{{ $user->email }}" required>
+                                    <input type="email" class="form-control border text-start py-3 rounded-4 shadow-sm"
+                                        id="email" name="email" value="{{ $user->email }}" required readonly>
                                 </div>
                             </div>
                             <div class="col-12 p-2">
@@ -71,7 +72,8 @@
                             <div class="col-12 px-2 mb-3 fs-6 d-flex">
                                 <div class="input-group rounded-4 shadow-sm ">
                                     <input type="text" name="phone" value="{{ $user->phone }}"
-                                        class="form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr" id="phone" required>
+                                        class="form-control border border-end-0 text-start py-3 direction-input-rtl direction-input-ltr"
+                                        id="phone" required>
                                     <label for="country_code">
                                         {!! Form::select('country_code', $countryCodes, $user->country_code ?? null, [
                                             'class' => 'py-3 form-select bg-primary rounded-0 rounded-end shadow-sm text-white',
@@ -81,8 +83,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-12 col-md-6 py-4 text-center">
-                                <button type="submit"
-                                    class="btn btn-primary rounded-4 py-3 w-100 shadow-custom">
+                                <button type="submit" class="btn btn-primary rounded-4 py-3 w-100 shadow-custom">
                                     <i class="fa-solid fa-circle-check"></i>
                                     @lang('lang.save')
                                 </button>
