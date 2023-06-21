@@ -183,7 +183,7 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item" target="_blank"
-                                            href="{{ asset('website/files/استراتيجية إنسان.pdf') }}">
+                                            href="{{ asset('website/files/final-presentation- to sponsors.pdf') }}">
                                             @lang('lang.association_strategy')
                                         </a>
                                     </li>
