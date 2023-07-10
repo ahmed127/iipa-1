@@ -248,9 +248,10 @@ class MainController extends Controller
     // Volunteer and Training
     public function volunteer_request()
     {
+        $page = Page::find(5);
         $volunteerTypes = VolunteerType::get()->pluck('name', 'id');
         $countryCodes = Country::get()->pluck('code', 'code');
-        return view('website.pages.volunteer_request', compact('volunteerTypes', 'countryCodes'));
+        return view('website.pages.volunteer_request', compact('page', 'volunteerTypes', 'countryCodes'));
     }
 
     public function volunteer_request_store(CreateVolunteerRequest $request)
@@ -311,7 +312,7 @@ class MainController extends Controller
     // Media Center
     public function media_center_all()
     {
-        $blogs = Blog::latest()->paginate(9);
+        $blogs = Blog::latest('date')->paginate(9);
         return view('website.pages.media_center.all', compact('blogs'));
     }
 

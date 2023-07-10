@@ -27,6 +27,7 @@ class Blog extends Model
 
     public $fillable = [
         'blog_category_id',
+        'date',
         'photo_sm',
         'photo_cover',
     ];
@@ -45,6 +46,7 @@ class Blog extends Model
         }
 
         $rules['blog_category_id'] = 'required';
+        $rules['date'] = 'required';
         $rules['photo_sm'] = 'required';
         $rules['photo_cover'] = 'required';
 

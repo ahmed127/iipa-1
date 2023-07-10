@@ -13,6 +13,18 @@
         src="{{ $blog->photo_cover_original_path }}" alt="{{ $blog->name }}" class="image-thumbnail" width="300">
 </div>
 
+<!-- Date Field -->
+<div class="form-group show">
+    {!! Form::label('date', __('models/blogs.fields.date') . ':') !!}
+    <p>{{ $blog->date }}</p>
+</div>
+
+<!-- Category Field -->
+<div class="form-group show">
+    {!! Form::label('category', __('models/blogs.fields.blog_category_id') . ':') !!}
+    <p>{{ $blog->category->title }}</p>
+</div>
+
 <!-- Created At Field -->
 <div class="form-group show">
     {!! Form::label('created_at', __('models/blogs.fields.created_at') . ':') !!}

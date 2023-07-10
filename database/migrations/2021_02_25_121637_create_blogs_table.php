@@ -36,6 +36,7 @@ class CreateBlogsTable extends Migration
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
             $table->foreignId('blog_category_id')->constrained();
+            $table->date('date')->nullable();
 
             $table->string('photo_sm');
             $table->string('photo_cover');

@@ -51,6 +51,12 @@
         {!! Form::select('blog_category_id', $blogCategories, null, ['class' => 'form-control']) !!}
     </div>
 
+    {{-- date --}}
+    <div class="form-group col-sm-6">
+        {!! Form::label('date', __('models/blogs.fields.date') . ':') !!}
+        {!! Form::date('date', null, ['class' => 'form-control']) !!}
+    </div>
+
 
     <!-- Photo Sm Field -->
     <div class="form-group col-sm-6">

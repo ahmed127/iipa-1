@@ -294,25 +294,6 @@
                         </div>
                     </div>
 
-                    <!-- description Field -->
-                    <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
-                        {!! Html::decode(
-                            Form::label(
-                                'description',
-                                '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
-                                    __('lang.description') .
-                                    ':' .
-                                    '<span class="text-danger">*</span>',
-                                ['class' => 'form-label px-1'],
-                            ),
-                        ) !!}
-                        <div class="input-group">
-                            {!! Form::text('description', null, [
-                                'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
-                            ]) !!}
-                        </div>
-                    </div>
-
                     <!-- nationality Field -->
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
                         {!! Html::decode(
@@ -333,7 +314,7 @@
                     </div>
 
                     <!-- attachment_letter Field -->
-                    <div class="col-lg-12 col-sm-12 col-md-6 px-2 mb-3 fs-6">
+                    <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
                         {!! Html::decode(
                             Form::label(
                                 'attachment_letter',
@@ -347,6 +328,26 @@
                             {!! Form::file('attachment_letter', [
                                 'class' => 'form-control shadow-sm',
                                 'id' => 'attachment_letter',
+                            ]) !!}
+                        </div>
+                    </div>
+
+                    <!-- description Field -->
+                    <div class="col-lg-12 col-sm-12 col-md-6 px-2 mb-3 fs-6">
+                        {!! Html::decode(
+                            Form::label(
+                                'description',
+                                '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
+                                    __('lang.description') .
+                                    ':' .
+                                    '<span class="text-danger">*</span>',
+                                ['class' => 'form-label px-1'],
+                            ),
+                        ) !!}
+                        <div class="input-group">
+                            {!! Form::text('description', null, [
+                                'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
+                                'rows' => 3,
                             ]) !!}
                         </div>
                     </div>

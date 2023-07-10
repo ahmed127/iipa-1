@@ -23,7 +23,7 @@
                                 <p class="card-text fw-lighter text-truncate">{{ $blog->breif }}</p>
                                 <p class="fw-bold m-0">
                                     <i class="fa-regular fa-calendar-days text-info"></i>
-                                    {{ $blog->created_at->diffForHumans() }}
+                                    {{ $blog->date }}
                                 </p>
                             </div>
                         </a>

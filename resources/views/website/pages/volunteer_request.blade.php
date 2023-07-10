@@ -10,6 +10,19 @@
     ])
 
     <section class="bg-content-custom">
+        <div class="container-fluid p-0 mb-5">
+            <div class="shadow-custom rounded-4 bg-white col-xl-10 col-lg-12 col-sm-12 mx-xl-auto mx-sm-0">
+                <div class="row gx-0 p-3">
+                    <div class="col-12 text-center py-3">
+
+                        <p class="mt-2 col-8 m-auto">
+                            {!! $page->description !!}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container-fluid p-0">
             @include('website.inc._error')
             @include('flash::message')
@@ -106,7 +119,7 @@
                         <div class="input-group">
                             {!! Form::file('attachment_cv', [
                                 'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl
-                                                                                                            direction-input-ltr',
+                                                                                                                                                                                                                            direction-input-ltr',
                                 'id' => 'attachment_cv',
                             ]) !!}
                         </div>

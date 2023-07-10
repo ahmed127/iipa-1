@@ -7,6 +7,7 @@ return array(
     array(
         'id' => '#',
         'blog_category_id' => 'الفئة',
+        'date' => 'التاريخ',
         'photo_sm' => 'المصغرة صورة الخلفية',
         'photo_cover' => 'صورة الخلفية',
         'title' => 'العنوان',
