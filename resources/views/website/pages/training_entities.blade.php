@@ -10,6 +10,19 @@
     ])
 
     <section class="bg-content-custom">
+        <div class="container-fluid p-0 mb-5">
+            <div class="shadow-custom rounded-4 bg-white col-xl-10 col-lg-12 col-sm-12 mx-xl-auto mx-sm-0">
+                <div class="row gx-0 p-3">
+                    <div class="col-12 text-center py-3">
+
+                        <p class="mt-2 col-8 m-auto">
+                            {!! $page->description !!}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container-fluid p-0">
             @include('website.inc._error')
             @include('flash::message')
@@ -59,13 +72,13 @@
                         <div class="input-group rounded-4 shadow-sm">
                             {!! Form::text('phone', null, [
                                 'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl
-                                                                                direction-input-ltr',
+                                                                                                            direction-input-ltr',
                                 'id' => 'phone',
                             ]) !!}
                             <label for="country_code">
                                 {!! Form::select('country_code', $countryCodes, null, [
                                     'class' => 'border border-end-0 py-3 form-select bg-primary text-white direction-span-rtl
-                                                                                            direction-span-ltr',
+                                                                                                                            direction-span-ltr',
                                 ]) !!}
                             </label>
                         </div>

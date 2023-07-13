@@ -270,8 +270,9 @@ class MainController extends Controller
 
     public function training_entities()
     {
+        $page = Page::find(6);
         $countryCodes = Country::get()->pluck('code', 'code');
-        return view('website.pages.training_entities', compact('countryCodes'));
+        return view('website.pages.training_entities', compact('page', 'countryCodes'));
     }
 
     public function training_entities_store(CreateCooperativeTrainingRequest $request)
@@ -290,8 +291,9 @@ class MainController extends Controller
 
     public function training_individuals()
     {
+        $page = Page::find(7);
         $countryCodes = Country::get()->pluck('code', 'code');
-        return view('website.pages.training_individuals', compact('countryCodes'));
+        return view('website.pages.training_individuals', compact('page', 'countryCodes'));
     }
 
 
