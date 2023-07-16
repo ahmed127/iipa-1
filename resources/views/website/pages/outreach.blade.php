@@ -15,6 +15,13 @@
         'heroImage' => $outreach->photo,
     ])
 
+    <style>
+        body a,
+        li {
+            font-weight: normal !important;
+        }
+    </style>
+
     <section class="bg-content-custom p-custom">
         <div class="container-fluid p-0">
 
