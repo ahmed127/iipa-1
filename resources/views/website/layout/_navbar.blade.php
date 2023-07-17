@@ -122,7 +122,7 @@
                             </li> --}}
                             <li class="nav-item dropdown">
                                 <a class="nav-link pt-0"
-                                    href="{{ app()->getLocale() == 'ar' ? str_replace('/ar/', '/en/', url()->current()) : str_replace('/en/', '/ar/', url()->current()) }}">
+                                    href="{{ app()->getLocale() == 'ar' ? str_replace('/ar', '/en', url()->current()) : str_replace('/en', '/ar', url()->current()) }}">
                                     <i class="fa-solid fa-language  text-primary"></i>
                                 </a>
                             </li>
