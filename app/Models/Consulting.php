@@ -22,7 +22,7 @@ class Consulting extends Model
         'identification_num',
         'identification_file',
         'country_id',
-        'job_id',
+        'job',
         'consultant_type_id',
         'advice_type',
         'type',
@@ -48,7 +48,7 @@ class Consulting extends Model
         'country_code' => 'string',
         'phone' => 'string',
         'country_id' => 'integer',
-        'job_id' => 'integer',
+        'job' => 'string',
         'consultant_type_id' => 'integer',
         'type' => 'integer',
         'date_of_birth' => 'date:Y-m-d',
@@ -68,11 +68,11 @@ class Consulting extends Model
         'name' => 'required|string|min:3|max:191',
         'email' => 'required|email|confirmed',
         'country_code' => 'required',
-        'phone' => 'required',
-        'identification_num' => 'required',
+        'phone' => 'required|numeric|digits:9',
+        'identification_num' => 'required|numeric|digits:10',
         'identification_file' => 'required|image',
         'country_id' => 'required|exists:countries,id',
-        'job_id' => 'required|exists:jobs,id',
+        'job' => 'required|string',
         'consultant_type_id' => 'required',
         'advice_type' => 'required_if:consultant_type_id,0',
         'type' => 'nullable',
@@ -199,11 +199,6 @@ class Consulting extends Model
     public function consultant_type()
     {
         return $this->belongsTo(ConsultantType::class);
-    }
-
-    public function job()
-    {
-        return $this->belongsTo(Job::class);
     }
 
     public function follow()

@@ -15,7 +15,7 @@
                 <div class="row gx-0 p-3">
                     <div class="col-12 text-center py-3">
 
-                        <p class="mt-2 col-8 m-auto">
+                        <p class="my-4 col-8 m-auto">
                             {!! $page->description !!}
                         </p>
                     </div>
@@ -31,7 +31,7 @@
                     <div class="col-12 text-center py-3">
 
                         <h3 class="firstWordInfo d-inline">@lang('lang.volunteer_request_intro_heading')</h3>
-                        {{-- <p class="mt-2 col-8 m-auto">
+                        {{-- <p class="my-4 col-8 m-auto">
                         @lang('lang.volunteer_request_intro_text')
                     </p> --}}
                     </div>
@@ -119,7 +119,7 @@
                         <div class="input-group">
                             {!! Form::file('attachment_cv', [
                                 'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl
-                                                                                                                                                                                                                            direction-input-ltr',
+                                                                                                                                                                                                                                                                                                                                            direction-input-ltr',
                                 'id' => 'attachment_cv',
                             ]) !!}
                         </div>

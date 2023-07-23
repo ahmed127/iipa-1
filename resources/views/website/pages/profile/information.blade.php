@@ -46,7 +46,7 @@
                                 <div class="input-group">
                                     <input type="text"
                                         class="form-control border border-end-0 text-start py-3 rounded-4 shadow-sm"
-                                        id="old_password" value="{{ $user->full_name }}" name="old_password" required>
+                                        id="full_name" value="{{ $user->full_name }}" name="full_name" required>
                                 </div>
                             </div>
                             <div class="col-12 p-2">

@@ -40,8 +40,8 @@
 
 <!-- Job Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('job_id', __('models/consultings.fields.job_id') . ':') !!}
-    {!! Form::select('job_id', $jobs, null, [
+    {!! Form::label('job', __('models/consultings.fields.job') . ':') !!}
+    {!! Form::text('job', null, [
         'class' => 'form-control',
         'placholder' => __('lang.select') . ' ' . __('lang.job'),
     ]) !!}

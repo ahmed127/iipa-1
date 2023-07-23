@@ -40,12 +40,12 @@
                             ]) !!}
                         </div>
 
-                        <!-- job_id Field -->
+                        <!-- job Field -->
                         <div class="form-group col-sm-4">
-                            {!! Form::label('job_id', __('models/consultings.fields.job_id') . ':') !!}
-                            {!! Form::select('job_id', $jobs, request('job_id') ?? null, [
+                            {!! Form::label('job', __('models/consultings.fields.job') . ':') !!}
+                            {!! Form::select('job', $jobs, request('job') ?? null, [
                                 'class' => 'form-control',
-                                'placeholder' => __('lang.select') . ' ' . __('models/consultings.fields.job_id'),
+                                'placeholder' => __('lang.select') . ' ' . __('models/consultings.fields.job'),
                             ]) !!}
                         </div>
 
@@ -129,7 +129,7 @@
             <th>@lang('models/consultings.fields.country_code')</th>
             <th>@lang('models/consultings.fields.phone')</th>
             <th>@lang('models/consultings.fields.country_id')</th>
-            <th>@lang('models/consultings.fields.job_id')</th>
+            <th>@lang('models/consultings.fields.job')</th>
             <th>@lang('models/consultings.fields.consultant_type_id')</th>
             <th>@lang('models/consultings.fields.type')</th>
             <th>@lang('models/consultings.fields.fav_lang')</th>
@@ -228,7 +228,7 @@
                         {!! Form::button('<i class="fa fa-trash"></i>', [
                             'type' => 'submit',
                             'class' => 'btn
-                                        btn-transparent-danger',
+                                                                btn-transparent-danger',
                         ]) !!}
                         {!! Form::close() !!}
                     </div>

@@ -7,6 +7,7 @@ return array(
     array(
         'id' => '#',
         'name' => 'الاسم',
+        'type' => 'النوع',
         'created_at' => 'تم الانشاء في',
         'updated_at' => 'تم التعديل في',
     ),

@@ -76,7 +76,7 @@ return [
 
     'full_name'         => 'الاسم بالكامل',
     'female'            => 'انثي',
-    'fav_lang'          => 'اللغةالمفضلة',
+    'fav_lang'          => 'اللغة المفضلة',
     'finished'          => 'تم الانتهاء',
     'forget_password_a' => 'هل نسيت كلمة السر ؟',
     'forget_password_h' => 'نسيت كلمة السر',

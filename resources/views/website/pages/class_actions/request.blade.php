@@ -17,7 +17,7 @@
                     <div class="col-12 text-center py-3">
 
                         <h3 class="firstWordInfo d-inline">@lang('lang.class_actions_request_intro_heading')</h3>
-                        <p class="mt-2 col-8 m-auto">
+                        <p class="my-4 col-8 m-auto">
                             @lang('lang.class_actions_request_intro_text')
                         </p>
                     </div>
@@ -176,11 +176,11 @@
                         </div>
                     </div>
 
-                    <!-- job_id Field -->
+                    <!-- job Field -->
                     <div class="col-lg-4 col-sm-12 col-md-6 px-2 mb-3 fs-6">
                         {!! Html::decode(
                             Form::label(
-                                'job_id',
+                                'job',
                                 '<i class="fa-solid fa-arrow-left reversed text-secondary opacity-50 fa-sm"></i> ' .
                                     __('lang.job') .
                                     ':' .
@@ -189,9 +189,8 @@
                             ),
                         ) !!}
                         <div class="input-group">
-                            {!! Form::select('job_id', $jobs, null, [
-                                'class' => 'border py-3 form-select rounded-4',
-                                'placeholder' => __('lang.select') . ' ' . __('lang.job'),
+                            {!! Form::text('job', null, [
+                                'class' => 'form-control border text-start py-3 shadow-sm rounded-4',
                             ]) !!}
                         </div>
                     </div>

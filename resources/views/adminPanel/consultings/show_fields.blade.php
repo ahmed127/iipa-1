@@ -36,7 +36,7 @@
 <!-- Country Code Field -->
 <div class="form-group show">
     {!! Form::label('country_code', __('models/consultings.fields.country_code') . ':') !!}
-    <b>{{ $consulting->country_code }}</b>
+    <b>{{ $consulting->country->code }}</b>
 </div>
 
 
@@ -56,8 +56,8 @@
 
 <!-- Job Id Field -->
 <div class="form-group show">
-    {!! Form::label('job_id', __('models/consultings.fields.job_id') . ':') !!}
-    <b>{{ $consulting->job->name ?? '' }}</b>
+    {!! Form::label('job', __('models/consultings.fields.job') . ':') !!}
+    <b>{{ $consulting->job ?? '' }}</b>
 </div>
 
 <!-- Identification File Field -->

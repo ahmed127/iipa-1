@@ -54,6 +54,7 @@
                 </label>
             </th>
             <th>@lang('models/consultantTypes.fields.name')</th>
+            <th>@lang('models/consultantTypes.fields.type')</th>
             <th>@lang('crud.action')</th>
         </tr>
     </thead>
@@ -69,6 +70,7 @@
                     </label>
                 </td>
                 <td>{{ $consultantType->name }}</td>
+                <td>{{ $consultantType->type }}</td>
                 <td>
                     {{-- {!! Form::open(['route' => ['adminPanel.consultantTypes.destroy', $consultantType->id], 'method' => 'delete']) !!} --}}
                     <div class='btn btn-sm-group'>

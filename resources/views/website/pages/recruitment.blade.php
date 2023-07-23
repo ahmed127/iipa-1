@@ -19,7 +19,7 @@
                     <div class="col-12 text-center py-3">
 
                         <h3 class="firstWordInfo d-inline">@lang('lang.recruitment_intro_heading')</h3>
-                        {{-- <p class="mt-2 col-8 m-auto">
+                        {{-- <p class="my-4 col-8 m-auto">
                         @lang('lang.recruitment_intro_text')
                     </p> --}}
                     </div>

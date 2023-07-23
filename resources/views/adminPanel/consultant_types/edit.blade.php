@@ -1,12 +1,12 @@
 @extends('adminPanel.layouts.app')
 
 @section('breadcrumb')
-<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
-    <li class="breadcrumb-item">
-        <a href="{!! route('adminPanel.consultantTypes.index') !!}">@lang('models/consultantTypes.singular')</a>
-    </li>
-    <li class="breadcrumb-item active">@lang('crud.edit')</li>
-</ul>
+    <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
+        <li class="breadcrumb-item">
+            <a href="{!! route('adminPanel.consultantTypes.index') !!}">@lang('models/consultantTypes.singular')</a>
+        </li>
+        <li class="breadcrumb-item active">@lang('crud.edit')</li>
+    </ul>
 @endsection
 @section('content')
     <div class="d-flex flex-column-fluid">
@@ -21,8 +21,11 @@
                             <h3 class="card-title">Edit @lang('models/consultantTypes.singular')</h3>
                         </div>
                         <div class="card-body">
-                            {!! Form::model($consultantType, ['route' => ['adminPanel.consultantTypes.update', $consultantType->id], 'method' => 'patch']) !!}
-                              @include('adminPanel.consultantTypes.fields')
+                            {!! Form::model($consultantType, [
+                                'route' => ['adminPanel.consultantTypes.update', $consultantType->id],
+                                'method' => 'patch',
+                            ]) !!}
+                            @include('adminPanel.consultant_types.fields')
                             {!! Form::close() !!}
                         </div>
                     </div>

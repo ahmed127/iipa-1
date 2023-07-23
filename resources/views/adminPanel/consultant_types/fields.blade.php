@@ -23,6 +23,12 @@
         </div>
     @endforeach
 
+    {{-- type --}}
+    <div class="form-group col-sm-6">
+        {!! Form::label('type', __('models/consultantTypes.fields.type') . ':') !!}
+        {!! Form::select('type', ['class' => 'class', 'advisor' => 'advisor'], null, ['class' => 'form-control']) !!}
+    </div>
+
 
     <!-- Submit Field -->
     <div class="form-group col-sm-12">

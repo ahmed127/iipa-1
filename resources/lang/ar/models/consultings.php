@@ -14,7 +14,7 @@ return array(
         'country_code' => 'رمز الدولة',
         'phone' => 'الهاتف',
         'country_id' => 'الدولة',
-        'job_id' => 'الوظيفة',
+        'job' => 'الوظيفة',
         'consultant_type_id' => 'نوع الاستشارة',
         'advice_type' => 'نوع الاستشارة',
         'type' => 'النوع',

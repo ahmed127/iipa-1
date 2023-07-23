@@ -12,6 +12,13 @@
 </div>
 
 
+<!-- Type Field -->
+<div class="form-group show">
+    {!! Form::label('type', __('models/consultantTypes.fields.type') . ':') !!}
+    <b>{{ $consultantType->type }}</b>
+</div>
+
+
 <!-- Created At Field -->
 <div class="form-group show">
     {!! Form::label('created_at', __('models/consultantTypes.fields.created_at') . ':') !!}

@@ -27,7 +27,8 @@ class ConsultantType extends Model
 
 
     public $fillable = [
-        'name'
+        'name',
+        'type'
     ];
 
     /**
@@ -37,7 +38,8 @@ class ConsultantType extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'name' => 'string'
+        'name' => 'string',
+        'type' => 'string'
     ];
 
     public $translatedAttributes = ['name'];
@@ -49,9 +51,8 @@ class ConsultantType extends Model
         foreach ($languages as $language) {
             $rules[$language . '.name'] = 'required|string|min:3|max:191';
         }
+        $rules['type'] = 'required|in:class,advisor';
 
         return $rules;
     }
-
-
 }

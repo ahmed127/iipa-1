@@ -14,7 +14,7 @@ return array(
         'country_code' => 'Country Code',
         'phone' => 'Phone',
         'country_id' => 'Country',
-        'job_id' => 'Job',
+        'job' => 'Job',
         'consultant_type_id' => 'Consultant Type',
         'advice_type' => 'Advice Type',
         'type' => 'Type',

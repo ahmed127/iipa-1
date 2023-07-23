@@ -173,10 +173,10 @@ class MainController extends Controller
     // Advisors
     public function advisors()
     {
-        $data['countryCodes'] = Country::get()->pluck('code', 'code');
+        $data['countryCodes'] = Country::get()->pluck('code', 'id');
         $data['countries'] = Country::get()->pluck('name', 'id');
         $data['jobs'] = Job::get()->pluck('name', 'id');
-        $consultantTypes = ConsultantType::get()->pluck('name', 'id')->toArray();
+        $consultantTypes = ConsultantType::where('type', 'advisor')->get()->pluck('name', 'id')->toArray();
         $data['consultantTypes'] = $consultantTypes + [0 => __('lang.outside_advice')];
         $data['types'] = Consulting::types();
         $data['favLangs'] = Consulting::favLangs();
@@ -208,10 +208,10 @@ class MainController extends Controller
     // Class Actions
     public function class_actions_request()
     {
-        $data['countryCodes'] = Country::get()->pluck('code', 'code');
+        $data['countryCodes'] = Country::get()->pluck('code', 'id');
         $data['countries'] = Country::get()->pluck('name', 'id');
         $data['jobs'] = Job::get()->pluck('name', 'id');
-        $consultantTypes = ConsultantType::get()->pluck('name', 'id')->toArray();
+        $consultantTypes = ConsultantType::where('type', 'class')->get()->pluck('name', 'id')->toArray();
         $data['consultantTypes'] = $consultantTypes + [0 => __('lang.outside_advice')];
         $data['types'] = Consulting::types();
         $data['favLangs'] = Consulting::favLangs();

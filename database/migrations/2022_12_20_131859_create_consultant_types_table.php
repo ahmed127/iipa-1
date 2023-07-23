@@ -16,6 +16,7 @@ class CreateConsultantTypesTable extends Migration
     {
         Schema::create('consultant_types', function (Blueprint $table) {
             $table->id();
+            $table->string('type')->default('class');
             $table->timestamps();
             $table->softDeletes();
         });
