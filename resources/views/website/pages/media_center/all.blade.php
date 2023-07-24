@@ -17,7 +17,7 @@
                         <a href="{{ route('website.media_center_single', $blog->id) }}">
 
                             <img src="{{ $blog->photo_sm_original_path }}" class=" card-img-top"
-                                style="border-radius: 16px 16px 0 0; height: 232px;" alt="...">
+                                style="border-radius: 16px 16px 0 0; height: 232px !important;" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{ Str::limit($blog->title, 80, '...') }}</h5>
                                 <p class="card-text fw-lighter text-truncate">{{ $blog->breif }}</p>
