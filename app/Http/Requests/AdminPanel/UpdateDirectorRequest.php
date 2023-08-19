@@ -24,8 +24,8 @@ class UpdateDirectorRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = Director::$rules;
-        
+        $rules = Director::rules();
+
         return $rules;
     }
 }

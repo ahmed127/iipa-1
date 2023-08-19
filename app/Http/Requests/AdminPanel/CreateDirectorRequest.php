@@ -24,6 +24,6 @@ class CreateDirectorRequest extends FormRequest
      */
     public function rules()
     {
-        return Director::$rules;
+        return Director::rules();
     }
 }

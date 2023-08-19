@@ -18,12 +18,21 @@ class CreateDirectorsTable extends Migration
             $table->id();
             $table->string('type')->default('directors')->comment('directors,generals');
             $table->string('photo')->nullable();
-            $table->string('name');
-            $table->string('nickname');
-            $table->string('job_title')->nullable();
             $table->string('period')->nullable();
             $table->timestamps();
             $table->softDeletes();
+        });
+
+        Schema::create('director_translations', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('director_id')->constrained();
+            $table->string('locale', 2)->index();
+
+            $table->string('name');
+            $table->string('nickname');
+            $table->string('job_title')->nullable();
+
+            $table->unique(['director_id', 'locale']);
         });
     }
 
@@ -34,6 +43,7 @@ class CreateDirectorsTable extends Migration
      */
     public function down()
     {
+        Schema::drop('director_translations');
         Schema::drop('directors');
     }
 }

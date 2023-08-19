@@ -4,13 +4,14 @@ namespace App\Models;
 
 use App\Helpers\ImageUploaderTrait;
 use Illuminate\Database\Eloquent\Model;
+use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 
 
 class Director extends Model
 {
-    use SoftDeletes, ImageUploaderTrait;
+    use SoftDeletes, Translatable, ImageUploaderTrait;
 
 
     public $table = 'directors';
@@ -23,38 +24,28 @@ class Director extends Model
     public $fillable = [
         'type',
         'photo',
-        'name',
-        'nickname',
-        'job_title',
         'period'
     ];
 
-    /**
-     * The attributes that should be casted to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'id' => 'integer',
-        'photo' => 'string',
-        'name' => 'string',
-        'nickname' => 'string',
-        'job_title' => 'string',
-        'period' => 'string',
-    ];
 
-    /**
-     * Validation rules
-     *
-     * @var array
-     */
-    public static $rules = [
-        'photo' => 'nullable|mimes:jpeg,jpg,png|max:10000',
-        'name' => 'required|string|min:3|max:191',
-        'nickname' => 'required',
-        'job_title' => 'nullable|string|min:3|max:191',
-        'period' => 'nullable|string|min:3|max:191'
-    ];
+    public $translatedAttributes =  ['name', 'nickname', 'job_title'];
+
+
+    public static function rules()
+    {
+        $languages = array_keys(config('langs'));
+
+        foreach ($languages as $language) {
+            $rules[$language . '.name'] = 'required|string|max:191';
+            $rules[$language . '.nickname'] = 'required|string';
+            $rules[$language . '.job_title'] = 'nullable|string';
+        }
+
+        $rules['photo'] = 'nullable|mimes:jpeg,jpg,png|max:10000';
+        $rules['period'] = 'nullable|string|min:3|max:191';
+
+        return $rules;
+    }
 
 
     public function setPhotoAttribute($file)
