@@ -28,8 +28,8 @@
                                     <img src="{{ $information_app->translate(App::getLocale())->logo_original_path }}"
                                         class="p-5" style="border-radius: 16px 16px 0 0;" alt="...">
                                     <div class=" text-white  text-center p-3"
-                                        style="background-color: #00113D;border-radius: 0 0 16px 16px;height:110px">
-                                        <p class="fw-bold fs-5 mb-1 m-auto">
+                                        style="background-color: #00113D;border-radius: 0 0 16px 16px;height:110px; display: flex; justify-content: center; align-items: center;">
+                                        <p class="fw-bold fs-5">
                                             {{ $law->title }}
                                         </p>
                                     </div>

@@ -183,7 +183,7 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item" target="_blank"
-                                            href="{{ asset('website/files/final-presentation- to sponsors.pdf') }}">
+                                            href="{{ asset('website/files/final-presentation- to sponsors_organized.pdf') }}">
                                             @lang('lang.association_strategy')
                                         </a>
                                     </li>

@@ -40,7 +40,8 @@
     <link rel="stylesheet" href="{{ asset('website') }}/css/navbar.css" />
     <link rel="stylesheet" href="{{ asset('website') }}/css/color.css" />
     <link rel="stylesheet" href="{{ asset('website') }}/css/svg.css" />
-    <link rel="shortcut icon" href="{{ $information_app->fav_icon_original_path }}" />
+    {{-- <link rel="shortcut icon" href="{{ $information_app->fav_icon_original_path }}" /> --}}
+    <link rel="icon" href="{{ asset('/favicon.ico') }}" type="image/x-icon">
     <style>
         .pagination-container nav {
             margin: auto

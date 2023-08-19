@@ -26,6 +26,8 @@ class UpdateLawRequest extends FormRequest
     {
         $rules = Law::rules();
 
+        $rules['attachment_pdf'] = 'nullable|file|mimes:pdf';
+
         return $rules;
     }
 }
