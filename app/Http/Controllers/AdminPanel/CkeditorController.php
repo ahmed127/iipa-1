@@ -24,7 +24,7 @@ class CkeditorController extends Controller
             if (App::environment('local')) {
                 $request->file('upload')->move(public_path('uploads/ckEditor'), $fileName);
             } else {
-                $request->file('upload')->move($_SERVER['DOCUMENT_ROOT'] . '/test/uploads/ckEditor', $fileName);
+                $request->file('upload')->move($_SERVER['DOCUMENT_ROOT'] . '/uploads/ckEditor', $fileName);
             }
 
             $CKEditorFuncNum = $request->input('CKEditorFuncNum');
