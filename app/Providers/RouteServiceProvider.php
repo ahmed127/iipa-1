@@ -42,7 +42,7 @@ class RouteServiceProvider extends ServiceProvider
         $this->routes(function () {
             $langs = array_keys(config('langs'));
             $locale = request()->segment(1);
-            App::setLocale(in_array($locale, $langs) ? $locale : 'en');
+            App::setLocale(in_array($locale, $langs) ? $locale : 'ar');
 
             Route::prefix(app()->getLocale() . '/api')
                 ->middleware('api')

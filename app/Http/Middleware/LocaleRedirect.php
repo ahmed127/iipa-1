@@ -17,8 +17,8 @@ class LocaleRedirect
     public function handle($request, Closure $next)
     {
         session_start();
-        $langs = array_keys ( config('langs') );
-        $default = $langs[0];
+        $langs = array_keys(config('langs'));
+        $default = $langs[1];
         $locale = $request->segment(1);
         if (in_array($locale, $langs)) {
             $_SESSION['localeCode'] = $locale;
@@ -36,7 +36,7 @@ class LocaleRedirect
             }
 
             // for  command php artisan serve
-            $newUrl = '/'. $lang . '/' . $request->path();
+            $newUrl = '/' . $lang . '/' . $request->path();
 
             // for htdocs launch
             // $newUrl = str_replace(env('REDIRECT'), env('REDIRECT').'/'. $lang, $request->fullUrl());
