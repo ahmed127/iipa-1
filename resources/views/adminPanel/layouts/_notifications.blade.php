@@ -1,8 +1,9 @@
 @php
     $newRequests = \App\Models\Follow::where('status', 1)
         ->latest()
+        ->take(20)
         ->get();
-
+    
     $showRoutes = [
         'App\Models\Consulting' => 'adminPanel.consultings.show',
         'App\Models\Volunteer' => 'adminPanel.volunteers.show',
