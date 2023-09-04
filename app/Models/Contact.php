@@ -50,5 +50,6 @@ class Contact extends Model
         'phone' => 'required',
         'country_code' => 'required',
         'message' => 'required|string|min:3',
+        'g-recaptcha-response' => 'recaptcha',
     ];
 }

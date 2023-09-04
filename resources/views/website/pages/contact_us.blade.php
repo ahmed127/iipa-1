@@ -154,6 +154,7 @@
                                 </label>
                             </div>
                         </div>
+                        {!! htmlFormSnippet() !!}
                         <div class="col-12 px-2 mb-3 fs-6">
                             <label for="message" class="form-label px-1">
                                 <i class="fa-solid fa-arrow-left text-secondary opacity-50 fa-sm"></i>
