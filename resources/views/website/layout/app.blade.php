@@ -54,6 +54,7 @@
     </style>
     @yield('css')
     @stack('css_stack')
+
     {!! htmlScriptTagJsApi() !!}
 </head>
 
