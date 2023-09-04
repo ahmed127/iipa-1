@@ -54,7 +54,8 @@ class Recruitment extends Model
         'email' => 'required|email',
         'country_code' => 'required',
         'phone' => 'required',
-        'attachment_cv' => 'required'
+        'attachment_cv' => 'required',
+        'g-recaptcha-response' => 'recaptcha',
     ];
 
 
@@ -89,7 +90,7 @@ class Recruitment extends Model
         return Follow::status_types()[$this->attributes['status']];
     }
 
-    
+
     public function user()
     {
         return $this->belongsTo(User::class);

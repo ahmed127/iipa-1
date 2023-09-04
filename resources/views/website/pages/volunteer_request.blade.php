@@ -119,10 +119,13 @@
                         <div class="input-group">
                             {!! Form::file('attachment_cv', [
                                 'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl
-                                                                                                                                                                                                                                                                                                                                            direction-input-ltr',
+                                                                                                                                                                                                                                                                                                                                                                        direction-input-ltr',
                                 'id' => 'attachment_cv',
                             ]) !!}
                         </div>
+                    </div>
+                    <div class="col-12 px-2 mb-3 fs-6">
+                        {!! htmlFormSnippet() !!}
                     </div>
                     <div class="row justify-content-center gx-0 pb-3">
                         {!! Form::button('<i class="fa-solid fa-circle-check"></i>' . ' ' . __('lang.send'), [

@@ -52,7 +52,8 @@ class CooperativeTraining extends Model
         'country_code' => 'required',
         'phone' => 'required',
         'email' => 'required|email',
-        'attachment_letter' => 'required'
+        'attachment_letter' => 'required',
+        'g-recaptcha-response' => 'recaptcha',
     ];
 
 

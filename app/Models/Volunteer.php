@@ -58,7 +58,8 @@ class Volunteer extends Model
         'email' => 'required|email',
         'country_code' => 'required',
         'phone' => 'required',
-        'attachment_cv' => 'required'
+        'attachment_cv' => 'required',
+        'g-recaptcha-response' => 'recaptcha',
     ];
 
 

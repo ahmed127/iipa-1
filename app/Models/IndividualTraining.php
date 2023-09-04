@@ -52,7 +52,8 @@ class IndividualTraining extends Model
         'country_code' => 'required',
         'phone' => 'required',
         'email' => 'required|email',
-        'attachment_letter' => 'required'
+        'attachment_letter' => 'required',
+        'g-recaptcha-response' => 'recaptcha',
     ];
 
     public function setAttachmentLetterAttribute($file)
@@ -84,7 +85,7 @@ class IndividualTraining extends Model
     {
         return Follow::status_types()[$this->attributes['status']];
     }
-    
+
     public function user()
     {
         return $this->belongsTo(User::class);

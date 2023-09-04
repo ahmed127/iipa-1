@@ -72,13 +72,13 @@
                         <div class="input-group rounded-4 shadow-sm">
                             {!! Form::text('phone', null, [
                                 'class' => 'form-control border border-end-0 text-start py-3 direction-input-rtl
-                                                                                                                                                                                                                            direction-input-ltr',
+                                                                                                                                                                                                                                                        direction-input-ltr',
                                 'id' => 'phone',
                             ]) !!}
                             <label for="country_code">
                                 {!! Form::select('country_code', $countryCodes, null, [
                                     'class' => 'border border-end-0 py-3 form-select bg-primary text-white direction-span-rtl
-                                                                                                                                                                                                                                                            direction-span-ltr',
+                                                                                                                                                                                                                                                                                            direction-span-ltr',
                                 ]) !!}
                             </label>
                         </div>
@@ -95,6 +95,9 @@
                                 'id' => 'attachment_letter',
                             ]) !!}
                         </div>
+                    </div>
+                    <div class="col-12 px-2 mb-3 fs-6">
+                        {!! htmlFormSnippet() !!}
                     </div>
                     <div class="row justify-content-center gx-0 pb-3">
                         {!! Form::button('<i class="fa-solid fa-circle-check"></i>' . ' ' . __('lang.send'), [
