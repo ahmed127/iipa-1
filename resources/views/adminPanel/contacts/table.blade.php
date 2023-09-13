@@ -38,27 +38,32 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($contacts as $contact)
-        <tr>
-            <td>{{ $contact->name }}</td>
-            <td>{{ $contact->email }}</td>
-            <td>{{ $contact->country_code }}</td>
-            <td>{{ $contact->phone }}</td>
-            <td>{{ Str::limit($contact->message, 80) }}</td>
-            <td nowrap>
-                {!! Form::open(['route' => ['adminPanel.contacts.destroy', $contact->id], 'method' => 'delete']) !!}
-                <div class='btn btn-sm-group'>
-                    @can('contacts view')
-                    <a href="{{ route('adminPanel.contacts.show', [$contact->id]) }}" class='btn btn-sm btn-shadow mx-1 btn-transparent-success'><i class="fa fa-eye"></i></a>
-                    @endcan
-                    {{-- <a href="{{ route('adminPanel.contacts.edit', [$contact->id]) }}" class='btn btn-sm btn-shadow mx-1 btn-transparent-primary'><i class="fa fa-edit"></i></a> --}}
-                    @can('contacts destroy')
-                    {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-sm btn-shadow mx-1 btn-transparent-danger', 'onclick' => 'return confirm("'.__('crud.are_you_sure').'")']) !!}
-                    @endcan
-                </div>
-                {!! Form::close() !!}
-            </td>
-        </tr>
+        @foreach ($contacts as $contact)
+            <tr>
+                <td>{{ $contact->name }}</td>
+                <td>{{ $contact->email }}</td>
+                <td>{{ $contact->country_code }}</td>
+                <td>{{ $contact->phone }}</td>
+                <td>{{ Str::limit($contact->message, 80) }}</td>
+                <td nowrap>
+                    {!! Form::open(['route' => ['adminPanel.contacts.destroy', $contact->id], 'method' => 'delete']) !!}
+                    <div class='btn btn-sm-group'>
+                        @can('contacts view')
+                            <a href="{{ route('adminPanel.contacts.show', [$contact->id]) }}"
+                                class='btn btn-sm btn-shadow mx-1 btn-transparent-success'><i class="fa fa-eye"></i></a>
+                        @endcan
+                        {{-- <a href="{{ route('adminPanel.contacts.edit', [$contact->id]) }}" class='btn btn-sm btn-shadow mx-1 btn-transparent-primary'><i class="fa fa-edit"></i></a> --}}
+                        @can('contacts destroy')
+                            {!! Form::button('<i class="fa fa-trash"></i>', [
+                                'type' => 'submit',
+                                'class' => 'btn btn-sm btn-shadow mx-1 btn-transparent-danger',
+                                'onclick' => 'return confirm("' . __('crud.are_you_sure') . '")',
+                            ]) !!}
+                        @endcan
+                    </div>
+                    {!! Form::close() !!}
+                </td>
+            </tr>
         @endforeach
     </tbody>
 </table>
