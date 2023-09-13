@@ -128,12 +128,12 @@
                                 <i class="fa fa-eye"></i>
                             </a>
                         @endcan
-                        @can('cooperativeTrainings edit')
+                        {{-- @can('cooperativeTrainings edit')
                             <a href="{{ route('adminPanel.cooperativeTrainings.edit', [$cooperativeTraining->id]) . '?languages=en' }}"
                                 class='btn btn-sm btn-shadow mx-1 btn-transparent-primary'>
                                 <i class="fa fa-edit"></i>
                             </a>
-                        @endcan
+                        @endcan --}}
                         @can('cooperativeTrainings destroy')
                             {{-- {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-sm btn-shadow mx-1 btn-transparent-danger', 'onclick' => 'return confirm("'.__('crud.are_you_sure').'")']) !!} --}}
                             <button type="button" class="btn btn-sm btn-shadow mx-1 btn-transparent-danger"
