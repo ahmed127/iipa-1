@@ -22,12 +22,8 @@
 
         <div class="card-body">
             @include('adminPanel.contacts.table')
-        </div>
-
-        <div class="card-body">
-            @include('adminPanel.companies.table')
             <div class="pull-right mr-3">
-                @include('coreui-templates::common.paginate', ['records' => $companies])
+                @include('coreui-templates::common.paginate', ['records' => $contacts])
 
             </div>
         </div>
