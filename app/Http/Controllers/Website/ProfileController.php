@@ -52,7 +52,7 @@ class ProfileController extends Controller
         $user = auth()->user();
 
         $request->validate([
-            'old_password'  => 'required|current_password',
+            'old_password'  => 'required|current_password:web',
             'password'      => 'required|confirmed',
         ]);
 
