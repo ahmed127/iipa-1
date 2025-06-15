@@ -17,7 +17,7 @@ class CreateEventsTable extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->timestamp('date');
-            $table->bool('open_calendar')->default(0);
+            $table->boolean('open_calendar')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
